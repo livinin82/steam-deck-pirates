@@ -12,7 +12,7 @@ nav_order: 6
 
 <table>
 <tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <ol>
     <li><strong>Open Protontricks:</strong> Launch Protontricks from your applications menu.</li>
     <li><strong>Select the Game:</strong> Protontricks will show a list of games installed on your Deck. Select the game you intend to modify.</li>
@@ -22,7 +22,7 @@ nav_order: 6
     <li><strong>Close all ProtonTricks windows</strong></li>
     <li><strong>Test your game</strong></li>
 </ol>
-</td>
+</div>
 </tr>
 </table>
 

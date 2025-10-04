@@ -17,7 +17,7 @@ nav_order: 3
 
 <table>
 <tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <ol>
     <li>In <strong>Game Mode/Desktop Mode</strong>, select your game.</li>
     <li>Click the <strong>Settings</strong> (gear) icon.</li>
@@ -26,7 +26,7 @@ nav_order: 3
     <li>Let's say we're trying to point to <code>dinput8.dll</code>, in order to do this type <code>WINEDLLOVERRIDES="dinput8.dll=n,b" %command%</code> in the <strong>Launch Options</strong> box.</li>
     <li>Do this same thing for any other DLL needed by replacing <code>dinput8.dll</code> in the command from <em>Step 5</em>. If adding multiple in one command, you can separate them with commas, making sure they fit within the first quotation mark and the equal sign. (Example: <code>WINEDLLOVERRIDES="dinput8.dll,d3d9.dll=n,b"</code>)</li>
 </ol>
-</td>
+</div>
 </tr>
 </table>
 
@@ -42,7 +42,7 @@ nav_order: 3
 
 <table>
 <tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <ol>
     <li>Open <strong>ProtonTricks</strong>.</li>
     <li>Select your game in the list. Click <strong>OK</strong>.</li>
@@ -54,7 +54,7 @@ nav_order: 3
     <li>Click <strong>OK</strong>, and exit out of all ProtonTricks windows.</li>
     <li>Run your game and see if the intended outcome was achieved.</li>
 </ol>
-</td>
+</div>
 </tr>
 </table>
 

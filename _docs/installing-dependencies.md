@@ -23,7 +23,7 @@ nav_order: 2
 
 <table>
 <tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <strong>Steam Database</strong>
 <ul>
     <li>Find your game on <a href="https://steamdb.info">SteamDB</a> by searching it by title.</li>
@@ -33,7 +33,7 @@ nav_order: 2
     <li>Proceed to the next portion to find out where to get them!</li>
     <li>Proceed to the step after that step to install them!!</li>
 </ul>
-</td>
+</div>
 </tr>
 </table>
 
@@ -69,7 +69,7 @@ nav_order: 2
 #### Installing with ProtonTricks
 <table>
 <tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <strong>Method 1</strong>
 <ul>
     <li>Click ok on the first screen with the radio button highlighted create new/default prefix</li>
@@ -79,12 +79,12 @@ nav_order: 2
     <li>Hit Ok at the bottom when you have finished</li>
     <li>Verify they installed by going back to the Uninstall menu and at the bottom is will show all that is installed in the Wine Prefix</li>
 </ul>
-</td>
+</div>
 </tr>
 </table>
 <table>
 <tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <strong>Method 2</strong>
 <ol>
     <li><strong>Open Protontricks:</strong> Launch Protontricks from your applications menu.</li>
@@ -106,7 +106,7 @@ nav_order: 2
         <ul><li>Once installed, Protontricks will confirm the installation of each component. Double-check that each required dependency is installed.</li></ul>
     </li>
 </ol>
-</td>
+</div>
 </tr>
 </table>
 
@@ -119,21 +119,17 @@ nav_order: 2
 > This method is useful for when you find a `Redist` folder or similar in the copy you downloaded. Some repackers do this.
 > Make sure ProtonTricks has access to your drives and SD card through Flatseal.
 
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <ol>
     <li><strong>Open Protontricks:</strong> Launch Protontricks from your applications menu.</li>
     <li><strong>Select the Game:</strong> Protontricks will show a list of games installed on your Deck. Select the game for which you need to install dependencies.</li>
     <li><strong>Choose “Select the default wineprefix”</strong> to set up a unique configuration environment for that game.</li>
-    <li><strong>Choose "Run explorer</strong> and click OK.</li>
-    <li><strong>Execute the dependency <code>.exe</code> file</strong> navigate using the folder list on the side, then double click the <code>.exe</code> when you find it.</li>
+    <li><strong>Choose "Run explorer"</strong> and click OK.</li>
+    <li><strong>Execute the dependency <code>.exe</code> file</strong>: navigate using the folder list on the side, then double click the <code>.exe</code> when you find it.</li>
     <li><strong>Close all ProtonTricks windows</strong></li>
     <li><strong>Test your game</strong></li>
 </ol>
-</td>
-</tr>
-</table>
+</div>
 
 > [!CAUTION]
 > If this didn't fix it, keep reading.

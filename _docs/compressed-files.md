@@ -11,7 +11,7 @@ nav_order: 1
 
 <table>
 <tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <ol>
     <li>Install <strong>PeaZip</strong> from the <strong>Discover Store</strong></li>
     <li>Open <strong>PeaZip</strong></li>
@@ -21,7 +21,7 @@ nav_order: 1
     <li>Extract them to the same folder or another easy to find folder.</li>
     <li>This will either extract as an installer, or as a complete game. From there you can follow any of our guides above.</li>
 </ol>
-</td>
+</div>
 </tr>
 </table>
 

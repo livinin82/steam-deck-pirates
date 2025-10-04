@@ -15,7 +15,7 @@ nav_order: 2
 
 <table>
 <tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <ol>
     <li>Obtain your desired game from a respected source.</li>
     <li>Install Lutris and open it.</li>
@@ -33,7 +33,7 @@ nav_order: 2
     <li>Select the game's executable and click the bottom right "Save".</li>
     <li>Double-click the game in Lutris to start it or use the bottom left button "Play".</li>
 </ol>
-</td>
+</div>
 </tr>
 </table>
 

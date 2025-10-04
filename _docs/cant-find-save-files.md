@@ -12,13 +12,13 @@ nav_order: 5
 
 <table>
 <tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <ul>
     <li>Use the website <a href="https://www.pcgamingwiki.com/wiki/Home">PCGamingWiki</a> to find the save path location.</li>
     <li>Refer to our <a href="#finding-non-steam-game-proton-folder">Finding Non-Steam Game Proton Folder</a> section.</li>
     <li>Use the path on the website to navigate within <code>drive_c</code> and find your save file.</li>
 </ul>
-</td>
+</div>
 </tr>
 </table>
 

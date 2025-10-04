@@ -10,7 +10,7 @@ RetroDECK is a [ES-DE Frontend](https://es-de.org/) powered Flatpak all-in-one g
 #### Installing RetroDeck
 <table>
 <tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <ul>
     <li>Put the Steam Deck into <strong>Desktop Mode</strong></li>
     <li>Install <strong>RetroDECK</strong> from <strong>Discover</strong></li>
@@ -24,7 +24,7 @@ RetroDECK is a [ES-DE Frontend](https://es-de.org/) powered Flatpak all-in-one g
     <li>Add any of the the Official Layouts under <strong>Controller Settings > Controller Layouts > Templates</strong> in the Steam Deck called <code>RetroDECK: Steam Deck - Neptune SIMPLE or FULL</code> with a version number. Apply the layout.</li>
     <li>Launch <strong>RetroDECK</strong> and enjoy.</li>
 </ul>
-</td>
+</div>
 </tr>
 </table>
 

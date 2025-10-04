@@ -21,9 +21,7 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
 ---
 
 #### Setting Up SSHD on Steam Deck
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <strong>Enable SSH Daemon Service on your Deck:</strong>
 <ol>
     <li>Switch to Desktop Mode (<strong>STEAM</strong> button > <strong>Power</strong> > <strong>Switch to Desktop</strong>).</li>
@@ -33,9 +31,7 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
     <li>Start SSHD: <code>sudo systemctl start sshd</code></li>
     <li>Check status: <code>sudo systemctl status sshd</code> (look for <code>enabled</code> and <code>running</code>).</li>
 </ol>
-</td>
-</tr>
-</table>
+</div>
 
 >*from [GitHub](https://github.com/Matalus/steamdeck-tips/blob/main/wiki/ssh.md)*
 
@@ -45,9 +41,7 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
 ---
 
 #### SSH Connection Guide: Linux
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <strong>Connect to Steam Deck from Linux:</strong>
 <ol>
     <li>Open a terminal window.</li>
@@ -58,14 +52,10 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
     <li>Enter your password when prompted.</li>
     <li>You now have terminal access to your Steam Deck.</li>
 </ol>
-</td>
-</tr>
-</table>
+</div>
 
 #### SSH Connection Guide: Mac
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <strong>Connect to Steam Deck from Mac:</strong>
 <ol>
     <li>Open the <strong>Terminal</strong> app (Applications > Utilities > Terminal).</li>
@@ -76,16 +66,12 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
     <li>Enter your password when prompted.</li>
     <li>You now have terminal access to your Steam Deck.</li>
 </ol>
-</td>
-</tr>
-</table>
+</div>
 
 ---
 
 #### SSH Connection Guide: Windows
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <strong>Connect to Steam Deck from Windows:</strong>
 <ol>
     <li>Download and install <strong>PuTTY</strong> (or use Windows Terminal/PowerShell if OpenSSH is installed).</li>
@@ -95,9 +81,7 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
     <li>Click <strong>Open</strong> and enter your password when prompted.</li>
     <li>You now have terminal access to your Steam Deck.</li>
 </ol>
-</td>
-</tr>
-</table>
+</div>
 
 ---
 
@@ -106,9 +90,7 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
 > [!NOTE]
 > If you want to take this a step further and make it REALLY streamlined, add it to your device as a network drive. This will make it an accessible folder in Finder/Explorer. Just drag and drop and call it a day.
 
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <strong>Guide: Add Steam Deck Storage as a Network Drive</strong>
 <ol>
     <li>Ensure SSH is enabled and running on your Steam Deck (see SSH setup above).</li>
@@ -145,9 +127,7 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
     <li>You can now drag and drop files between your PC/Mac/Linux and Steam Deck as if it were a local folder.</li>
     <li>If you have trouble, use a graphical SFTP client like <strong>WinSCP</strong>, <strong>Cyberduck</strong>, or <strong>FileZilla</strong> with the same connection details.</li>
 </ol>
-</td>
-</tr>
-</table>
+</div>
 
 #### Windows (10/11)
 
@@ -157,9 +137,7 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
 > Warpinator is an app available for Windows, and Linux that makes a direct tunnel between your two devices. This is by far the highest speed option outside of SSH. This method requires the application to be running on your Steam Deck and your other device at the same time.
 
 #### On Your Deck
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <ol>
     <li>Install <strong>Warpinator</strong> from the <strong>Discover Store</strong>.</li>
     <li>Open <strong>Preferences</strong> and click <strong>Connection</strong> then set a unique PIN.</li>
@@ -167,14 +145,10 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
         <ul><li>If you don't have access to a certain location (like your SD card), use flatseal to give Warpinator Permissions.</li></ul>
     </li>
 </ol>
-</td>
-</tr>
-</table>
+</div>
 
 #### On Your PC
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <ol>
     <li>Download (unofficial) Warpinator from this <a href="https://warpinator.com/warpinator-download/">github</a>. Install it.</li>
     <li>Click <strong>Options > Settings</strong>.</li>
@@ -182,23 +156,17 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
     <li>Also make sure your <strong>Receive into folder</strong> is somewhere you can find it.</li>
     <li>Click <strong>Apply</strong>, then click <strong>OK</strong>.</li>
 </ol>
-</td>
-</tr>
-</table>
+</div>
 
 #### Transferring Files
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <ol>
     <li>Your Deck should show in the <strong>Available Devices</strong> area. If not, make sure you followed the steps above. Click on it to open its transfer window.</li>
     <li>On Windows you can click the <code>+</code> button to add a folder, or the <code>Browse</code> button to add a singular file. You can also drag and drop multiple folders/into the window.</li>
     <li>Accept the transfer on the deck.</li>
     <li>Watch the files fly across your network onto your Deck.</li>
 </ol>
-</td>
-</tr>
-</table>
+</div>
 
 > [!NOTE]
 > The instructions for Deck>PC should be the same.
@@ -214,9 +182,7 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
 > [!NOTE]
 > We will be using Filezilla here, as it is available on every OS. Any combination of FTP clients should work, as FTP is a protocol that is being utilized by all of the apps that offer it. There should be almost no difference.
 
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <ol>
     <li>Download <strong><a href="https://filezilla-project.org/">Filezilla</a></strong> on both devices.</li>
     <li>Find your IP address on your Deck by going to <strong>Settings>Internet</strong> in either <strong>Game Mode</strong> or <strong>Big Picture</strong> in <strong>Desktop Mode</strong></li>
@@ -230,9 +196,7 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
     </li>
     <li>Click <strong>Quickconnect</strong></li>
 </ol>
-</td>
-</tr>
-</table>
+</div>
 
 > [!WARNING]
 > You can add the connection to the app by clicking **File>Copy Current Connection to Site Manager**.

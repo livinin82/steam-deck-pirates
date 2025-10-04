@@ -16,7 +16,7 @@ nav_order: 4
 
 <table>
 <tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <ul>
     <li>Install <strong>FlatSeal</strong> from the <strong>Discover Store</strong></li>
     <li>Open <strong>FlatSeal</strong></li>
@@ -37,7 +37,7 @@ nav_order: 4
     </li>
     <li>Close whatever app was having trouble seeing your folders and open it and try again</li>
 </ul>
-</td>
+</div>
 </tr>
 </table>
 

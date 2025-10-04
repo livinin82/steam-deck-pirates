@@ -15,22 +15,16 @@ If your game is already in a preinstalled state, skip to **Part 3**.
 
 
 
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <strong>Method 1: Using Wine</strong>
 <ul>
     <li>Right-click setup.exe and select Wine.</li>
     <li>Limit the installer to 2GB of RAM.</li>
     <li>Install to your preferred location for games.</li>
 </ul>
-</td>
-</tr>
-</table>
+</div>
 
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <strong>Method 2: Using Steam Compatibility Tool</strong>
 <ul>
     <li>Switch your Steam Deck to desktop mode (in the Power settings menu).</li>
@@ -42,21 +36,15 @@ If your game is already in a preinstalled state, skip to **Part 3**.
     <li>Create a new folder called Games in <code>/home/deck/</code>.</li>
     <li>Go back to Steam, click on setup.exe, and press Play.</li>
 </ul>
-</td>
-</tr>
-</table>
+</div>
 
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <strong>Continued from either method:</strong>
 <ul>
     <li>Wait for the installation to complete.</li>
     <li>Once done, check off all the radio boxes in the installer and close it.</li>
 </ul>
-</td>
-</tr>
-</table>
+</div>
 
 **Note:** FG repacks default to the D drive, and DoDi repacks default to the C drive.
 
@@ -65,9 +53,7 @@ If your game is already in a preinstalled state, skip to **Part 3**.
 > [!WARNING]
 > Be patient. Sometimes, it can take a while for the installer to appear.
 
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <ul>
     <li>Once it does, select your preferred language (e.g., English) and click Next.</li>
     <li>Follow the installer steps. Make sure to:
@@ -82,17 +68,13 @@ If your game is already in a preinstalled state, skip to **Part 3**.
         </ul>
     </li>
 </ul>
-</td>
-</tr>
-</table>
+</div>
 
 > [!NOTE]
 > Don’t worry if the installation is slow, especially for repacks. This is normal and can take hours depending on game size and compression.
 
 #### Part 3: Running the Game
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <strong>Method 1: Using Wine</strong>
 <ul>
     <li>Once the installation is complete, go to the installation folder and locate the game’s .exe file (e.g., <code>game.exe</code>).</li>
@@ -104,12 +86,8 @@ If your game is already in a preinstalled state, skip to **Part 3**.
     <li>Run the game in Desktop mode to verify it works correctly.</li>
     <li>Once verified, you can rename it in Steam to whatever you prefer, and then switch back to Gaming mode to play.</li>
 </ul>
-</td>
-</tr>
-</table>
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+</div>
+<div class="panel">
 <strong>Method 2: Using Steam Compatibility Tool</strong>
 <ul>
     <li>Once the installation is complete, go back to Steam and remove <code>setup.exe</code> (right-click > Manage > Remove non-Steam game).</li>
@@ -120,16 +98,12 @@ If your game is already in a preinstalled state, skip to **Part 3**.
     <li>Exit the game. You can rename it in Steam to whatever you prefer (otherwise, it’ll show as <code>game.exe</code> in gaming mode).</li>
     <li>Switch back to Gaming mode and enjoy your game!</li>
 </ul>
-</td>
-</tr>
-</table>
+</div>
 
 > [!NOTE]
 > If it shows an error or doesn’t run: Either the Proton version is incorrect (try different ones) or there’s a missing dependency. If it's the latter, refer to a dependencies guide ([Dependencies Guide](#installing-dependencies)).
 
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <strong>Additional Notes</strong>
 <ul>
     <li>Some downloads may come in <code>.rar</code> files. Extract these using an app like PeaZip before proceeding to Step 2.</li>
@@ -143,6 +117,4 @@ If your game is already in a preinstalled state, skip to **Part 3**.
     <li>Some games require specific Proton versions. Search Reddit for recommendations, and use ProtonUp-QT to download other Proton versions if needed.</li>
     <li>This guide should help you install and configure non-Steam games on your Steam Deck. Enjoy gaming!</li>
 </ul>
-</td>
-</tr>
-</table>
+</div>

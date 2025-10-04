@@ -10,7 +10,7 @@ EmuDeck is a collection of scripts that allows you to autoconfigure your Steam D
 #### Installing EmuDeck
 <table>
 <tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <ol>
     <li>If you are using an SD Card, format your SD Card in Game Mode on SteamOS. SD Cards need to be formatted as ext4 (or btrfs) to be compatible with EmuDeck.
         <ul><li><strong>Skip</strong> this step if you have already formatted your SD Card</li></ul>
@@ -34,7 +34,7 @@ EmuDeck is a collection of scripts that allows you to autoconfigure your Steam D
     </li>
     <li>Close Steam ROM Manager. Click <code>Return to Game Mode</code> on your desktop and your EmuDeck install is now complete!</li>
 </ol>
-</td>
+</div>
 </tr>
 </table>
 

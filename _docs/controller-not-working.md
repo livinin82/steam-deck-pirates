@@ -12,9 +12,7 @@ nav_order: 7
 #### Steam Input
 In most cases you can disable Steam Input in the Game Menu and that alone should solve the issue.
 
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <strong>In Desktop Mode:</strong>
 <ul>
     <li>Select your game in Steam</li>
@@ -24,18 +22,14 @@ In most cases you can disable Steam Input in the Game Menu and that alone should
     <li>Next to <code>Override for [Game Name]</code> click the dropdown</li>
     <li>Select <code>Disable Steam Input</code></li>
 </ul>
-</td>
-</tr>
-</table>
+</div>
 
 #### Finding Community Layouts
 There are also **Community Layouts**. These are layouts made by (you guessed it) the community on steam. These are searched through steam based on what they are named in the Steam Interface. Sometimes this yields results, but often for me it hasn't.
 
 A couple of people have reported being able to pinpoint the search by changing the shortcut name to the Steam URL listing number:
 
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<div class="panel">
 <strong>In Desktop mode:</strong>
 <ul>
     <li>Open <a href="https://steamdb.info">SteamDB</a></li>
@@ -49,6 +43,4 @@ A couple of people have reported being able to pinpoint the search by changing t
     <li>Close the settings</li>
     <li>Click on the Controller Icon next to the Gear Icon, click on the Layout Selector (above <strong>View Layout</strong> and <strong>Edit Layout</strong>)</li>
 </ul>
-</td>
-</tr>
-</table>
+</div>
