@@ -5,58 +5,6 @@ layout: default
 
 # <div align="center">🏴‍☠️ Steam Deck Pirates' Cove 🏴‍☠️</div>
 
-## Table of Contents
-
-1. [Info About Steam Deck](#info-about-steam-deck)
-   - [Game Mode](#game-mode)
-   - [Desktop Mode](#desktop-mode)
-   - [Wine](#wine)
-   - [Proton](#proton)
-     - [Steam's Official Proton](#steams-official-proton)
-     - [GE-Proton](#ge-proton)
-   - [Prefixes](#prefixes)
-   - [Launchers](#launchers)
-   - [Decky Plugins](#decky-plugins)
-
-2. [Apps you NEED TO have installed](#apps-you-need-to-have-installed)
-
-3. [Guides for installing games](#guides-for-installing-games)
-   - [Installing games through Steam](#installing-games-through-steam)
-     - [Part 1: Running the setup.exe](#part-1-running-the-setupexe)
-     - [Part 2: Installation](#part-2-installation)
-     - [Part 3: Running the Game](#part-3-running-the-game)
-   - [Installing games through Lutris](#installing-games-through-lutris)
-   - [Installing Games through other launchers](#installing-games-through-other-launchers)
-   - [Transferring Installed Games from PC](#transferring-installed-games-from-pc)
-     - [SSH (Network File Sharing)](#ssh-network-file-sharing)
-     - [FTP (Slower Network Sharing, Needs an App)](#ftp-slower-network-sharing-needs-an-app)
-     - [MTP (USB Sharing)](#mtp-usb-sharing)
-
-4. [Guides for Proton/Wine](#guides-for-protonwine)
-   - [Finding Non-Steam Game Proton Folder](#finding-non-steam-game-proton-folder)
-   - [Installing Dependencies](#installing-dependencies)
-     - [What are dependencies?](#what-are-dependencies)
-     - [How to find what dependencies are needed for your game](#how-to-find-what-dependencies-are-needed-for-your-game)
-     - [Where to get dependencies](#where-to-get-dependencies)
-     - [Installing with ProtonTricks](#installing-with-protontricks)
-     - [Installing manually (with an installer, still in ProtonTricks)](#installing-manually-with-an-installer-still-in-protontricks)
-
-5. [Guides for emulators and roms](#guides-for-emulators-and-roms)
-   - [Emudeck](#emudeck)
-     - [Installing EmuDeck](#installing-emudeck)
-   - [RetroDeck](#retrodeck)
-     - [Installing RetroDeck](#installing-retrodeck)
-   - [Individual emulators](#individual-emulators)
-   - [Switch Emulation](#switch-emulation)
-     - [Recommended Emulators](#recommended-emulators)
-     - [Switch Emulator Performance](#switch-emulator-performance)
-   - [BIOS, ROMs, and other files](#bios-roms-and-other-files)
-   - [PC Ports](#pc-ports)
-
-6. [Cracks/DLC/Updates](#cracksdlcupdates)
-
----
-
 ## Info About Steam Deck
 
 ### Game Mode

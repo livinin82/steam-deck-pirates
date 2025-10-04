@@ -10,7 +10,7 @@ search_enabled: true
 
 collections:
   docs:
-    output: true
+    output: false  # disable separate docs pages; we now run single-page app style
     permalink: /:collection/:name
 
 permalink: pretty
@@ -33,6 +33,7 @@ exclude:
   - .gitignore
   - scripts/
   - Gemfile*
+  - _docs/*.md
 
 # Simple nav configuration (optional manual ordering override)
 nav_parents_order:

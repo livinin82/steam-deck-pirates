@@ -17,83 +17,80 @@
     <aside class="sidebar" role="complementary" aria-label="Sidebar navigation">
       <div class="brand">🏴‍☠️ {{ site.title }}</div>
       <nav class="nav" role="navigation" aria-label="Primary">
-  <a href="{{ site.baseurl }}/" class="nav-root" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
-        {%- comment -%}
-          Updated navigation reflecting consolidated pages with anchor links.
-        {%- endcomment -%}
-        <div class="nav-section">
-          <div class="nav-section-title">Info About Steam Deck</div>
+        <a href="{{ site.baseurl }}/" class="nav-root" aria-current="page">Home</a>
+        <!-- Anchor-only navigation -->
+        <div class="nav-section" data-section="info">
+          <div class="nav-section-title"><button class="nav-section-toggle" type="button" aria-expanded="true">–</button> Info About Steam Deck</div>
           <ul>
-            <li><a href="{{ site.baseurl }}/docs/info" class="{% if page.url == '/docs/info' %}active{% endif %}" {% if page.url == '/docs/info' %}aria-current="page"{% endif %}>Overview</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/info#game-mode">Game Mode</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/info#desktop-mode">Desktop Mode</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/info#wine">Wine</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/info#proton">Proton</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/info#prefixes">Prefixes</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/info#launchers">Launchers</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/info#decky-plugins">Decky Plugins</a></li>
+            <li class="small"><a href="#info-about-steam-deck">Overview</a></li>
+            <li class="small"><a href="#game-mode">Game Mode</a></li>
+            <li class="small"><a href="#desktop-mode">Desktop Mode</a></li>
+            <li class="small"><a href="#wine">Wine</a></li>
+            <li class="small"><a href="#proton">Proton</a></li>
+            <li class="small"><a href="#prefixes">Prefixes</a></li>
+            <li class="small"><a href="#launchers">Launchers</a></li>
+            <li class="small"><a href="#decky-plugins">Decky Plugins</a></li>
           </ul>
         </div>
-        <div class="nav-section">
-          <div class="nav-section-title">Apps you NEED TO have installed</div>
+        <div class="nav-section" data-section="apps">
+          <div class="nav-section-title"><button class="nav-section-toggle" type="button" aria-expanded="true">–</button> Apps</div>
           <ul>
-            <li><a href="{{ site.baseurl }}/docs/apps" class="{% if page.url == '/docs/apps' %}active{% endif %}" {% if page.url == '/docs/apps' %}aria-current="page"{% endif %}>Apps you NEED TO have installed</a></li>
+            <li class="small"><a href="#apps-you-need-to-have-installed">All Apps</a></li>
           </ul>
         </div>
-        <div class="nav-section">
-          <div class="nav-section-title">Guides for installing games</div>
+        <div class="nav-section" data-section="installing">
+          <div class="nav-section-title"><button class="nav-section-toggle" type="button" aria-expanded="true">–</button> Installing Games</div>
           <ul>
-            <li><a href="{{ site.baseurl }}/docs/installing-games" class="{% if page.url == '/docs/installing-games' %}active{% endif %}" {% if page.url == '/docs/installing-games' %}aria-current="page"{% endif %}>Overview</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/installing-games#installing-games-through-steam">Steam</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/installing-games#installing-games-through-lutris">Lutris</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/installing-games#installing-games-through-other-launchers">Other launchers</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/installing-games#transferring-installed-games-from-pc">Transfer from PC</a></li>
+            <li class="small"><a href="#guides-for-installing-games">Overview</a></li>
+            <li class="small"><a href="#installing-games-through-steam">Steam</a></li>
+            <li class="small"><a href="#installing-games-through-lutris">Lutris</a></li>
+            <li class="small"><a href="#installing-games-through-other-launchers">Other launchers</a></li>
+            <li class="small"><a href="#transferring-installed-games-from-pc">Transfer from PC</a></li>
           </ul>
         </div>
         <div class="nav-section" data-section="proton">
-          <div class="nav-section-title"><button class="nav-section-toggle" type="button" aria-expanded="true" aria-label="Collapse section">–</button> Guides for Proton/Wine</div>
+          <div class="nav-section-title"><button class="nav-section-toggle" type="button" aria-expanded="true">–</button> Proton/Wine</div>
           <ul>
-            <li><a href="{{ site.baseurl }}/docs/proton-wine" class="{% if page.url == '/docs/proton-wine' %}active{% endif %}" {% if page.url == '/docs/proton-wine' %}aria-current="page"{% endif %}>Overview</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/proton-wine#finding-proton-folder">Finding Proton Folder</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/proton-wine#installing-dependencies">Installing Dependencies</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/proton-wine#adding-dlls-to-proton">Adding DLLs</a></li>
+            <li class="small"><a href="#guides-for-protonwine">Overview</a></li>
+            <li class="small"><a href="#finding-non-steam-game-proton-folder">Finding Proton Folder</a></li>
+            <li class="small"><a href="#installing-dependencies">Installing Dependencies</a></li>
+            <li class="small"><a href="#adding-dlls-to-proton">Adding DLLs</a></li>
           </ul>
         </div>
-        <div class="nav-section">
-          <div class="nav-section-title">Guides for emulators and roms</div>
+        <div class="nav-section" data-section="emulators">
+          <div class="nav-section-title"><button class="nav-section-toggle" type="button" aria-expanded="true">–</button> Emulation</div>
           <ul>
-            <li><a href="{{ site.baseurl }}/docs/emulation-overview" class="{% if page.url == '/docs/emulation-overview' %}active{% endif %}" {% if page.url == '/docs/emulation-overview' %}aria-current="page"{% endif %}>Overview</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/emulation-overview#why-use-frontends">Why Use Frontends</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/emulation-overview#installing-emudeck">EmuDeck</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/emulation-overview#installing-retrodeck">RetroDeck</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/emulation-overview#individual-emulators-vs-frontends">Individual emulators</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/emulation-overview#switch-emulation">Switch Emulation</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/emulation-overview#bios-roms-and-other-files">BIOS, ROMs, and other files</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/emulation-overview#pc-ports-vs-emulation">PC Ports</a></li>
+            <li class="small"><a href="#guides-for-emulators-and-roms">Overview</a></li>
+            <li class="small"><a href="#emudeck">EmuDeck</a></li>
+            <li class="small"><a href="#retrodeck">RetroDeck</a></li>
+            <li class="small"><a href="#individual-emulators">Individual emulators</a></li>
+            <li class="small"><a href="#switch-emulation">Switch Emulation</a></li>
+            <li class="small"><a href="#bios-roms-and-other-files">BIOS/ROMs</a></li>
+            <li class="small"><a href="#pc-ports">PC Ports</a></li>
           </ul>
         </div>
-        <div class="nav-section">
-          <div class="nav-section-title">Cracks/DLC/Updates</div>
+        <div class="nav-section" data-section="cracks">
+          <div class="nav-section-title"><button class="nav-section-toggle" type="button" aria-expanded="true">–</button> Cracks/DLC</div>
           <ul>
-            <li><a href="{{ site.baseurl }}/docs/cracks-dlc-updates" class="{% if page.url == '/docs/cracks-dlc-updates' %}active{% endif %}" {% if page.url == '/docs/cracks-dlc-updates' %}aria-current="page"{% endif %}>Cracks/DLC/Updates</a></li>
+            <li class="small"><a href="#cracksdlcupdates">Cracks/DLC/Updates</a></li>
           </ul>
         </div>
         <div class="nav-section" data-section="common">
-          <div class="nav-section-title"><button class="nav-section-toggle" type="button" aria-expanded="true" aria-label="Collapse section">–</button> Common Questions</div>
+          <div class="nav-section-title"><button class="nav-section-toggle" type="button" aria-expanded="true">–</button> Common Q's</div>
           <ul>
-            <li><a href="{{ site.baseurl }}/docs/common-questions" class="{% if page.url == '/docs/common-questions' %}active{% endif %}" {% if page.url == '/docs/common-questions' %}aria-current="page"{% endif %}>Overview</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#compressed-files">Compressed Files</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#iso-files">ISO Files</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#install-locations">Install Locations</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#cant-see-external-hddsd-cardhome-folder">Can't see external HDD/SD Card</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#cant-find-save-files">Can't find save files</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#how-do-i-movebackup-my-save-files">Move/backup save files</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#controller-not-working">Controller not working</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#game-opens-steam">Game opens steam</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#no-licenses">No licenses</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#games-suddenly-wont-open-or-close">Games won't open</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#game-tries-to-load-and-immediately-stops">Game stops immediately</a></li>
-            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#mods-wont-load">Mods won't load</a></li>
+            <li class="small"><a href="#common-questionsthings-you-will-encounter">Overview</a></li>
+            <li class="small"><a href="#compressed-files-rar-zip-7z-etc">Compressed Files</a></li>
+            <li class="small"><a href="#iso-files">ISO Files</a></li>
+            <li class="small"><a href="#install-locations">Install Locations</a></li>
+            <li class="small"><a href="#cant-see-external-hddsd-cardhome-folder">External Drives</a></li>
+            <li class="small"><a href="#cant-find-save-files">Save Files</a></li>
+            <li class="small"><a href="#how-do-i-movebackup-my-save-files">Backup Saves</a></li>
+            <li class="small"><a href="#controller-not-working">Controller Issues</a></li>
+            <li class="small"><a href="#game-opens-steam">Game opens Steam</a></li>
+            <li class="small"><a href="#no-licenses">No licenses</a></li>
+            <li class="small"><a href="#games-suddenly-wont-open-or-close">Won't open/close</a></li>
+            <li class="small"><a href="#game-tries-to-load-and-immediately-stops">Stops Immediately</a></li>
+            <li class="small"><a href="#mods-wont-load">Mods won't load</a></li>
           </ul>
         </div>
       </nav>
@@ -115,164 +112,104 @@
           (function(){
             const STORAGE_KEY = 'sdp-theme';
             const mql = window.matchMedia('(prefers-color-scheme: dark)');
-            const prefersDark = mql.matches;
             const saved = localStorage.getItem(STORAGE_KEY);
-            const applied = saved || (prefersDark ? 'dark' : 'light');
-            if(applied === 'light') document.documentElement.setAttribute('data-theme','light');
+            const applied = saved || (mql.matches ? 'dark':'light');
             function setTheme(mode){
-              if(mode === 'light') document.documentElement.setAttribute('data-theme','light');
+              if(mode==='light') document.documentElement.setAttribute('data-theme','light');
               else document.documentElement.removeAttribute('data-theme');
               localStorage.setItem(STORAGE_KEY,mode);
-              const btn = document.getElementById('themeToggle');
-              if(btn){
-                const isLight = mode==='light';
-                btn.querySelector('.icon').textContent = isLight ? '☀️' : '🌙';
-                btn.querySelector('.label').textContent = isLight ? 'Light' : 'Dark';
-              }
-              if(window.renderMermaid) { window.renderMermaid(); }
+              const btn=document.getElementById('themeToggle');
+              if(btn){ const light=mode==='light'; btn.querySelector('.icon').textContent=light?'☀️':'🌙'; btn.querySelector('.label').textContent=light?'Light':'Dark'; }
+              if(window.renderMermaid){ window.renderMermaid(); }
             }
-            window.__setTheme = setTheme;
             document.addEventListener('DOMContentLoaded',()=>{
-              const btn = document.getElementById('themeToggle');
-              if(!btn) return;
-              btn.addEventListener('click',()=>{
-                const current = document.documentElement.getAttribute('data-theme')==='light' ? 'light':'dark';
+              document.getElementById('themeToggle').addEventListener('click',()=>{
+                const current=document.documentElement.getAttribute('data-theme')==='light'?'light':'dark';
                 setTheme(current==='light'?'dark':'light');
               });
               setTheme(applied);
             });
-            mql.addEventListener('change', e => {
-              if(!localStorage.getItem(STORAGE_KEY)){
-                setTheme(e.matches ? 'dark' : 'light');
-              }
-            });
+            mql.addEventListener('change', e=>{ if(!localStorage.getItem(STORAGE_KEY)) setTheme(e.matches?'dark':'light'); });
           })();
         </script>
       </header>
       <article id="main-content" class="doc markdown-body">{{ content }}</article>
       <button id="backToTop" type="button" aria-label="Back to top">Top</button>
       <script>
-        // Mobile sidebar toggle + collapsible sections + scroll state
+        // Sidebar toggle & collapsibles
         (function(){
-          const toggle = document.getElementById('menuToggle');
-          const sidebar = document.querySelector('.sidebar');
-          if(!toggle || !sidebar) return;
+          const toggle=document.getElementById('menuToggle');
+          const sidebar=document.querySelector('.sidebar');
           toggle.addEventListener('click',()=>{
-            const open = sidebar.classList.toggle('open');
+            const open=sidebar.classList.toggle('open');
             toggle.setAttribute('aria-expanded',open?'true':'false');
             document.body.classList.toggle('nav-open',open);
           });
-          document.addEventListener('keydown',e=>{ if(e.key==='Escape' && sidebar.classList.contains('open')){ sidebar.classList.remove('open'); document.body.classList.remove('nav-open'); toggle.setAttribute('aria-expanded','false'); }});
-          const sectionStatesKey = 'sdp-section-states';
-            let states = {};
-            try{ states = JSON.parse(localStorage.getItem(sectionStatesKey)||'{}'); }catch(_){states={}};
+          document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&sidebar.classList.contains('open')){ sidebar.classList.remove('open'); document.body.classList.remove('nav-open'); toggle.setAttribute('aria-expanded','false'); }});
+          const sectionStatesKey='sdp-section-states';
+          let states={};
+          try{ states=JSON.parse(localStorage.getItem(sectionStatesKey)||'{}'); }catch(_){states={}};
           document.querySelectorAll('.nav-section').forEach(sec=>{
-            const id = sec.getAttribute('data-section');
-            const btn = sec.querySelector('.nav-section-toggle');
-            if(!btn || !id) return;
-            if(states[id] === 'collapsed'){
+            const id=sec.getAttribute('data-section');
+            const btn=sec.querySelector('.nav-section-toggle');
+            if(!btn||!id) return;
+            if(states[id]==='collapsed'){
               sec.classList.add('collapsed');
               btn.setAttribute('aria-expanded','false');
-              btn.textContent = '+';
+              btn.textContent='+';
             }
             btn.addEventListener('click',()=>{
-              const collapsed = sec.classList.toggle('collapsed');
-              btn.setAttribute('aria-expanded', collapsed ? 'false':'true');
-              btn.textContent = collapsed ? '+' : '–';
-              states[id] = collapsed ? 'collapsed':'expanded';
+              const collapsed=sec.classList.toggle('collapsed');
+              btn.setAttribute('aria-expanded',collapsed?'false':'true');
+              btn.textContent=collapsed?'+':'–';
+              states[id]=collapsed?'collapsed':'expanded';
               localStorage.setItem(sectionStatesKey, JSON.stringify(states));
             });
           });
-          const scrollKey = 'sdp-sidebar-scroll';
-          sidebar.scrollTop = +(localStorage.getItem(scrollKey)||0);
-          sidebar.addEventListener('scroll',()=>{ localStorage.setItem(scrollKey, sidebar.scrollTop); });
+          const scrollKey='sdp-sidebar-scroll';
+          sidebar.scrollTop=+(localStorage.getItem(scrollKey)||0);
+          sidebar.addEventListener('scroll',()=>localStorage.setItem(scrollKey, sidebar.scrollTop));
         })();
-        // Scroll spy (single highlight) + back to top
+        // Scroll spy for single-page anchors
         (function(){
-          const backBtn = document.getElementById('backToTop');
-          backBtn.addEventListener('click',()=>{ window.scrollTo({top:0,behavior:'smooth'}); });
-          const headings = Array.from(document.querySelectorAll('.doc h2, .doc h3'))
-            .filter(h=>h.id);
-          const linkMap = new Map();
-          const navLinks = document.querySelectorAll('.nav a');
-          navLinks.forEach(a=>{
-            const href = a.getAttribute('href')||'';
-            if(href.includes('#')){
-              const hash = href.split('#')[1];
-              if(hash) linkMap.set(hash,a);
-            }
-          });
-          let activeId = null;
-          const observer = new IntersectionObserver(entries=>{
+          const backBtn=document.getElementById('backToTop');
+            backBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+          const headings=Array.from(document.querySelectorAll('.doc h2, .doc h3')).filter(h=>h.id);
+          const navLinks=document.querySelectorAll('.nav a[href^="#"]');
+          const map=new Map();
+          navLinks.forEach(a=>{ const hash=a.getAttribute('href').slice(1); map.set(hash,a); });
+          let active=null;
+          const obs=new IntersectionObserver(entries=>{
             entries.forEach(entry=>{
-              if(entry.isIntersecting){
-                activeId = entry.target.id;
-                update();
-              }
+              if(entry.isIntersecting){ active=entry.target.id; update(); }
             });
-          },{ rootMargin:'-55% 0px -40% 0px', threshold:[0,1]});
+          },{rootMargin:'-55% 0px -40% 0px',threshold:[0,1]});
           function update(){
-            navLinks.forEach(a=>{ a.classList.remove('spy-active'); if(a.getAttribute('data-anchor')==='true') a.removeAttribute('aria-current'); });
-            if(activeId && linkMap.has(activeId)){
-              const link = linkMap.get(activeId);
+            navLinks.forEach(a=>{ a.classList.remove('spy-active'); a.removeAttribute('aria-current'); });
+            if(active&&map.has(active)){
+              const link=map.get(active);
               link.classList.add('spy-active');
-              link.setAttribute('data-anchor','true');
               link.setAttribute('aria-current','true');
             }
           }
-          headings.forEach(h=>observer.observe(h));
-          window.addEventListener('scroll',()=>{
-            const y = window.scrollY || document.documentElement.scrollTop;
-            if(y>400) backBtn.classList.add('visible'); else backBtn.classList.remove('visible');
-          });
+          headings.forEach(h=>obs.observe(h));
+          window.addEventListener('scroll',()=>{ const y=window.scrollY||document.documentElement.scrollTop; if(y>400) backBtn.classList.add('visible'); else backBtn.classList.remove('visible'); });
         })();
-        // Transform admonitions
+        // Admonitions
         (function(){
-          const map = { NOTE:'note', WARNING:'warning', CAUTION:'caution', TIP:'tip', IMPORTANT:'important' };
+          const map={ NOTE:'note', WARNING:'warning', CAUTION:'caution', TIP:'tip', IMPORTANT:'important' };
           document.querySelectorAll('.markdown-body blockquote').forEach(bq=>{
-            const first = bq.firstElementChild || bq.firstChild;
-            if(!first) return;
-            const text = (first.textContent||'').trim();
-            const m = text.match(/^\[(?:!)([A-Z]+)]/);
-            if(m){
-              const key = m[1];
-              const kind = map[key];
-              if(kind){
-                bq.classList.add('admonition', 'admonition-'+kind);
-                first.textContent = first.textContent.replace(/^\[!([A-Z]+)]\s*/,'');
-                const label = document.createElement('div');
-                label.className='admonition-title';
-                const title = key.charAt(0)+key.slice(1).toLowerCase();
-                label.textContent = title;
-                bq.insertBefore(label, bq.firstChild);
-              }
-            }
+            const first=bq.firstElementChild||bq.firstChild; if(!first) return;
+            const text=(first.textContent||'').trim();
+            const m=text.match(/^\[(?:!)([A-Z]+)]/);
+            if(m){ const key=m[1]; const kind=map[key]; if(kind){ bq.classList.add('admonition','admonition-'+kind); first.textContent=first.textContent.replace(/^\[!([A-Z]+)]\s*/,''); const label=document.createElement('div'); label.className='admonition-title'; label.textContent=key.charAt(0)+key.slice(1).toLowerCase(); bq.insertBefore(label,bq.firstChild); }}
           });
         })();
-        // Mermaid loader
+        // Mermaid
         (function(){
-          function load(){
-            if(window.mermaid){ render(); return; }
-            const s=document.createElement('script');
-            s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';
-            s.onload=render; document.head.appendChild(s);
-          }
-          function render(){
-            if(!window.mermaid) return;
-            const dark = document.documentElement.getAttribute('data-theme')!=='light';
-            window.mermaid.initialize({ startOnLoad:false, theme: dark? 'dark':'default' });
-            document.querySelectorAll('code.language-mermaid, pre code.mermaid').forEach(block=>{
-              const parent = block.closest('pre') || block.parentElement;
-              const code = block.textContent.trim();
-              const wrapper = document.createElement('div');
-              wrapper.className='mermaid';
-              wrapper.textContent = code;
-              parent.replaceWith(wrapper);
-            });
-            window.mermaid.init(undefined, document.querySelectorAll('.mermaid'));
-          }
-          window.renderMermaid = render;
-          if(document.readyState!=='loading') load(); else document.addEventListener('DOMContentLoaded',load);
+          function load(){ if(window.mermaid){ render(); return;} const s=document.createElement('script'); s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js'; s.onload=render; document.head.appendChild(s); }
+          function render(){ if(!window.mermaid) return; const dark=document.documentElement.getAttribute('data-theme')!=='light'; window.mermaid.initialize({startOnLoad:false, theme:dark?'dark':'default'}); document.querySelectorAll('code.language-mermaid, pre code.mermaid').forEach(block=>{ const parent=block.closest('pre')||block.parentElement; const code=block.textContent.trim(); const wrapper=document.createElement('div'); wrapper.className='mermaid'; wrapper.textContent=code; parent.replaceWith(wrapper); }); window.mermaid.init(undefined, document.querySelectorAll('.mermaid')); }
+          window.renderMermaid=render; if(document.readyState!=='loading') load(); else document.addEventListener('DOMContentLoaded',load);
         })();
       </script>
     </main>
