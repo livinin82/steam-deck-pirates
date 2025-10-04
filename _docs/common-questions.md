@@ -2,34 +2,7 @@
 title: Common Questions
 id: common-questions
 nav_order: 7
-subsections:
-    - title: Compressed Files
-        anchor: compressed-files
-    - title: ISO Files
-        anchor: iso-files
-    - title: Install Locations
-        anchor: install-locations
-    - title: Can't see HDD/SD
-        anchor: cant-see-external-hddsd-cardhome-folder
-    - title: Can't find saves
-        anchor: cant-find-save-files
-    - title: Move/backup saves
-        anchor: how-do-i-movebackup-my-save-files
-    - title: Controller issues
-        anchor: controller-not-working
-    - title: Game opens Steam
-        anchor: game-opens-steam
-    - title: No licenses
-        anchor: no-licenses
-    - title: Games won't open
-        anchor: games-suddenly-wont-open-or-close
-    - title: Game stops
-        anchor: game-tries-to-load-and-immediately-stops
-    - title: Mods won't load
-        anchor: mods-wont-load
----
-
-# Common questions/Things you will encounter
+---# Common questions/Things you will encounter
 
 Use the quick links below to jump to a topic:
 
