@@ -17,11 +17,11 @@
 	--color-panel-soft-bg:#18212b;
 	--color-panel-soft-border:#233040;
 	/* Admonition variant colors (dark) */
-	--adm-note-color:#2d6cdf; --adm-note-bg:rgba(45,108,223,.15);
-	--adm-tip-color:#16a34a; --adm-tip-bg:rgba(22,163,74,.18);
-	--adm-important-color:#8b5cf6; --adm-important-bg:rgba(139,92,246,.18);
-	--adm-warning-color:#f59e0b; --adm-warning-bg:rgba(245,158,11,.20);
-	--adm-caution-color:#dc2626; --adm-caution-bg:rgba(220,38,38,.22);
+	--adm-note-color:#15803d; --adm-note-bg:rgba(21,128,61,.18); /* green */
+	--adm-tip-color:#15803d; --adm-tip-bg:rgba(21,128,61,.18); /* align tip with note (green family) */
+	--adm-important-color:#2563eb; --adm-important-bg:rgba(37,99,235,.18); /* blue for important */
+	--adm-warning-color:#f59e0b; --adm-warning-bg:rgba(245,158,11,.22); /* yellow/orange */
+	--adm-caution-color:#dc2626; --adm-caution-bg:rgba(220,38,38,.25); /* red */
 }
 [data-theme='light']{
 	--color-bg:#f7f9fc;
@@ -38,11 +38,11 @@
 	--color-panel-soft-bg:#e3f2fd;
 	--color-panel-soft-border:#c6d9eb;
 	/* Admonition variant colors (light) */
-	--adm-note-color:#1d4ed8; --adm-note-bg:rgba(29,78,216,.08);
-	--adm-tip-color:#15803d; --adm-tip-bg:rgba(21,128,61,.10);
-	--adm-important-color:#7e22ce; --adm-important-bg:rgba(126,34,206,.10);
-	--adm-warning-color:#b45309; --adm-warning-bg:rgba(180,83,9,.12);
-	--adm-caution-color:#b91c1c; --adm-caution-bg:rgba(185,28,28,.13);
+	--adm-note-color:#15803d; --adm-note-bg:rgba(21,128,61,.12);
+	--adm-tip-color:#15803d; --adm-tip-bg:rgba(21,128,61,.12);
+	--adm-important-color:#1d4ed8; --adm-important-bg:rgba(29,78,216,.10);
+	--adm-warning-color:#b45309; --adm-warning-bg:rgba(180,83,9,.16);
+	--adm-caution-color:#b91c1c; --adm-caution-bg:rgba(185,28,28,.18);
 }
 body{margin:0;font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--color-bg);color:var(--color-text);line-height:1.55;-webkit-font-smoothing:antialiased;transition:.25s background,.25s color}
 .layout{display:flex;min-height:100vh}
