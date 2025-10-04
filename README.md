@@ -1075,35 +1075,36 @@ If this shows it means your crack isn't working. Make sure you copied the files 
 
 #### Is Proton Enabled?
 > [!NOTE]
-> In some instances, for some reason, Steam has turned off Proton in a non-steam game (not sure if widespread, but has happened to me)
-> Always (before troubleshooting anything else) make sure you have a **Proton** version of some sort enabled.
-
-
+> In some instances Steam may silently disable your forced Proton version for a non‑Steam shortcut.
+> Before doing anything else: open the shortcut's Properties and re‑enable a Proton version (start with Proton Experimental).
 
 #### Are there quotes around the target path?
 > [!NOTE]
-> Linux has trouble understanding file paths with spaces in them. It sees them as separate commands rather than folders.
-> For example: `/home/deck/Games/Tomb Raider` would not work properly. So in the **Target Path** in your game's settings has quotes around it. This will make Linux treat it as one path by contatining it in quotes and specifying every character (including spaces). You need to type it as `"/home/deck/Games/Tomb Raider"`
+> Paths containing spaces must be wrapped in quotes in Launch Options / Target field.
+> Example (GOOD): `"/home/deck/Games/Tomb Raider/game.exe"`
+> Example (BAD): `/home/deck/Games/Tomb Raider/game.exe`
 
 #### Are dependencies installed?
 > [!CAUTION]
-> If you are here, then that means you haven't been <a href="#installing-dependencies">here</a>.
+> Missing DirectX / VC++ / .NET components will cause silent exits. See the [Installing Dependencies](#installing-dependencies) section above and install what your game needs.
 
 ### Mods won't load
 > [!WARNING]
-> If your mods won't load, it could be a few things:
-> * A lot of times, mods use/alter/interact with DLL files. Try adding them to the prefix per this [section](#adding-dlls-to-proton).
-> * In some instances, there is a Linux version of the mod application you're trying to use, be sure to check into the source of the mod loader.
-> * Check this [guide](https://www.reddit.com/r/SteamDeckTricks/comments/xnmm32/game_modding_guide/) from [r/SteamDeckTricks](https://www.reddit.com/r/SteamDeckTricks/).
+> Possible causes:
+> * Required DLL overrides not applied (see [Adding DLLs to Proton](#adding-dlls-to-proton)).
+> * Using a Windows-only mod manager when a native / alternative method exists.
+> * Mod loader files placed in wrong prefix path.
+> * Incompatible Proton version (test Proton-GE or older Proton).
+> * Incorrect case-sensitive filenames on Linux.
 
 ---
-
 ## Other subreddits/groups
 #### Piracy Related
 - [Linux Crack Tips](https://www.reddit.com/r/LinuxCrackSupport/)
+- [Piracy](https://www.reddit.com/r/Piracy)
+- [FreeMediaHeckYeah](https://www.reddit.com/r/FREEMEDIAHECKYEAH)
 
 ---
-
 ## Useful Links
 - [ProtonDB](https://protondb.com/)
 - [SteamDB](https://steamdb.info/)
