@@ -35,9 +35,13 @@ exclude:
 
 # Simple nav configuration (optional manual ordering override)
 nav_parents_order:
-  - Installing Games
-  - Proton and Wine
-  - Other Resources
+  - Info About Steam Deck
+  - Apps you NEED TO have installed
+  - Guides for installing games
+  - Guides for Proton/Wine
+  - Guides for emulators and roms
+  - Cracks/DLC/Updates
+  - Common Questions
 
 sass:
   style: compressed
