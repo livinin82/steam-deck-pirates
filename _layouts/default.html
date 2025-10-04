@@ -25,17 +25,20 @@
         {% assign top_level = site.docs | where_exp: "d","d.parent == nil" | sort: 'nav_order' %}
         {% for top in top_level %}
           <div class="nav-section">
-            <div class="nav-section-title">
-              <a href="{{ top.url | relative_url }}" class="nav-section-link {% if page.url == top.url %}active{% endif %}" {% if page.url == top.url %}aria-current="page"{% endif %}>{{ top.title }}</a>
-            </div>
-            {% assign children = site.docs | where: 'parent', top.title | sort: 'nav_order' %}
-            {% if children.size > 0 %}
-              <ul>
+            <div class="nav-section-title">{{ top.title }}</div>
+            <ul>
+              <li><a href="{{ top.url | relative_url }}" class="{% if page.url == top.url %}active{% endif %}" {% if page.url == top.url %}aria-current="page"{% endif %}>{{ top.overview_label | default: top.title }}</a></li>
+              {% assign children = site.docs | where: 'parent', top.title | sort: 'nav_order' %}
+              {% if children.size > 0 %}
                 {% for doc in children %}
                   <li><a href="{{ doc.url | relative_url }}" class="{% if page.url == doc.url %}active{% endif %}" {% if page.url == doc.url %}aria-current="page"{% endif %}>{{ doc.title }}</a></li>
                 {% endfor %}
-              </ul>
-            {% endif %}
+              {% elsif top.subsections %}
+                {% for sub in top.subsections %}
+                  <li class="small"><a href="{{ top.url | relative_url }}#{{ sub.anchor }}" class="{% if page.url == top.url and page.content contains sub.anchor %}{% endif %}">{{ sub.title }}</a></li>
+                {% endfor %}
+              {% endif %}
+            </ul>
           </div>
         {% endfor %}
       </nav>

@@ -1,6 +1,21 @@
 ---
 title: Info About Steam Deck
 nav_order: 1
+subsections:
+	- title: Game Mode
+		anchor: game-mode
+	- title: Desktop Mode
+		anchor: desktop-mode
+	- title: Wine
+		anchor: wine
+	- title: Proton
+		anchor: proton
+	- title: Prefixes
+		anchor: prefixes
+	- title: Launchers
+		anchor: launchers
+	- title: Decky Plugins
+		anchor: decky-plugins
 ---
 
 # Info About Steam Deck

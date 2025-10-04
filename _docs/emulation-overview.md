@@ -1,6 +1,19 @@
 ---
 title: Guides for emulators and roms
 nav_order: 5
+subsections:
+  - title: Why Use Frontends
+    anchor: why-use-frontends
+  - title: Installing EmuDeck
+    anchor: installing-emudeck
+  - title: Installing RetroDeck
+    anchor: installing-retrodeck
+  - title: Switch Emulation
+    anchor: switch-emulation
+  - title: BIOS / ROMs
+    anchor: bios-roms-and-other-files
+  - title: Individual vs Frontends
+    anchor: individual-emulators-vs-frontends
 ---
 
 # Guides for emulators and roms
