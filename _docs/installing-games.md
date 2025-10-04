@@ -85,3 +85,17 @@ Use other launchers only if they add value (cloud saves, store integration).
 
 ### Warpinator
 <div class="panel"><strong>Deck:</strong><ol><li>Install Warpinator.</li><li>Set PIN.</li><li>Select download folder.</li></ol><strong>PC:</strong><ol><li>Install Warpinator/Winpinator.</li><li>Match PIN.</li><li>Send files.</li></ol></div>
+
+#### SSH (Network File Sharing) {#ssh-network-file-sharing}
+Below are step-by-step platform examples—enable SSH first (see steps above or reuse SSH Setup section):
+<div class="panel"><strong>Linux:</strong><ol><li>Terminal: <code>ssh deck@&lt;IP&gt;</code></li><li>Accept fingerprint.</li><li>Enter password.</li></ol><strong>Mac:</strong><ol><li>Open Terminal.</li><li><code>ssh deck@&lt;IP&gt;</code></li></ol><strong>Windows (PowerShell):</strong><ol><li><code>ssh deck@&lt;IP&gt;</code></li><li>Or use PuTTY GUI.</li></ol></div>
+> [!TIP] Use <code>scp -r folder deck@&lt;IP&gt;:~/Games/</code> for direct transfers.
+
+#### FTP (Slower Network Sharing, Needs an App) {#ftp-slower-network-sharing-needs-an-app}
+> [!NOTE] SFTP already provides secure file transfer via SSH; plain FTP is not recommended. If an app demands FTP, prefer SFTP mode.
+<div class="panel"><ul><li>Use an SFTP-capable client (FileZilla, WinSCP).</li><li>Host: Deck IP, Protocol: SFTP, User: <code>deck</code>.</li><li>Drag & drop game folder.</li></ul></div>
+
+#### MTP (USB Sharing) {#mtp-usb-sharing}
+> [!NOTE] Useful if network is slow/unreliable.
+<div class="panel"><ol><li>Boot Desktop Mode.</li><li>Connect USB-C cable Deck ↔ PC.</li><li>On Deck, confirm file sharing (if prompt appears).</li><li>Deck storage mounts on host as media device.</li><li>Copy files into <code>/home/deck/Games</code> (create if missing).</li></ol></div>
+> [!WARNING] Large single-file transfers may appear stalled; be patient—no compression.

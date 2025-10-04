@@ -52,6 +52,21 @@ PhysX: https://www.nvidia.com/en-us/drivers/physx/physx-9-19-0218-driver/
 > [!CAUTION]
 > Only download these from Microsoft / official sources or via ProtonTricks. Avoid shady mirrors.
 
+#### What are dependencies? {#what-are-dependencies}
+> [!NOTE] They are shared runtime components (VC++, DirectX, .NET, PhysX, Media Foundation) a game expects to exist. Without them: crashes, missing audio/video, or silent exit.
+
+#### How to find what dependencies are needed for your game {#how-to-find-what-dependencies-are-needed-for-your-game}
+<div class="panel"><ol><li>Open <a href="https://steamdb.info">SteamDB</a>.</li><li>Search the game.</li><li>Click <strong>Depots</strong>.</li><li>Note Windows-logo items referencing redistributables.</li><li>Match them to Official sources list above.</li></ol></div>
+
+#### Where to get dependencies {#where-to-get-dependencies}
+Official Microsoft links (listed above) or ProtonTricks components list. Avoid third-party aggregators.
+
+#### Installing with ProtonTricks {#installing-with-protontricks}
+Batch method shown above; repeat for any missing runtime after testing launch.
+
+#### Installing manually (with an installer, still in ProtonTricks) {#installing-manually-with-an-installer-still-in-protontricks}
+Use “Run explorer” to execute vendor-provided redistributable .exe inside the prefix when a repack bundles a Redist folder.
+
 ---
 ## Adding DLLs to Proton {#adding-dlls-to-proton}
 Used for mod loaders / API hooks (e.g., <code>dinput8.dll</code>, custom DirectX wrappers) when a project injects or overrides behavior.
