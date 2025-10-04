@@ -25,7 +25,7 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
 <strong>Enable SSH Daemon Service on your Deck:</strong>
 <ol>
     <li>Switch to Desktop Mode (<strong>STEAM</strong> button > <strong>Power</strong> > <strong>Switch to Desktop</strong>).</li>
-    <li>Open <strong>Konsole</strong> from <strong>All Applications</strong>.</li>
+    <li>Open&nbsp;<strong>Konsole</strong> from <strong>All Applications</strong>.</li>
     <li>Set a password for your user: <code>passwd</code></li>
     <li>Enable SSHD: <code>sudo systemctl enable sshd</code></li>
     <li>Start SSHD: <code>sudo systemctl start sshd</code></li>
@@ -97,7 +97,7 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
     <li>Find your Steam Deck's IP address (Settings > Internet).</li>
     <li><strong>Windows:</strong>
         <ul>
-            <li>Open <strong>File Explorer</strong>.</li>
+            <li>Open&nbsp;<strong>File Explorer</strong>.</li>
             <li>Right-click <strong>This PC</strong> &rarr; <strong>Add a network location</strong>.</li>
             <li>Choose <strong>Choose a custom network location</strong> &rarr; <strong>Next</strong>.</li>
             <li>Enter: <code>sftp://deck@&lt;SteamDeck_IP&gt;:/home/deck</code></li>
@@ -107,7 +107,7 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
     </li>
     <li><strong>Mac:</strong>
         <ul>
-            <li>Open <strong>Finder</strong>.</li>
+            <li>Open&nbsp;<strong>Finder</strong>.</li>
             <li>Click <strong>Go</strong> &rarr; <strong>Connect to Server...</strong></li>
             <li>Enter: <code>sftp://deck@&lt;SteamDeck_IP&gt;/home/deck</code></li>
             <li>Click <strong>Connect</strong> and enter your password.</li>
@@ -139,8 +139,8 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
 #### On Your Deck
 <div class="panel">
 <ol>
-    <li>Install <strong>Warpinator</strong> from the <strong>Discover Store</strong>.</li>
-    <li>Open <strong>Preferences</strong> and click <strong>Connection</strong> then set a unique PIN.</li>
+    <li>Install&nbsp;<strong>Warpinator</strong> from the <strong>Discover Store</strong>.</li>
+    <li>Open&nbsp;<strong>Preferences</strong> and click <strong>Connection</strong> then set a unique PIN.</li>
     <li>In the <strong>General</strong> tab, make sure you point the download folder to a place you can find. I chose my <strong>Games</strong> folder.
         <ul><li>If you don't have access to a certain location (like your SD card), use flatseal to give Warpinator Permissions.</li></ul>
     </li>

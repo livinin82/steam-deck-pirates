@@ -29,8 +29,8 @@ Use the quick links below to jump to a topic:
 <div class="panel panel--soft">
 <strong>Compressed files (.rar, .zip, .7z, etc.)</strong>
 <ol>
-    <li>Install <strong>PeaZip</strong> from the Discover Store</li>
-    <li>Open <strong>PeaZip</strong></li>
+    <li>Install&nbsp;<strong>PeaZip</strong> from the Discover Store</li>
+    <li>Open&nbsp;<strong>PeaZip</strong></li>
     <li>Click <em>File</em> then click <em>Open</em></li>
     <li>Find and open your compresed files. If there are multiple select all or select the one that ends in <code>.7z</code> <code>.zip</code> or <code>.rar</code>.</li>
     <li>Click <em>Extract</em></li>
@@ -55,8 +55,8 @@ Use the quick links below to jump to a topic:
 <div class="panel panel--soft">
 <strong>ISO Files</strong>
 <ol>
-    <li>Install <strong>PeaZip</strong> or <strong>PowerISO</strong> from the Discover Store</li>
-    <li>Open <strong>PeaZip</strong> or <strong>PowerISO</strong></li>
+    <li>Install&nbsp;<strong>PeaZip</strong> or&nbsp;<strong>PowerISO</strong> from the Discover Store</li>
+    <li>Open&nbsp;<strong>PeaZip</strong> or&nbsp;<strong>PowerISO</strong></li>
     <li>Click <em>File</em> then click <em>Open</em> (PeaZip will be <em>Open archive</em>).</li>
     <li>Find and open your <code>.iso</code>.</li>
     <li>Click <em>Extract</em></li>
@@ -91,8 +91,8 @@ Use the quick links below to jump to a topic:
 <div class="panel panel--soft">
 <strong>Flatseal permissions</strong>
 <ul>
-    <li>Install <strong>FlatSeal</strong> from the <strong>Discover Store</strong></li>
-    <li>Open <strong>FlatSeal</strong></li>
+    <li>Install&nbsp;<strong>FlatSeal</strong> from the <strong>Discover Store</strong></li>
+    <li>Open&nbsp;<strong>FlatSeal</strong></li>
     <li>On the left, select the app in question, in this example we'll use <strong>Lutris</strong></li>
     <li>Scroll down to <strong>Filesystem</strong>
         <ul>

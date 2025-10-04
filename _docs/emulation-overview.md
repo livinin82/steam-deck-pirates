@@ -69,12 +69,12 @@ RetroDECK is a [ES-DE Frontend](https://es-de.org/) powered Flatpak all-in-one g
 <strong>Installing RetroDeck (verbatim steps)</strong>
 <ul>
   <li>Put the Steam Deck into <strong>Desktop Mode</strong></li>
-  <li>Install <strong>RetroDECK</strong> from <strong>Discover</strong></li>
+  <li>Install&nbsp;<strong>RetroDECK</strong> from <strong>Discover</strong></li>
   <li>Start RetroDECK first time in <strong>Desktop Mode</strong></li>
   <li>Choose where RetroDECK should create the roms folders <strong>Internal</strong> or <strong>SDCard</strong>.</li>
   <li>Put the <strong>BIOS files</strong> inside <code>~/retrodeck/bios/</code>.</li>
   <li>Put the <strong>ROMS</strong> inside <code>~/retrodeck/roms/ or &lt;sdcard&gt;/retrodeck/roms/</code> or a custom location.</li>
-  <li>Choose to install <strong>Steam Controller Layouts</strong> for RetroDECK, it should be checked from the start.</li>
+  <li>Choose to install&nbsp;<strong>Steam Controller Layouts</strong> for RetroDECK, it should be checked from the start.</li>
   <li>In Steam desktop go to the tab <strong>Games</strong> press <code>Add non-Steam game to My library</code> and select <strong>RetroDECK</strong> to add it into your library. If that is not working, you can <em>right-click</em> on the RetroDECK desktop icon and press <code>Add to Steam</code> in the menu.</li>
   <li>Switch over to <strong>Game Mode</strong> and go to <strong>RetroDECK</strong> on the Steam Grid under <strong>Library &gt; Non-Steam</strong></li>
   <li>Add any of the the Official Layouts under <strong>Controller Settings &gt; Controller Layouts &gt; Templates</strong> in the Steam Deck called <code>RetroDECK: Steam Deck - Neptune SIMPLE or FULL</code> with a version number. Apply the layout.</li>

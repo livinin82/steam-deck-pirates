@@ -38,7 +38,7 @@ nav_order: 3
 
 <div class="panel">
 <ol>
-    <li>Open <strong>ProtonTricks</strong>.</li>
+    <li>Open&nbsp;<strong>ProtonTricks</strong>.</li>
     <li>Select your game in the list. Click <strong>OK</strong>.</li>
     <li>Select <strong>default wine prefix</strong>, click <strong>OK</strong>.</li>
     <li>Select <strong>Run winecfg</strong>, click <strong>OK</strong>.</li>
