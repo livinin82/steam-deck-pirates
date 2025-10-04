@@ -1,62 +1,19 @@
+theme: just-the-docs
 title: Steam Deck Pirates' Cove
 description: A comprehensive guide to sailing the high seas on your Steam Deck.
-url: "https://livinin82.github.io"
-baseurl: "/steam-deck-pirates"
-markdown: kramdown
-highlighter: rouge
+url: "https://livinin82.github.io/steam-deck-pirates"
+color_scheme: custom-dark
 
 # Enable search
 search_enabled: true
 
-collections:
-  docs:
-    output: false  # disable separate docs pages; we now run single-page app style
-    permalink: /:collection/:name
-
-permalink: pretty
-
-defaults:
-  - scope:
-      path: "_docs"
-      type: docs
-    values:
-      layout: default
-
-plugins:
-  - jekyll-relative-links
-  - jekyll-seo-tag
-  - jekyll-redirect-from
-
-exclude:
-  - README.md
-  - LICENSE
-  - .gitignore
-  - scripts/
-  - Gemfile*
-  - _docs/*.md
-
-# Simple nav configuration (optional manual ordering override)
-nav_parents_order:
-  - Info About Steam Deck
-  - Apps you NEED TO have installed
-  - Guides for installing games
-  - Installing games through Steam
-  - Installing games through Lutris
-  - Installing Games through other launchers
-  - Transferring Installed Games from PC
-  - Guides for Proton/Wine
-  - Finding Non-Steam Game Proton Folder
-  - Installing Dependencies
-  - Guides for emulators and roms
-  - Emudeck
-  - RetroDeck
-  - Individual emulators
-  - Switch Emulation
-  - BIOS, ROMs, and other files
-  - PC Ports
-  - Cracks/DLC/Updates
-  - Common Questions
-
-sass:
-  style: compressed
+# Just the Docs settings
+just_the_docs:
+  # Enable table of contents
+  toc:
+    enabled: true
+    title: "On this page"
+  # Enable mermaid diagrams
+  mermaid:
+    enabled: true
 
