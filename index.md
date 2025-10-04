@@ -1,7 +1,6 @@
 ---
 title: Home
 layout: default
-nav_order: 1
 ---
 <h1 style="text-align: center;">🏴‍☠️ Steam Deck Pirates' Cove 🏴‍☠️</h1>
 

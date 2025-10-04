@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}"/>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/site.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">🏴‍☠️ {{ site.title }}</div>
+      <nav class="nav">
+        <a href="{{ site.baseurl }}/" class="nav-root">Home</a>
+        {% assign grouped = site.docs | group_by: 'parent' %}
+        {% for parent in site.nav_parents_order %}
+          {% assign bucket = grouped | where: 'name', parent | first %}
+          {% if bucket %}
+            <div class="nav-section">
+              <div class="nav-section-title">{{ parent }}</div>
+              <ul>
+                {% for doc in bucket.items | sort: 'nav_order' %}
+                  <li><a href="{{ doc.url | relative_url }}" class="{% if page.url == doc.url %}active{% endif %}">{{ doc.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+        {% endfor %}
+        <div class="nav-section">
+          <div class="nav-section-title">All Guides (A–Z)</div>
+          <ul>
+            {% assign allSorted = site.docs | sort: 'title' %}
+            {% for doc in allSorted %}
+              <li class="small"><a href="{{ doc.url | relative_url }}">{{ doc.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </nav>
+      <footer class="sidebar-footer">
+        <a href="https://github.com/{{ site.github.owner_name }}/{{ site.github.repository_name }}">GitHub</a>
+      </footer>
+    </aside>
+    <main class="content">
+      <header class="topbar">
+        <div class="page-title">{{ page.title }}</div>
+      </header>
+      <article class="doc">{{ content }}</article>
+    </main>
+  </div>
+</body>
+</html>
