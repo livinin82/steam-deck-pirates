@@ -17,14 +17,14 @@ This single page consolidates guidance that was previously split across multiple
 - [PC Ports vs Emulation](#pc-ports-vs-emulation)
 
 ---
-## Why Use Frontends
+## Why Use Frontends {#why-use-frontends}
 Frontends like **EmuDeck** and **RetroDeck** automate folder structure, controller layouts, configuration, artwork scraping, and integration into Steam. They dramatically reduce time-to-play compared to hand‑rolling every emulator. Unless you enjoy low-level tweaking, start with one of these.
 
 > [!TIP]
 > Pick one frontend. Mixing both at the same time can lead to duplicate ROM folders, differing config expectations, and confusion when troubleshooting.
 
 ---
-## Installing EmuDeck
+## Installing EmuDeck {#installing-emudeck}
 EmuDeck is a collection of scripts that auto-configures your Steam Deck, creates the `Emulation/roms` directory structure, installs emulators, and applies sane defaults. It also pairs well with **Steam ROM Manager** or **EmulationStation DE (ES‑DE)**.
 
 <div class="panel panel--soft">
@@ -43,7 +43,7 @@ EmuDeck is a collection of scripts that auto-configures your Steam Deck, creates
 </div>
 
 ---
-## Installing RetroDeck
+## Installing RetroDeck {#installing-retrodeck}
 RetroDeck (RetroDECK) bundles a curated set of emulators and engines behind the ES‑DE frontend with a unified update path.
 
 <div class="panel panel--soft">
@@ -62,7 +62,7 @@ RetroDeck (RetroDECK) bundles a curated set of emulators and engines behind the 
 </div>
 
 ---
-## Switch Emulation
+## Switch Emulation {#switch-emulation}
 
 > [!NOTE]
 > The original mainline Switch emulator projects had takedowns, but working builds and maintained forks (e.g., fork of Ryujinx by GreemDev; Sudachi / Suyu for former Yuzu builds) still circulate. We won’t link direct binaries.
@@ -73,21 +73,21 @@ RetroDeck (RetroDECK) bundles a curated set of emulators and engines behind the 
 Performance varies: some games run flawlessly, others stutter or have audio issues. Community compatibility spreadsheets and patches help—see the widely shared Google Sheet (search “Steam Deck Switch compatibility spreadsheet” if the link changes).
 
 ---
-## BIOS, ROMs, and Other Files
+## BIOS, ROMs, and Other Files {#bios-roms-and-other-files}
 Some systems refuse to boot without correct BIOS. A commonly referenced community “ROM Megathread” plus the EmuDeck Cheat Sheet help map required BIOS filenames. We do not mirror or deep-link BIOS content.
 
 > [!TIP]
 > Verify BIOS validity by checking emulator logs—many will report missing or bad checksums.
 
 ---
-## Individual Emulators vs Frontends
+## Individual Emulators vs Frontends {#individual-emulators-vs-frontends}
 You can install individual emulators from Discover (Dolphin, PPSSPP, etc.). This grants maximal control but increases setup time: per-emulator configs, shader caches, layouts, artwork, and folder conventions. Frontends batch those chores. If you enjoy tweaking, go manual; if you want “it just works”, stay with EmuDeck/RetroDeck.
 
 > [!IMPORTANT]
 > Don’t run both frontends and a parallel maze of individually configured stand‑alone emulators unless you have a specific reason—duplication complicates troubleshooting.
 
 ---
-## PC Ports vs Emulation
+## PC Ports vs Emulation {#pc-ports-vs-emulation}
 Some classics have modern PC ports or source ports (e.g., Mario 64, Perfect Dark fan ports, Scarface). Benefits:
 
 - Higher potential performance and battery life versus heavyweight emulation layers.
@@ -100,7 +100,7 @@ Always check a title on <a href="https://www.pcgamingwiki.com/wiki/Home">PCGamin
 > Source/PC port projects vary in legality by included assets. Follow each project’s instructions—most require you to supply original game data.
 
 ---
-## Quick Comparison
+## Quick Comparison {#quick-comparison}
 
 | Approach | Setup Speed | Maintenance | Features / Automation | Fine Control | Recommended For |
 | -------- | ----------- | ----------- | --------------------- | ------------ | --------------- |
@@ -110,7 +110,7 @@ Always check a title on <a href="https://www.pcgamingwiki.com/wiki/Home">PCGamin
 | PC / Source Ports | Varies | Varies | N/A | High | Best experience for specific titles |
 
 ---
-## Housekeeping Checklist
+## Housekeeping Checklist {#housekeeping-checklist}
 - Keep SD card formatted ext4 or btrfs for case-sensitive paths & performance.
 - Back up `Emulation/bios` and `Emulation/roms` regularly.
 - Periodically refresh artwork cache if renamed ROMs appear blank.
