@@ -1,5 +1,5 @@
 ---
-title: Recommended Apps
+title: Apps you NEED TO have installed
 nav_order: 2
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Installing Games
+title: Guides for installing games
 nav_order: 3
 has_children: true
 ---

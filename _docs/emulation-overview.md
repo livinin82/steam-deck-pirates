@@ -1,9 +1,9 @@
 ---
-title: Emulation & ROMs Overview
+title: Guides for emulators and roms
 nav_order: 5
 ---
 
-# Emulation & ROMs Overview
+# Guides for emulators and roms
 
 Use the quick links below to jump to a topic:
 

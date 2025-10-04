@@ -1,6 +1,6 @@
 ---
-title: Installing through Lutris
-parent: Installing Games
+title: Installing games through Lutris
+parent: Guides for installing games
 nav_order: 2
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Installing through Steam
-parent: Installing Games
+title: Installing games through Steam
+parent: Guides for installing games
 nav_order: 1
 ---
 

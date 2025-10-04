@@ -1,5 +1,5 @@
 ---
-title: Cracks, DLC, and Updates
+title: Cracks/DLC/Updates
 nav_order: 6
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Other Launchers
-parent: Installing Games
+title: Installing Games through other launchers
+parent: Guides for installing games
 nav_order: 3
 ---
 

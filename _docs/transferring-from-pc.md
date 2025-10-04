@@ -1,6 +1,6 @@
 ---
-title: Transferring from PC
-parent: Installing Games
+title: Transferring Installed Games from PC
+parent: Guides for installing games
 nav_order: 4
 ---
 

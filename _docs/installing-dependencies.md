@@ -1,6 +1,6 @@
 ---
 title: Installing Dependencies
-parent: Proton and Wine
+parent: Guides for Proton/Wine
 nav_order: 2
 ---
 

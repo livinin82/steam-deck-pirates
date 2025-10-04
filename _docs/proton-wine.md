@@ -1,5 +1,5 @@
 ---
-title: Proton and Wine
+title: Guides for Proton/Wine
 nav_order: 4
 has_children: true
 ---
