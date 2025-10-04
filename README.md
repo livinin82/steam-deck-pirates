@@ -1,7 +1,6 @@
-
 ---
 title: Steam Deck Pirates' Cove (Repo Overview)
-layout: none
+layout: default
 ---
 
 # <div align="center">🏴‍☠️ Steam Deck Pirates' Cove 🏴‍☠️</div>
@@ -1069,6 +1068,7 @@ A couple of people have reported being able to pinpoint the search by changing t
 
 <table>
 <tr>
+<tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
 <strong>In Desktop mode:</strong>
 <ul>
@@ -1113,6 +1113,8 @@ If this shows it means your crack isn't working. Make sure you copied the files 
 > [!NOTE]
 > In some instances, for some reason, Steam has turned off Proton in a non-steam game (not sure if widespread, but has happened to me)
 > Always (before troubleshooting anything else) make sure you have a **Proton** version of some sort enabled.
+
+
 
 #### Are there quotes around the target path?
 > [!NOTE]
