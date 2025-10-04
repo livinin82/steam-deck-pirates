@@ -70,7 +70,7 @@ graph TD
     C["Pre-installed Game"]
     D["Install Game on SteamDeck"]
     E["Transfer to Steam Deck"]
-    F["Add Non-Steam Game]
+    F["Add Non-Steam Game"]
     G{"Set up Windows Environment"}
     H["Configure with ProtonTricks"]
     Z((Play Game))
@@ -1112,4 +1112,5 @@ If this shows it means your crack isn't working. Make sure you copied the files 
 | PCGamingWiki | https://www.pcgamingwiki.com/wiki/Home |
 
 <!-- End of document: ensure no stray unclosed table tags -->
+<!-- EOF -->
 
