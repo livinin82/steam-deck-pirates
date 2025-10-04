@@ -84,7 +84,32 @@
           })();
         </script>
       </header>
-      <article class="doc">{{ content }}</article>
+      <article class="doc markdown-body">{{ content }}</article>
+      <script>
+        // Transform GitHub style admonitions inside blockquotes beginning with [!TAG]
+        (function(){
+          const map = { NOTE:'note', WARNING:'warning', CAUTION:'caution', TIP:'tip', IMPORTANT:'important' };
+          document.querySelectorAll('.markdown-body blockquote').forEach(bq=>{
+            const first = bq.firstElementChild || bq.firstChild;
+            if(!first) return;
+            const text = (first.textContent||'').trim();
+            const m = text.match(/^\[(?:!)([A-Z]+)]/);
+            if(m){
+              const key = m[1];
+              const kind = map[key];
+              if(kind){
+                bq.classList.add('admonition', 'admonition-'+kind);
+                // Remove the marker from first node
+                first.textContent = first.textContent.replace(/^\[!([A-Z]+)]\s*/,'');
+                const label = document.createElement('div');
+                label.className='admonition-title';
+                label.textContent = key.charAt(0)+key.slice(1).toLowerCase();
+                bq.insertBefore(label, bq.firstChild);
+              }
+            }
+          });
+        })();
+      </script>
     </main>
   </div>
 </body>
