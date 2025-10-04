@@ -1,8 +1,4 @@
----
-title: Steam Deck Pirates' Cove (Repo Overview)
-layout: default
----
-
+<!-- README content (front matter removed; handled by index.md) -->
 # <span class="hero-title">Steam Deck Pirates' Cove</span>
 
 <p class="hero-sub">A consolidated single-page reference for running Windows games, emulation, and tweaks on Steam Deck.</p>

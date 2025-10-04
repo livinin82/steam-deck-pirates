@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Steam Deck Pirates' Cove
 nav_order: 1
 ---
 
