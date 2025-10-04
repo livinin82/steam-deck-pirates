@@ -59,8 +59,8 @@
             {% endif %}
           </ul>
         </div>
-        <div class="nav-section">
-          <div class="nav-section-title">Guides for Proton/Wine</div>
+        <div class="nav-section" data-section="proton">
+          <div class="nav-section-title"><button class="nav-section-toggle" type="button" aria-expanded="true" aria-label="Collapse section">–</button> Guides for Proton/Wine</div>
           <ul>
             {% assign proton_doc = site.docs | where: 'id', 'proton-wine' | first %}
             {% if proton_doc %}
@@ -68,6 +68,14 @@
               {% assign proton_children = site.docs | where: 'parent_id', 'proton-wine' | sort: 'nav_order' %}
               {% for doc in proton_children %}
                 <li><a href="{{ doc.url | relative_url }}" class="{% if page.url == doc.url %}active{% endif %}" {% if page.url == doc.url %}aria-current="page"{% endif %}>{{ doc.title }}</a></li>
+                {% if doc.title == 'Installing Dependencies' and page.url == doc.url %}
+                  {%- assign dep_anchors = 'what-are-dependencies|how-to-find-what-dependencies-are-needed-for-your-game|where-to-get-dependencies|installing-with-protontricks|installing-manually-with-an-installer-still-in-protontricks' | split: '|' -%}
+                  <ul>
+                    {% for a in dep_anchors %}
+                      <li><a class="deep-anchor" href="{{ doc.url | relative_url }}#{{ a }}">{{ a | replace: '-', ' ' | replace: 'dependencies', 'Dependencies' | capitalize }}</a></li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
               {% endfor %}
             {% endif %}
           </ul>
@@ -97,8 +105,8 @@
             {% endif %}
           </ul>
         </div>
-        <div class="nav-section">
-          <div class="nav-section-title">Common Questions</div>
+        <div class="nav-section" data-section="common">
+          <div class="nav-section-title"><button class="nav-section-toggle" type="button" aria-expanded="true" aria-label="Collapse section">–</button> Common Questions</div>
           <ul>
             {% assign common_doc = site.docs | where: 'id', 'common-questions' | first %}
             {% if common_doc %}
@@ -174,7 +182,7 @@
       <article id="main-content" class="doc markdown-body">{{ content }}</article>
       <button id="backToTop" type="button" aria-label="Back to top">Top</button>
       <script>
-        // Mobile sidebar toggle
+        // Mobile sidebar toggle + collapsible sections + scroll state
         (function(){
           const toggle = document.getElementById('menuToggle');
           const sidebar = document.querySelector('.sidebar');
@@ -185,6 +193,31 @@
             document.body.classList.toggle('nav-open',open);
           });
           document.addEventListener('keydown',e=>{ if(e.key==='Escape' && sidebar.classList.contains('open')){ sidebar.classList.remove('open'); document.body.classList.remove('nav-open'); toggle.setAttribute('aria-expanded','false'); }});
+          // collapsible
+          const sectionStatesKey = 'sdp-section-states';
+            let states = {};
+            try{ states = JSON.parse(localStorage.getItem(sectionStatesKey)||'{}'); }catch(_){states={}};
+          document.querySelectorAll('.nav-section').forEach(sec=>{
+            const id = sec.getAttribute('data-section');
+            const btn = sec.querySelector('.nav-section-toggle');
+            if(!btn || !id) return;
+            if(states[id] === 'collapsed'){
+              sec.classList.add('collapsed');
+              btn.setAttribute('aria-expanded','false');
+              btn.textContent = '+';
+            }
+            btn.addEventListener('click',()=>{
+              const collapsed = sec.classList.toggle('collapsed');
+              btn.setAttribute('aria-expanded', collapsed ? 'false':'true');
+              btn.textContent = collapsed ? '+' : '–';
+              states[id] = collapsed ? 'collapsed':'expanded';
+              localStorage.setItem(sectionStatesKey, JSON.stringify(states));
+            });
+          });
+          // preserve sidebar scroll
+          const scrollKey = 'sdp-sidebar-scroll';
+          sidebar.scrollTop = +(localStorage.getItem(scrollKey)||0);
+          sidebar.addEventListener('scroll',()=>{ localStorage.setItem(scrollKey, sidebar.scrollTop); });
         })();
         // Scroll spy + back to top
         (function(){
@@ -193,7 +226,7 @@
           const headings = Array.from(document.querySelectorAll('.doc h2, .doc h3, .doc h4'))
             .filter(h=>h.id);
           const linkMap = new Map();
-          const navLinks = document.querySelectorAll('.nav a[href*="#"]');
+          const navLinks = document.querySelectorAll('.nav a[href*="#"], .nav a[aria-current="page"]');
             navLinks.forEach(a=>{ try { const hash = decodeURIComponent(a.getAttribute('href').split('#')[1]||''); if(hash){ linkMap.set(hash,a);} } catch(_){} });
           let activeId = null;
           const observer = new IntersectionObserver(entries=>{
@@ -203,7 +236,11 @@
           },{ rootMargin:'-55% 0px -40% 0px', threshold:[0,1]});
           function update(){
             navLinks.forEach(a=>a.classList.remove('spy-active'));
-            if(activeId && linkMap.has(activeId)) linkMap.get(activeId).classList.add('spy-active');
+            if(activeId && linkMap.has(activeId)){
+              const link = linkMap.get(activeId);
+              link.classList.add('spy-active');
+              link.setAttribute('aria-current','true');
+            }
           }
           headings.forEach(h=>observer.observe(h));
           window.addEventListener('scroll',()=>{
