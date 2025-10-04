@@ -1067,7 +1067,7 @@ If this shows it means your crack isn't working. Make sure you copied the files 
 </tr>
 </table>
 
-### Game tries to load and immediately stops
+<h3 id="game-tries-to-load-and-immediately-stops">Game tries to load and immediately stops</h3>
 
 #### Is Proton Enabled?
 > [!NOTE]
@@ -1084,7 +1084,7 @@ If this shows it means your crack isn't working. Make sure you copied the files 
 > [!CAUTION]
 > Missing DirectX / VC++ / .NET components will cause silent exits. See the [Installing Dependencies](#installing-dependencies) section above and install what your game needs.
 
-### Mods won't load
+<h3 id="mods-wont-load">Mods won't load</h3>
 > [!WARNING]
 > Possible causes:
 > * Required DLL overrides not applied (see [Adding DLLs to Proton](#adding-dlls-to-proton)).
@@ -1094,14 +1094,14 @@ If this shows it means your crack isn't working. Make sure you copied the files 
 > * Incorrect case-sensitive filenames on Linux.
 
 ---
-## Other subreddits/groups
+<h2 id="other-subreddits-groups">Other subreddits/groups</h2>
 #### Piracy Related
 - [Linux Crack Tips](https://www.reddit.com/r/LinuxCrackSupport/)
 - [Piracy](https://www.reddit.com/r/Piracy)
 - [FreeMediaHeckYeah](https://www.reddit.com/r/FREEMEDIAHECKYEAH)
 
 ---
-## Useful Links
+<h2 id="useful-links">Useful Links</h2>
 - [ProtonDB](https://protondb.com/)
 - [SteamDB](https://steamdb.info/)
 - [SteamDeckHQ](https://steamdeckhq.com/)
