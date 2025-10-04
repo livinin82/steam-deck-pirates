@@ -182,30 +182,41 @@
           sidebar.scrollTop=+(localStorage.getItem(scrollKey)||0);
           sidebar.addEventListener('scroll',()=>localStorage.setItem(scrollKey, sidebar.scrollTop));
         })();
-        // Scroll spy for single-page anchors
+        // Scroll spy for single-page anchors (includes h4 for deeper sections)
         (function(){
           const backBtn=document.getElementById('backToTop');
-            backBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-          const headings=Array.from(document.querySelectorAll('.doc h2, .doc h3')).filter(h=>h.id);
+          if(backBtn){ backBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'})); }
+          // Include h2, h3, and h4 so nav links to sub‑sections highlight
+          const headings=Array.from(document.querySelectorAll('.doc h2, .doc h3, .doc h4')).filter(h=>h.id);
+          if(!headings.length) return; // nothing to observe
           const navLinks=document.querySelectorAll('.nav a[href^="#"]');
           const map=new Map();
-          navLinks.forEach(a=>{ const hash=a.getAttribute('href').slice(1); map.set(hash,a); });
+          navLinks.forEach(a=>{ const hash=a.getAttribute('href').slice(1); if(hash) map.set(hash,a); });
           let active=null;
           const obs=new IntersectionObserver(entries=>{
             entries.forEach(entry=>{
-              if(entry.isIntersecting){ active=entry.target.id; update(); }
+              if(entry.isIntersecting){ active=entry.target.id; }
             });
-          },{rootMargin:'-55% 0px -40% 0px',threshold:[0,1]});
+            update();
+          },{rootMargin:'-55% 0px -35% 0px',threshold:[0,1]});
           function update(){
             navLinks.forEach(a=>{ a.classList.remove('spy-active'); a.removeAttribute('aria-current'); });
-            if(active&&map.has(active)){
-              const link=map.get(active);
-              link.classList.add('spy-active');
-              link.setAttribute('aria-current','true');
+            if(active){
+              // If the active id is not directly mapped (e.g., an h4 not in nav) climb up to previous heading that is.
+              let id=active;
+              if(!map.has(id)){
+                const idx=headings.findIndex(h=>h.id===active);
+                for(let i=idx-1;i>=0;i--){ if(map.has(headings[i].id)){ id=headings[i].id; break; } }
+              }
+              if(map.has(id)){
+                const link=map.get(id);
+                link.classList.add('spy-active');
+                link.setAttribute('aria-current','true');
+              }
             }
           }
           headings.forEach(h=>obs.observe(h));
-          window.addEventListener('scroll',()=>{ const y=window.scrollY||document.documentElement.scrollTop; if(y>400) backBtn.classList.add('visible'); else backBtn.classList.remove('visible'); });
+          window.addEventListener('scroll',()=>{ const y=window.scrollY||document.documentElement.scrollTop; if(backBtn){ if(y>400) backBtn.classList.add('visible'); else backBtn.classList.remove('visible'); }});
         })();
         // Admonitions
         (function(){
