@@ -5,17 +5,19 @@
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}"/>
+  {% seo %}
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/site.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
   <div class="layout">
-    <aside class="sidebar">
+    <aside class="sidebar" role="complementary" aria-label="Sidebar navigation">
       <div class="brand">🏴‍☠️ {{ site.title }}</div>
-      <nav class="nav">
-        <a href="{{ site.baseurl }}/" class="nav-root">Home</a>
+      <nav class="nav" role="navigation" aria-label="Primary">
+        <a href="{{ site.baseurl }}/" class="nav-root" aria-current="{{ page.url == '/' | ternary: 'page', 'false' }}">Home</a>
         {% assign grouped = site.docs | group_by: 'parent' %}
         {% for parent in site.nav_parents_order %}
           {% assign bucket = grouped | where: 'name', parent | first %}
@@ -24,7 +26,7 @@
               <div class="nav-section-title">{{ parent }}</div>
               <ul>
                 {% for doc in bucket.items | sort: 'nav_order' %}
-                  <li><a href="{{ doc.url | relative_url }}" class="{% if page.url == doc.url %}active{% endif %}">{{ doc.title }}</a></li>
+                  <li><a href="{{ doc.url | relative_url }}" class="{% if page.url == doc.url %}active{% endif %}" {% if page.url == doc.url %}aria-current="page"{% endif %}>{{ doc.title }}</a></li>
                 {% endfor %}
               </ul>
             </div>
@@ -45,7 +47,7 @@
       </footer>
     </aside>
     <main class="content">
-      <header class="topbar">
+      <header class="topbar" role="banner">
         <div class="page-title">{{ page.title }}</div>
         <div class="theme-toggle">
           <button id="themeToggle" type="button" aria-label="Toggle color theme">
@@ -56,9 +58,10 @@
         <script>
           (function(){
             const STORAGE_KEY = 'sdp-theme';
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const mql = window.matchMedia('(prefers-color-scheme: dark)');
+            const prefersDark = mql.matches;
             const saved = localStorage.getItem(STORAGE_KEY);
-            const applied = saved || (prefersDark ? 'dark' : 'dark'); // default dark
+            const applied = saved || (prefersDark ? 'dark' : 'light');
             if(applied === 'light') document.documentElement.setAttribute('data-theme','light');
             function setTheme(mode){
               if(mode === 'light') document.documentElement.setAttribute('data-theme','light');
@@ -81,10 +84,16 @@
               });
               setTheme(applied);
             });
+            // Live respond to system changes if user hasn't explicitly chosen
+            mql.addEventListener('change', e => {
+              if(!localStorage.getItem(STORAGE_KEY)){
+                setTheme(e.matches ? 'dark' : 'light');
+              }
+            });
           })();
         </script>
       </header>
-      <article class="doc markdown-body">{{ content }}</article>
+      <article id="main-content" class="doc markdown-body">{{ content }}</article>
       <script>
         // Transform GitHub style admonitions inside blockquotes beginning with [!TAG]
         (function(){
