@@ -182,41 +182,67 @@
           sidebar.scrollTop=+(localStorage.getItem(scrollKey)||0);
           sidebar.addEventListener('scroll',()=>localStorage.setItem(scrollKey, sidebar.scrollTop));
         })();
-        // Scroll spy for single-page anchors (includes h4 for deeper sections)
+        // Scroll spy (deterministic scroll position approach for stability at top & bottom)
         (function(){
           const backBtn=document.getElementById('backToTop');
           if(backBtn){ backBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'})); }
-          // Include h2, h3, and h4 so nav links to sub‑sections highlight
           const headings=Array.from(document.querySelectorAll('.doc h2, .doc h3, .doc h4')).filter(h=>h.id);
-          if(!headings.length) return; // nothing to observe
-          const navLinks=document.querySelectorAll('.nav a[href^="#"]');
+          if(!headings.length) return;
+          const navLinks=[...document.querySelectorAll('.nav a[href^="#"]')];
           const map=new Map();
-          navLinks.forEach(a=>{ const hash=a.getAttribute('href').slice(1); if(hash) map.set(hash,a); });
-          let active=null;
-          const obs=new IntersectionObserver(entries=>{
-            entries.forEach(entry=>{
-              if(entry.isIntersecting){ active=entry.target.id; }
-            });
-            update();
-          },{rootMargin:'-55% 0px -35% 0px',threshold:[0,1]});
-          function update(){
+          navLinks.forEach(a=>{ const id=a.getAttribute('href').slice(1); if(id) map.set(id,a); });
+          const TOP_OFFSET=120; // compensate for top bar / comfortable activation point
+          let lastActive=null;
+
+          function resolveMapped(id){
+            if(map.has(id)) return id;
+            const idx=headings.findIndex(h=>h.id===id);
+            for(let i=idx-1;i>=0;i--){ if(map.has(headings[i].id)) return headings[i].id; }
+            return null;
+          }
+
+            function computeActive(){
+            const scrollY=window.scrollY||document.documentElement.scrollTop;
+            const viewportBottom=scrollY + window.innerHeight;
+            const docHeight=Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+            // Near top
+            if(scrollY < 50) return headings[0].id;
+            // Near bottom: force last heading
+            if(viewportBottom >= docHeight - 10) return headings[headings.length-1].id;
+            // Find last heading whose top is above the activation line
+            const activationLine=scrollY + TOP_OFFSET;
+            let current=headings[0].id;
+            for(const h of headings){
+              const top=h.getBoundingClientRect().top + scrollY; // doc position
+              if(top <= activationLine) current=h.id; else break;
+            }
+            return current;
+          }
+
+          function render(){
+            const rawId=computeActive();
+            let id=resolveMapped(rawId)||rawId;
+            if(id===lastActive) return;
+            lastActive=id;
             navLinks.forEach(a=>{ a.classList.remove('spy-active'); a.removeAttribute('aria-current'); });
-            if(active){
-              // If the active id is not directly mapped (e.g., an h4 not in nav) climb up to previous heading that is.
-              let id=active;
-              if(!map.has(id)){
-                const idx=headings.findIndex(h=>h.id===active);
-                for(let i=idx-1;i>=0;i--){ if(map.has(headings[i].id)){ id=headings[i].id; break; } }
-              }
-              if(map.has(id)){
-                const link=map.get(id);
-                link.classList.add('spy-active');
-                link.setAttribute('aria-current','true');
-              }
+            if(map.has(id)){
+              const link=map.get(id);
+              link.classList.add('spy-active');
+              link.setAttribute('aria-current','true');
             }
           }
-          headings.forEach(h=>obs.observe(h));
-          window.addEventListener('scroll',()=>{ const y=window.scrollY||document.documentElement.scrollTop; if(backBtn){ if(y>400) backBtn.classList.add('visible'); else backBtn.classList.remove('visible'); }});
+
+          let ticking=false;
+          function onScroll(){
+            if(!ticking){
+              requestAnimationFrame(()=>{ render(); if(backBtn){ const y=window.scrollY||document.documentElement.scrollTop; if(y>400) backBtn.classList.add('visible'); else backBtn.classList.remove('visible'); } ticking=false; });
+              ticking=true;
+            }
+          }
+          window.addEventListener('scroll', onScroll, {passive:true});
+          window.addEventListener('resize', ()=>{ lastActive=null; render(); });
+          // Initial pass
+          render();
         })();
         // Admonitions
         (function(){
