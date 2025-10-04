@@ -99,8 +99,8 @@
       </footer>
     </aside>
     <main class="content">
-      <header class="topbar" role="banner">
-  <div class="page-title"><span class="hero-title">{{ page.title }}</span></div>
+    <header class="topbar" role="banner">
+  <div class="page-title" aria-hidden="true"><span class="hero-title">{{ page.title }}</span></div>
         <button class="menu-toggle-btn" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰ Menu</button>
         <div class="theme-toggle">
           <button id="themeToggle" type="button" aria-label="Toggle color theme">
@@ -148,15 +148,15 @@
       </script>
       <button id="backToTop" type="button" aria-label="Back to top">Top</button>
       <script>
-        // Sidebar toggle & collapsibles
+        // Sidebar toggle, mobile backdrop & collapsibles
         (function(){
+          let backdrop=document.getElementById('navBackdrop');
+          if(!backdrop){ backdrop=document.createElement('div'); backdrop.id='navBackdrop'; backdrop.className='nav-backdrop'; document.body.appendChild(backdrop); }
           const toggle=document.getElementById('menuToggle');
           const sidebar=document.querySelector('.sidebar');
-          toggle.addEventListener('click',()=>{
-            const open=sidebar.classList.toggle('open');
-            toggle.setAttribute('aria-expanded',open?'true':'false');
-            document.body.classList.toggle('nav-open',open);
-          });
+          function closeNav(){ sidebar.classList.remove('open'); document.body.classList.remove('nav-open'); toggle.setAttribute('aria-expanded','false'); backdrop.classList.remove('visible'); }
+          toggle.addEventListener('click',()=>{ const open=sidebar.classList.toggle('open'); toggle.setAttribute('aria-expanded',open?'true':'false'); document.body.classList.toggle('nav-open',open); backdrop.classList.toggle('visible',open); });
+          backdrop.addEventListener('click',closeNav);
           document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&sidebar.classList.contains('open')){ sidebar.classList.remove('open'); document.body.classList.remove('nav-open'); toggle.setAttribute('aria-expanded','false'); }});
           const sectionStatesKey='sdp-section-states';
           let states={};
