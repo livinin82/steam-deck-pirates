@@ -13,8 +13,6 @@ nav_order: 2
 > [!NOTE]
 > It's not necessary to install a game using Lutris as described here. But for some (cracked) games it works better or as described below is necessary insofar as you need a different runner for e. g. the installation of FitGirl repacks. So if you have an already installed game, skip steps 6 to 12.
 
-<table>
-<tr>
 <div class="panel">
 <ol>
     <li>Obtain your desired game from a respected source.</li>
@@ -34,8 +32,6 @@ nav_order: 2
     <li>Double-click the game in Lutris to start it or use the bottom left button "Play".</li>
 </ol>
 </div>
-</tr>
-</table>
 
 > [!NOTE]
 > If a game doesn't work or has poor performance, click "Configure" on the game and tick the bottom left box "Show advanced options". Now you can edit the game's options, change the runner, etc.

@@ -5,8 +5,6 @@ nav_order: 10
 ---
 
 ## Games suddenly won't open or close
-<table>
-<tr>
 <div class="panel">
 <p>More often than not, this is related to a plugin running in Decky. To verify this:</p>
 <ul>
@@ -15,5 +13,3 @@ nav_order: 10
     <li>Uninstall them all, and add them back one by one until you see the error happen again.</li>
 </ul>
 </div>
-</tr>
-</table>

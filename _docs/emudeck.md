@@ -8,8 +8,6 @@ nav_order: 1
 EmuDeck is a collection of scripts that allows you to autoconfigure your Steam Deck, it creates your roms directory structure and downloads all of the needed Emulators for you along with the best configurations for each of them. EmuDeck works great with [Steam Rom Manager](https://github.com/SteamGridDB/steam-rom-manager) or with [EmulationStation DE](https://es-de.org).
 
 #### Installing EmuDeck
-<table>
-<tr>
 <div class="panel">
 <ol>
     <li>If you are using an SD Card, format your SD Card in Game Mode on SteamOS. SD Cards need to be formatted as ext4 (or btrfs) to be compatible with EmuDeck.
@@ -35,7 +33,5 @@ EmuDeck is a collection of scripts that allows you to autoconfigure your Steam D
     <li>Close Steam ROM Manager. Click <code>Return to Game Mode</code> on your desktop and your EmuDeck install is now complete!</li>
 </ol>
 </div>
-</tr>
-</table>
 
 *from [Emudeck wiki](https://emudeck.github.io/)*

@@ -14,8 +14,6 @@ nav_order: 4
 > [!NOTE]
 > Most of the apps you are using will be installed in a package format named **Flatpak**. **Lutris** and **ProtonTricks** especially. These apps can be controlled by an app called **FlatSeal**. Here we will show you how to enable permissions for an app to see your other devices.
 
-<table>
-<tr>
 <div class="panel">
 <ul>
     <li>Install <strong>FlatSeal</strong> from the <strong>Discover Store</strong></li>
@@ -38,8 +36,6 @@ nav_order: 4
     <li>Close whatever app was having trouble seeing your folders and open it and try again</li>
 </ul>
 </div>
-</tr>
-</table>
 
 > [!NOTE]
 > This should work for any folder you want your app to see, and any app that is a flatpak.

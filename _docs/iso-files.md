@@ -12,8 +12,6 @@ nav_order: 2
 >
 > In some cases, this functionality may be built into Dolphin's contect menu by `right-clicking>hovering over Mount/unmount iso image>clicking Mount`. If that option is not present read below.
 
-<table>
-<tr>
 <div class="panel">
 <ol>
     <li>Install <strong>PeaZip</strong>/<strong>PowerISO</strong> from the <strong>Discover Store</strong></li>
@@ -25,5 +23,3 @@ nav_order: 2
     <li>This will either extract as an installer, or as a complete game. From there you can follow any of our guides above.</li>
 </ol>
 </div>
-</tr>
-</table>

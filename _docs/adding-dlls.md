@@ -15,8 +15,6 @@ nav_order: 3
 > [!NOTE]
 > Steam arguments are entered through the game properties in the `Launch Options` box. These vary by the type of command, here we are going to cover `WINEDLLOVERRIDES`.
 
-<table>
-<tr>
 <div class="panel">
 <ol>
     <li>In <strong>Game Mode/Desktop Mode</strong>, select your game.</li>
@@ -27,8 +25,6 @@ nav_order: 3
     <li>Do this same thing for any other DLL needed by replacing <code>dinput8.dll</code> in the command from <em>Step 5</em>. If adding multiple in one command, you can separate them with commas, making sure they fit within the first quotation mark and the equal sign. (Example: <code>WINEDLLOVERRIDES="dinput8.dll,d3d9.dll=n,b"</code>)</li>
 </ol>
 </div>
-</tr>
-</table>
 
 *from [r/SteamDeckTricks](https://www.reddit.com/r/SteamDeckTricks/comments/xnmm32/game_modding_guide/)*
 
@@ -40,8 +36,6 @@ nav_order: 3
 > [!NOTE]
 > This method uses ProtonTricks interface to add DLL files to the prefix. This is my preferred method as I can see what is being entered, and not have to worry about typing things properly.
 
-<table>
-<tr>
 <div class="panel">
 <ol>
     <li>Open <strong>ProtonTricks</strong>.</li>
@@ -55,8 +49,6 @@ nav_order: 3
     <li>Run your game and see if the intended outcome was achieved.</li>
 </ol>
 </div>
-</tr>
-</table>
 
 > [!NOTE]
 > You do not need to include the `.dll` at the end.

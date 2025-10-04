@@ -8,8 +8,6 @@ nav_order: 2
 RetroDECK is a [ES-DE Frontend](https://es-de.org/) powered Flatpak all-in-one game application that is still in development. Thanks to its RetroDECK Framework it builds-in a variety of software (that runs your games) like emulators and game engines in one package that is pre-configured.
 
 #### Installing RetroDeck
-<table>
-<tr>
 <div class="panel">
 <ul>
     <li>Put the Steam Deck into <strong>Desktop Mode</strong></li>
@@ -25,7 +23,5 @@ RetroDECK is a [ES-DE Frontend](https://es-de.org/) powered Flatpak all-in-one g
     <li>Launch <strong>RetroDECK</strong> and enjoy.</li>
 </ul>
 </div>
-</tr>
-</table>
 
 *from [RetroDeck wiki](https://retrodeck.readthedocs.io/en/latest/wiki_devices/steamdeck/steamdeck-start/)*

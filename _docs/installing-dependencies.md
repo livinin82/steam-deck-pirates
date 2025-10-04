@@ -21,8 +21,6 @@ nav_order: 2
 > [!NOTE]
 > In the event that a game does not come with it's dependencies in the folder or you are not sure which they need, Steam actually has a database dedicated to every iteration of every game they have. Being the awesome company they are, they have a dedicated log of all things required through the history of a games life cycle on their server. This includes everything from prices up to dependencies, updates and DLC. In this instance, we're going to show you where to go on their database to get the info you need.
 
-<table>
-<tr>
 <div class="panel">
 <strong>Steam Database</strong>
 <ul>
@@ -34,8 +32,6 @@ nav_order: 2
     <li>Proceed to the step after that step to install them!!</li>
 </ul>
 </div>
-</tr>
-</table>
 
 ![GTA V Dependencies](https://i.imgur.com/adLTbwV.png)
 
@@ -67,8 +63,6 @@ nav_order: 2
 - [NVIDIA Site](https://www.nvidia.com/en-us/drivers/physx/physx-9-19-0218-driver/)
 
 #### Installing with ProtonTricks
-<table>
-<tr>
 <div class="panel">
 <strong>Method 1</strong>
 <ul>
@@ -80,10 +74,6 @@ nav_order: 2
     <li>Verify they installed by going back to the Uninstall menu and at the bottom is will show all that is installed in the Wine Prefix</li>
 </ul>
 </div>
-</tr>
-</table>
-<table>
-<tr>
 <div class="panel">
 <strong>Method 2</strong>
 <ol>
@@ -107,8 +97,6 @@ nav_order: 2
     </li>
 </ol>
 </div>
-</tr>
-</table>
 
 > [!CAUTION]
 > This will likely show errors, that's okay, it's batch installing different types (including incompatible ones), the right ones will still be installed. Click through any installers that may show up.

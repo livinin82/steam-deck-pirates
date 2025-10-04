@@ -9,8 +9,6 @@ nav_order: 1
 > [!NOTE]
 > A lot of games come in what are called *compressed* formats. These are used when a folder or file is too large and you want to shrink them down. Repackers and download sites do this so they can be downloaded faster. Sometimes they come with the file extensions listed above in parentheses, or they may come in something like `.001, .002` or `7z01, .7z02,`, etc. These can be handled using **PeaZip**
 
-<table>
-<tr>
 <div class="panel">
 <ol>
     <li>Install <strong>PeaZip</strong> from the <strong>Discover Store</strong></li>
@@ -22,8 +20,6 @@ nav_order: 1
     <li>This will either extract as an installer, or as a complete game. From there you can follow any of our guides above.</li>
 </ol>
 </div>
-</tr>
-</table>
 
 > [!NOTE]
 > This will result in double the size of your download or more taking up space on your drive.

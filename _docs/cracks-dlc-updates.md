@@ -10,8 +10,6 @@ nav_order: 6
 > This is not a blanket guide for all situations. This is just for the most common situations. Further tweaking may be needed depending on the game, the patch, or a plethora of other reasons.
 > Make sure ProtonTricks has access to your drives and SD card through Flatseal.
 
-<table>
-<tr>
 <div class="panel">
 <ol>
     <li><strong>Open Protontricks:</strong> Launch Protontricks from your applications menu.</li>
@@ -23,8 +21,6 @@ nav_order: 6
     <li><strong>Test your game</strong></li>
 </ol>
 </div>
-</tr>
-</table>
 
 > [!NOTE]
 > Most modloaders really just modify and apply new files within the game folder. This can be done manually in most cases.
