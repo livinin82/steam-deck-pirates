@@ -26,7 +26,22 @@
               <div class="nav-section-title">{{ parent }}</div>
               <ul>
                 {% for doc in bucket.items | sort: 'nav_order' %}
-                  <li><a href="{{ doc.url | relative_url }}" class="{% if page.url == doc.url %}active{% endif %}" {% if page.url == doc.url %}aria-current="page"{% endif %}>{{ doc.title }}</a></li>
+                  <li>
+                    <a href="{{ doc.url | relative_url }}" class="{% if page.url == doc.url %}active{% endif %}" {% if page.url == doc.url %}aria-current="page"{% endif %}>{{ doc.title }}</a>
+                    {% if doc.url == '/docs/emulation-overview' %}
+                      <ul class="sub sub--emulation">
+                        <li><a href="{{ '/docs/emulation-overview#why-use-frontends' | relative_url }}">Why Use Frontends</a></li>
+                        <li><a href="{{ '/docs/emulation-overview#installing-emudeck' | relative_url }}">Installing EmuDeck</a></li>
+                        <li><a href="{{ '/docs/emulation-overview#installing-retrodeck' | relative_url }}">Installing RetroDeck</a></li>
+                        <li><a href="{{ '/docs/emulation-overview#switch-emulation' | relative_url }}">Switch Emulation</a></li>
+                        <li><a href="{{ '/docs/emulation-overview#bios-roms-and-other-files' | relative_url }}">BIOS / ROMs</a></li>
+                        <li><a href="{{ '/docs/emulation-overview#individual-emulators-vs-frontends' | relative_url }}">Individual vs Frontends</a></li>
+                        <li><a href="{{ '/docs/emulation-overview#pc-ports-vs-emulation' | relative_url }}">PC Ports</a></li>
+                        <li><a href="{{ '/docs/emulation-overview#quick-comparison' | relative_url }}">Comparison</a></li>
+                        <li><a href="{{ '/docs/emulation-overview#housekeeping-checklist' | relative_url }}">Housekeeping</a></li>
+                      </ul>
+                    {% endif %}
+                  </li>
                 {% endfor %}
               </ul>
             </div>
