@@ -1,10 +1,9 @@
-theme: just-the-docs
-
-
 remote_theme: just-the-docs/just-the-docs
 title: Steam Deck Pirates' Cove
 description: A comprehensive guide to sailing the high seas on your Steam Deck.
 url: "https://livinin82.github.io/steam-deck-pirates"
+# If you publish at a project page, baseurl should match the repo name
+baseurl: "/steam-deck-pirates"
 color_scheme: custom-dark
 
 # Enable search
@@ -17,4 +16,38 @@ just_the_docs:
     title: "On this page"
   mermaid:
     enabled: true
+  # Navigation order root index and docs collection
+  collections:
+    docs:
+      name: Guides
+      nav_fold: true
+      sort_by: nav_order
+
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:name
+
+defaults:
+  - scope:
+      path: "_docs"
+      type: docs
+    values:
+      layout: default
+      parent: Guides
+      nav_order: 100
+
+aux_links:
+  Repository: https://github.com/livinin82/steam-deck-pirates
+
+plugins:
+  - jekyll-relative-links
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - LICENSE
+  - .gitignore
+  - scripts/
 

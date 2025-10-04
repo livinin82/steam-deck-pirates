@@ -1,4 +1,9 @@
 
+---
+title: Steam Deck Pirates' Cove (Repo Overview)
+layout: none
+---
+
 # <div align="center">🏴‍☠️ Steam Deck Pirates' Cove 🏴‍☠️</div>
 
 ## Info About Steam Deck
