@@ -37,7 +37,6 @@ exclude:
 nav_parents_order:
   - Installing Games
   - Proton and Wine
-  - Common Questions
   - Other Resources
 
 sass:

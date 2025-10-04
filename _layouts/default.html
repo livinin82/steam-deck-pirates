@@ -55,6 +55,31 @@
           </ul>
         </div>
         <div class="nav-section">
+          <div class="nav-section-title">Common Questions</div>
+          <ul>
+            {% assign commonQuestionsDoc = site.docs | where: 'title', 'Common Questions' | first %}
+            {% if commonQuestionsDoc %}
+              <li>
+                <a href="{{ commonQuestionsDoc.url | relative_url }}" class="{% if page.url == commonQuestionsDoc.url %}active{% endif %}" {% if page.url == commonQuestionsDoc.url %}aria-current="page"{% endif %}>{{ commonQuestionsDoc.title }}</a>
+                <ul class="sub sub--common-questions">
+                  <li><a href="{{ '/docs/common-questions#compressed-files' | relative_url }}">Compressed Files</a></li>
+                  <li><a href="{{ '/docs/common-questions#iso-files' | relative_url }}">ISO Files</a></li>
+                  <li><a href="{{ '/docs/common-questions#install-locations' | relative_url }}">Install Locations</a></li>
+                  <li><a href="{{ '/docs/common-questions#cant-see-external-hddsd-cardhome-folder' | relative_url }}">Can't see HDD/SD</a></li>
+                  <li><a href="{{ '/docs/common-questions#cant-find-save-files' | relative_url }}">Can't find saves</a></li>
+                  <li><a href="{{ '/docs/common-questions#how-do-i-movebackup-my-save-files' | relative_url }}">Move/backup saves</a></li>
+                  <li><a href="{{ '/docs/common-questions#controller-not-working' | relative_url }}">Controller issues</a></li>
+                  <li><a href="{{ '/docs/common-questions#game-opens-steam' | relative_url }}">Game opens Steam</a></li>
+                  <li><a href="{{ '/docs/common-questions#no-licenses' | relative_url }}">No licenses</a></li>
+                  <li><a href="{{ '/docs/common-questions#games-suddenly-wont-open-or-close' | relative_url }}">Games won't open</a></li>
+                  <li><a href="{{ '/docs/common-questions#game-tries-to-load-and-immediately-stops' | relative_url }}">Game stops</a></li>
+                  <li><a href="{{ '/docs/common-questions#mods-wont-load' | relative_url }}">Mods won't load</a></li>
+                </ul>
+              </li>
+            {% endif %}
+          </ul>
+        </div>
+        <div class="nav-section">
           <div class="nav-section-title">All Guides (A–Z)</div>
           <ul>
             {% assign allSorted = site.docs | sort: 'title' %}
