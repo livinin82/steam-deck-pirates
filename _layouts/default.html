@@ -134,6 +134,18 @@
         </script>
       </header>
       <article id="main-content" class="doc markdown-body">{{ content }}</article>
+      <script>
+        // Cleanup: remove any stray orphan closing table tags appended by malformed markdown mixes
+        (function(){
+          const art=document.getElementById('main-content');
+          if(!art) return;
+          // Look for a closing table tag sequence at the very end with no matching opener context
+          const html=art.innerHTML.trimEnd();
+          if(/<\/tr><\/table>\s*$/.test(html) && !html.match(/<table[^>]*>[^<]*?<\/table>\s*$/)){
+            art.innerHTML=html.replace(/<\/tr><\/table>\s*$/,'');
+          }
+        })();
+      </script>
       <button id="backToTop" type="button" aria-label="Back to top">Top</button>
       <script>
         // Sidebar toggle & collapsibles

@@ -1067,42 +1067,49 @@ If this shows it means your crack isn't working. Make sure you copied the files 
 </tr>
 </table>
 
-<h3 id="game-tries-to-load-and-immediately-stops">Game tries to load and immediately stops</h3>
+### Game tries to load and immediately stops
 
 #### Is Proton Enabled?
 > [!NOTE]
-> In some instances Steam may silently disable your forced Proton version for a non‑Steam shortcut.
-> Before doing anything else: open the shortcut's Properties and re‑enable a Proton version (start with Proton Experimental).
+> Steam may silently disable your forced Proton version for a non‑Steam shortcut. Re‑open Properties → Compatibility and re‑select Proton (start with Proton Experimental) before deeper troubleshooting.
 
 #### Are there quotes around the target path?
 > [!NOTE]
-> Paths containing spaces must be wrapped in quotes in Launch Options / Target field.
-> Example (GOOD): `"/home/deck/Games/Tomb Raider/game.exe"`
+> File paths with spaces must be quoted.  
+> Example (GOOD): `"/home/deck/Games/Tomb Raider/game.exe"`  
 > Example (BAD): `/home/deck/Games/Tomb Raider/game.exe`
 
 #### Are dependencies installed?
 > [!CAUTION]
-> Missing DirectX / VC++ / .NET components will cause silent exits. See the [Installing Dependencies](#installing-dependencies) section above and install what your game needs.
+> Missing DirectX / VC++ / .NET components cause silent exits. See [Installing Dependencies](#installing-dependencies) and add what the game needs.
 
-<h3 id="mods-wont-load">Mods won't load</h3>
+### Mods won't load
 > [!WARNING]
 > Possible causes:
-> * Required DLL overrides not applied (see [Adding DLLs to Proton](#adding-dlls-to-proton)).
-> * Using a Windows-only mod manager when a native / alternative method exists.
-> * Mod loader files placed in wrong prefix path.
-> * Incompatible Proton version (test Proton-GE or older Proton).
-> * Incorrect case-sensitive filenames on Linux.
+> * Missing DLL overrides (see [Adding DLLs to Proton](#adding-dlls-to-proton)).
+> * Windows‑only mod manager used; prefer native / alternative method.
+> * Mod loader files in wrong prefix/game folder.
+> * Incompatible Proton version (test Proton‑GE / older stable).
+> * Case sensitivity mismatch in filenames.
 
 ---
-<h2 id="other-subreddits-groups">Other subreddits/groups</h2>
-#### Piracy Related
-- [Linux Crack Tips](https://www.reddit.com/r/LinuxCrackSupport/)
-- [Piracy](https://www.reddit.com/r/Piracy)
-- [FreeMediaHeckYeah](https://www.reddit.com/r/FREEMEDIAHECKYEAH)
+## Other subreddits/groups
+**Piracy Related**
+
+| Community | Link |
+| --- | --- |
+| Linux Crack Tips | https://www.reddit.com/r/LinuxCrackSupport/ |
+| Piracy | https://www.reddit.com/r/Piracy |
+| FreeMediaHeckYeah | https://www.reddit.com/r/FREEMEDIAHECKYEAH |
 
 ---
-<h2 id="useful-links">Useful Links</h2>
-- [ProtonDB](https://protondb.com/)
-- [SteamDB](https://steamdb.info/)
-- [SteamDeckHQ](https://steamdeckhq.com/)
-- [PCGamingWiki](https://www.pcgamingwiki.com/wiki/Home)
+## Useful Links
+| Resource | URL |
+| --- | --- |
+| ProtonDB | https://protondb.com/ |
+| SteamDB | https://steamdb.info/ |
+| SteamDeckHQ | https://steamdeckhq.com/ |
+| PCGamingWiki | https://www.pcgamingwiki.com/wiki/Home |
+
+<!-- End of document: ensure no stray unclosed table tags -->
+
