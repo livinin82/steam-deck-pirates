@@ -7,18 +7,18 @@ nav_order: 3
 # Guides for installing games
 
 ```mermaid
-graph TD
-    A[Source Game] --> B[Install Game on PC]
-    A --> C[Pre-installed Game]
-    A --> D[Install on SteamDeck]
-    B --> E[Transfer to Deck]
-    C --> E
-    E --> F[Add Non-Steam Game]
-    D --> F
-    F --> G{Set up Windows Env}
-    G -->|SteamOS| H[Configure (ProtonTricks)]
-    G -->|Lutris| Z((Play))
-    H --> Z
+graph TD;
+    A[Source Game] --> B[Install Game on PC];
+    A --> C[Pre-installed Game];
+    A --> D[Install on SteamDeck];
+    B --> E[Transfer to Deck];
+    C --> E;
+    E --> F[Add Non-Steam Game];
+    D --> F;
+    F --> G{Set up Windows Env};
+    G -->|SteamOS| H[Configure (ProtonTricks)];
+    G -->|Lutris| Z((Play));
+    H --> Z;
 ```
 
 Quick links:
