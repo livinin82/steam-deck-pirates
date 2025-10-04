@@ -157,7 +157,6 @@ If your game is already in a preinstalled state, skip to **Part 3**.
 <table>
 <tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
-<strong>Method 1: Using Wine</strong>
 <ul>
     <li>Right-click setup.exe and select Wine.</li>
     <li>Limit the installer to 2GB of RAM.</li>
@@ -383,7 +382,7 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
     <li>Open a terminal window.</li>
     <li>Find your Steam Deck's IP address (Settings > Internet).</li>
     <li>Connect using SSH:
-        <pre><code>ssh deck@<SteamDeck_IP></code></pre>
+        <pre><code>ssh deck@&lt;SteamDeck_IP&gt;</code></pre>
     </li>
     <li>Enter your password when prompted.</li>
     <li>You now have terminal access to your Steam Deck.</li>
@@ -420,7 +419,7 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
 <ol>
     <li>Download and install <strong>PuTTY</strong> (or use Windows Terminal/PowerShell if OpenSSH is installed).</li>
     <li>Find your Steam Deck's IP address (Settings > Internet).</li>
-    <li>Open PuTTY and enter <code>deck@<SteamDeck_IP></code> as the Host Name.</li>
+    <li>Open PuTTY and enter <code>deck@&lt;SteamDeck_IP&gt;</code> as the Host Name.</li>
     <li>Set Port to <code>22</code> and Connection Type to <code>SSH</code>.</li>
     <li>Click <strong>Open</strong> and enter your password when prompted.</li>
     <li>You now have terminal access to your Steam Deck.</li>
@@ -430,43 +429,6 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
 </table>
 
 ---
-
-#### SSH Connection Guide: Mac
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
-<strong>Connect to Steam Deck from Mac:</strong>
-<ol>
-    <li>Open the <strong>Terminal</strong> app (Applications > Utilities > Terminal).</li>
-    <li>Find your Steam Deck's IP address (Settings > Internet).</li>
-    <li>Connect using SSH:
-        <pre><code>ssh deck@<SteamDeck_IP></code></pre>
-    </li>
-    <li>Enter your password when prompted.</li>
-    <li>You now have terminal access to your Steam Deck.</li>
-</ol>
-</td>
-</tr>
-</table>
-
----
-
-#### SSH Connection Guide: Windows
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
-<strong>Connect to Steam Deck from Windows:</strong>
-<ol>
-    <li>Download and install <strong>PuTTY</strong> (or use Windows Terminal/PowerShell if OpenSSH is installed).</li>
-    <li>Find your Steam Deck's IP address (Settings > Internet).</li>
-    <li>Open PuTTY and enter <code>deck@<SteamDeck_IP></code> as the Host Name.</li>
-    <li>Set Port to <code>22</code> and Connection Type to <code>SSH</code>.</li>
-    <li>Click <strong>Open</strong> and enter your password when prompted.</li>
-    <li>You now have terminal access to your Steam Deck.</li>
-</ol>
-</td>
-</tr>
-</table>
 
 #### Adding Your Deck Storage as a Drive on Your PC or Mac
 
