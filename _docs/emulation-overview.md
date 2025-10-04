@@ -1,7 +1,6 @@
 ---
 title: Emulation & ROMs Overview
-parent: Emulators and ROMs
-nav_order: 1
+nav_order: 5
 ---
 
 # Emulation & ROMs Overview
