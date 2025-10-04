@@ -98,13 +98,6 @@
         // Transform GitHub style admonitions inside blockquotes beginning with [!TAG]
         (function(){
           const map = { NOTE:'note', WARNING:'warning', CAUTION:'caution', TIP:'tip', IMPORTANT:'important' };
-          const icons = {
-            note: '🟢',
-            tip: '🟢',
-            important: '📘',
-            warning: '🟡',
-            caution: '🔴'
-          };
           document.querySelectorAll('.markdown-body blockquote').forEach(bq=>{
             const first = bq.firstElementChild || bq.firstChild;
             if(!first) return;
@@ -120,8 +113,7 @@
                 const label = document.createElement('div');
                 label.className='admonition-title';
                 const title = key.charAt(0)+key.slice(1).toLowerCase();
-                const icon = icons[kind] || '';
-                label.textContent = icon ? icon+' '+title : title;
+                label.textContent = title;
                 bq.insertBefore(label, bq.firstChild);
               }
             }
