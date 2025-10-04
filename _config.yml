@@ -1,4 +1,7 @@
 theme: just-the-docs
+
+
+remote_theme: just-the-docs/just-the-docs
 title: Steam Deck Pirates' Cove
 description: A comprehensive guide to sailing the high seas on your Steam Deck.
 url: "https://livinin82.github.io/steam-deck-pirates"
@@ -9,11 +12,9 @@ search_enabled: true
 
 # Just the Docs settings
 just_the_docs:
-  # Enable table of contents
   toc:
     enabled: true
     title: "On this page"
-  # Enable mermaid diagrams
   mermaid:
     enabled: true
 
