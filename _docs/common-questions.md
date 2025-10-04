@@ -2,7 +2,8 @@
 title: Common Questions
 id: common-questions
 nav_order: 7
----# Common questions/Things you will encounter
+---
+# Common questions/Things you will encounter
 
 Use the quick links below to jump to a topic:
 

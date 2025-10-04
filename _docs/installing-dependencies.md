@@ -5,7 +5,7 @@ nav_order: 2
 ---
 
 ## Installing Dependencies
-#### What are dependencies?
+#### What are dependencies? {#what-are-dependencies}
 
 > [!NOTE]
 > Dependencies are other tools/apps that software relies on to work.
@@ -16,7 +16,7 @@ nav_order: 2
 > * [X] Error at beginning stating a certain file or app cannot be found.
 > * [X] The game doesn't start.
 
-#### How to find what dependencies are needed for your game.
+#### How to find what dependencies are needed for your game {#how-to-find-what-dependencies-are-needed-for-your-game}
 
 > [!NOTE]
 > In the event that a game does not come with it's dependencies in the folder or you are not sure which they need, Steam actually has a database dedicated to every iteration of every game they have. Being the awesome company they are, they have a dedicated log of all things required through the history of a games life cycle on their server. This includes everything from prices up to dependencies, updates and DLC. In this instance, we're going to show you where to go on their database to get the info you need.
@@ -35,7 +35,7 @@ nav_order: 2
 
 ![GTA V Dependencies](https://i.imgur.com/adLTbwV.png)
 
-#### Where to get dependencies.
+#### Where to get dependencies {#where-to-get-dependencies}
 
 > [!NOTE]
 > Microsoft has everything you need.
@@ -44,11 +44,11 @@ nav_order: 2
 > [!CAUTION]
 > If it wasn't explicitly clear in the previous note, do not download these from places other than the Microsoft site or Wine/ProtonTricks. While they may not mess your Steam Deck up due to it being Linux, it's just good practice to not download official and freely available things that can harm your system from shady places or people. Repackers issue the same stuff and probably get them from Microsoft themselves. Just save yourself the trouble.
 
-#### DirectX
+#### DirectX {#installing-with-protontricks}
 - [DirectX 9 (2010)](https://www.microsoft.com/en-us/download/details.aspx?id=8109)
 - [DirectX 10/11](https://www.microsoft.com/en-us/download/details.aspx?id=35)
 
-#### VC Runtime Redist
+#### VC Runtime Redist {#installing-manually-with-an-installer-still-in-protontricks}
 - [VC Redist 2005](https://www.microsoft.com/en-us/download/details.aspx?id=26347)
 - [VC Redist 2008](https://www.microsoft.com/en-us/download/details.aspx?id=26368)
 - [VC Redist 2010](https://www.microsoft.com/en-us/download/details.aspx?id=26999)
