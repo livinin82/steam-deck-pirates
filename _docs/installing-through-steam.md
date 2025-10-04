@@ -46,7 +46,8 @@ If your game is already in a preinstalled state, skip to **Part 3**.
 </ul>
 </div>
 
-**Note:** FG repacks default to the D drive, and DoDi repacks default to the C drive.
+> [!NOTE]
+> FG repacks default to the D drive, and DoDi repacks default to the C drive.
 
 #### Part 2: Installation
 
