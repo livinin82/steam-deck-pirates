@@ -6,9 +6,9 @@ nav_order: 1
 
 # Emulation & ROMs Overview
 
-This single page consolidates guidance that was previously split across multiple smaller pages (EmuDeck, RetroDeck, Switch Emulation, Individual Emulators, BIOS/ROMs, PC Ports). Use the sectional links below to jump where you need:
+Use the quick links below to jump to a topic:
 
-- [Why Use Frontends (EmuDeck / RetroDeck)](#why-use-frontends)
+- [Why Use Frontends](#why-use-frontends)
 - [Installing EmuDeck](#installing-emudeck)
 - [Installing RetroDeck](#installing-retrodeck)
 - [Switch Emulation](#switch-emulation)
@@ -117,5 +117,4 @@ Always check a title on <a href="https://www.pcgamingwiki.com/wiki/Home">PCGamin
 - Audit shader caches if storage tight—they can grow large over time.
 - Track fork vitality (especially Switch emulator forks) before updating.
 
-> [!NOTE]
-> This page replaces: EmuDeck, RetroDeck, Switch Emulation, BIOS/ROMs, Individual Emulators, PC Ports.
+
