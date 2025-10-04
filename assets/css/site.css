@@ -108,9 +108,6 @@ html{scroll-behavior:smooth}
 .admonition-title{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin:0 0 .4rem;color:var(--adm-color)}
 .doc h1,.doc h2,.doc h3,.doc h4{scroll-margin-top:80px;font-weight:600;line-height:1.2}
 .doc h1{font-size:2rem;margin-top:0;color:var(--color-heading)}
-.doc h1.hero-title{font-size:2.4rem;margin:0 0 1.2rem;text-align:center;font-weight:700;letter-spacing:.5px;background:linear-gradient(90deg,var(--color-accent),#ffa600);-webkit-background-clip:text;background-clip:text;color:transparent}
-.doc .hero-sub{font-size:.9rem;text-align:center;color:var(--color-text-muted);margin-top:-.6rem;margin-bottom:2.2rem}
-.doc h2:first-of-type{border-top:0;padding-top:0;margin-top:1rem}
 .doc h2{font-size:1.35rem;margin-top:2.2rem;border-top:1px solid var(--color-border);padding-top:1.2rem;color:var(--color-heading)}
 .doc h3{font-size:1.05rem;margin-top:1.6rem;color:var(--color-accent)}
 .doc h4{font-size:.85rem;margin-top:1.2rem;letter-spacing:.5px;text-transform:uppercase;color:var(--color-text-muted)}

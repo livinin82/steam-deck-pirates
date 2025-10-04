@@ -1,4 +1,3 @@
-````markdown
 <!-- README content (front matter removed; handled by index.md) -->
 # <span class="hero-title">Steam Deck Pirates' Cove</span>
 
@@ -1111,5 +1110,3 @@ If this shows it means your crack isn't working. Make sure you copied the files 
 | SteamDeckHQ | https://steamdeckhq.com/ |
 | PCGamingWiki | https://www.pcgamingwiki.com/wiki/Home |
 
-
-````

@@ -7,7 +7,6 @@ gem 'jekyll-relative-links'
 gem 'jekyll-redirect-from'
 gem 'kramdown-parser-gfm'
 gem 'webrick'
-gem 'just-the-docs'
 
 group :development do
 	gem 'faraday-retry' # silences Faraday retry middleware suggestion, optional
