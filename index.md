@@ -72,100 +72,14 @@ graph TD
     D["Install Game on SteamDeck"]
     E["Transfer to Steam Deck"]
     F["Add Non-Steam Game"]
-    G{"Set up Windows Environment"}
-    H["Configure with ProtonTricks"]
-    Z((Play Game))
-
-    A --> B
-    A --> C
-    A --> D
-    B --> E
-    C --> E
-    E --> F
-    D --> F
-    F --> G
-    G -- SteamOS --> H
-    G -- Lutris --> Z
-    H --> Z
-```
-
-
-#### Installing games through Steam
-
-> [!NOTE]
-> There are a few different ways to get cracked games on your system. They all for the most part end in the same results. Some games require one method over another. Part of piracy is experimenting and finding what works best. If you find a better method for a specific game let us know in the subreddit!
-
-If your game is already in a preinstalled state, skip to **Part 3**.
-
-#### Part 1: Running the setup.exe
-
-
-
-> **Method 1: Using Wine**
-> * Right-click setup.exe and select Wine.
-> * Limit the installer to 2GB of RAM.
-> * Install to your preferred location for games.
-
-> **Method 2: Using Steam Compatibility Tool**
-> * Switch your Steam Deck to desktop mode (in the Power settings menu).
-> * Locate the downloaded game and the setup.exe file.
-> * Right-click on setup.exe and click “Add to Steam”.
-> * Open Steam, go to your Library, and click on setup.exe.
-> * Go to the Compatibility section and check the box for “Force the use of a specific compatibility tool.”
-> * Select Proton Experimental.
-> * Create a new folder called Games in `/home/deck/`.
-> * Go back to Steam, click on setup.exe, and press Play.
-
-> **Continued from either method:**
-> * Wait for the installation to complete.
-> * Once done, check off all the radio boxes in the installer and close it.
-
-**Note:** FG repacks default to the D drive, and DoDi repacks default to the C drive.
-
-#### Part 2: Installation
-
-> [!WARNING]
-> Be patient. Sometimes, it can take a while for the installer to appear.
-
-> * Once it does, select your preferred language (e.g., English) and click Next.
-> * Follow the installer steps. Make sure to:
->     * Set the installation path to the `Games` folder in the Z drive (or your microSD card if installing there).
->     * Untick any options for additional installations (like DirectX and Visual C++).
-> * Start the installation.
->     * Optional step: Limit the installer to 2GB of RAM for installation stability.
-
-> [!NOTE]
-> Don’t worry if the installation is slow, especially for repacks. This is normal and can take hours depending on game size and compression.
-
-#### Part 3: Running the Game
-> **Method 1: Using Wine**
-> * Once the installation is complete, go to the installation folder and locate the game’s .exe file (e.g., `game.exe`).
-> * Right-click on the `game.exe`, select “Add to Steam” to add it as a non-Steam game.
-> * Open Steam, find `game.exe`, and go to the Compatibility section.
-> * Set the compatibility to Proton Experimental.
-> * Launch the game by pressing Play.
-> * If it shows an error or doesn’t run: Refer to the dependencies guide for help ([Dependencies Guide](#installing-dependencies)).
-> * Run the game in Desktop mode to verify it works correctly.
-> * Once verified, you can rename it in Steam to whatever you prefer, and then switch back to Gaming mode to play.
-> **Method 2: Using Steam Compatibility Tool**
-> * Once the installation is complete, go back to Steam and remove `setup.exe` (right-click > Manage > Remove non-Steam game).
-> * Go to the installation folder, find the `game.exe` file, right-click on it, and add it to Steam.
-> * Open Steam, find `game.exe`, and go to the Compatibility section. Repeat steps 5-7 from Part 1 (set the compatibility to Proton Experimental).
-> * Launch the game by pressing Play.
-> * Run the game in Desktop mode to make sure it works correctly.
-> * Exit the game. You can rename it in Steam to whatever you prefer (otherwise, it’ll show as `game.exe` in gaming mode).
-> * Switch back to Gaming mode and enjoy your game!
-
-> [!NOTE]
-> If it shows an error or doesn’t run: Either the Proton version is incorrect (try different ones) or there’s a missing dependency. If it's the latter, refer to a dependencies guide ([Dependencies Guide](#installing-dependencies)).
-
-> **Additional Notes**
-> * Some downloads may come in `.rar` files. Extract these using an app like PeaZip before proceeding to Step 2.
-> * Proton Experimental should usually work, but if it doesn’t, try the latest Proton version or Proton-GE.
-> * You may need to enable hidden files for this step.
-> * To install on a microSD card, create a folder named `Games` on the SD card root. Then, add the following to `setup.exe`’s launch options:
->     ```
->     STEAM_COMPAT_MOUNTS="/run/media/mmcblk0p1/Games/" %command%
+    ---
+    title: Home
+    layout: default
+    permalink: /
+    ---
+    <!-- This homepage is now sourced directly from README.md so editing README updates the site. -->
+    {% comment %}Include raw README markdown, then it is processed together on this page.{% endcomment %}
+    {% include_relative README.md %}
 >     ```
 > * Avoid installing to the C drive to prevent issues later on.
 > * Some games may have a different `.exe` file for launching. Use Dolphin File Explorer to search for other `.exe` files in the game folder.
