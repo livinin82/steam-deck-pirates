@@ -28,12 +28,16 @@ plugins:
   - jekyll-redirect-from
 
 exclude:
-  - README.md
   - LICENSE
   - .gitignore
   - scripts/
   - Gemfile*
   - _docs/*.md
+
+heading_anchors: true
+enable_copy_code_button: true
+back_to_top: true
+back_to_top_text: "Back to top"
 
 # Simple nav configuration (optional manual ordering override)
 nav_parents_order:

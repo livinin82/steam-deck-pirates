@@ -1105,6 +1105,7 @@ If this shows it means your crack isn't working. Make sure you copied the files 
 
 ---
 ## Useful Links
+
 | Resource | URL |
 | --- | --- |
 | ProtonDB | [https://protondb.com/](https://protondb.com/) |
