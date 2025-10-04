@@ -3,7 +3,9 @@ title: Steam Deck Pirates' Cove (Repo Overview)
 layout: default
 ---
 
-# <div align="center">🏴‍☠️ Steam Deck Pirates' Cove 🏴‍☠️</div>
+# <span class="hero-title">Steam Deck Pirates' Cove</span>
+
+<p class="hero-sub">A consolidated single-page reference for running Windows games, emulation, and tweaks on Steam Deck.</p>
 
 ## Info About Steam Deck
 
@@ -72,7 +74,7 @@ graph TD
     C["Pre-installed Game"]
     D["Install Game on SteamDeck"]
     E["Transfer to Steam Deck"]
-    F["Add Non-Steam Game"]
+    F["Add Non-Steam Game]
     G{"Set up Windows Environment"}
     H["Configure with ProtonTricks"]
     Z((Play Game))
@@ -1099,8 +1101,6 @@ If this shows it means your crack isn't working. Make sure you copied the files 
 ## Other subreddits/groups
 #### Piracy Related
 - [Linux Crack Tips](https://www.reddit.com/r/LinuxCrackSupport/)
-- [Piracy](https://www.reddit.com/r/Piracy)
-- [FreeMediaHeckYeah](https://www.reddit.com/r/FREEMEDIAHECKYEAH)
 
 ---
 
