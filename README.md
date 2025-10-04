@@ -63,6 +63,8 @@ Launchers are apps built for Linux that allow you to play games from other Launc
 ---
 
 ## Guides for installing games
+
+### Installing Games Overview
 ```mermaid
 graph TD
     A[Source Game]
@@ -70,7 +72,7 @@ graph TD
     C["Pre-installed Game"]
     D["Install Game on SteamDeck"]
     E["Transfer to Steam Deck"]
-    F["Add Non-Steam Game]
+    F["Add Non-Steam Game"]
     G{"Set up Windows Environment"}
     H["Configure with ProtonTricks"]
     Z((Play Game))
@@ -1105,8 +1107,8 @@ If this shows it means your crack isn't working. Make sure you copied the files 
 ## Useful Links
 | Resource | URL |
 | --- | --- |
-| ProtonDB | https://protondb.com/ |
-| SteamDB | https://steamdb.info/ |
-| SteamDeckHQ | https://steamdeckhq.com/ |
-| PCGamingWiki | https://www.pcgamingwiki.com/wiki/Home |
+| ProtonDB | [https://protondb.com/](https://protondb.com/) |
+| SteamDB | [https://steamdb.info/](https://steamdb.info/) |
+| SteamDeckHQ | [https://steamdeckhq.com/](https://steamdeckhq.com/) |
+| PCGamingWiki | [https://www.pcgamingwiki.com/wiki/Home](https://www.pcgamingwiki.com/wiki/Home) |
 
