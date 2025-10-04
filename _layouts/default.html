@@ -17,113 +17,83 @@
     <aside class="sidebar" role="complementary" aria-label="Sidebar navigation">
       <div class="brand">🏴‍☠️ {{ site.title }}</div>
       <nav class="nav" role="navigation" aria-label="Primary">
-        <a href="{{ site.baseurl }}/" class="nav-root" aria-current="{{ page.url == '/' | ternary: 'page', 'false' }}">Home</a>
+  <a href="{{ site.baseurl }}/" class="nav-root" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
         {%- comment -%}
           Navigation that exactly mirrors the README structure
         {%- endcomment -%}
         <div class="nav-section">
           <div class="nav-section-title">Info About Steam Deck</div>
           <ul>
-            {% assign info_doc = site.docs | where: 'id', 'info' | first %}
-            {% if info_doc %}
-              <li><a href="{{ info_doc.url | relative_url }}" class="{% if page.url == info_doc.url %}active{% endif %}" {% if page.url == info_doc.url %}aria-current="page"{% endif %}>Overview</a></li>
-              <li class="small"><a href="{{ info_doc.url | relative_url }}#game-mode">Game Mode</a></li>
-              <li class="small"><a href="{{ info_doc.url | relative_url }}#desktop-mode">Desktop Mode</a></li>
-              <li class="small"><a href="{{ info_doc.url | relative_url }}#wine">Wine</a></li>
-              <li class="small"><a href="{{ info_doc.url | relative_url }}#proton">Proton</a></li>
-              <li class="small"><a href="{{ info_doc.url | relative_url }}#prefixes">Prefixes</a></li>
-              <li class="small"><a href="{{ info_doc.url | relative_url }}#launchers">Launchers</a></li>
-              <li class="small"><a href="{{ info_doc.url | relative_url }}#decky-plugins">Decky Plugins</a></li>
-            {% endif %}
+            <li><a href="{{ site.baseurl }}/docs/info" class="{% if page.url == '/docs/info' %}active{% endif %}" {% if page.url == '/docs/info' %}aria-current="page"{% endif %}>Overview</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/info#game-mode">Game Mode</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/info#desktop-mode">Desktop Mode</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/info#wine">Wine</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/info#proton">Proton</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/info#prefixes">Prefixes</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/info#launchers">Launchers</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/info#decky-plugins">Decky Plugins</a></li>
           </ul>
         </div>
         <div class="nav-section">
           <div class="nav-section-title">Apps you NEED TO have installed</div>
           <ul>
-            {% assign apps_doc = site.docs | where: 'id', 'apps' | first %}
-            {% if apps_doc %}
-              <li><a href="{{ apps_doc.url | relative_url }}" class="{% if page.url == apps_doc.url %}active{% endif %}" {% if page.url == apps_doc.url %}aria-current="page"{% endif %}>{{ apps_doc.title }}</a></li>
-            {% endif %}
+            <li><a href="{{ site.baseurl }}/docs/apps" class="{% if page.url == '/docs/apps' %}active{% endif %}" {% if page.url == '/docs/apps' %}aria-current="page"{% endif %}>Apps you NEED TO have installed</a></li>
           </ul>
         </div>
         <div class="nav-section">
           <div class="nav-section-title">Guides for installing games</div>
           <ul>
-            {% assign install_doc = site.docs | where: 'id', 'install-guides' | first %}
-            {% if install_doc %}
-              <li><a href="{{ install_doc.url | relative_url }}" class="{% if page.url == install_doc.url %}active{% endif %}" {% if page.url == install_doc.url %}aria-current="page"{% endif %}>Overview</a></li>
-              {% assign install_children = site.docs | where: 'parent_id', 'install-guides' | sort: 'nav_order' %}
-              {% for doc in install_children %}
-                <li><a href="{{ doc.url | relative_url }}" class="{% if page.url == doc.url %}active{% endif %}" {% if page.url == doc.url %}aria-current="page"{% endif %}>{{ doc.title }}</a></li>
-              {% endfor %}
-            {% endif %}
+            <li><a href="{{ site.baseurl }}/docs/installing-games" class="{% if page.url == '/docs/installing-games' %}active{% endif %}" {% if page.url == '/docs/installing-games' %}aria-current="page"{% endif %}>Overview</a></li>
+            <li><a href="{{ site.baseurl }}/docs/installing-through-steam" class="{% if page.url == '/docs/installing-through-steam' %}active{% endif %}" {% if page.url == '/docs/installing-through-steam' %}aria-current="page"{% endif %}>Installing games through Steam</a></li>
+            <li><a href="{{ site.baseurl }}/docs/installing-through-lutris" class="{% if page.url == '/docs/installing-through-lutris' %}active{% endif %}" {% if page.url == '/docs/installing-through-lutris' %}aria-current="page"{% endif %}>Installing games through Lutris</a></li>
+            <li><a href="{{ site.baseurl }}/docs/other-launchers" class="{% if page.url == '/docs/other-launchers' %}active{% endif %}" {% if page.url == '/docs/other-launchers' %}aria-current="page"{% endif %}>Installing games through other launchers</a></li>
+            <li><a href="{{ site.baseurl }}/docs/transferring-from-pc" class="{% if page.url == '/docs/transferring-from-pc' %}active{% endif %}" {% if page.url == '/docs/transferring-from-pc' %}aria-current="page"{% endif %}>Transferring Installed Games from PC</a></li>
           </ul>
         </div>
         <div class="nav-section" data-section="proton">
           <div class="nav-section-title"><button class="nav-section-toggle" type="button" aria-expanded="true" aria-label="Collapse section">–</button> Guides for Proton/Wine</div>
           <ul>
-            {% assign proton_doc = site.docs | where: 'id', 'proton-wine' | first %}
-            {% if proton_doc %}
-              <li><a href="{{ proton_doc.url | relative_url }}" class="{% if page.url == proton_doc.url %}active{% endif %}" {% if page.url == proton_doc.url %}aria-current="page"{% endif %}>Overview</a></li>
-              {% assign proton_children = site.docs | where: 'parent_id', 'proton-wine' | sort: 'nav_order' %}
-              {% for doc in proton_children %}
-                <li><a href="{{ doc.url | relative_url }}" class="{% if page.url == doc.url %}active{% endif %}" {% if page.url == doc.url %}aria-current="page"{% endif %}>{{ doc.title }}</a></li>
-                {% if doc.title == 'Installing Dependencies' and page.url == doc.url %}
-                  {%- assign dep_anchors = 'what-are-dependencies|how-to-find-what-dependencies-are-needed-for-your-game|where-to-get-dependencies|installing-with-protontricks|installing-manually-with-an-installer-still-in-protontricks' | split: '|' -%}
-                  <ul>
-                    {% for a in dep_anchors %}
-                      <li><a class="deep-anchor" href="{{ doc.url | relative_url }}#{{ a }}">{{ a | replace: '-', ' ' | replace: 'dependencies', 'Dependencies' | capitalize }}</a></li>
-                    {% endfor %}
-                  </ul>
-                {% endif %}
-              {% endfor %}
-            {% endif %}
+            <li><a href="{{ site.baseurl }}/docs/proton-wine" class="{% if page.url == '/docs/proton-wine' %}active{% endif %}" {% if page.url == '/docs/proton-wine' %}aria-current="page"{% endif %}>Overview</a></li>
+            <li><a href="{{ site.baseurl }}/docs/finding-proton-folder" class="{% if page.url == '/docs/finding-proton-folder' %}active{% endif %}" {% if page.url == '/docs/finding-proton-folder' %}aria-current="page"{% endif %}>Finding Proton Folder</a></li>
+            <li><a href="{{ site.baseurl }}/docs/installing-dependencies" class="{% if page.url == '/docs/installing-dependencies' %}active{% endif %}" {% if page.url == '/docs/installing-dependencies' %}aria-current="page"{% endif %}>Installing Dependencies</a></li>
+            <li><a href="{{ site.baseurl }}/docs/adding-dlls" class="{% if page.url == '/docs/adding-dlls' %}active{% endif %}" {% if page.url == '/docs/adding-dlls' %}aria-current="page"{% endif %}>Adding DLLs</a></li>
           </ul>
         </div>
         <div class="nav-section">
           <div class="nav-section-title">Guides for emulators and roms</div>
           <ul>
-            {% assign emulation_doc = site.docs | where: 'id', 'emulation' | first %}
-            {% if emulation_doc %}
-              <li><a href="{{ emulation_doc.url | relative_url }}" class="{% if page.url == emulation_doc.url %}active{% endif %}" {% if page.url == emulation_doc.url %}aria-current="page"{% endif %}>Overview</a></li>
-              <li class="small"><a href="{{ emulation_doc.url | relative_url }}#why-use-frontends">Why Use Frontends</a></li>
-              <li class="small"><a href="{{ emulation_doc.url | relative_url }}#installing-emudeck">EmuDeck</a></li>
-              <li class="small"><a href="{{ emulation_doc.url | relative_url }}#installing-retrodeck">RetroDeck</a></li>
-              <li class="small"><a href="{{ emulation_doc.url | relative_url }}#individual-emulators-vs-frontends">Individual emulators</a></li>
-              <li class="small"><a href="{{ emulation_doc.url | relative_url }}#switch-emulation">Switch Emulation</a></li>
-              <li class="small"><a href="{{ emulation_doc.url | relative_url }}#bios-roms-and-other-files">BIOS, ROMs, and other files</a></li>
-              <li class="small"><a href="{{ emulation_doc.url | relative_url }}#pc-ports-vs-emulation">PC Ports</a></li>
-            {% endif %}
+            <li><a href="{{ site.baseurl }}/docs/emulation-overview" class="{% if page.url == '/docs/emulation-overview' %}active{% endif %}" {% if page.url == '/docs/emulation-overview' %}aria-current="page"{% endif %}>Overview</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/emulation-overview#why-use-frontends">Why Use Frontends</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/emulation-overview#installing-emudeck">EmuDeck</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/emulation-overview#installing-retrodeck">RetroDeck</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/emulation-overview#individual-emulators-vs-frontends">Individual emulators</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/emulation-overview#switch-emulation">Switch Emulation</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/emulation-overview#bios-roms-and-other-files">BIOS, ROMs, and other files</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/emulation-overview#pc-ports-vs-emulation">PC Ports</a></li>
           </ul>
         </div>
         <div class="nav-section">
           <div class="nav-section-title">Cracks/DLC/Updates</div>
           <ul>
-            {% assign cracks_doc = site.docs | where: 'id', 'cracks' | first %}
-            {% if cracks_doc %}
-              <li><a href="{{ cracks_doc.url | relative_url }}" class="{% if page.url == cracks_doc.url %}active{% endif %}" {% if page.url == cracks_doc.url %}aria-current="page"{% endif %}>{{ cracks_doc.title }}</a></li>
-            {% endif %}
+            <li><a href="{{ site.baseurl }}/docs/cracks-dlc-updates" class="{% if page.url == '/docs/cracks-dlc-updates' %}active{% endif %}" {% if page.url == '/docs/cracks-dlc-updates' %}aria-current="page"{% endif %}>Cracks/DLC/Updates</a></li>
           </ul>
         </div>
         <div class="nav-section" data-section="common">
           <div class="nav-section-title"><button class="nav-section-toggle" type="button" aria-expanded="true" aria-label="Collapse section">–</button> Common Questions</div>
           <ul>
-            {% assign common_doc = site.docs | where: 'id', 'common-questions' | first %}
-            {% if common_doc %}
-              <li><a href="{{ common_doc.url | relative_url }}" class="{% if page.url == common_doc.url %}active{% endif %}" {% if page.url == common_doc.url %}aria-current="page"{% endif %}>Overview</a></li>
-              <li class="small"><a href="{{ common_doc.url | relative_url }}#compressed-files">Compressed Files</a></li>
-              <li class="small"><a href="{{ common_doc.url | relative_url }}#iso-files">ISO Files</a></li>
-              <li class="small"><a href="{{ common_doc.url | relative_url }}#install-locations">Install Locations</a></li>
-              <li class="small"><a href="{{ common_doc.url | relative_url }}#cant-see-external-hddsd-cardhome-folder">Can't see external HDD/SD Card</a></li>
-              <li class="small"><a href="{{ common_doc.url | relative_url }}#cant-find-save-files">Can't find save files</a></li>
-              <li class="small"><a href="{{ common_doc.url | relative_url }}#how-do-i-movebackup-my-save-files">Move/backup save files</a></li>
-              <li class="small"><a href="{{ common_doc.url | relative_url }}#controller-not-working">Controller not working</a></li>
-              <li class="small"><a href="{{ common_doc.url | relative_url }}#game-opens-steam">Game opens steam</a></li>
-              <li class="small"><a href="{{ common_doc.url | relative_url }}#no-licenses">No licenses</a></li>
-              <li class="small"><a href="{{ common_doc.url | relative_url }}#games-suddenly-wont-open-or-close">Games won't open</a></li>
-              <li class="small"><a href="{{ common_doc.url | relative_url }}#game-tries-to-load-and-immediately-stops">Game stops immediately</a></li>
-              <li class="small"><a href="{{ common_doc.url | relative_url }}#mods-wont-load">Mods won't load</a></li>
-            {% endif %}
+            <li><a href="{{ site.baseurl }}/docs/common-questions" class="{% if page.url == '/docs/common-questions' %}active{% endif %}" {% if page.url == '/docs/common-questions' %}aria-current="page"{% endif %}>Overview</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#compressed-files">Compressed Files</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#iso-files">ISO Files</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#install-locations">Install Locations</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#cant-see-external-hddsd-cardhome-folder">Can't see external HDD/SD Card</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#cant-find-save-files">Can't find save files</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#how-do-i-movebackup-my-save-files">Move/backup save files</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#controller-not-working">Controller not working</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#game-opens-steam">Game opens steam</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#no-licenses">No licenses</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#games-suddenly-wont-open-or-close">Games won't open</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#game-tries-to-load-and-immediately-stops">Game stops immediately</a></li>
+            <li class="small"><a href="{{ site.baseurl }}/docs/common-questions#mods-wont-load">Mods won't load</a></li>
           </ul>
         </div>
       </nav>
