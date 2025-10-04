@@ -1,42 +1,8 @@
 ---
-title: Transferring Installed Games from PC
-parent_id: install-guides
-nav_order: 4
+redirect_to: /steam-deck-pirates/docs/installing-games#transferring-installed-games-from-pc
+title: Transferring Installed Games from PC (Moved)
 ---
-
-## Transferring Installed Games from PC
-
-> [!NOTE]
-> There are a multitude of ways to transfer your files from any device you have over to your Deck.
-> We won't mention USB drives here because it is easy to do and also the longest time out of any of the options seeing as how you have to transfer twice.
-
-> [!WARNING]
-> Speeds may vary based on a variety of things including network speed, network hardware, PC hardware, cable vs. WiFi, etc.
-
-
-#### SSH (Network File Sharing)
-
-Below are step-by-step guides for connecting to your Steam Deck via SSH from Linux, Mac, and Windows. Each guide assumes you have already enabled SSHD on your Steam Deck (see below).
-
----
-
-#### Setting Up SSHD on Steam Deck
-<div class="panel">
-<strong>Enable SSH Daemon Service on your Deck:</strong>
-<ol>
-    <li>Switch to Desktop Mode (<strong>STEAM</strong> button > <strong>Power</strong> > <strong>Switch to Desktop</strong>).</li>
-    <li>Open&nbsp;<strong>Konsole</strong> from <strong>All Applications</strong>.</li>
-    <li>Set a password for your user: <code>passwd</code></li>
-    <li>Enable SSHD: <code>sudo systemctl enable sshd</code></li>
-    <li>Start SSHD: <code>sudo systemctl start sshd</code></li>
-    <li>Check status: <code>sudo systemctl status sshd</code> (look for <code>enabled</code> and <code>running</code>).</li>
-</ol>
-</div>
-
->*from [GitHub](https://github.com/Matalus/steamdeck-tips/blob/main/wiki/ssh.md)*
-
-> [!CAUTION]
-> The password set in this tutorial will be your password across all Deck operations. Remember it!!
+Content moved to consolidated Installing Games page.
 
 ---
 

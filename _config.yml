@@ -25,6 +25,7 @@ defaults:
 plugins:
   - jekyll-relative-links
   - jekyll-seo-tag
+  - jekyll-redirect-from
 
 exclude:
   - README.md
