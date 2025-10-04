@@ -70,7 +70,7 @@ graph TD
     C["Pre-installed Game"]
     D["Install Game on SteamDeck"]
     E["Transfer to Steam Deck"]
-    F["Add Non-Steam Game"]
+    F["Add Non-Steam Game]
     G{"Set up Windows Environment"}
     H["Configure with ProtonTricks"]
     Z((Play Game))
@@ -1028,7 +1028,6 @@ A couple of people have reported being able to pinpoint the search by changing t
 
 <table>
 <tr>
-<tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
 <strong>In Desktop mode:</strong>
 <ul>
@@ -1110,7 +1109,4 @@ If this shows it means your crack isn't working. Make sure you copied the files 
 | SteamDB | https://steamdb.info/ |
 | SteamDeckHQ | https://steamdeckhq.com/ |
 | PCGamingWiki | https://www.pcgamingwiki.com/wiki/Home |
-
-<!-- End of document: ensure no stray unclosed table tags -->
-<!-- EOF -->
 
