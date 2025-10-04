@@ -1,5 +1,6 @@
 ---
 title: Guides for emulators and roms
+id: emulation
 nav_order: 5
 subsections:
   - title: Why Use Frontends

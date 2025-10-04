@@ -1,7 +1,7 @@
 ---
 title: Other Resources
-nav_order: 8
-has_children: true
+parent_id: common-questions
+nav_order: 99
 ---
 
 # Other subreddits/groups

@@ -1,5 +1,6 @@
 ---
 title: Cracks/DLC/Updates
+id: cracks
 nav_order: 6
 ---
 

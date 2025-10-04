@@ -1,6 +1,6 @@
 ---
 title: Installing games through Steam
-parent: Guides for installing games
+parent_id: install-guides
 nav_order: 1
 ---
 

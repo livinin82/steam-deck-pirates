@@ -1,6 +1,6 @@
 ---
 title: Compressed Files
-parent: Common Questions
+parent_id: common-questions
 nav_order: 1
 ---
 

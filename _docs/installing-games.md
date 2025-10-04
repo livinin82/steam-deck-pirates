@@ -1,5 +1,6 @@
 ---
 title: Guides for installing games
+id: install-guides
 nav_order: 3
 has_children: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Common Questions
+id: common-questions
 nav_order: 7
 subsections:
     - title: Compressed Files

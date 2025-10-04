@@ -1,6 +1,6 @@
 ---
 title: Finding Non-Steam Game Proton Folder
-parent: Guides for Proton/Wine
+parent_id: proton-wine
 nav_order: 1
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Adding DLLs
-parent: Proton and Wine
+parent_id: proton-wine
 nav_order: 3
 ---
 

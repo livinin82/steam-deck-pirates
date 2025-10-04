@@ -1,5 +1,6 @@
 ---
 title: Guides for Proton/Wine
+id: proton-wine
 nav_order: 4
 has_children: true
 subsections:

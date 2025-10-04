@@ -1,5 +1,6 @@
 ---
 title: Info About Steam Deck
+id: info
 nav_order: 1
 subsections:
 	- title: Game Mode

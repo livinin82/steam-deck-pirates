@@ -1,6 +1,6 @@
 ---
 title: Can't see external HDD/SD Card/home Folder
-parent: Common Questions
+parent_id: common-questions
 nav_order: 4
 ---
 

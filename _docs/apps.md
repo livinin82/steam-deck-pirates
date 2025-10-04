@@ -1,5 +1,6 @@
 ---
 title: Apps you NEED TO have installed
+id: apps
 nav_order: 2
 ---
 
