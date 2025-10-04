@@ -126,6 +126,7 @@
     <main class="content">
       <header class="topbar" role="banner">
         <div class="page-title">{{ page.title }}</div>
+        <button class="menu-toggle-btn" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰ Menu</button>
         <div class="theme-toggle">
           <button id="themeToggle" type="button" aria-label="Toggle color theme">
             <span class="icon">🌙</span>
@@ -171,7 +172,45 @@
         </script>
       </header>
       <article id="main-content" class="doc markdown-body">{{ content }}</article>
+      <button id="backToTop" type="button" aria-label="Back to top">Top</button>
       <script>
+        // Mobile sidebar toggle
+        (function(){
+          const toggle = document.getElementById('menuToggle');
+          const sidebar = document.querySelector('.sidebar');
+          if(!toggle || !sidebar) return;
+          toggle.addEventListener('click',()=>{
+            const open = sidebar.classList.toggle('open');
+            toggle.setAttribute('aria-expanded',open?'true':'false');
+            document.body.classList.toggle('nav-open',open);
+          });
+          document.addEventListener('keydown',e=>{ if(e.key==='Escape' && sidebar.classList.contains('open')){ sidebar.classList.remove('open'); document.body.classList.remove('nav-open'); toggle.setAttribute('aria-expanded','false'); }});
+        })();
+        // Scroll spy + back to top
+        (function(){
+          const backBtn = document.getElementById('backToTop');
+          backBtn.addEventListener('click',()=>{ window.scrollTo({top:0,behavior:'smooth'}); });
+          const headings = Array.from(document.querySelectorAll('.doc h2, .doc h3, .doc h4'))
+            .filter(h=>h.id);
+          const linkMap = new Map();
+          const navLinks = document.querySelectorAll('.nav a[href*="#"]');
+            navLinks.forEach(a=>{ try { const hash = decodeURIComponent(a.getAttribute('href').split('#')[1]||''); if(hash){ linkMap.set(hash,a);} } catch(_){} });
+          let activeId = null;
+          const observer = new IntersectionObserver(entries=>{
+            entries.forEach(entry=>{
+              if(entry.isIntersecting){ activeId = entry.target.id; update(); }
+            });
+          },{ rootMargin:'-55% 0px -40% 0px', threshold:[0,1]});
+          function update(){
+            navLinks.forEach(a=>a.classList.remove('spy-active'));
+            if(activeId && linkMap.has(activeId)) linkMap.get(activeId).classList.add('spy-active');
+          }
+          headings.forEach(h=>observer.observe(h));
+          window.addEventListener('scroll',()=>{
+            const y = window.scrollY || document.documentElement.scrollTop;
+            if(y>400) backBtn.classList.add('visible'); else backBtn.classList.remove('visible');
+          });
+        })();
         // Transform GitHub style admonitions inside blockquotes beginning with [!TAG]
         (function(){
           const map = { NOTE:'note', WARNING:'warning', CAUTION:'caution', TIP:'tip', IMPORTANT:'important' };
