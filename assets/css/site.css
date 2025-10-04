@@ -81,14 +81,15 @@ body{margin:0;font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Se
 .markdown-body hr{border-top:1px solid var(--md-border)}
 
 /* Admonitions */
-.admonition{position:relative;border:1px solid var(--color-border);border-left:4px solid var(--color-accent);background:var(--color-bg-alt);padding:.85rem 1rem .9rem 1rem;margin:1.5rem 0;border-radius:6px;--adm-color:var(--color-accent)}
+/* Base admonition; border-left default overwritten by variants */
+.admonition{position:relative;border:1px solid var(--color-border);border-left:4px solid var(--color-accent);background:var(--color-bg-alt);padding:.85rem 1rem .9rem 1rem;margin:1.5rem 0;border-radius:6px;--adm-color:var(--color-accent);}
 /* Variant colors now only affect left line + title; unified background for readability */
 .admonition-note{--adm-color:var(--adm-note-color)}
 .admonition-tip{--adm-color:var(--adm-tip-color)}
 .admonition-important{--adm-color:var(--adm-important-color)}
 .admonition-warning{--adm-color:var(--adm-warning-color)}
 .admonition-caution{--adm-color:var(--adm-caution-color)}
-.admonition{border-left-color:var(--adm-color)}
+.admonition{border-left-color:var(--adm-color);}
 .admonition-title{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin:0 0 .4rem;color:var(--adm-color)}
 .doc h1,.doc h2,.doc h3,.doc h4{scroll-margin-top:80px;font-weight:600;line-height:1.2}
 .doc h1{font-size:2rem;margin-top:0;color:var(--color-heading)}
