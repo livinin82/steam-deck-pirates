@@ -14,20 +14,15 @@
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
   <div class="layout">
-    <button class="nav-toggle" aria-controls="auto-nav" aria-expanded="false" type="button">☰ Menu</button>
     <div class="nav-backdrop" id="navBackdrop"></div>
     <aside id="auto-nav" class="auto-nav" aria-label="On this page"></aside>
     <main class="content">
     <header class="topbar" role="banner">
-  <div class="page-title">
-    <span class="hero-title"><span class="emoji" aria-hidden="true">🏴‍☠️</span> <span class="hero-text">{{ page.title }}</span> <span class="emoji" aria-hidden="true">🏴‍☠️</span></span>
-  </div>
+      <div class="page-title">
+        <span class="hero-title"><span class="emoji" aria-hidden="true">🏴‍☠️</span> <span class="hero-text">{{ page.title }}</span> <span class="emoji" aria-hidden="true">🏴‍☠️</span></span>
+      </div>
         <button class="menu-toggle-btn" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰ Menu</button>
-        <div class="theme-center">
-          <button id="themeToggle" type="button" aria-label="Toggle color theme" class="theme-icon-btn">
-            <span class="icon" aria-hidden="true">🌙</span>
-          </button>
-        </div>
+        <!-- Theme toggle moved to utility dock -->
         <script>
           (function(){
             const STORAGE_KEY = 'sdp-theme';
@@ -78,12 +73,16 @@
           }
         })();
       </script>
-  <button id="backToTop" type="button" aria-label="Back to top">Top</button>
+  <div class="utility-dock" role="group" aria-label="Page utilities">
+    <button class="util-btn nav-toggle" id="menuToggle" aria-label="Open navigation" aria-controls="auto-nav" aria-expanded="false" type="button" title="Navigation">☰</button>
+    <button class="util-btn" id="themeToggle" type="button" aria-label="Toggle color theme" title="Toggle theme"><span class="icon" aria-hidden="true">🌙</span></button>
+    <button class="util-btn" id="backToTop" type="button" aria-label="Back to top" title="Back to top">↑</button>
+  </div>
       <script>
   // Auto-generate navigation & mobile behavior
         (function(){
           const navContainer=document.getElementById('auto-nav');
-          const toggle=document.querySelector('.nav-toggle');
+          const toggle=document.getElementById('menuToggle');
           const backdrop=document.getElementById('navBackdrop');
           const content=document.getElementById('main-content');
           if(!navContainer||!content) return;
@@ -116,17 +115,17 @@
           navContainer.addEventListener('click',e=>{ if(e.target.tagName==='A') close(); });
           document.addEventListener('keydown',e=>{ if(e.key==='Escape') close(); });
         })();
-        // Back to top visibility + click
+        // Back to top (in utility dock) visibility + click
         (function(){
           const btn=document.getElementById('backToTop');
           if(!btn) return;
           btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-          function toggle(){
+          function reveal(){
             const y=window.scrollY||document.documentElement.scrollTop;
             if(y>400) btn.classList.add('visible'); else btn.classList.remove('visible');
           }
-            window.addEventListener('scroll',toggle,{passive:true});
-          toggle();
+          window.addEventListener('scroll',reveal,{passive:true});
+          reveal();
         })();
         // Admonitions
         (function(){
