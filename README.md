@@ -1094,22 +1094,17 @@ If this shows it means your crack isn't working. Make sure you copied the files 
 > * Case sensitivity mismatch in filenames.
 
 ---
-## Other subreddits/groups
-**Piracy Related**
+## Communities & Resources
+Below is a consolidated list of related subreddits and helpful external reference sites.
 
-| Community | Link |
-| --- | --- |
-| Linux Crack Tips | [https://www.reddit.com/r/LinuxCrackSupport/](https://www.reddit.com/r/LinuxCrackSupport/) |
-| Piracy | [https://www.reddit.com/r/Piracy](https://www.reddit.com/r/Piracy) |
-| FreeMediaHeckYeah | [https://www.reddit.com/r/FREEMEDIAHECKYEAH](https://www.reddit.com/r/FREEMEDIAHECKYEAH) |
+| Type | Name | URL |
+| ---- | ---- | --- |
+| Subreddit | Linux Crack Tips | [https://www.reddit.com/r/LinuxCrackSupport/](https://www.reddit.com/r/LinuxCrackSupport/) |
+| Subreddit | Piracy | [https://www.reddit.com/r/Piracy](https://www.reddit.com/r/Piracy) |
+| Subreddit | FreeMediaHeckYeah | [https://www.reddit.com/r/FREEMEDIAHECKYEAH](https://www.reddit.com/r/FREEMEDIAHECKYEAH) |
+| Reference | ProtonDB | [https://protondb.com/](https://protondb.com/) |
+| Reference | SteamDB | [https://steamdb.info/](https://steamdb.info/) |
+| Reference | SteamDeckHQ | [https://steamdeckhq.com/](https://steamdeckhq.com/) |
+| Reference | PCGamingWiki | [https://www.pcgamingwiki.com/wiki/Home](https://www.pcgamingwiki.com/wiki/Home) |
 
----
-## Useful Links
-
-| Resource | URL |
-| --- | --- |
-| ProtonDB | [https://protondb.com/](https://protondb.com/) |
-| SteamDB | [https://steamdb.info/](https://steamdb.info/) |
-| SteamDeckHQ | [https://steamdeckhq.com/](https://steamdeckhq.com/) |
-| PCGamingWiki | [https://www.pcgamingwiki.com/wiki/Home](https://www.pcgamingwiki.com/wiki/Home) |
 
