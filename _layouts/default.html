@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"/>
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}"/>
   {% seo %}
@@ -74,7 +74,7 @@
           }
         })();
       </script>
-  <div class="utility-dock" role="group" aria-label="Page utilities">
+  <div class="utility-dock expanded" role="group" aria-label="Page utilities">
     <button class="util-btn" id="menuToggle" aria-label="Open navigation" aria-controls="auto-nav" aria-expanded="false" type="button" title="Navigation">☰</button>
     <button class="util-btn" id="themeToggle" type="button" aria-label="Toggle color theme" title="Toggle theme"><span class="icon" aria-hidden="true">🌙</span></button>
     <div class="expander" aria-hidden="true">
@@ -127,24 +127,15 @@
           navContainer.addEventListener('click',e=>{ if(e.target.tagName==='A') close(); });
           document.addEventListener('keydown',e=>{ if(e.key==='Escape') close(); });
         })();
-        // Back to top visibility + click (dock expands on scroll; always available on short pages)
+        // Back to top: now always visible (dock pre-expanded). Keep minimal safety logic.
         (function(){
           const btn=document.getElementById('backToTop');
           const dock=document.querySelector('.utility-dock');
             if(!btn||!dock) return;
             btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-            const THRESHOLD=12; // slightly lower for earlier reveal
-            const shortPage = document.documentElement.scrollHeight - window.innerHeight < 400; // fallback for short content
-            function reveal(){
-              const y=window.scrollY||document.documentElement.scrollTop;
-              if(shortPage || y>THRESHOLD){
-                dock.classList.add('expanded');
-                btn.setAttribute('aria-hidden','false');
-              }
-            }
-            window.addEventListener('scroll',reveal,{passive:true});
-            // Run initial frames; also run after images load (in case layout shifts)
-            reveal(); requestAnimationFrame(reveal); window.addEventListener('load',()=>setTimeout(reveal,60));
+            // Ensure aria-hidden cleared for assistive tech
+            btn.setAttribute('aria-hidden','false');
+            // Optional: if user scrolls back to very top, we could collapse; currently we keep it persistent.
         })();
         // Admonitions
         (function(){
