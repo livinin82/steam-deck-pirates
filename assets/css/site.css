@@ -77,13 +77,14 @@ body.nav-open .auto-nav{transform:translateX(0)}
 .auto-nav li.lvl-3 a{padding-left:1.35rem;font-size:.74rem;opacity:.9}
 /* Hide duplicate first H1 inside document (hero provides visual) */
 .doc > h1:first-of-type{display:none}
-@media (min-width:1024px){
-	/* Desktop collapsible: hidden by default, overlay when .nav-overlay */
-	.auto-nav{display:none}
-	body.nav-overlay .auto-nav{display:block;position:fixed;left:0;top:0;width:300px;max-width:90vw;height:100vh;padding:calc(var(--topbar-height) + 10px) 1rem 2rem;background:var(--color-bg-alt);border-right:1px solid var(--color-border);box-shadow:0 0 0 1px var(--color-border),0 18px 50px -12px rgba(0,0,0,.55);overflow-y:auto;animation:slideInNav .28s ease}
-	@keyframes slideInNav{from{transform:translateX(-22px);opacity:0}to{transform:translateX(0);opacity:1}}
-	.nav-backdrop{display:none}
-	body.nav-overlay .nav-backdrop{display:block;opacity:1;pointer-events:auto}
+/* Unified off-canvas nav for all breakpoints */
+.auto-nav{position:fixed;left:0;top:0;width:300px;max-width:85vw;height:100vh;padding:calc(var(--topbar-height) + 10px) 1rem 2rem;background:var(--color-bg-alt);border-right:1px solid var(--color-border);box-shadow:0 0 0 1px var(--color-border),0 14px 40px -10px rgba(0,0,0,.55);overflow-y:auto;transform:translateX(-110%);transition:.35s transform cubic-bezier(.4,.1,.2,1);z-index:1200}
+body.nav-active .auto-nav{transform:translateX(0)}
+.nav-backdrop{opacity:0;pointer-events:none;transition:.35s opacity}
+body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
+@media (min-width:1180px){
+	/* Optionally dock nav on very wide screens */
+	body.nav-active.dock-wide .auto-nav{transform:none;position:sticky}
 }
 /* Utility dock (floating controls) */
 /* Utility dock island */

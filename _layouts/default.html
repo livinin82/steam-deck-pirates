@@ -111,17 +111,14 @@
             links.forEach(l=>l.classList.remove('active')); if(current) map[current].classList.add('active');
           }
           window.addEventListener('scroll',update,{passive:true}); window.addEventListener('resize',update); update();
-          function close(){ document.body.classList.remove('nav-open','nav-overlay'); toggle&&toggle.setAttribute('aria-expanded','false'); }
+          function close(){ document.body.classList.remove('nav-active'); toggle&&toggle.setAttribute('aria-expanded','false'); }
           toggle&&toggle.addEventListener('click',()=>{
-            const isDesktop=window.innerWidth>=1024;
-            if(isDesktop){
-              const willOpen=!document.body.classList.contains('nav-overlay');
-              document.body.classList.toggle('nav-overlay',willOpen);
-              toggle.setAttribute('aria-expanded',willOpen);
-            } else {
-              const willOpen=!document.body.classList.contains('nav-open');
-              document.body.classList.toggle('nav-open',willOpen);
-              toggle.setAttribute('aria-expanded',willOpen);
+            const willOpen=!document.body.classList.contains('nav-active');
+            document.body.classList.toggle('nav-active',willOpen);
+            toggle.setAttribute('aria-expanded',willOpen);
+            if(willOpen){
+              // focus first link for accessibility
+              const first=navContainer.querySelector('a'); if(first) setTimeout(()=>first.focus(),60);
             }
           });
           backdrop&&backdrop.addEventListener('click',close);
