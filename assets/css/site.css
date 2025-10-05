@@ -55,8 +55,8 @@ html{scroll-behavior:smooth}
 /* Removed legacy sidebar styles */
 .content{flex:1;min-width:0;display:flex;flex-direction:column}
 .topbar{position:sticky;top:0;background:color-mix(in srgb,var(--color-bg) 90%,transparent);backdrop-filter:saturate(160%) blur(8px);padding:.9rem 1.5rem;border-bottom:1px solid var(--color-border);z-index:20;display:flex;align-items:center;gap:1rem}
-.hero-wide{width:100%;max-width:none;margin:0;padding:0;justify-content:center;--hero-bg:color-mix(in srgb,var(--color-bg-alt) 96%, transparent);background:var(--hero-bg);}
-.hero-wide .hero-inner{width:100%;max-width:1180px;margin:0 auto;padding:.95rem clamp(.9rem,4vw,2.2rem);display:flex;justify-content:center}
+.hero-wide{display:block;width:100%;max-width:none;margin:0;padding:0;--hero-bg:color-mix(in srgb,var(--color-bg-alt) 96%, transparent);background:var(--hero-bg);}
+.hero-wide .hero-inner{width:100%;max-width:1180px;margin:0 auto;padding:.95rem clamp(.9rem,4vw,2.2rem);display:flex;flex-direction:column;align-items:center;justify-content:center}
 .hero-wide .page-title{max-width:100%;margin:0 auto;text-align:center}
 .page-title{font-size:1rem;font-weight:600;color:var(--color-heading);flex:1;text-align:center}
 .hero-title{font-size:1.55rem;font-weight:700;letter-spacing:.5px;display:inline-flex;align-items:center;gap:.5rem;line-height:1.1}
@@ -120,6 +120,9 @@ body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
 	.markdown-body table{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--color-border);}
 	.markdown-body table thead{display:table-header-group}
 	.markdown-body table tr{display:table-row}
+	/* Ensure no side clipping on mobile */
+	.hero-wide{left:0;right:0}
+	body, .layout, .content{overflow-x:hidden}
 }
 /* Code blocks inside admonition/table cells should wrap instead of overflow */
 .markdown-body pre code{white-space:pre-wrap;word-break:break-word}
