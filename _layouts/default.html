@@ -143,7 +143,7 @@
           if(!btn) return;
           function apply(mode){
             if(!ORDER.includes(mode)) mode='normal';
-            document.documentElement.setAttribute('data-font',mode==='normal'?'':mode);
+            if(mode==='normal') document.documentElement.removeAttribute('data-font'); else document.documentElement.setAttribute('data-font',mode);
             localStorage.setItem(STORE_KEY,mode);
             btn.textContent = mode==='normal'?'A':(mode==='large'?'A+':'A++');
             btn.setAttribute('data-size',mode);

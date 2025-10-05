@@ -125,11 +125,11 @@ body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
 .markdown-body code{word-break:break-word}
 .markdown-body{--md-code-bg:var(--color-bg-alt);--md-border:var(--color-border);font-size:16px;}
 /* Font scaling modes */
-[data-font='large'] .markdown-body{font-size:17.5px}
-[data-font='xlarge'] .markdown-body{font-size:19px}
+html[data-font='large'] .markdown-body{font-size:18.25px}
+html[data-font='xlarge'] .markdown-body{font-size:20px}
 @media (max-width:640px){
-	[data-font='large'] .markdown-body{font-size:18px}
-	[data-font='xlarge'] .markdown-body{font-size:19.5px}
+	html[data-font='large'] .markdown-body{font-size:18.75px}
+	html[data-font='xlarge'] .markdown-body{font-size:20.5px}
 }
 .markdown-body p, .markdown-body ul, .markdown-body ol{line-height:1.6}
 .markdown-body ul{padding-left:1.2rem}
