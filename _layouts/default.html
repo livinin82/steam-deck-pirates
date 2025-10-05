@@ -74,8 +74,9 @@
         })();
       </script>
   <div class="utility-dock" role="group" aria-label="Page utilities">
-    <button class="util-btn nav-toggle" id="menuToggle" aria-label="Open navigation" aria-controls="auto-nav" aria-expanded="false" type="button" title="Navigation">☰</button>
+    <button class="util-btn" id="menuToggle" aria-label="Open navigation" aria-controls="auto-nav" aria-expanded="false" type="button" title="Navigation">☰</button>
     <button class="util-btn" id="themeToggle" type="button" aria-label="Toggle color theme" title="Toggle theme"><span class="icon" aria-hidden="true">🌙</span></button>
+    <span class="divider" aria-hidden="true"></span>
     <button class="util-btn" id="backToTop" type="button" aria-label="Back to top" title="Back to top">↑</button>
   </div>
       <script>
@@ -115,14 +116,15 @@
           navContainer.addEventListener('click',e=>{ if(e.target.tagName==='A') close(); });
           document.addEventListener('keydown',e=>{ if(e.key==='Escape') close(); });
         })();
-        // Back to top (in utility dock) visibility + click
+        // Back to top (expand utility dock) visibility + click
         (function(){
           const btn=document.getElementById('backToTop');
-          if(!btn) return;
+          const dock=document.querySelector('.utility-dock');
+          if(!btn||!dock) return;
           btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
           function reveal(){
             const y=window.scrollY||document.documentElement.scrollTop;
-            if(y>400) btn.classList.add('visible'); else btn.classList.remove('visible');
+            if(y>400){ dock.classList.add('expanded'); } else { dock.classList.remove('expanded'); }
           }
           window.addEventListener('scroll',reveal,{passive:true});
           reveal();
