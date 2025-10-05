@@ -19,12 +19,13 @@
     <aside id="auto-nav" class="auto-nav" aria-label="On this page"></aside>
     <main class="content">
     <header class="topbar" role="banner">
-  <div class="page-title"><span class="hero-title">🏴‍☠️ {{ page.title }} 🏴‍☠️</span></div>
+  <div class="page-title">
+    <span class="hero-title"><span class="emoji" aria-hidden="true">🏴‍☠️</span> <span class="hero-text">{{ page.title }}</span> <span class="emoji" aria-hidden="true">🏴‍☠️</span></span>
+  </div>
         <button class="menu-toggle-btn" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰ Menu</button>
-        <div class="theme-toggle">
-          <button id="themeToggle" type="button" aria-label="Toggle color theme">
-            <span class="icon">🌙</span>
-            <span class="label">Dark</span>
+        <div class="theme-center">
+          <button id="themeToggle" type="button" aria-label="Toggle color theme" class="theme-icon-btn">
+            <span class="icon" aria-hidden="true">🌙</span>
           </button>
         </div>
         <script>
@@ -38,7 +39,7 @@
               else document.documentElement.removeAttribute('data-theme');
               localStorage.setItem(STORAGE_KEY,mode);
               const btn=document.getElementById('themeToggle');
-              if(btn){ const light=mode==='light'; btn.querySelector('.icon').textContent=light?'☀️':'🌙'; btn.querySelector('.label').textContent=light?'Light':'Dark'; }
+              if(btn){ const light=mode==='light'; btn.querySelector('.icon').textContent=light?'☀️':'🌙'; }
               if(window.renderMermaid){ window.renderMermaid(); }
             }
             document.addEventListener('DOMContentLoaded',()=>{

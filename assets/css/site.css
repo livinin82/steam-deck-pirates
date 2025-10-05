@@ -2,7 +2,7 @@
 
 :root{
 	--sidebar-width:300px;
-	--topbar-height:64px; /* approximate height of sticky top bar */
+	--topbar-height:92px; /* increased for centered toggle beneath title */
 	--radius:10px;
 	/* Dark theme (default) */
 	--color-bg:#0f1115;
@@ -56,7 +56,9 @@ html{scroll-behavior:smooth}
 .content{flex:1;min-width:0;display:flex;flex-direction:column}
 .topbar{position:sticky;top:0;background:color-mix(in srgb,var(--color-bg) 90%,transparent);backdrop-filter:saturate(160%) blur(8px);padding:.9rem 1.5rem;border-bottom:1px solid var(--color-border);z-index:20;display:flex;align-items:center;gap:1rem}
 .page-title{font-size:1rem;font-weight:600;color:var(--color-heading);flex:1;text-align:center}
-.hero-title{font-size:1.4rem;font-weight:700;letter-spacing:.5px;background:linear-gradient(90deg,var(--color-accent),#ffef9c);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+.hero-title{font-size:1.55rem;font-weight:700;letter-spacing:.5px;display:inline-flex;align-items:center;gap:.5rem;line-height:1.1}
+.hero-text{background:linear-gradient(90deg,var(--color-accent),#ffef9c);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+.emoji{font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji','Android Emoji','EmojiOne Color','Twemoji Mozilla',system-ui,sans-serif;font-size:1.05em;line-height:1}
 .hero-sub{font-size:.8rem;margin:.2rem 0 0;color:var(--color-text-muted);max-width:720px}
 /* Mobile navigation */
 .nav-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.45);backdrop-filter:blur(2px);opacity:0;pointer-events:none;transition:.25s opacity;z-index:30}
@@ -82,9 +84,14 @@ body.nav-open .auto-nav{transform:translateX(0)}
 	.layout{align-items:flex-start}
 	body.nav-open{overflow:auto}
 }
-.theme-toggle{margin-left:auto;display:flex;align-items:center;gap:.4rem}
-.theme-toggle button{cursor:pointer;background:var(--color-bg-alt);border:1px solid var(--color-border);color:var(--color-text);padding:.45rem .7rem;font-size:.7rem;border-radius:6px;font-weight:500;display:flex;align-items:center;gap:.4rem;transition:.2s background,.2s color,.2s border-color}
-.theme-toggle button:hover{background:var(--color-accent-bg);color:var(--color-accent);border-color:var(--color-accent-bg)}
+/* Centered icon-only theme toggle under hero */
+.theme-center{position:absolute;left:50%;transform:translateX(-50%);bottom:4px;display:flex;justify-content:center}
+.theme-icon-btn{cursor:pointer;background:var(--color-bg-alt);border:1px solid var(--color-border);color:var(--color-text);padding:.45rem .65rem;font-size:.85rem;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;transition:.2s background,.2s color,.2s border-color}
+.theme-icon-btn:hover{background:var(--color-accent-bg);color:var(--color-accent);border-color:var(--color-accent-bg)}
+@media (max-width:640px){
+	.hero-title{font-size:1.25rem}
+	.theme-center{bottom:2px}
+}
 .doc{padding:2rem 2.5rem;max-width:1000px}
 .markdown-body{--md-code-bg:var(--color-bg-alt);--md-border:var(--color-border);font-size:15px;}
 .markdown-body p, .markdown-body ul, .markdown-body ol{line-height:1.6}
