@@ -124,15 +124,11 @@ body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
 .utility-dock .util-btn{cursor:pointer;width:42px;height:42px;background:var(--color-bg);border:1px solid var(--color-border);color:var(--color-text);padding:0;font-size:.95rem;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.25s background,.25s color,.25s border-color,.25s transform,.25s box-shadow}
 .utility-dock .util-btn:hover{background:var(--color-accent-bg);color:var(--color-accent);border-color:var(--color-accent-bg);box-shadow:0 2px 6px -2px rgba(0,0,0,.6)}
 .utility-dock .util-btn:active{transform:scale(.9)}
-.utility-dock .expander{display:flex;align-items:center;gap:.55rem;max-width:0;opacity:0;overflow:hidden;transition:max-width .45s ease, opacity .35s ease .05s}
-.utility-dock.expanded .expander{max-width:140px;opacity:1}
-.utility-dock .divider{width:1px;height:26px;background:var(--color-border);flex:0 0 1px}
-.utility-dock .expander button{opacity:0;transform:translateY(8px);transition:.4s opacity .05s,.4s transform .05s}
-.utility-dock.expanded .expander button{opacity:1;transform:translateY(0)}
-/* Ensure back-to-top never hidden if dock pre-expanded */
-.utility-dock.expanded #backToTop{opacity:1;pointer-events:auto}
+/* Inline dock variant: no expansion mechanics */
+.utility-dock .expander,.utility-dock .divider{display:none!important}
+#backToTop{opacity:1!important;pointer-events:auto!important}
 @keyframes btt-pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,204,51,.0)}50%{box-shadow:0 0 0 6px rgba(255,204,51,.12)}}
-.utility-dock.expanded #backToTop:focus-visible{animation:btt-pulse 1.4s ease-out 1}
+#backToTop:focus-visible{animation:btt-pulse 1.4s ease-out 1}
 /* Hide nav toggle on wide screens (desktop persistent nav) */
 /* Keep menu button visible on all widths */
 /* Compact adjustments small screens */
