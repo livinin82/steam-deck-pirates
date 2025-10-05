@@ -19,7 +19,7 @@
     <aside id="auto-nav" class="auto-nav" aria-label="On this page"></aside>
     <main class="content">
     <header class="topbar" role="banner">
-  <div class="page-title" aria-hidden="true"><span class="hero-title">{{ page.title }}</span></div>
+  <div class="page-title"><span class="hero-title">{{ page.title }}</span></div>
         <button class="menu-toggle-btn" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰ Menu</button>
         <div class="theme-toggle">
           <button id="themeToggle" type="button" aria-label="Toggle color theme">
@@ -67,7 +67,7 @@
       </script>
   <button id="backToTop" type="button" aria-label="Back to top">Top</button>
       <script>
-        // Auto-generate navigation & mobile behavior
+  // Auto-generate navigation & mobile behavior
         (function(){
           const navContainer=document.getElementById('auto-nav');
           const toggle=document.querySelector('.nav-toggle');
@@ -102,6 +102,18 @@
           backdrop&&backdrop.addEventListener('click',close);
           navContainer.addEventListener('click',e=>{ if(e.target.tagName==='A') close(); });
           document.addEventListener('keydown',e=>{ if(e.key==='Escape') close(); });
+        })();
+        // Back to top visibility + click
+        (function(){
+          const btn=document.getElementById('backToTop');
+          if(!btn) return;
+          btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+          function toggle(){
+            const y=window.scrollY||document.documentElement.scrollTop;
+            if(y>400) btn.classList.add('visible'); else btn.classList.remove('visible');
+          }
+            window.addEventListener('scroll',toggle,{passive:true});
+          toggle();
         })();
         // Admonitions
         (function(){
