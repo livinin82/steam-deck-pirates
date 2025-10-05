@@ -75,8 +75,10 @@
   <div class="utility-dock" role="group" aria-label="Page utilities">
     <button class="util-btn" id="menuToggle" aria-label="Open navigation" aria-controls="auto-nav" aria-expanded="false" type="button" title="Navigation">☰</button>
     <button class="util-btn" id="themeToggle" type="button" aria-label="Toggle color theme" title="Toggle theme"><span class="icon" aria-hidden="true">🌙</span></button>
-    <span class="divider" aria-hidden="true"></span>
-    <button class="util-btn" id="backToTop" type="button" aria-label="Back to top" title="Back to top">↑</button>
+    <div class="expander" aria-hidden="true">
+      <span class="divider" aria-hidden="true"></span>
+      <button class="util-btn" id="backToTop" type="button" aria-label="Back to top" title="Back to top">↑</button>
+    </div>
   </div>
       <script>
   // Auto-generate navigation & mobile behavior
@@ -124,13 +126,9 @@
           const THRESHOLD=80; // pixels scrolled before island expands
           function reveal(){
             const y=window.scrollY||document.documentElement.scrollTop;
-            if(y>THRESHOLD){
-              dock.classList.add('expanded');
-              btn.classList.add('visible');
-            } else {
-              dock.classList.remove('expanded');
-              btn.classList.remove('visible');
-            }
+            const expand = y>THRESHOLD;
+            dock.classList.toggle('expanded',expand);
+            btn.setAttribute('aria-hidden', expand? 'false':'true');
           }
           window.addEventListener('scroll',reveal,{passive:true});
           reveal();
