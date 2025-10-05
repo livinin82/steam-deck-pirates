@@ -77,6 +77,7 @@
   <div class="utility-dock dock-inline" role="group" aria-label="Page utilities">
     <button class="util-btn" id="menuToggle" aria-label="Open navigation" aria-controls="auto-nav" aria-expanded="false" type="button" title="Navigation">☰</button>
     <button class="util-btn" id="themeToggle" type="button" aria-label="Toggle color theme" title="Toggle theme"><span class="icon" aria-hidden="true">🌙</span></button>
+    <button class="util-btn" id="fontToggle" type="button" aria-label="Cycle font size" title="Font size">A</button>
     <button class="util-btn" id="backToTop" type="button" aria-label="Back to top" title="Back to top">↑</button>
   </div>
       <script>
@@ -132,6 +133,28 @@
             // Ensure aria-hidden cleared for assistive tech
             btn.setAttribute('aria-hidden','false');
             // Optional future: hide near top if desired.
+        })();
+        // Font size toggle (normal -> large -> xlarge)
+        (function(){
+          const BTN_ID='fontToggle';
+          const STORE_KEY='sdp-font';
+          const ORDER=['normal','large','xlarge'];
+          const btn=document.getElementById(BTN_ID);
+          if(!btn) return;
+          function apply(mode){
+            if(!ORDER.includes(mode)) mode='normal';
+            document.documentElement.setAttribute('data-font',mode==='normal'?'':mode);
+            localStorage.setItem(STORE_KEY,mode);
+            btn.textContent = mode==='normal'?'A':(mode==='large'?'A+':'A++');
+            btn.setAttribute('data-size',mode);
+          }
+            const saved=localStorage.getItem(STORE_KEY)||'normal';
+            apply(saved);
+          btn.addEventListener('click',()=>{
+            const current=btn.getAttribute('data-size')||'normal';
+            const next=ORDER[(ORDER.indexOf(current)+1)%ORDER.length];
+            apply(next);
+          });
         })();
         // Admonitions
         (function(){

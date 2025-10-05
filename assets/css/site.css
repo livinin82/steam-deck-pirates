@@ -46,7 +46,7 @@
 	--adm-warning-color:#b45309; --adm-warning-bg:rgba(180,83,9,.16);
 	--adm-caution-color:#b91c1c; --adm-caution-bg:rgba(185,28,28,.18);
 }
-body{margin:0;font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--color-bg);color:var(--color-text);line-height:1.55;-webkit-font-smoothing:antialiased;transition:.25s background,.25s color}
+body{margin:0;font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--color-bg);color:var(--color-text);line-height:1.6;-webkit-font-smoothing:antialiased;transition:.25s background,.25s color;font-size:16px}
 html{scroll-behavior:smooth}
 .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
 .skip-link:focus{left:12px;top:12px;width:auto;height:auto;background:var(--color-bg-alt);color:var(--color-heading);padding:.6rem .9rem;border:2px solid var(--color-accent);border-radius:6px;z-index:999}
@@ -123,7 +123,14 @@ body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
 /* Code blocks inside admonition/table cells should wrap instead of overflow */
 .markdown-body pre code{white-space:pre-wrap;word-break:break-word}
 .markdown-body code{word-break:break-word}
-.markdown-body{--md-code-bg:var(--color-bg-alt);--md-border:var(--color-border);font-size:15px;}
+.markdown-body{--md-code-bg:var(--color-bg-alt);--md-border:var(--color-border);font-size:16px;}
+/* Font scaling modes */
+[data-font='large'] .markdown-body{font-size:17.5px}
+[data-font='xlarge'] .markdown-body{font-size:19px}
+@media (max-width:640px){
+	[data-font='large'] .markdown-body{font-size:18px}
+	[data-font='xlarge'] .markdown-body{font-size:19.5px}
+}
 .markdown-body p, .markdown-body ul, .markdown-body ol{line-height:1.6}
 .markdown-body ul{padding-left:1.2rem}
 .markdown-body ol{padding-left:1.25rem}
