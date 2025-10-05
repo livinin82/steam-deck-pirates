@@ -44,6 +44,22 @@ Launchers are apps built for Linux that allow you to play games from other Launc
 
 Decky Loader lets you extend the Steam Deck's Game Mode with plugins (quick tools, performance tweaks, UI helpers). Treat it like a mod manager: minimal, intentional, documented changes are safest.
 
+<div style="margin:1rem 0; padding:0.75rem 1rem; border:1px solid var(--border-color,#444); border-radius:6px; background:var(--code-bg,#111); font-size:0.95em;">
+<strong>Decky Quick Navigation</strong>
+<br>
+<a href="#installation-decky-loader">Installation</a> •
+<a href="#updating-decky">Updating</a> •
+<a href="#installing-plugins">Installing Plugins</a> •
+<a href="#managing--configuring-plugins">Managing & Configuring</a> •
+<a href="#disabling-vs-uninstalling">Disable vs Uninstall</a> •
+<a href="#common-troubleshooting-flow">Troubleshooting</a> •
+<a href="#safe-starter-plugins-generally-low-risk">Safe Starters</a> •
+<a href="#known-conflicts--plugin-notes">Conflicts</a> •
+<a href="#when-not-to-use-decky">When Not To Use</a> •
+<a href="#quick-removal-script-optional">Removal Script</a> •
+<a href="#summary">Summary</a>
+</div>
+
 #### What Decky Can (and Cannot) Do
 | Can Do | Cannot / Should Not Do |
 | ------ | ---------------------- |
@@ -124,6 +140,19 @@ Remove both, then reinstall the loader.
 
 > [!CAUTION]
 > Avoid stacking multiple performance‑tuning plugins at once (e.g., two that both manipulate clocks or fan curves). Conflicts compound and make root cause analysis painful.
+
+#### Known Conflicts & Plugin Notes
+> [!NOTE]
+> This living table is for patterns the community confirms. Update it as you validate conflicts (do not guess). Test after every SteamOS update.
+
+| Symptom / Issue | Suspected Plugin(s) | Mitigation | Notes / Conditions |
+| --------------- | ------------------- | ---------- | ------------------ |
+| Game launches then immediately exits | PowerTools (aggressive clocks) | Disable plugin, re-test with stock clocks | Seen after enabling manual clock lower than Proton expects |
+| Controller input drops randomly | Decky Recorder, FPS overlays combo | Disable one overlay at a time | Usually two overlays polling gamepad state |
+| UI flickering / phantom clicks | CSS Loader (outdated theme) | Switch to default theme, update theme | After major Game Mode UI update |
+| Performance tank after resume | Fan / power tuning plugin | Reboot or disable plugin before sleep | Some plugins don't re-apply curves gracefully |
+| (Add more rows…) |  |  |  |
+
 
 ---
 #### When NOT to Use Decky
