@@ -207,11 +207,15 @@ img{max-width:100%;border-radius:6px}
 /* -------------------------------------------------- */
 @media (max-width:640px){
 	/* Stack topbar content vertically and center */
-	.topbar{flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1.05rem 1rem 1.15rem}
+	.topbar{flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:calc(env(safe-area-inset-top,0px) + 1rem) 1rem 1.15rem}
 	.page-title{width:100%;text-align:center}
-	.hero-title{font-size:1.9rem;line-height:1.15;flex-wrap:wrap;justify-content:center;text-align:center}
+	/* Allow intelligent wrapping but avoid emojis isolating themselves */
+	.hero-title{font-size:clamp(1.65rem,7.2vw,2.05rem);line-height:1.12;flex-wrap:wrap;justify-content:center;text-align:center}
+	.hero-title .emoji:last-of-type{display:none} /* hide trailing emoji to reduce awkward wrap */
 	.hero-title .emoji{font-size:1.15em}
 	.hero-sub{font-size:.85rem;text-align:center}
+	/* Extra bottom padding so floating utility dock doesn't overlap early content */
+	.doc{padding-bottom:calc(6.25rem + env(safe-area-inset-bottom,0px))}
 }
 
 /* Full height mobile nav (account for mobile browser chrome & safe areas) */
@@ -221,6 +225,11 @@ img{max-width:100%;border-radius:6px}
 
 /* Slight bump for really narrow devices */
 @media (max-width:420px){
-	.hero-title{font-size:2rem}
+	.hero-title{font-size:clamp(1.7rem,8vw,2.15rem)}
+}
+
+/* Provide bottom padding for medium small screens too (utility dock space) */
+@media (min-width:641px) and (max-width:900px){
+	.doc{padding-bottom:calc(5.5rem + env(safe-area-inset-bottom,0px))}
 }
 
