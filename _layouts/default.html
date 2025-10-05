@@ -111,12 +111,18 @@
             links.forEach(l=>l.classList.remove('active')); if(current) map[current].classList.add('active');
           }
           window.addEventListener('scroll',update,{passive:true}); window.addEventListener('resize',update); update();
-          function close(){ document.body.classList.remove('nav-open'); toggle&&toggle.setAttribute('aria-expanded','false'); }
+          function close(){ document.body.classList.remove('nav-open','nav-overlay'); toggle&&toggle.setAttribute('aria-expanded','false'); }
           toggle&&toggle.addEventListener('click',()=>{
-            const open=document.body.classList.toggle('nav-open');
-            toggle.setAttribute('aria-expanded',open);
-            // Desktop: collapse nav into overlay if previously opened (force overlay mode by adding class)
-            if(window.innerWidth>=1024){ document.body.classList.toggle('nav-overlay',open); }
+            const isDesktop=window.innerWidth>=1024;
+            if(isDesktop){
+              const willOpen=!document.body.classList.contains('nav-overlay');
+              document.body.classList.toggle('nav-overlay',willOpen);
+              toggle.setAttribute('aria-expanded',willOpen);
+            } else {
+              const willOpen=!document.body.classList.contains('nav-open');
+              document.body.classList.toggle('nav-open',willOpen);
+              toggle.setAttribute('aria-expanded',willOpen);
+            }
           });
           backdrop&&backdrop.addEventListener('click',close);
           navContainer.addEventListener('click',e=>{ if(e.target.tagName==='A') close(); });
@@ -128,7 +134,7 @@
           const dock=document.querySelector('.utility-dock');
           if(!btn||!dock) return;
           btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-          const THRESHOLD=80; // pixels scrolled before island expands (one-way)
+          const THRESHOLD=15; // smaller threshold so button reliably appears
           function reveal(){
             const y=window.scrollY||document.documentElement.scrollTop;
             if(y>THRESHOLD){
@@ -137,7 +143,8 @@
             }
           }
           window.addEventListener('scroll',reveal,{passive:true});
-          reveal();
+          // Run twice: immediate + after first frame to catch initial scroll position
+          reveal(); requestAnimationFrame(reveal);
         })();
         // Admonitions
         (function(){
