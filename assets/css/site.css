@@ -85,15 +85,23 @@ body.nav-open .auto-nav{transform:translateX(0)}
 	body.nav-open{overflow:auto}
 }
 /* Utility dock (floating controls) */
-.utility-dock{position:fixed;right:16px;bottom:16px;display:flex;flex-direction:column;gap:.65rem;z-index:1500}
-.utility-dock .util-btn{cursor:pointer;background:var(--color-bg-alt);border:1px solid var(--color-border);color:var(--color-text);width:44px;height:44px;padding:0;font-size:1rem;border-radius:14px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px -3px rgba(0,0,0,.5);transition:.25s background,.25s color,.25s border-color,.25s transform}
-.utility-dock .util-btn:hover{background:var(--color-accent-bg);color:var(--color-accent);border-color:var(--color-accent-bg);transform:translateY(-3px)}
-.utility-dock .util-btn:active{transform:translateY(-1px)}
-.utility-dock .util-btn#backToTop{opacity:0;pointer-events:none}
-.utility-dock .util-btn#backToTop.visible{opacity:1;pointer-events:auto}
-/* Hide nav toggle in dock on wide screens (desktop shows static sidebar) */
+/* Utility dock island */
+.utility-dock{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:1500;display:flex;align-items:center;gap:.55rem;padding:.55rem .75rem;background:color-mix(in srgb,var(--color-bg-alt) 85%, transparent);backdrop-filter:saturate(150%) blur(10px);border:1px solid var(--color-border);border-radius:40px;box-shadow:0 4px 18px -4px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.02)}
+.utility-dock .util-btn{cursor:pointer;--btn-size:42px;width:var(--btn-size);height:var(--btn-size);background:var(--color-bg);border:1px solid var(--color-border);color:var(--color-text);padding:0;font-size:.95rem;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.25s background,.25s color,.25s border-color,.25s transform, .25s box-shadow}
+.utility-dock .util-btn:hover{background:var(--color-accent-bg);color:var(--color-accent);border-color:var(--color-accent-bg);box-shadow:0 2px 6px -2px rgba(0,0,0,.6)}
+.utility-dock .util-btn:active{transform:scale(.92)}
+.utility-dock .util-btn#backToTop{opacity:0;pointer-events:none;transition:.3s opacity,.3s transform}
+.utility-dock .util-btn#backToTop.visible{opacity:1;pointer-events:auto;transform:scale(1)}
+.utility-dock .divider{width:1px;height:28px;background:var(--color-border);margin:0 .25rem;align-self:center;display:block}
+/* Hide nav toggle on wide screens (desktop persistent nav) */
 @media (min-width:1024px){
-	.utility-dock .nav-toggle{display:none}
+	.utility-dock #menuToggle{display:none}
+}
+/* Compact adjustments small screens */
+@media (max-width:520px){
+	.utility-dock{gap:.4rem;padding:.45rem .6rem;bottom:14px}
+	.utility-dock .util-btn{--btn-size:38px;font-size:.85rem}
+	.utility-dock .divider{height:22px}
 }
 @media (max-width:640px){
 	.hero-title{font-size:1.25rem}
