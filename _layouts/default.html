@@ -21,7 +21,6 @@
       <div class="page-title">
         <span class="hero-title"><span class="emoji" aria-hidden="true">🏴‍☠️</span> <span class="hero-text">{{ page.title }}</span> <span class="emoji" aria-hidden="true">🏴‍☠️</span></span>
       </div>
-        <button class="menu-toggle-btn" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰ Menu</button>
         <!-- Theme toggle moved to utility dock -->
         <script>
           (function(){
@@ -116,7 +115,7 @@
           navContainer.addEventListener('click',e=>{ if(e.target.tagName==='A') close(); });
           document.addEventListener('keydown',e=>{ if(e.key==='Escape') close(); });
         })();
-        // Back to top (expand utility dock) visibility + click
+        // Back to top visibility + click (uses .visible class & optional dock expansion)
         (function(){
           const btn=document.getElementById('backToTop');
           const dock=document.querySelector('.utility-dock');
@@ -124,7 +123,13 @@
           btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
           function reveal(){
             const y=window.scrollY||document.documentElement.scrollTop;
-            if(y>400){ dock.classList.add('expanded'); } else { dock.classList.remove('expanded'); }
+            if(y>400){
+              dock.classList.add('expanded');
+              btn.classList.add('visible');
+            } else {
+              dock.classList.remove('expanded');
+              btn.classList.remove('visible');
+            }
           }
           window.addEventListener('scroll',reveal,{passive:true});
           reveal();
