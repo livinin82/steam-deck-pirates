@@ -39,6 +39,113 @@ Launchers are apps built for Linux that allow you to play games from other Launc
 
 ### Decky Plugins
 
+> [!CAUTION]
+> Plugins can and do break games, controller input, overlays, performance, sleep / resume, or even prevent titles from launching. Always change one thing at a time and re‑test so you know what caused a regression.
+
+Decky Loader lets you extend the Steam Deck's Game Mode with plugins (quick tools, performance tweaks, UI helpers). Treat it like a mod manager: minimal, intentional, documented changes are safest.
+
+#### What Decky Can (and Cannot) Do
+| Can Do | Cannot / Should Not Do |
+| ------ | ---------------------- |
+| Inject quick toggles (TDP, FPS limit, system info) | Magically fix broken cracks |
+| Provide plugin UIs inside the Quick Access Menu | Replace Proton / Wine |
+| Expose system telemetry & fan curves | Replace system updates |
+| Manage / update installed plugins | Guarantee stability with every SteamOS update |
+
+---
+#### Installation (Decky Loader)
+1. Switch to **Desktop Mode**.
+2. Open a browser and go to: <https://decky.xyz>
+3. Download the latest **Decky Loader Installer** (`.desktop` or script) and run it.
+4. When finished, return to **Game Mode** (Power → Switch to Game Mode).
+5. Press the <strong>… (QAM)</strong> button → you should now see a new **plug icon** tab (Decky).
+
+> [!TIP]
+> If the plug icon does not appear: fully reboot once, then check again. Still missing? Remove any custom UI replacement plugins you might already have installed manually.
+
+---
+#### Updating Decky
+Decky auto‑notifies in its own tab. Open the Decky tab → click the update banner (if present). If an update fails:
+1. Reboot and try again.
+2. If still failing, reinstall the installer from Desktop Mode (it preserves plugins unless you purge the folders).
+
+---
+#### Installing Plugins
+1. Open Game Mode → Quick Access Menu → Decky (plug icon).
+2. Select the **Store** (shopping bag icon).
+3. Browse or search; select a plugin → Install.
+4. The plugin appears in your Installed list instantly; many add a panel or toggle.
+
+> [!NOTE]
+> Some plugins only show content while a game is running (e.g., performance overlays). Launch a game if you don't see anything.
+
+---
+#### Managing / Configuring Plugins
+Within Decky:
+* Use the gear icon on a plugin tile (if present) for settings.
+* Drag to reorder (affects display order in the panel).
+* Disable (toggle off) to test conflicts without uninstalling.
+
+---
+#### Disabling vs Uninstalling
+| Action | When to Use | Effect |
+| ------ | ----------- | ------ |
+| Disable | Troubleshooting suspected conflict | Keeps files; faster re‑enable |
+| Uninstall | No longer needed / confirmed culprit | Removes plugin code only |
+| Full Purge | Loader corrupted / persistent breakage | Remove loader + plugin data folders |
+
+Full purge locations (desktop terminal / Dolphin):
+```
+~/.local/share/decky-loader/
+~/.local/share/SteamDeckHomebrew/
+```
+Remove both, then reinstall the loader.
+
+> [!WARNING]
+> Deleting those folders removes all plugin data & settings. Export anything important first (fan curves, custom JSON configs, etc.).
+
+---
+#### Common Troubleshooting Flow
+1. Game suddenly stops launching / controller dead.
+2. Open Decky → disable ALL plugins (do not uninstall yet).
+3. Test the game.
+4. Re‑enable plugins one at a time until the issue returns → last enabled = culprit.
+5. Check the plugin's GitHub issues page for an update or open a new report (include SteamOS version + Proton version + reproduction steps).
+
+---
+#### Safe Starter Plugins (Generally Low Risk)
+| Plugin | Purpose |
+| ------ | ------- |
+| PowerTools | TDP / Clock / SMT tweaks (use judiciously) |
+| CSS Loader | Cosmetic UI theming only (verify after SteamOS updates) |
+| Storage Cleaner | Clears shader caches / temp data |
+| Vibrant Deck | Adjust saturation (visual preference) |
+| Decky Recorder | Game video capture (performance impact possible) |
+
+> [!CAUTION]
+> Avoid stacking multiple performance‑tuning plugins at once (e.g., two that both manipulate clocks or fan curves). Conflicts compound and make root cause analysis painful.
+
+---
+#### When NOT to Use Decky
+* Trying to fix DRM / crack issues (unrelated layer).
+* Replacing Proton versions (use ProtonUpQt instead).
+* Chasing a marginal FPS improvement when the system is otherwise stable.
+
+If stability matters more than a plugin's benefit, remove it. Minimalism wins.
+
+---
+#### Quick Removal Script (Optional)
+In Desktop Mode terminal:
+```bash
+rm -rf ~/.local/share/decky-loader ~/.local/share/SteamDeckHomebrew
+```
+Then reinstall via <https://decky.xyz>.
+
+---
+#### Summary
+Decky is powerful but sits inside the most fragile interaction layer (Game Mode UI). Treat every new plugin as an experiment: document, test, rollback quickly if problems appear.
+
+
 ## Apps you NEED TO have installed
 
 > [!NOTE]
