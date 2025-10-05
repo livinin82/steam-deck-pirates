@@ -55,7 +55,7 @@ html{scroll-behavior:smooth}
 /* Removed legacy sidebar styles */
 .content{flex:1;min-width:0;display:flex;flex-direction:column}
 .topbar{position:sticky;top:0;background:color-mix(in srgb,var(--color-bg) 90%,transparent);backdrop-filter:saturate(160%) blur(8px);padding:.9rem 1.5rem;border-bottom:1px solid var(--color-border);z-index:20;display:flex;align-items:center;gap:1rem}
-.page-title{font-size:1rem;font-weight:600;color:var(--color-heading)}
+.page-title{font-size:1rem;font-weight:600;color:var(--color-heading);flex:1;text-align:center}
 .hero-title{font-size:1.4rem;font-weight:700;letter-spacing:.5px;background:linear-gradient(90deg,var(--color-accent),#ffef9c);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
 .hero-sub{font-size:.8rem;margin:.2rem 0 0;color:var(--color-text-muted);max-width:720px}
 /* Mobile navigation */
