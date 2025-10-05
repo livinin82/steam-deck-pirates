@@ -1097,14 +1097,14 @@ If this shows it means your crack isn't working. Make sure you copied the files 
 ## Communities & Resources
 Below is a consolidated list of related subreddits and helpful external reference sites.
 
-| Type | Name | URL |
-| ---- | ---- | --- |
-| Subreddit | Linux Crack Tips | [https://www.reddit.com/r/LinuxCrackSupport/](https://www.reddit.com/r/LinuxCrackSupport/) |
-| Subreddit | Piracy | [https://www.reddit.com/r/Piracy](https://www.reddit.com/r/Piracy) |
-| Subreddit | FreeMediaHeckYeah | [https://www.reddit.com/r/FREEMEDIAHECKYEAH](https://www.reddit.com/r/FREEMEDIAHECKYEAH) |
-| Reference | ProtonDB | [https://protondb.com/](https://protondb.com/) |
-| Reference | SteamDB | [https://steamdb.info/](https://steamdb.info/) |
-| Reference | SteamDeckHQ | [https://steamdeckhq.com/](https://steamdeckhq.com/) |
-| Reference | PCGamingWiki | [https://www.pcgamingwiki.com/wiki/Home](https://www.pcgamingwiki.com/wiki/Home) |
+| Name | URL |
+| ---- | --- |
+| Linux Crack Tips | [https://www.reddit.com/r/LinuxCrackSupport/](https://www.reddit.com/r/LinuxCrackSupport/) |
+| Piracy | [https://www.reddit.com/r/Piracy](https://www.reddit.com/r/Piracy) |
+| FreeMediaHeckYeah | [https://www.reddit.com/r/FREEMEDIAHECKYEAH](https://www.reddit.com/r/FREEMEDIAHECKYEAH) |
+| ProtonDB | [https://protondb.com/](https://protondb.com/) |
+| SteamDB | [https://steamdb.info/](https://steamdb.info/) |
+| SteamDeckHQ | [https://steamdeckhq.com/](https://steamdeckhq.com/) |
+| PCGamingWiki | [https://www.pcgamingwiki.com/wiki/Home](https://www.pcgamingwiki.com/wiki/Home) |
 
 
