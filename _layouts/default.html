@@ -15,7 +15,7 @@
   <a href="#main-content" class="skip-link">Skip to content</a>
   <div class="layout">
     <div class="nav-backdrop" id="navBackdrop"></div>
-    <aside id="auto-nav" class="auto-nav" aria-label="On this page"></aside>
+  <aside id="auto-nav" class="auto-nav" aria-label="On this page"></aside>
     <main class="content">
     <header class="topbar" role="banner">
       <div class="page-title">
@@ -112,7 +112,12 @@
           }
           window.addEventListener('scroll',update,{passive:true}); window.addEventListener('resize',update); update();
           function close(){ document.body.classList.remove('nav-open'); toggle&&toggle.setAttribute('aria-expanded','false'); }
-          toggle&&toggle.addEventListener('click',()=>{ const open=document.body.classList.toggle('nav-open'); toggle.setAttribute('aria-expanded',open); });
+          toggle&&toggle.addEventListener('click',()=>{
+            const open=document.body.classList.toggle('nav-open');
+            toggle.setAttribute('aria-expanded',open);
+            // Desktop: collapse nav into overlay if previously opened (force overlay mode by adding class)
+            if(window.innerWidth>=1024){ document.body.classList.toggle('nav-overlay',open); }
+          });
           backdrop&&backdrop.addEventListener('click',close);
           navContainer.addEventListener('click',e=>{ if(e.target.tagName==='A') close(); });
           document.addEventListener('keydown',e=>{ if(e.key==='Escape') close(); });
@@ -123,12 +128,13 @@
           const dock=document.querySelector('.utility-dock');
           if(!btn||!dock) return;
           btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-          const THRESHOLD=80; // pixels scrolled before island expands
+          const THRESHOLD=80; // pixels scrolled before island expands (one-way)
           function reveal(){
             const y=window.scrollY||document.documentElement.scrollTop;
-            const expand = y>THRESHOLD;
-            dock.classList.toggle('expanded',expand);
-            btn.setAttribute('aria-hidden', expand? 'false':'true');
+            if(y>THRESHOLD){
+              dock.classList.add('expanded');
+              btn.setAttribute('aria-hidden','false');
+            }
           }
           window.addEventListener('scroll',reveal,{passive:true});
           reveal();

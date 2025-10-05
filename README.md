@@ -1099,9 +1099,9 @@ If this shows it means your crack isn't working. Make sure you copied the files 
 
 | Community | Link |
 | --- | --- |
-| Linux Crack Tips | https://www.reddit.com/r/LinuxCrackSupport/ |
-| Piracy | https://www.reddit.com/r/Piracy |
-| FreeMediaHeckYeah | https://www.reddit.com/r/FREEMEDIAHECKYEAH |
+| Linux Crack Tips | [https://www.reddit.com/r/LinuxCrackSupport/](https://www.reddit.com/r/LinuxCrackSupport/) |
+| Piracy | [https://www.reddit.com/r/Piracy](https://www.reddit.com/r/Piracy) |
+| FreeMediaHeckYeah | [https://www.reddit.com/r/FREEMEDIAHECKYEAH](https://www.reddit.com/r/FREEMEDIAHECKYEAH) |
 
 ---
 ## Useful Links
