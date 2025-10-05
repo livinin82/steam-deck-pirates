@@ -85,21 +85,24 @@ body.nav-open .auto-nav{transform:translateX(0)}
 }
 /* Utility dock (floating controls) */
 /* Utility dock island */
-.utility-dock{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:1500;display:flex;align-items:center;gap:.55rem;padding:.55rem .75rem;background:color-mix(in srgb,var(--color-bg-alt) 85%, transparent);backdrop-filter:saturate(150%) blur(10px);border:1px solid var(--color-border);border-radius:40px;box-shadow:0 4px 18px -4px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.02)}
-.utility-dock .util-btn{cursor:pointer;--btn-size:42px;width:var(--btn-size);height:var(--btn-size);background:var(--color-bg);border:1px solid var(--color-border);color:var(--color-text);padding:0;font-size:.95rem;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.25s background,.25s color,.25s border-color,.25s transform, .25s box-shadow}
+/* Collapsed island: only menu + theme buttons occupy width; back-to-top & divider expand in */
+.utility-dock{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:1500;display:flex;align-items:center;gap:.55rem;padding:.55rem .7rem;background:color-mix(in srgb,var(--color-bg-alt) 85%, transparent);backdrop-filter:saturate(150%) blur(10px);border:1px solid var(--color-border);border-radius:46px;box-shadow:0 4px 18px -4px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.02);transition:.35s padding,.35s gap}
+.utility-dock .util-btn{cursor:pointer;--btn-size:42px;width:var(--btn-size);height:var(--btn-size);background:var(--color-bg);border:1px solid var(--color-border);color:var(--color-text);padding:0;font-size:.95rem;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.25s background,.25s color,.25s border-color,.25s transform,.25s box-shadow}
 .utility-dock .util-btn:hover{background:var(--color-accent-bg);color:var(--color-accent);border-color:var(--color-accent-bg);box-shadow:0 2px 6px -2px rgba(0,0,0,.6)}
-.utility-dock .util-btn:active{transform:scale(.92)}
-.utility-dock .util-btn#backToTop{opacity:0;pointer-events:none;transition:.3s opacity,.3s transform}
-.utility-dock .util-btn#backToTop.visible{opacity:1;pointer-events:auto;transform:scale(1)}
-.utility-dock .divider{width:1px;height:28px;background:var(--color-border);margin:0 .25rem;align-self:center;display:block}
+.utility-dock .util-btn:active{transform:scale(.9)}
+/* Back to top collapsed */
+.utility-dock .util-btn#backToTop{--btn-size:0;width:0;height:0;opacity:0;pointer-events:none;margin:0;border:0;padding:0;transform:scale(.4);overflow:hidden;transition:.35s}
+.utility-dock.expanded .util-btn#backToTop{--btn-size:42px;width:var(--btn-size);height:var(--btn-size);opacity:1;pointer-events:auto;border:1px solid var(--color-border);transform:scale(1)}
+/* Divider animates open */
+.utility-dock .divider{width:0;height:26px;background:var(--color-border);margin:0;align-self:center;display:block;transition:.35s width,.35s margin}
+.utility-dock.expanded .divider{width:1px;margin:0 .25rem}
 /* Hide nav toggle on wide screens (desktop persistent nav) */
-@media (min-width:1024px){
-	.utility-dock #menuToggle{display:none}
-}
+/* Keep menu button visible on all widths */
 /* Compact adjustments small screens */
 @media (max-width:520px){
-	.utility-dock{gap:.4rem;padding:.45rem .6rem;bottom:14px}
+	.utility-dock{gap:.45rem;padding:.45rem .6rem;bottom:14px}
 	.utility-dock .util-btn{--btn-size:38px;font-size:.85rem}
+	.utility-dock.expanded .util-btn#backToTop{--btn-size:38px}
 	.utility-dock .divider{height:22px}
 }
 @media (max-width:640px){

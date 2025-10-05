@@ -121,9 +121,10 @@
           const dock=document.querySelector('.utility-dock');
           if(!btn||!dock) return;
           btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+          const THRESHOLD=80; // pixels scrolled before island expands
           function reveal(){
             const y=window.scrollY||document.documentElement.scrollTop;
-            if(y>400){
+            if(y>THRESHOLD){
               dock.classList.add('expanded');
               btn.classList.add('visible');
             } else {
