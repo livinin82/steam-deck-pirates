@@ -1,6 +1,8 @@
 *{box-sizing:border-box}
+
 :root{
 	--sidebar-width:300px;
+	--topbar-height:64px; /* approximate height of sticky top bar */
 	--radius:10px;
 	/* Dark theme (default) */
 	--color-bg:#0f1115;
@@ -74,7 +76,8 @@ body.nav-open .auto-nav{transform:translateX(0)}
 .auto-nav li.lvl-3 a{padding-left:1.35rem;font-size:.74rem;opacity:.9}
 @media (min-width:1024px){
 	.nav-toggle,.nav-backdrop{display:none}
-	.auto-nav{position:sticky;transform:none;width:220px;top:4.4rem;max-height:calc(100vh - 5rem)}
+	.auto-nav{position:sticky;transform:none;width:var(--sidebar-width);top:0;max-height:100vh;z-index:10;padding-top:var(--topbar-height);box-sizing:border-box}
+	.layout{align-items:flex-start}
 	body.nav-open{overflow:auto}
 }
 .theme-toggle{margin-left:auto;display:flex;align-items:center;gap:.4rem}
