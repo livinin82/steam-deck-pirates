@@ -67,14 +67,7 @@ html{scroll-behavior:smooth}
 .emoji{font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji','Android Emoji','EmojiOne Color','Twemoji Mozilla',system-ui,sans-serif;font-size:1.05em;line-height:1}
 .hero-sub{font-size:.8rem;margin:.2rem 0 0;color:var(--color-text-muted);max-width:720px}
 /* Mobile navigation */
-.nav-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.45);backdrop-filter:blur(2px);opacity:0;pointer-events:none;transition:.25s opacity;z-index:30}
-.nav-backdrop.visible{opacity:1;pointer-events:auto}
-/* Auto nav & mobile toggle */
-/* (Removed obsolete .nav-toggle floating button styles after island dock adoption) */
-.nav-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(2px);opacity:0;pointer-events:none;transition:.25s opacity;z-index:1090}
-body.nav-open .nav-backdrop{opacity:1;pointer-events:auto}
-.auto-nav{position:fixed;top:3.4rem;left:0;bottom:0;width:250px;padding:1rem .8rem 2rem;background:var(--color-bg-alt);border-right:1px solid var(--color-border);overflow-y:auto;transform:translateX(-265px);transition:.25s transform;z-index:1100}
-body.nav-open .auto-nav{transform:translateX(0)}
+.nav-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(2px);opacity:0;pointer-events:none;transition:.3s opacity;z-index:1090}
 .auto-nav nav ul{list-style:none;margin:0;padding:0}
 .auto-nav li{margin:0}
 .auto-nav a{display:block;padding:.4rem .55rem;margin:0 0 .15rem;border-radius:.4rem;font-size:.8rem;color:var(--color-text-muted);text-decoration:none;transition:.15s background,color}
@@ -83,7 +76,7 @@ body.nav-open .auto-nav{transform:translateX(0)}
 .auto-nav li.lvl-3 a{padding-left:1.35rem;font-size:.74rem;opacity:.9}
 /* Hide duplicate first H1 inside document (hero provides visual) */
 .doc > h1:first-of-type{display:none}
-/* Unified off-canvas nav for all breakpoints */
+/* Unified off-canvas nav for all breakpoints (uses body.nav-active only) */
 .auto-nav{position:fixed;left:0;top:0;width:300px;max-width:85vw;height:100vh;padding:calc(var(--topbar-height) + 10px) 1rem 2rem;background:var(--color-bg-alt);border-right:1px solid var(--color-border);box-shadow:0 0 0 1px var(--color-border),0 14px 40px -10px rgba(0,0,0,.55);overflow-y:auto;transform:translateX(-110%);transition:.35s transform cubic-bezier(.4,.1,.2,1);z-index:1200}
 body.nav-active .auto-nav{transform:translateX(0)}
 .nav-backdrop{opacity:0;pointer-events:none;transition:.35s opacity}
@@ -183,19 +176,11 @@ img{max-width:100%;border-radius:6px}
 [bgcolor]{background:var(--color-bg-alt)!important;color:var(--color-text)!important}
 @media (max-width:1080px){:root{--sidebar-width:250px}.doc{padding:1.5rem 1.75rem}.sidebar{padding:.9rem .75rem}}
 @media (max-width:820px){
-	.layout{flex-direction:column}
-	.sidebar{position:fixed;left:0;top:0;height:100vh;width:260px;transform:translateX(-100%);transition:transform .25s ease;box-shadow:2px 0 8px rgba(0,0,0,.4);border-right:1px solid var(--color-border);border-bottom:0;display:block}
-	.sidebar.open{transform:translateX(0)}
-	.sidebar .brand{margin-top:.25rem}
-	.nav-section-title{margin-top:1rem}
-	.menu-toggle-btn{display:inline-flex}
-	.content .topbar{position:sticky}
-	body.nav-open{overflow:hidden}
+  .layout{flex-direction:column}
 }
 
 /* Mobile menu toggle */
-.menu-toggle-btn{display:none;cursor:pointer;background:var(--color-bg-alt);border:1px solid var(--color-border);color:var(--color-text);padding:.45rem .7rem;font-size:.75rem;border-radius:6px;font-weight:500;align-items:center;gap:.4rem}
-.menu-toggle-btn:hover{background:var(--color-accent-bg);color:var(--color-accent)}
+/* Removed legacy .menu-toggle-btn styles (menu handled via dock button) */
 
 /* Scroll spy active anchor */
 .nav a.spy-active{background:var(--color-accent-bg);color:var(--color-accent);font-weight:600}
