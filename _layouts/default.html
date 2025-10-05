@@ -125,23 +125,24 @@
           navContainer.addEventListener('click',e=>{ if(e.target.tagName==='A') close(); });
           document.addEventListener('keydown',e=>{ if(e.key==='Escape') close(); });
         })();
-        // Back to top visibility + click (uses .visible class & optional dock expansion)
+        // Back to top visibility + click (dock expands on scroll; always available on short pages)
         (function(){
           const btn=document.getElementById('backToTop');
           const dock=document.querySelector('.utility-dock');
-          if(!btn||!dock) return;
-          btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-          const THRESHOLD=15; // smaller threshold so button reliably appears
-          function reveal(){
-            const y=window.scrollY||document.documentElement.scrollTop;
-            if(y>THRESHOLD){
-              dock.classList.add('expanded');
-              btn.setAttribute('aria-hidden','false');
+            if(!btn||!dock) return;
+            btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+            const THRESHOLD=12; // slightly lower for earlier reveal
+            const shortPage = document.documentElement.scrollHeight - window.innerHeight < 400; // fallback for short content
+            function reveal(){
+              const y=window.scrollY||document.documentElement.scrollTop;
+              if(shortPage || y>THRESHOLD){
+                dock.classList.add('expanded');
+                btn.setAttribute('aria-hidden','false');
+              }
             }
-          }
-          window.addEventListener('scroll',reveal,{passive:true});
-          // Run twice: immediate + after first frame to catch initial scroll position
-          reveal(); requestAnimationFrame(reveal);
+            window.addEventListener('scroll',reveal,{passive:true});
+            // Run initial frames; also run after images load (in case layout shifts)
+            reveal(); requestAnimationFrame(reveal); window.addEventListener('load',()=>setTimeout(reveal,60));
         })();
         // Admonitions
         (function(){
