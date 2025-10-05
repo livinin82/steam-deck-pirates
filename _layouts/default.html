@@ -6,7 +6,7 @@
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}"/>
   {% seo %}
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/site.css"/>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/site.css?v={{ site.time | date: '%s' }}"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -53,6 +53,18 @@
         </script>
       </header>
       <article id="main-content" class="doc markdown-body">{{ content }}</article>
+      <script>
+        // Remove duplicate top H1 if it matches page title (defensive in case CSS hide fails or cache issues)
+        (function(){
+          const hero=document.querySelector('.page-title .hero-title');
+          const doc=document.getElementById('main-content');
+          if(!hero||!doc) return;
+          const firstH1=doc.querySelector('h1');
+          if(firstH1 && firstH1.textContent.trim().toLowerCase()===hero.textContent.trim().toLowerCase()){
+            firstH1.parentElement.removeChild(firstH1);
+          }
+        })();
+      </script>
       <script>
         // Cleanup: remove any stray orphan closing table tags appended by malformed markdown mixes
         (function(){
