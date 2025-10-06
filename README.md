@@ -61,6 +61,7 @@ Decky Loader lets you extend the Steam Deck's Game Mode with plugins (quick tool
 </div>
 
 #### What Decky Can (and Cannot) Do
+
 | Can Do | Cannot / Should Not Do |
 | ------ | ---------------------- |
 | Inject quick toggles (TDP, FPS limit, system info) | Magically fix broken cracks |
@@ -104,6 +105,7 @@ Within Decky:
 
 ---
 #### Disabling vs Uninstalling
+
 | Action | When to Use | Effect |
 | ------ | ----------- | ------ |
 | Disable | Troubleshooting suspected conflict | Keeps files; faster re‑enable |
@@ -130,6 +132,7 @@ Remove both, then reinstall the loader.
 
 ---
 #### Safe Starter Plugins (Generally Low Risk)
+
 | Plugin | Purpose |
 | ------ | ------- |
 | PowerTools | TDP / Clock / SMT tweaks (use judiciously) |

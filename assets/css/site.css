@@ -115,6 +115,10 @@ body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
 .markdown-body table{display:table;width:100%;table-layout:auto}
 @media (max-width:680px){
 	.markdown-body table{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--color-border);}
+	.markdown-body p + table, .markdown-body h4 + table, .markdown-body h3 + table{margin-top:.8rem}
+	/* Fallback: if GitHub Pages or parser fails and pipes render inline, force display block when row starts with pipe and contains pipe cells (progressive enhancement not bulletproof) */
+	.markdown-body table{border-collapse:collapse}
+	.markdown-body table th, .markdown-body table td{padding:.5rem .55rem}
 	.markdown-body table thead{display:table-header-group}
 	.markdown-body table tr{display:table-row}
 	/* Ensure no side clipping on mobile */
@@ -124,10 +128,10 @@ body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
 /* Code blocks inside admonition/table cells should wrap instead of overflow */
 .markdown-body pre code{white-space:pre-wrap;word-break:break-word}
 .markdown-body code{word-break:break-word}
-.markdown-body{--md-code-bg:var(--color-bg-alt);--md-border:var(--color-border);font-size:calc(17px * var(--font-scale));}
-/* Unified font scaling: remove breakpoint-specific font-size overrides to ensure consistent growth */
-/* Scale factors now driven by JS; provide fallback defaults */
-html{--font-scale:1}
+/* Base markdown font size now driven by root html font-size (JS adjusts) */
+.markdown-body{--md-code-bg:var(--color-bg-alt);--md-border:var(--color-border);font-size:1rem;}
+/* Root scale fallback (normal). JS modifies html font-size directly. */
+html{font-size:17px}
 .markdown-body p, .markdown-body ul, .markdown-body ol{line-height:1.6}
 .markdown-body ul{padding-left:1.2rem}
 .markdown-body ol{padding-left:1.25rem}
@@ -140,9 +144,8 @@ html{--font-scale:1}
 
 /* Admonitions */
 /* Base admonition; border-left default overwritten by variants */
-.admonition{position:relative;border:1px solid var(--color-border);border-left:4px solid var(--color-accent);background:var(--color-bg-alt);padding:.85rem 1rem .9rem 1rem;margin:1.5rem 0;border-radius:6px;--adm-color:var(--color-accent);}
+ .admonition{position:relative;border:1px solid var(--color-border);border-left:4px solid var(--color-accent);background:var(--color-bg-alt);padding:.85rem 1rem .9rem 1rem;margin:1.5rem 0;border-radius:6px;--adm-color:var(--color-accent);}
 /* Variant colors now only affect left line + title; unified background for readability */
-	--font-scale:1; /* legacy (no longer drives text size directly) */
 .admonition-tip{--adm-color:var(--adm-tip-color)}
 .admonition-important{--adm-color:var(--adm-important-color)}
 .admonition-warning{--adm-color:var(--adm-warning-color)}
