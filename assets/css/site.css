@@ -172,6 +172,8 @@ html[data-font='xlarge']{--font-scale:1.18}
 .doc a:hover{text-decoration:underline}
 hr{border:0;border-top:1px solid var(--color-border);margin:2.5rem 0}
 img{max-width:100%;border-radius:6px}
+.doc .mermaid{display:block;margin:1.2rem auto;max-width:100%;text-align:center}
+.doc .mermaid svg{height:auto!important;width:auto!important;max-width:100%;display:inline-block}
 .panel{background:var(--color-bg-alt);border:1px solid var(--color-border);padding:15px;border-radius:8px;margin:1.1rem 0;word-spacing:0.1em;text-rendering:optimizeLegibility}
 .panel--soft{background:var(--color-panel-soft-bg);border-color:var(--color-panel-soft-border)}
 .panel--soft strong:first-child{margin-top:0}

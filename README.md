@@ -141,18 +141,6 @@ Remove both, then reinstall the loader.
 > [!CAUTION]
 > Avoid stacking multiple performance‑tuning plugins at once (e.g., two that both manipulate clocks or fan curves). Conflicts compound and make root cause analysis painful.
 
-#### Known Conflicts & Plugin Notes
-> [!NOTE]
-> This living table is for patterns the community confirms. Update it as you validate conflicts (do not guess). Test after every SteamOS update.
-
-| Symptom / Issue | Suspected Plugin(s) | Mitigation | Notes / Conditions |
-| --------------- | ------------------- | ---------- | ------------------ |
-| Game launches then immediately exits | PowerTools (aggressive clocks) | Disable plugin, re-test with stock clocks | Seen after enabling manual clock lower than Proton expects |
-| Controller input drops randomly | Decky Recorder, FPS overlays combo | Disable one overlay at a time | Usually two overlays polling gamepad state |
-| UI flickering / phantom clicks | CSS Loader (outdated theme) | Switch to default theme, update theme | After major Game Mode UI update |
-| Performance tank after resume | Fan / power tuning plugin | Reboot or disable plugin before sleep | Some plugins don't re-apply curves gracefully |
-| (Add more rows…) |  |  |  |
-
 
 ---
 #### When NOT to Use Decky
