@@ -129,8 +129,9 @@ body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
 html[data-font='large'] .markdown-body{font-size:19px}
 html[data-font='xlarge'] .markdown-body{font-size:21px}
 @media (max-width:640px){
-	html[data-font='large'] .markdown-body{font-size:19.4px}
-	html[data-font='xlarge'] .markdown-body{font-size:21.5px}
+  /* Use relative scaling for mobile so future base size tweaks propagate */
+	html[data-font='large'] .markdown-body{font-size:calc(1.11 * 1rem + 2px)}
+	html[data-font='xlarge'] .markdown-body{font-size:calc(1.23 * 1rem + 2px)}
 }
 html[data-font='large']{--font-scale:1.08}
 html[data-font='xlarge']{--font-scale:1.18}
