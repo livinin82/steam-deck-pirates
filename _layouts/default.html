@@ -143,12 +143,13 @@
           if(!btn) return;
           function apply(mode){
             if(!ORDER.includes(mode)) mode='normal';
-            // Always set attribute so mobile browsers reevaluate styles uniformly
             document.documentElement.setAttribute('data-font',mode);
-            // Map scale factors (slightly bumped for clarity on small screens)
-            const SCALE = mode==='normal'?1 : (mode==='large'?1.12:1.25);
-            document.documentElement.style.setProperty('--font-scale',SCALE);
-            document.documentElement.style.setProperty('--_ts',Date.now()); // reflow nudge
+            // Base size 17px (set in CSS); adjust rem root for global scaling
+            const base=17; // px
+            const size = mode==='normal'?base : (mode==='large'?Math.round(base*1.12):Math.round(base*1.25));
+            document.documentElement.style.fontSize = size + 'px';
+            // Reflow nudge for iOS Safari caching
+            void document.documentElement.offsetWidth;
             localStorage.setItem(STORE_KEY,mode);
             btn.textContent = mode==='normal'?'A':(mode==='large'?'A+':'A++');
             btn.setAttribute('data-size',mode);
