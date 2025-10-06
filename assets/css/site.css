@@ -223,7 +223,13 @@ img{max-width:100%;border-radius:6px}
 	.hero-title .emoji{font-size:1.15em}
 	.hero-sub{font-size:.85rem;text-align:center}
 	/* Extra bottom padding so floating utility dock doesn't overlap early content */
-	.doc{padding-bottom:calc(6.25rem + env(safe-area-inset-bottom,0px));}
+	.doc{padding:1.3rem clamp(.85rem,5vw,1.15rem) calc(6.25rem + env(safe-area-inset-bottom,0px));max-width:100%;}
+	/* Constrain wide content elements */
+	.doc pre,
+	.doc table,
+	.doc .mermaid{margin-left:0;margin-right:0;}
+	.doc .mermaid{overflow-x:auto;-webkit-overflow-scrolling:touch;padding:.25rem .25rem;}
+	.doc .mermaid svg{width:100%!important;height:auto!important;}
 }
 
 /* Full height mobile nav (account for mobile browser chrome & safe areas) */
