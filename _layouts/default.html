@@ -143,9 +143,12 @@
           if(!btn) return;
           function apply(mode){
             if(!ORDER.includes(mode)) mode='normal';
-            if(mode==='normal') document.documentElement.removeAttribute('data-font'); else document.documentElement.setAttribute('data-font',mode);
-            /* Force reflow for some mobile browsers that cache initial font metrics */
-            document.documentElement.style.setProperty('--_ts',Date.now());
+            // Always set attribute so mobile browsers reevaluate styles uniformly
+            document.documentElement.setAttribute('data-font',mode);
+            // Map scale factors (slightly bumped for clarity on small screens)
+            const SCALE = mode==='normal'?1 : (mode==='large'?1.12:1.25);
+            document.documentElement.style.setProperty('--font-scale',SCALE);
+            document.documentElement.style.setProperty('--_ts',Date.now()); // reflow nudge
             localStorage.setItem(STORE_KEY,mode);
             btn.textContent = mode==='normal'?'A':(mode==='large'?'A+':'A++');
             btn.setAttribute('data-size',mode);

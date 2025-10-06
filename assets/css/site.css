@@ -126,8 +126,8 @@ body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
 .markdown-body code{word-break:break-word}
 .markdown-body{--md-code-bg:var(--color-bg-alt);--md-border:var(--color-border);font-size:calc(17px * var(--font-scale));}
 /* Unified font scaling: remove breakpoint-specific font-size overrides to ensure consistent growth */
-html[data-font='large']{--font-scale:1.08}
-html[data-font='xlarge']{--font-scale:1.18}
+/* Scale factors now driven by JS; provide fallback defaults */
+html{--font-scale:1}
 .markdown-body p, .markdown-body ul, .markdown-body ol{line-height:1.6}
 .markdown-body ul{padding-left:1.2rem}
 .markdown-body ol{padding-left:1.25rem}
