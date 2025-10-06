@@ -155,6 +155,9 @@ html[data-font='xlarge']{--font-scale:1.18}
 .admonition-caution{--adm-color:var(--adm-caution-color)}
 .admonition{border-left-color:var(--adm-color);}
 .admonition-title{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin:0 0 .4rem;color:var(--adm-color)}
+.markdown-body .admonition-title{font-size:calc(.7rem * var(--font-scale))}
+/* Optionally slightly boost body text in large modes for readability */
+.markdown-body .admonition{font-size:calc(1rem * var(--font-scale))}
 .doc h1,.doc h2,.doc h3,.doc h4{scroll-margin-top:80px;font-weight:600;line-height:1.2}
 .doc h1{font-size:2rem;margin-top:0;color:var(--color-heading)}
 .doc h2{font-size:1.35rem;margin-top:2.2rem;border-top:1px solid var(--color-border);padding-top:1.2rem;color:var(--color-heading)}
