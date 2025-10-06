@@ -124,15 +124,8 @@ body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
 /* Code blocks inside admonition/table cells should wrap instead of overflow */
 .markdown-body pre code{white-space:pre-wrap;word-break:break-word}
 .markdown-body code{word-break:break-word}
-.markdown-body{--md-code-bg:var(--color-bg-alt);--md-border:var(--color-border);font-size:17px;}
-/* Font scaling modes */
-html[data-font='large'] .markdown-body{font-size:19px}
-html[data-font='xlarge'] .markdown-body{font-size:21px}
-@media (max-width:640px){
-  /* Use relative scaling for mobile so future base size tweaks propagate */
-	html[data-font='large'] .markdown-body{font-size:calc(1.11 * 1rem + 2px)}
-	html[data-font='xlarge'] .markdown-body{font-size:calc(1.23 * 1rem + 2px)}
-}
+.markdown-body{--md-code-bg:var(--color-bg-alt);--md-border:var(--color-border);font-size:calc(17px * var(--font-scale));}
+/* Unified font scaling: remove breakpoint-specific font-size overrides to ensure consistent growth */
 html[data-font='large']{--font-scale:1.08}
 html[data-font='xlarge']{--font-scale:1.18}
 .markdown-body p, .markdown-body ul, .markdown-body ol{line-height:1.6}
@@ -156,20 +149,20 @@ html[data-font='xlarge']{--font-scale:1.18}
 .admonition-caution{--adm-color:var(--adm-caution-color)}
 .admonition{border-left-color:var(--adm-color);}
 .admonition-title{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin:0 0 .4rem;color:var(--adm-color)}
-.markdown-body .admonition-title{font-size:calc(.72em * var(--font-scale))}
-.markdown-body .admonition{font-size:calc(1em * var(--font-scale))}
+.markdown-body .admonition-title{font-size:.72em}
+.markdown-body .admonition{font-size:1em}
 .doc h1,.doc h2,.doc h3,.doc h4{scroll-margin-top:80px;font-weight:600;line-height:1.2}
-.doc h1{font-size:2rem;margin-top:0;color:var(--color-heading)}
-.doc h2{font-size:1.35rem;margin-top:2.2rem;border-top:1px solid var(--color-border);padding-top:1.2rem;color:var(--color-heading)}
-.doc h3{font-size:1.05rem;margin-top:1.6rem;color:var(--color-accent)}
-.doc h4{font-size:.85rem;margin-top:1.2rem;letter-spacing:.5px;text-transform:uppercase;color:var(--color-text-muted)}
+.doc h1{font-size:calc(2rem * var(--font-scale));margin-top:0;color:var(--color-heading)}
+.doc h2{font-size:calc(1.35rem * var(--font-scale));margin-top:2.2rem;border-top:1px solid var(--color-border);padding-top:1.2rem;color:var(--color-heading)}
+.doc h3{font-size:calc(1.05rem * var(--font-scale));margin-top:1.6rem;color:var(--color-accent)}
+.doc h4{font-size:calc(.85rem * var(--font-scale));margin-top:1.2rem;letter-spacing:.5px;text-transform:uppercase;color:var(--color-text-muted)}
 .doc p{margin:1rem 0}
-.doc code{background:var(--color-bg-alt);padding:.15rem .4rem;border-radius:4px;font-size:calc(.78em * var(--font-scale));font-family:ui-monospace,Menlo,Monaco,"Cascadia Mono","Segoe UI Mono",Roboto Mono,monospace}
-.doc pre{background:var(--color-bg-alt);padding:1rem 1.2rem;border-radius:8px;overflow:auto;font-size:calc(.74em * var(--font-scale));line-height:1.4}
-.doc table{border-collapse:collapse;width:100%;margin:1.5rem 0;font-size:calc(.78em * var(--font-scale))}
+.doc code{background:var(--color-bg-alt);padding:.15rem .4rem;border-radius:4px;font-size:.78em;font-family:ui-monospace,Menlo,Monaco,"Cascadia Mono","Segoe UI Mono",Roboto Mono,monospace}
+.doc pre{background:var(--color-bg-alt);padding:1rem 1.2rem;border-radius:8px;overflow:auto;font-size:.74em;line-height:1.4}
+.doc table{border-collapse:collapse;width:100%;margin:1.5rem 0;font-size:.78em}
 .doc th,.doc td{border:1px solid var(--color-border);padding:.55rem .6rem;text-align:left;vertical-align:top}
 .doc th{background:var(--color-table-header);font-weight:600;color:var(--color-heading)}
-.doc blockquote{margin:1.5rem 0;padding:.9rem 1rem .9rem 1rem;border-left:4px solid var(--color-accent);background:var(--color-blockquote-bg);border-radius:4px;font-size:.8rem;color:var(--color-text-muted)}
+.doc blockquote{margin:1.5rem 0;padding:.9rem 1rem .9rem 1rem;border-left:4px solid var(--color-accent);background:var(--color-blockquote-bg);border-radius:4px;font-size:calc(.8rem * var(--font-scale));color:var(--color-text-muted)}
 .doc a{color:var(--color-link);text-decoration:none}
 .doc a:hover{text-decoration:underline}
 hr{border:0;border-top:1px solid var(--color-border);margin:2.5rem 0}
