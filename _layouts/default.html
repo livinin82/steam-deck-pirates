@@ -147,7 +147,9 @@
             // Base size 17px (set in CSS); adjust rem root for global scaling
             const base=17; // px
             const size = mode==='normal'?base : (mode==='large'?Math.round(base*1.12):Math.round(base*1.25));
-            document.documentElement.style.fontSize = size + 'px';
+            // Apply min/max guard rails
+            const clamped = Math.min(24, Math.max(14, size));
+            document.documentElement.style.fontSize = clamped + 'px';
             // Reflow nudge for iOS Safari caching
             void document.documentElement.offsetWidth;
             localStorage.setItem(STORE_KEY,mode);
