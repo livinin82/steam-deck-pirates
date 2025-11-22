@@ -1,4 +1,4 @@
-
+# Updated: 2025-11-22
 
 # <span class="hero-title">Steam Deck Pirates' Cove</span>
 
