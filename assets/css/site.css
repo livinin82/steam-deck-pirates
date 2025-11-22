@@ -34,17 +34,23 @@ h4, .markdown-body h4 {
 /* Table/warning box improvements */
 td[bgcolor="#FFF3CD"] {
 	background: #FFF3CD !important;
-	color: #856404;
+	color: #3a2a00 !important;
 	border: 1px solid #FFEEBA !important;
 	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	opacity: 0.98;
 }
 
 /* Make warning/note boxes less visually dominant */
 td[bgcolor="#E3F2FD"] {
 	background: #E3F2FD !important;
-	color: #0c5460;
+	color: #1a2633 !important;
 	border: 1px solid #b8daff !important;
 	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	opacity: 0.98;
 }
 @media (max-width: 700px) {
 	.topbar {
