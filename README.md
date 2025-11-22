@@ -46,31 +46,8 @@ Decky Loader lets you extend the Steam Deck's Game Mode with plugins (quick tool
 
 <div style="margin:1rem 0; padding:0.75rem 1rem; border:1px solid var(--border-color,#444); border-radius:6px; background:var(--code-bg,#111); font-size:0.95em;">
 <strong>Decky Quick Navigation</strong>
-<br>
-<a href="#installation-decky-loader">Installation</a> •
-<a href="#updating-decky">Updating</a> •
-<a href="#installing-plugins">Installing Plugins</a> •
-<a href="#managing--configuring-plugins">Managing & Configuring</a> •
-<a href="#disabling-vs-uninstalling">Disable vs Uninstall</a> •
-<a href="#common-troubleshooting-flow">Troubleshooting</a> •
-<a href="#safe-starter-plugins-generally-low-risk">Safe Starters</a> •
-<a href="#known-conflicts--plugin-notes">Conflicts</a> •
-<a href="#when-not-to-use-decky">When Not To Use</a> •
-<a href="#quick-removal-script-optional">Removal Script</a> •
-<a href="#summary">Summary</a>
-</div>
 
-#### What Decky Can (and Cannot) Do
-
-| Can Do | Cannot / Should Not Do |
-| ------ | ---------------------- |
-| Inject quick toggles (TDP, FPS limit, system info) | Magically fix broken cracks |
-| Provide plugin UIs inside the Quick Access Menu | Replace Proton / Wine |
-| Expose system telemetry & fan curves | Replace system updates |
-| Manage / update installed plugins | Guarantee stability with every SteamOS update |
-
----
-#### Installation (Decky Loader)
+#### Installing Decky Loader
 1. Switch to **Desktop Mode**.
 2. Open a browser and go to: <https://decky.xyz>
 3. Download the latest **Decky Loader Installer** (`.desktop` or script) and run it.
@@ -81,23 +58,25 @@ Decky Loader lets you extend the Steam Deck's Game Mode with plugins (quick tool
 > If the plug icon does not appear: fully reboot once, then check again. Still missing? Remove any custom UI replacement plugins you might already have installed manually.
 
 ---
-#### Updating Decky
-Decky auto‑notifies in its own tab. Open the Decky tab → click the update banner (if present). If an update fails:
-1. Reboot and try again.
-2. If still failing, reinstall the installer from Desktop Mode (it preserves plugins unless you purge the folders).
+#### Disabling Decky
+To disable Decky (without uninstalling):
+1. Open the Decky tab in Game Mode (plug icon in Quick Access Menu).
+2. Disable all plugins (toggle off) to test for conflicts or issues.
+3. You can re-enable plugins one at a time to identify any causing problems.
 
 ---
-#### Installing Plugins
-1. Open Game Mode → Quick Access Menu → Decky (plug icon).
-2. Select the **Store** (shopping bag icon).
-3. Browse or search; select a plugin → Install.
-4. The plugin appears in your Installed list instantly; many add a panel or toggle.
+#### Removing Decky Completely
+To fully remove Decky Loader and all plugins/data:
+1. Switch to **Desktop Mode**.
+2. Open a terminal and run:
+    ```bash
+    rm -rf ~/.local/share/decky-loader ~/.local/share/SteamDeckHomebrew
+    ```
+3. This will delete all Decky data and plugins. **Export any important settings first!**
+4. You can reinstall Decky at any time from <https://decky.xyz>.
 
-> [!NOTE]
-> Some plugins only show content while a game is running (e.g., performance overlays). Launch a game if you don't see anything.
-
----
-#### Managing / Configuring Plugins
+> [!WARNING]
+> Deleting those folders removes all plugin data & settings. Export anything important first (fan curves, custom JSON configs, etc.).
 Within Decky:
 * Use the gear icon on a plugin tile (if present) for settings.
 * Drag to reorder (affects display order in the panel).
