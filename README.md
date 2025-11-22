@@ -1102,20 +1102,21 @@ A couple of people have reported being able to pinpoint the search by changing t
     <li>Change the title to the number you copied</li>
     <li>Close the settings</li>
     <li>Click on the Controller Icon next to the Gear Icon, click on the Layout Selector (above <strong>View Layout</strong> and <strong>Edit Layout</strong>)</li>
+
 </ul>
- </td>
+</td>
 </tr>
 </table>
 
 
 ### Game opens steam
 
-Either your crack isnt applied properly or you need to change the number in `steamapp_id.txt` to `1` in the game folder.
+Either your crack isn't applied properly or you need to change the number in `steamapp_id.txt` to `1` in the game folder.
 
 
 ### No licenses
 
-If this shows it means your crack isn't working. Make sure you copied the files over properly, and that you have pointed to all of the relevent DLLs and dependencies.
+If this shows it means your crack isn't working. Make sure you copied the files over properly, and that you have pointed to all of the relevant DLLs and dependencies.
 
 
 ### Games suddenly won't open or close
@@ -1123,12 +1124,15 @@ If this shows it means your crack isn't working. Make sure you copied the files 
 <table>
 <tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
-<p>More often than not, this is related to a plugin running in Decky. To verify this:</p>
+
+More often than not, this is related to a plugin running in Decky. To verify this:
+
 <ul>
     <li>Disable Decky and test your game</li>
     <li>Uninstall your plugins one by one, and see what changes it.</li>
     <li>Uninstall them all, and add them back one by one until you see the error happen again.</li>
 </ul>
+
 </td>
 </tr>
 </table>
@@ -1140,6 +1144,7 @@ If this shows it means your crack isn't working. Make sure you copied the files 
 #### Is Proton Enabled?
 
 > [!NOTE]
+>
 > In some instances Steam may silently disable your forced Proton version for a non‑Steam shortcut.
 > Before doing anything else: open the shortcut's Properties and re‑enable a Proton version (start with Proton Experimental).
 
@@ -1147,6 +1152,7 @@ If this shows it means your crack isn't working. Make sure you copied the files 
 #### Are there quotes around the target path?
 
 > [!NOTE]
+>
 > Paths containing spaces must be wrapped in quotes in Launch Options / Target field.
 > Example (GOOD): `"/home/deck/Games/Tomb Raider/game.exe"`
 > Example (BAD): `/home/deck/Games/Tomb Raider/game.exe`
@@ -1155,12 +1161,14 @@ If this shows it means your crack isn't working. Make sure you copied the files 
 #### Are dependencies installed?
 
 > [!CAUTION]
+>
 > Missing DirectX / VC++ / .NET components will cause silent exits. See the [Installing Dependencies](#installing-dependencies) section above and install what your game needs.
 
 
 ### Mods won't load
 
 > [!WARNING]
+>
 > Possible causes:
 >
 > * Required DLL overrides not applied (see [Adding DLLs to Proton](#adding-dlls-to-proton)).
@@ -1171,14 +1179,19 @@ If this shows it means your crack isn't working. Make sure you copied the files 
 
 
 ---
+
 ## Other subreddits/groups
+
 #### Piracy Related
+
 - [Linux Crack Tips](https://www.reddit.com/r/LinuxCrackSupport/)
 - [Piracy](https://www.reddit.com/r/Piracy)
 - [FreeMediaHeckYeah](https://www.reddit.com/r/FREEMEDIAHECKYEAH)
 
 ---
+
 ## Useful Links
+
 - [ProtonDB](https://protondb.com/)
 - [SteamDB](https://steamdb.info/)
 - [SteamDeckHQ](https://steamdeckhq.com/)
