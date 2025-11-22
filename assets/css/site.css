@@ -120,39 +120,6 @@ body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
 		align-items: center;
 		justify-content: center;
 }
-@media (max-width: 600px) {
-	.menu-fixed-top-left,
-	.theme-topbar,
-	.back-to-bottom-right {
-		width: 40px;
-		height: 40px;
-		font-size: 1.2rem;
-	}
-	.hero-title {
-		font-size: 1.1rem;
-	}
-	.topbar {
-		position: sticky !important;
-		top: 0 !important;
-		left: 0;
-		right: 0;
-		z-index: 2001 !important;
-		display: flex !important;
-		flex-direction: row !important;
-		align-items: center !important;
-		justify-content: flex-start !important;
-		padding: .9rem 1.5rem !important;
-		min-height: unset !important;
-	}
-	.hero-inner {
-		display: flex !important;
-		flex-direction: row !important;
-		align-items: center !important;
-		gap: 1.2rem !important;
-		width: 100%;
-		padding: 0 !important;
-	}
-}
 
 /* Theme toggle anchored to topbar, right side */
 /* Larger theme toggle button for accessibility (desktop/tablet) */
@@ -219,9 +186,7 @@ body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
 		/* removed expanded variant */
 	.utility-dock .divider{height:22px}
 }
-@media (max-width:640px){
-	.hero-title{font-size:1.25rem}
-}
+/* Removed mobile-specific layout overrides to unify desktop/mobile appearance */
 .doc{padding:2rem 2.5rem;max-width:1000px;margin:0 auto}
 /* Responsive tables: wrap wide tables on small screens */
 .markdown-body table{display:table;width:100%;table-layout:auto}
