@@ -56,7 +56,30 @@ Launchers are apps built for Linux that allow you to play games from other Launc
 
 ### Decky Plugins
 
+<table>
+<tr>
+<td bgcolor="#FFF3CD" width="100%" style="padding:15px; border-radius:5px; border: 1px solid #FFEEBA;">
+<strong>Warning:</strong> Decky Loader and its plugins have been known to break after SteamOS or plugin updates. <strong>Support for Decky is not offered here.</strong> Use at your own risk.
+</td>
+</tr>
+</table>
 
+#### Installing Decky Loader
+1. Go to the <a href="https://github.com/SteamDeckHomebrew/decky-loader">Decky Loader GitHub</a> and follow the installation instructions for your Steam Deck.
+2. After installation, Decky will appear as a plug icon in the Steam Deck's quick access menu.
+3. Browse and install plugins directly from the Decky interface.
+
+#### Disabling Decky Plugins
+1. Open the Decky menu (plug icon).
+2. Find the plugin you want to disable.
+3. Toggle the switch or use the disable option (varies by plugin).
+
+#### Uninstalling Decky Plugins
+1. Open the Decky menu.
+2. Select the plugin you want to remove.
+3. Use the uninstall or remove option (usually found in the plugin's settings or via right-click).
+
+If you experience issues with games or SteamOS after installing Decky or plugins, try disabling or uninstalling plugins first.
 
 ## Commonly Used Apps
 
@@ -180,9 +203,8 @@ If your game is already in a preinstalled state, skip to **Part 3**.
 <table>
 <tr>
 <td bgcolor="#FFF3CD" width="100%" style="padding:15px; border-radius:5px; border: 1px solid #FFEEBA;">
-<strong>FG/DoDi Repack Note:</strong> <br>
-FG repacks default to the <strong>D drive</strong>, and DoDi repacks default to the <strong>C drive</strong>.<br>
-If your game files are missing after install, check these locations first.
+<strong>FG/DoDi Repack Note:</strong><br>
+The default install location for FG and DoDi repacks depends on what you set as your games folder during installation. It could be <strong>Z:</strong>, <strong>D:</strong>, <strong>C:</strong>, or any other drive letter or path you choose. Always check inside the folder you selected for your games. If your game files are missing after install, look in the folder you made during setup.
 </td>
 </tr>
 </table>
