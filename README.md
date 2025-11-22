@@ -193,7 +193,7 @@ If your game is already in a preinstalled state, skip to **Part 3**.
 > [!CAUTION]
 > **Installer Warning:** On Linux/Steam Deck, never install games or repacks to the <strong>C:</strong> drive (or any default path inside <code>drive_c</code>). The <strong>C:</strong> drive is actually a hidden folder inside a "prefix"—a fake Windows environment created by Proton or Wine. If you install to <strong>C:</strong>, your game will be buried deep inside the prefix and hard to find or move later.
 >
-> Instead, always choose a custom folder (like <strong>Games</strong> on your SD card, internal storage, or another drive). In most installers, your internal storage or microSD card will show up as a different drive letter—often <strong>Z:</strong>, <strong>D:</strong>, or something other than <strong>C:</strong>. Look for the folder you created (such as <strong>Games</strong>) in one of those drives and select it as your install location. After installation, double-check the folder you selected for your game files. This warning is for Linux/Steam Deck users, not Windows.
+> Instead, always choose a custom folder (like <strong>Games</strong> on your SD card, internal storage, or another drive). In most installers, your internal storage or microSD card will show up as a different drive letter—often <strong>Z:</strong>, <strong>D:</strong>, or something other than <strong>C:</strong>. Look for the folder you created (such as <strong>Games</strong>) in one of those drives and select it as your install location. After installation, double-check the folder you selected for your game files.
 
 
 #### Part 2: Installation
