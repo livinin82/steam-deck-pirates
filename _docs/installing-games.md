@@ -29,7 +29,7 @@ Quick links:
 - [Transferring Installed Games from PC](#transferring-installed-games-from-pc)
 
 ---
-## Installing games through Steam {#installing-games-through-steam}
+### Installing games through Steam {#installing-games-through-steam}
 > [!NOTE]
 > If the game is already fully installed (a pre‑installed repack) skip to Part 3.
 
@@ -58,14 +58,14 @@ Quick links:
 <div class="panel"><strong>Tips</strong><ul><li>Extract multi‑part archives first.</li><li>Try Proton-GE if stock versions fail.</li><li>Avoid prefix drive_c for storage.</li></ul></div>
 
 ---
-## Installing games through Lutris {#installing-games-through-lutris}
+### Installing games through Lutris {#installing-games-through-lutris}
 > [!CAUTION] Ensure Lutris has filesystem permission (Flatseal).
 > [!NOTE] Some repacks need alternate runners; Lutris simplifies that.
 <div class="panel"><ol><li>Open Lutris.</li><li>+ → Add Game.</li><li>Name; Runner: Wine.</li><li>Game Options → installer .exe.</li><li>Save → entry appears.</li><li>Launch to install.</li><li>Configure → point executable to installed game.</li></ol></div>
 > Use Advanced Options for custom Wine / Proton-GE versions.
 
 ---
-## Installing games through other launchers {#installing-games-through-other-launchers}
+### Installing games through other launchers {#installing-games-through-other-launchers}
 Use other launchers only if they add value (cloud saves, store integration).
 <div align="center">
 <a href="https://docs.usebottles.com/"><img src="https://cdn2.steamgriddb.com/logo_thumb/b6971181414fe808396c6883eb262e8d.png" alt="Bottles" width="110"></a>
@@ -73,7 +73,7 @@ Use other launchers only if they add value (cloud saves, store integration).
 </div>
 
 ---
-## Transferring Installed Games from PC {#transferring-installed-games-from-pc}
+### Transferring Installed Games from PC {#transferring-installed-games-from-pc}
 > [!NOTE] Network transfer > USB (avoids double copy).
 > [!WARNING] Speed depends on LAN + storage I/O.
 
