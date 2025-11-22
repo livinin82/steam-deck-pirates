@@ -1,7 +1,3 @@
----
-title: Steam Deck Pirates' Cove (Repo Overview)
-layout: default
----
 
 # <span class="hero-title">Steam Deck Pirates' Cove</span>
 
@@ -74,7 +70,7 @@ graph TD
     C["Pre-installed Game"]
     D["Install Game on SteamDeck"]
     E["Transfer to Steam Deck"]
-    F["Add Non-Steam Game]
+    F["Add Non-Steam Game"]
     G{"Set up Windows Environment"}
     H["Configure with ProtonTricks"]
     Z((Play Game))

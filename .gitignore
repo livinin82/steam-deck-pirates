@@ -1,0 +1,29 @@
+# Jekyll build files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby/Bundler
+.bundle/
+vendor/
+Gemfile.lock
+
+# Backup system (local only)
+backups/*/
+!backups/README.md
+!backups/2025-10-05-baseline/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Scripts (keep in repo but mark as executable)
+*.sh
