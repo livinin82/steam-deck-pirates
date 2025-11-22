@@ -4,6 +4,9 @@ a, .modern-link {
 	text-decoration: underline;
 	transition: color 0.2s;
 }
+a:visited, .modern-link:visited {
+	color: #7c3aed;
+}
 a:hover, .modern-link:hover {
 	color: #0056b3;
 	text-decoration: underline;
