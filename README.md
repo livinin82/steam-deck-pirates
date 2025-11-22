@@ -58,7 +58,7 @@ Launchers are apps built for Linux that allow you to play games from other Launc
 
 
 
-## Apps you NEED TO have installed
+## Commonly Used Apps
 
 
 
@@ -72,7 +72,7 @@ Launchers are apps built for Linux that allow you to play games from other Launc
 | *[ProtonTricks](https://github.com/Matoking/protontricks)* | Similar to WineTricks, this allows you to manipulate the prefixes for your individual Windows based games. You can install dependencies, set the prefix up to use DLL files (for mods), set the Windows versions compatibility, install game updates or other exe files, and so much more. This is like the control panel in Windows for each individual games prefix. This is also where you can find the **compatdata** folder number for any non steam games you have installed (if you installed through steam). The folder number will be in parentheses next to whatever the entry is titled in steam. |
 | *[Bottles](https://usebottles.com)/[Lutris](https://lutris.net)/[Heroic Launcher](https://heroicgameslauncher.com)* | These are the launchers that are mentioned in the previous section. Bottles, Lutris, and Heroic have varied access to the stupid launchers all AAA publishers insist on using. Thing of these as mega launcher that allows you to organize and work with a multitude of launcher-based games without having to jump from launcher to launcher. These can all be found on the discover store. |
 | [EmuDeck](https://www.emudeck.com)/[RetroDeck](https://retrodeck.net) | If it isn't obvious from the name, these are the most commonly recommended methods of playing emulators and retro games. The advantages of these methods rather than setting up every emulator individually are: better folder structure, custom settings tailored to the Deck itself, a frontend that brings everything into view easily, and a bunch of other included tools that make getting on the road to emulation a lot easier. There is a larger section about emulation below. |
-| *[Warpinator](https://warpinator.com/warpinator-download/)* | Warpinator is a recommended file transfer service for your local network. This application works with all OS options. It will need to be running on both your Steam Deck and the device you are transferring files from/to. For Windows there are two options, [Winpinator](https://winpinator.swisz.cz/) and [Warpinator](https://warpinator.com/warpinator-download/). I have personally had more luck with the actual Warpinator. Sometimes if there are connection issues it is best to manually set the network device in settings. This is the fastest and easiest to set up method for transferring files. |
+| *[Warpinator](https://warpinator.com/warpinator-download/)* | <span class="modern-link">Warpinator</span> is a recommended file transfer service for your local network. This application works with all OS options. It will need to be running on both your Steam Deck and the device you are transferring files from/to. For Windows there are two options, <span class="modern-link">Winpinator</span> and <span class="modern-link">Warpinator</span>. I have personally had more luck with the actual Warpinator. Sometimes if there are connection issues it is best to manually set the network device in settings. This is the fastest and easiest to set up method for transferring files. |
 | *[JDownloader](https://jdownloader.org)* | A download manager that I myself swear by. It can handle multi part links, fill captchas for you, store account info for sites you have a login with, and it usually finds the highest speed it can. Any type of DL link works here for the most part. It is recommend downloading one or two files at a time through settings so you can maximize speed. |
 | *[qBittorrent](https://www.qbittorrent.org)* | For downloading torrents. |
 | *[AnyDesk](https://anydesk.com/en)/[RustDesk](https://rustdesk.com)* | These are Remote Desktop applications. Use this to access your desktop mode from another PC or Device that can install these apps. This is great in the absence of a keyboard and mouse, you can also send files to yourself (albeit small ones). This is really useful also if you don't wanna keep switching between monitor inputs while docked, etc. If you want real ease of use be sure to set up unattended access with a password for the remote app so you don't have to use the Deck to accept every session. |
@@ -177,7 +177,15 @@ If your game is already in a preinstalled state, skip to **Part 3**.
 
 
 
-**Note:** FG repacks default to the D drive, and DoDi repacks default to the C drive.
+<table>
+<tr>
+<td bgcolor="#FFF3CD" width="100%" style="padding:15px; border-radius:5px; border: 1px solid #FFEEBA;">
+<strong>FG/DoDi Repack Note:</strong> <br>
+FG repacks default to the <strong>D drive</strong>, and DoDi repacks default to the <strong>C drive</strong>.<br>
+If your game files are missing after install, check these locations first.
+</td>
+</tr>
+</table>
 
 
 #### Part 2: Installation
