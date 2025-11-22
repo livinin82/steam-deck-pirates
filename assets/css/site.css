@@ -306,13 +306,13 @@ body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
 /* Removed mobile-specific layout overrides to unify desktop/mobile appearance */
 .doc{padding:56px 2.5rem 2rem 2.5rem;max-width:1000px;margin:0 auto}
 /* Responsive tables: wrap wide tables on small screens */
-.markdown-body table{display:table;width:100%;table-layout:auto}
+.markdown-body table{display:table;width:100%;table-layout:auto;font-size:0.92em;}
 @media (max-width:680px){
 	.markdown-body table{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--color-border);}
 	.markdown-body p + table, .markdown-body h4 + table, .markdown-body h3 + table{margin-top:.8rem}
 	/* Fallback: if GitHub Pages or parser fails and pipes render inline, force display block when row starts with pipe and contains pipe cells (progressive enhancement not bulletproof) */
 	.markdown-body table{border-collapse:collapse}
-	.markdown-body table th, .markdown-body table td{padding:.5rem .55rem}
+	.markdown-body table th, .markdown-body table td{padding:.5rem .55rem;font-size:0.92em;}
 	.markdown-body table thead{display:table-header-group}
 	.markdown-body table tr{display:table-row}
 	/* Ensure no side clipping on mobile */
