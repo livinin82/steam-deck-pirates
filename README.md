@@ -1087,8 +1087,6 @@ There are also **Community Layouts**. These are layouts made by (you guessed it)
 A couple of people have reported being able to pinpoint the search by changing the shortcut name to the Steam URL listing number:
 
 <table>
-<tr>
-<tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
 <strong>In Desktop mode:</strong>
 <ul>
