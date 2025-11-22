@@ -92,24 +92,36 @@ body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
 .utility-dock{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:1500;display:flex;align-items:center;gap:.55rem;padding:.55rem .7rem;background:color-mix(in srgb,var(--color-bg-alt) 85%, transparent);backdrop-filter:saturate(150%) blur(10px);border:1px solid var(--color-border);border-radius:46px;box-shadow:0 4px 18px -4px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.02);}
 
 /* Hamburger menu fixed at top left, always above everything */
-/* Larger hamburger/menu button for accessibility */
+/* Larger hamburger/menu button for accessibility (desktop/tablet) */
 .menu-fixed-top-left {
-	position: fixed;
-	top: 14px;
-	left: 14px;
-	z-index: 9999;
-	box-shadow: 0 2px 8px 0 rgba(0,0,0,0.18);
-	width: 56px;
-	height: 56px;
-	font-size: 2rem;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+		position: fixed;
+		top: 14px;
+		left: 14px;
+		z-index: 9999;
+		box-shadow: 0 2px 8px 0 rgba(0,0,0,0.18);
+		width: 56px;
+		height: 56px;
+		font-size: 2rem;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+}
+@media (max-width: 600px) {
+	.menu-fixed-top-left,
+	.theme-topbar,
+	.back-to-bottom-right {
+		width: 40px;
+		height: 40px;
+		font-size: 1.2rem;
+	}
+	.hero-title {
+		font-size: 1.1rem;
+	}
 }
 
 /* Theme toggle anchored to topbar, right side */
-/* Larger theme toggle button for accessibility */
+/* Larger theme toggle button for accessibility (desktop/tablet) */
 .theme-topbar {
 	position: absolute;
 	top: 14px;
@@ -125,7 +137,7 @@ body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
 }
 
 /* Back to top button at bottom right, always visible */
-/* Larger scroll-to-top button for accessibility */
+/* Larger scroll-to-top button for accessibility (desktop/tablet) */
 .back-to-bottom-right {
 	position: fixed;
 	bottom: 18px;
