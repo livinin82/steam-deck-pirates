@@ -1,4 +1,8 @@
-<!-- README content (front matter removed; handled by index.md) -->
+---
+title: Steam Deck Pirates' Cove (Repo Overview)
+layout: default
+---
+
 # <span class="hero-title">Steam Deck Pirates' Cove</span>
 
 <p class="hero-sub">A consolidated single-page reference for running Windows games, emulation, and tweaks on Steam Deck.</p>
@@ -39,113 +43,7 @@ Launchers are apps built for Linux that allow you to play games from other Launc
 
 ### Decky Plugins
 
-> [!CAUTION]
-> Plugins can and do break games, controller input, overlays, performance, sleep / resume, or even prevent titles from launching. Always change one thing at a time and re‑test so you know what caused a regression.
-
-Decky Loader lets you extend the Steam Deck's Game Mode with plugins (quick tools, performance tweaks, UI helpers). Treat it like a mod manager: minimal, intentional, documented changes are safest.
-
-<div style="margin:1rem 0; padding:0.75rem 1rem; border:1px solid var(--border-color,#444); border-radius:6px; background:var(--code-bg,#111); font-size:0.95em;">
-<strong>Decky Quick Navigation</strong>
-
-#### Installing Decky Loader
-1. Switch to **Desktop Mode**.
-2. Open a browser and go to: <https://decky.xyz>
-3. Download the latest **Decky Loader Installer** (`.desktop` or script) and run it.
-4. When finished, return to **Game Mode** (Power → Switch to Game Mode).
-5. Press the <strong>… (QAM)</strong> button → you should now see a new **plug icon** tab (Decky).
-
-> [!TIP]
-> If the plug icon does not appear: fully reboot once, then check again. Still missing? Remove any custom UI replacement plugins you might already have installed manually.
-
----
-#### Disabling Decky
-To disable Decky (without uninstalling):
-1. Open the Decky tab in Game Mode (plug icon in Quick Access Menu).
-2. Disable all plugins (toggle off) to test for conflicts or issues.
-3. You can re-enable plugins one at a time to identify any causing problems.
-
----
-#### Removing Decky Completely
-To fully remove Decky Loader and all plugins/data:
-1. Switch to **Desktop Mode**.
-2. Open a terminal and run:
-    ```bash
-    rm -rf ~/.local/share/decky-loader ~/.local/share/SteamDeckHomebrew
-    ```
-3. This will delete all Decky data and plugins. **Export any important settings first!**
-4. You can reinstall Decky at any time from <https://decky.xyz>.
-
-> [!WARNING]
-> Deleting those folders removes all plugin data & settings. Export anything important first (fan curves, custom JSON configs, etc.).
-Within Decky:
-* Use the gear icon on a plugin tile (if present) for settings.
-* Drag to reorder (affects display order in the panel).
-* Disable (toggle off) to test conflicts without uninstalling.
-
----
-#### Disabling vs Uninstalling
-
-| Action | When to Use | Effect |
-| ------ | ----------- | ------ |
-| Disable | Troubleshooting suspected conflict | Keeps files; faster re‑enable |
-| Uninstall | No longer needed / confirmed culprit | Removes plugin code only |
-| Full Purge | Loader corrupted / persistent breakage | Remove loader + plugin data folders |
-
-Full purge locations (desktop terminal / Dolphin):
-```
-~/.local/share/decky-loader/
-~/.local/share/SteamDeckHomebrew/
-```
-Remove both, then reinstall the loader.
-
-> [!WARNING]
-> Deleting those folders removes all plugin data & settings. Export anything important first (fan curves, custom JSON configs, etc.).
-
----
-#### Common Troubleshooting Flow
-1. Game suddenly stops launching / controller dead.
-2. Open Decky → disable ALL plugins (do not uninstall yet).
-3. Test the game.
-4. Re‑enable plugins one at a time until the issue returns → last enabled = culprit.
-5. Check the plugin's GitHub issues page for an update or open a new report (include SteamOS version + Proton version + reproduction steps).
-
----
-#### Safe Starter Plugins (Generally Low Risk)
-
-| Plugin | Purpose |
-| ------ | ------- |
-| PowerTools | TDP / Clock / SMT tweaks (use judiciously) |
-| CSS Loader | Cosmetic UI theming only (verify after SteamOS updates) |
-| Storage Cleaner | Clears shader caches / temp data |
-| Vibrant Deck | Adjust saturation (visual preference) |
-| Decky Recorder | Game video capture (performance impact possible) |
-
-> [!CAUTION]
-> Avoid stacking multiple performance‑tuning plugins at once (e.g., two that both manipulate clocks or fan curves). Conflicts compound and make root cause analysis painful.
-
-
----
-#### When NOT to Use Decky
-* Trying to fix DRM / crack issues (unrelated layer).
-* Replacing Proton versions (use ProtonUpQt instead).
-* Chasing a marginal FPS improvement when the system is otherwise stable.
-
-If stability matters more than a plugin's benefit, remove it. Minimalism wins.
-
----
-#### Quick Removal Script (Optional)
-In Desktop Mode terminal:
-```bash
-rm -rf ~/.local/share/decky-loader ~/.local/share/SteamDeckHomebrew
-```
-Then reinstall via <https://decky.xyz>.
-
----
-#### Summary
-Decky is powerful but sits inside the most fragile interaction layer (Game Mode UI). Treat every new plugin as an experiment: document, test, rollback quickly if problems appear.
-
-
-## Commonly Used Applications 
+## Apps you NEED TO have installed
 
 > [!NOTE]
 > Items in *Italics* are available on the Discover Store.
@@ -169,8 +67,6 @@ Decky is powerful but sits inside the most fragile interaction layer (Game Mode 
 ---
 
 ## Guides for installing games
-
-### Installing Games Overview
 ```mermaid
 graph TD
     A[Source Game]
@@ -178,7 +74,7 @@ graph TD
     C["Pre-installed Game"]
     D["Install Game on SteamDeck"]
     E["Transfer to Steam Deck"]
-    F["Add Non-Steam Game"]
+    F["Add Non-Steam Game]
     G{"Set up Windows Environment"}
     H["Configure with ProtonTricks"]
     Z((Play Game))
@@ -1136,6 +1032,7 @@ A couple of people have reported being able to pinpoint the search by changing t
 
 <table>
 <tr>
+<tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
 <strong>In Desktop mode:</strong>
 <ul>
@@ -1178,39 +1075,38 @@ If this shows it means your crack isn't working. Make sure you copied the files 
 
 #### Is Proton Enabled?
 > [!NOTE]
-> Steam may silently disable your forced Proton version for a non‑Steam shortcut. Re‑open Properties → Compatibility and re‑select Proton (start with Proton Experimental) before deeper troubleshooting.
+> In some instances Steam may silently disable your forced Proton version for a non‑Steam shortcut.
+> Before doing anything else: open the shortcut's Properties and re‑enable a Proton version (start with Proton Experimental).
 
 #### Are there quotes around the target path?
 > [!NOTE]
-> File paths with spaces must be quoted.  
-> Example (GOOD): `"/home/deck/Games/Tomb Raider/game.exe"`  
+> Paths containing spaces must be wrapped in quotes in Launch Options / Target field.
+> Example (GOOD): `"/home/deck/Games/Tomb Raider/game.exe"`
 > Example (BAD): `/home/deck/Games/Tomb Raider/game.exe`
 
 #### Are dependencies installed?
 > [!CAUTION]
-> Missing DirectX / VC++ / .NET components cause silent exits. See [Installing Dependencies](#installing-dependencies) and add what the game needs.
+> Missing DirectX / VC++ / .NET components will cause silent exits. See the [Installing Dependencies](#installing-dependencies) section above and install what your game needs.
 
 ### Mods won't load
 > [!WARNING]
 > Possible causes:
-> * Missing DLL overrides (see [Adding DLLs to Proton](#adding-dlls-to-proton)).
-> * Windows‑only mod manager used; prefer native / alternative method.
-> * Mod loader files in wrong prefix/game folder.
-> * Incompatible Proton version (test Proton‑GE / older stable).
-> * Case sensitivity mismatch in filenames.
+> * Required DLL overrides not applied (see [Adding DLLs to Proton](#adding-dlls-to-proton)).
+> * Using a Windows-only mod manager when a native / alternative method exists.
+> * Mod loader files placed in wrong prefix path.
+> * Incompatible Proton version (test Proton-GE or older Proton).
+> * Incorrect case-sensitive filenames on Linux.
 
 ---
-## Communities & Resources
-Below is a consolidated list of related subreddits and helpful external reference sites.
+## Other subreddits/groups
+#### Piracy Related
+- [Linux Crack Tips](https://www.reddit.com/r/LinuxCrackSupport/)
+- [Piracy](https://www.reddit.com/r/Piracy)
+- [FreeMediaHeckYeah](https://www.reddit.com/r/FREEMEDIAHECKYEAH)
 
-| Name | URL |
-| ---- | --- |
-| Linux Crack Tips | [https://www.reddit.com/r/LinuxCrackSupport/](https://www.reddit.com/r/LinuxCrackSupport/) |
-| Piracy | [https://www.reddit.com/r/Piracy](https://www.reddit.com/r/Piracy) |
-| FreeMediaHeckYeah | [https://www.reddit.com/r/FREEMEDIAHECKYEAH](https://www.reddit.com/r/FREEMEDIAHECKYEAH) |
-| ProtonDB | [https://protondb.com/](https://protondb.com/) |
-| SteamDB | [https://steamdb.info/](https://steamdb.info/) |
-| SteamDeckHQ | [https://steamdeckhq.com/](https://steamdeckhq.com/) |
-| PCGamingWiki | [https://www.pcgamingwiki.com/wiki/Home](https://www.pcgamingwiki.com/wiki/Home) |
-
-
+---
+## Useful Links
+- [ProtonDB](https://protondb.com/)
+- [SteamDB](https://steamdb.info/)
+- [SteamDeckHQ](https://steamdeckhq.com/)
+- [PCGamingWiki](https://www.pcgamingwiki.com/wiki/Home)
