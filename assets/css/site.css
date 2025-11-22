@@ -14,30 +14,30 @@ a:hover, .modern-link:hover {
 
 /* More prominent subheadings */
 h2, .markdown-body h2 {
-	font-size: 2.3rem;
-	font-weight: 800;
+	font-size: 2.7rem;
+	font-weight: 900;
 	border-bottom: 2.5px solid #e3e3e3;
-	padding-bottom: 0.25em;
-	margin-top: 2.5em;
-	margin-bottom: 1.2em;
+	padding-bottom: 0.28em;
+	margin-top: 2.7em;
+	margin-bottom: 1.3em;
 	letter-spacing: 0.01em;
 	color: var(--color-heading);
 }
 h3, .markdown-body h3 {
-	font-size: 1.8rem;
-	font-weight: 700;
-	margin-top: 2em;
-	margin-bottom: 0.9em;
+	font-size: 2.1rem;
+	font-weight: 800;
+	margin-top: 2.2em;
+	margin-bottom: 1em;
 	color: var(--color-accent);
 	letter-spacing: 0.01em;
 }
 h4, .markdown-body h4 {
-	font-size: 1.3rem;
+	font-size: 1.1rem;
 	font-weight: 700;
-	margin-top: 1.4em;
-	margin-bottom: 0.7em;
+	margin-top: 1.5em;
+	margin-bottom: 0.8em;
 	color: var(--color-text-muted);
-	letter-spacing: 0.03em;
+	letter-spacing: 0.04em;
 	text-transform: uppercase;
 }
 
@@ -345,9 +345,9 @@ html{font-size:17px}
 .admonition-warning{--adm-color:var(--adm-warning-color)}
 .admonition-caution{--adm-color:var(--adm-caution-color)}
 .admonition{border-left-color:var(--adm-color);}
-.admonition-title{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin:0 0 .4rem;color:var(--adm-color)}
-.markdown-body .admonition-title{font-size:.72em}
-.markdown-body .admonition{font-size:1em}
+.admonition-title{font-size:.62rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin:0 0 .4rem;color:var(--adm-color)}
+.markdown-body .admonition-title{font-size:.68em}
+.markdown-body .admonition{font-size:.93em}
 .doc h1,.doc h2,.doc h3,.doc h4{scroll-margin-top:80px;font-weight:600;line-height:1.2}
 .doc h1{font-size:calc(2rem * var(--font-scale));margin-top:0;color:var(--color-heading)}
 .doc h2{font-size:calc(1.35rem * var(--font-scale));margin-top:2.2rem;border-top:1px solid var(--color-border);padding-top:1.2rem;color:var(--color-heading)}
@@ -368,7 +368,7 @@ html{font-size:17px}
 	border-collapse: collapse;
 	width: 100%;
 	margin: 1.5rem 0;
-	font-size: 0.98em;
+	font-size: 0.92em;
 	background: inherit;
 }
 .doc th, .doc td {
@@ -389,11 +389,11 @@ html{font-size:17px}
   border-left: 4px solid var(--color-accent);
   background: var(--color-blockquote-bg);
   border-radius: 4px;
-  font-size: 1rem;
+	font-size: 0.92rem;
   color: var(--color-text-muted);
 }
 .admonition, .admonition-title {
-  font-size: 0.98em !important;
+	font-size: 0.92em !important;
 }
 .markdown-body {
 	--md-code-bg: var(--color-bg-alt);
