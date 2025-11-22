@@ -1,60 +1,5 @@
 @media (max-width: 700px) {
 	.topbar {
-		position: fixed !important;
-		top: 0 !important;
-		left: 0;
-		right: 0;
-		width: 100vw;
-		z-index: 2001 !important;
-		height: 44px !important;
-		min-height: 44px !important;
-		padding: 0 0.3rem !important;
-		background: color-mix(in srgb,var(--color-bg) 90%,transparent);
-		box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
-		display: flex !important;
-		align-items: center !important;
-	}
-	.hero-inner {
-		gap: 0.3rem !important;
-		padding: 0 !important;
-		height: 44px !important;
-		min-height: 44px !important;
-		align-items: center !important;
-	}
-	.hero-title {
-		font-size: 1.05rem !important;
-		line-height: 1.1 !important;
-		padding: 0 0.2rem !important;
-		max-width: 100vw;
-		white-space: normal;
-	}
-	.menu-fixed-top-left,
-	.theme-topbar {
-		width: 34px !important;
-		height: 34px !important;
-		font-size: 1rem !important;
-		margin: 0 !important;
-	}
-	.back-to-bottom-right {
-		width: 34px !important;
-		height: 34px !important;
-		font-size: 1rem !important;
-	}
-	.page-title {
-		flex: 1 1 0%;
-		min-width: 0;
-		text-align: center;
-	}
-	.hero-title .emoji {
-		margin: 0 0.12em !important;
-		font-size: 1.1em !important;
-	}
-	.doc {
-		padding-top: 56px !important;
-	}
-}
-@media (max-width: 700px) {
-	.topbar {
 		position: sticky !important;
 		top: 0 !important;
 		left: 0;
@@ -148,27 +93,31 @@ html{scroll-behavior:smooth}
 /* Removed legacy sidebar styles */
 .content{flex:1;min-width:0;display:flex;flex-direction:column}
 .topbar {
-	position: sticky;
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
+	width: 100vw;
 	background: color-mix(in srgb,var(--color-bg) 90%,transparent);
 	backdrop-filter: saturate(160%) blur(8px);
-	padding: .9rem 1.5rem;
+	padding: 0 0.7rem;
 	border-bottom: 1px solid var(--color-border);
 	z-index: 2001;
 	display: flex;
 	align-items: center;
 	gap: 1rem;
+	height: 44px;
+	min-height: 44px;
+	box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
 }
 /* Full-bleed hero banner */
 .hero-wide{display:block;width:100%;max-width:none;margin:0;padding:0;--hero-bg:color-mix(in srgb,var(--color-bg-alt) 96%, transparent);background:var(--hero-bg)}
 
 /* Narrow hero adjustments already handled below in max-width:640px block */
-.hero-wide .hero-inner{width:100%;max-width:1180px;margin:0 auto;padding:.95rem clamp(.9rem,4vw,2.2rem);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.hero-wide .hero-inner{width:100%;max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:1.2rem;height:44px;min-height:44px;flex-direction:row;justify-content:center;padding:0;}
 .hero-wide .page-title{max-width:100%;margin:0 auto;text-align:center}
 .page-title{font-size:1rem;font-weight:600;color:var(--color-heading);flex:1;text-align:center}
-.hero-title{font-size:1.55rem;font-weight:700;letter-spacing:.5px;display:inline-flex;align-items:center;gap:.5rem;line-height:1.1}
+.hero-title{font-size:1.05rem;font-weight:700;letter-spacing:.5px;display:inline-flex;align-items:center;gap:.5rem;line-height:1.1}
 .hero-text{background:linear-gradient(90deg,var(--color-accent),#ffef9c);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
 .emoji{font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji','Android Emoji','EmojiOne Color','Twemoji Mozilla',system-ui,sans-serif;font-size:1.05em;line-height:1}
 .hero-sub{font-size:.8rem;margin:.2rem 0 0;color:var(--color-text-muted);max-width:720px}
@@ -204,9 +153,9 @@ body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
 		left: 14px;
 		z-index: 9999;
 		box-shadow: 0 2px 8px 0 rgba(0,0,0,0.18);
-		width: 38px;
-		height: 38px;
-		font-size: 1.15rem;
+		width: 34px;
+		height: 34px;
+		font-size: 1rem;
 		border-radius: 7px;
 		display: flex;
 		align-items: center;
@@ -220,9 +169,9 @@ body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
 	top: 14px;
 	right: 24px;
 	z-index: 2000;
-	width: 38px;
-	height: 38px;
-	font-size: 1.15rem;
+	width: 34px;
+	height: 34px;
+	font-size: 1rem;
 	border-radius: 7px;
 	display: flex;
 	align-items: center;
@@ -236,9 +185,9 @@ body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
 	bottom: 18px;
 	right: 18px;
 	z-index: 2000;
-	width: 38px;
-	height: 38px;
-	font-size: 1.15rem;
+	width: 34px;
+	height: 34px;
+	font-size: 1rem;
 	@media (max-width: 700px) {
 		.topbar {
 			position: sticky !important;
@@ -288,7 +237,7 @@ body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
 	.utility-dock .divider{height:22px}
 }
 /* Removed mobile-specific layout overrides to unify desktop/mobile appearance */
-.doc{padding:2rem 2.5rem;max-width:1000px;margin:0 auto}
+.doc{padding:56px 2.5rem 2rem 2.5rem;max-width:1000px;margin:0 auto}
 /* Responsive tables: wrap wide tables on small screens */
 .markdown-body table{display:table;width:100%;table-layout:auto}
 @media (max-width:680px){
