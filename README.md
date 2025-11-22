@@ -54,32 +54,21 @@ A (Wine/Proton) prefix is what makes Proton able to run a Windows app on Linux "
 Launchers are apps built for Linux that allow you to play games from other Launcher based game companies. Heroic, Bottles, and Lutris are the mainly discussed ones. These add a few more things some games may need to run efficiently or properly at all. While these are a preferred method for ease of use, keep in mind this is another layer between your game and SteamOS so at times troubleshooting it may be a little more difficult. These also usually come with Wine configuration, login support for launchers, the option to add shortcuts to Steam, and a whole slew of other features allowing you to do less tinkering and kind of just get going.
 
 
-### Decky Plugins
+### Decky Loader
 
-<table>
-<tr>
-<td bgcolor="#FFF3CD" width="100%" style="padding:15px; border-radius:5px; border: 1px solid #FFEEBA;">
-<strong>Warning:</strong> Decky Loader and its plugins have been known to break after SteamOS or plugin updates. <strong>Support for Decky is not offered here.</strong> Use at your own risk.
-</td>
-</tr>
-</table>
+> [!WARNING]
+> **Decky Loader** is a third-party plugin loader for the Steam Deck. It allows you to add custom features and tweaks to your Deck, but it has been known to break after SteamOS or plugin updates. **Support for Decky Loader is not offered here. Use at your own risk.**
 
 #### Installing Decky Loader
 1. Go to the <a href="https://github.com/SteamDeckHomebrew/decky-loader">Decky Loader GitHub</a> and follow the installation instructions for your Steam Deck.
 2. After installation, Decky will appear as a plug icon in the Steam Deck's quick access menu.
-3. Browse and install plugins directly from the Decky interface.
+3. You can browse and install plugins directly from the Decky interface.
 
-#### Disabling Decky Plugins
+#### Disabling or Uninstalling Decky Loader
 1. Open the Decky menu (plug icon).
-2. Find the plugin you want to disable.
-3. Toggle the switch or use the disable option (varies by plugin).
+2. Use the settings or options menu to disable or uninstall Decky Loader or any installed plugins.
 
-#### Uninstalling Decky Plugins
-1. Open the Decky menu.
-2. Select the plugin you want to remove.
-3. Use the uninstall or remove option (usually found in the plugin's settings or via right-click).
-
-If you experience issues with games or SteamOS after installing Decky or plugins, try disabling or uninstalling plugins first.
+If you experience issues with games or SteamOS after installing Decky Loader or plugins, try disabling or uninstalling Decky Loader first.
 
 ## Commonly Used Apps
 
@@ -202,10 +191,8 @@ If your game is already in a preinstalled state, skip to **Part 3**.
 
 <table>
 <tr>
-<td bgcolor="#FFF3CD" width="100%" style="padding:15px; border-radius:5px; border: 1px solid #FFEEBA;">
-<strong>FG/DoDi Repack Note:</strong><br>
-The default install location for FG and DoDi repacks depends on what you set as your games folder during installation. It could be <strong>Z:</strong>, <strong>D:</strong>, <strong>C:</strong>, or any other drive letter or path you choose. Always check inside the folder you selected for your games. If your game files are missing after install, look in the folder you made during setup.
-</td>
+> [!CAUTION]
+> **Installer Warning:** Never install games or repacks to the <strong>C:</strong> drive. The drive letter shown by the installer can vary (Z:, D:, etc.), but <strong>C:</strong> is reserved for the system and will cause problems. Always choose a custom folder (like <strong>Games</strong> on your SD card or another drive). After installation, check the folder you selected for your game files.
 </tr>
 </table>
 
