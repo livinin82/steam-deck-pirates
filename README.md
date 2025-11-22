@@ -166,7 +166,7 @@ Then reinstall via <https://decky.xyz>.
 Decky is powerful but sits inside the most fragile interaction layer (Game Mode UI). Treat every new plugin as an experiment: document, test, rollback quickly if problems appear.
 
 
-## Apps you NEED TO have installed
+## Commonly Used Applications 
 
 > [!NOTE]
 > Items in *Italics* are available on the Discover Store.
