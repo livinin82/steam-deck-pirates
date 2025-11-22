@@ -21,12 +21,13 @@ graph TD;
     H --> Z;
 ```
 
+
 Quick links:
 
-- [Steam install](#installing-games-through-steam)
-- [Lutris install](#installing-games-through-lutris)
-- [Other launchers](#installing-games-through-other-launchers)
-- [Transfer from PC](#transferring-installed-games-from-pc)
+- [Installing games through Steam](#installing-games-through-steam)
+- [Installing games through Lutris](#installing-games-through-lutris)
+- [Installing games through other launchers](#installing-games-through-other-launchers)
+- [Transferring Installed Games from PC](#transferring-installed-games-from-pc)
 
 ---
 ## Installing games through Steam {#installing-games-through-steam}
