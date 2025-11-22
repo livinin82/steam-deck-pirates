@@ -1,45 +1,66 @@
 
+
 # <span class="hero-title">Steam Deck Pirates' Cove</span>
 
 <p class="hero-sub">A consolidated single-page reference for running Windows games, emulation, and tweaks on Steam Deck.</p>
 
+
+
 ## Info About Steam Deck
 
+
 ### Game Mode
+
 Game Mode is essentially an overlay running Big Picture Mode, allowing you to access the Quick Access Menu and the Steam Menu and control everything in one easy to use interface. This is the preferred method to play games as it allows you to set hardware limits, change settings on the fly, enable a fps counter, and many other things on the fly. This is what the Deck boots into by default.
 
 ### Desktop Mode
+
 Desktop Mode is what Game Mode is installed over. It is the real computer behind everything. Built on Arch Linux with KDE Desktop Environment. It can be accessed through Game Mode by opening the Steam Menu and clicking **Power > Switch to Desktop**.
 
 ### Wine
+
 Wine (originally an acronym for "Wine Is Not an Emulator") is a compatibility layer capable of running Windows applications on several POSIX-compliant operating systems, such as Linux, macOS, & BSD. Instead of simulating internal Windows logic like a virtual machine or emulator, Wine translates Windows API calls into POSIX calls on-the-fly, eliminating the performance and memory penalties of other methods and allowing you to cleanly integrate Windows applications into your desktop.
 
+
 *from [WineHQ](https://www.winehq.org/)*
+
 
 > To simplify: Wine Makes Linux run Windows apps
 
 ### Proton
+
 Proton is a compatibility layer for Windows games to run on Linux-based operating systems. Proton is developed by Valve in cooperation with developers from CodeWeavers. It is a collection of software and libraries combined with a patched version of Wine to improve performance and compatibility with Windows games. Proton is designed for integration into the Steam client as "Steam Play". It is officially distributed through the client, although third-party forks can be manually installed. Proton incorporates several libraries that improve 3D performance. These include Direct3D-to-Vulkan translation layers, namely DXVK for Direct3D 9, 10 and 11, and VKD3D-Proton for Direct3D 12.
 
+
 *from [Wikipedia](https://www.wikipedia.org)*
+
 
 ***There are two different Proton iterations right now:***
 
 #### Steam's Official Proton
+
 This is what comes baked into the system more or less. These are selectable by going into the game Properties and clicking the Compatibility tab. From there you'll click the checkbox next to "Force the use of a specific Steam Play compatibility tool". Here you will be able to select any Proton available through steam as well as any others you have installed. Sometimes different games work with different Proton versions. More often than not Proton Experimental is the most up to date and has the best compatibility rate. All games are different, some may not have working sound unless you go to an old version. Mess with this first if you have issues running games.
 
 #### GE-Proton
+
 GE Proton (or Glorious Eggroll Proton) is an open source variant of Steams Proton that is user developed and maintained. It usually has faster support for games and also includes additional features and fixes, some which Steam can't include for licensing reasons. It's usually installed through ProtonUpQt, and can be selected the same as any other Proton version once installed, in the compatibility section of any game's properties.
 
 ### Prefixes
+
 A (Wine/Proton) prefix is what makes Proton able to run a Windows app on Linux "natively". Inside of any prefix you'll usually find a series of folders and files, one being `drive_c`. The reason for all of this is the folder structure and other dependencies and files emulates a Windows environment. Essentially a prefix pretends to be a Windows hard drive, pretends Windows is installed on it, and translates Linux commands/operations into Windows specific versions. This combined with Wine/Proton are the most major components of playing a Windows game on a Linux device.
 
 ### Launchers
+
 Launchers are apps built for Linux that allow you to play games from other Launcher based game companies. Heroic, Bottles, and Lutris are the mainly discussed ones. These add a few more things some games may need to run efficiently or properly at all. While these are a preferred method for ease of use, keep in mind this is another layer between your game and SteamOS so at times troubleshooting it may be a little more difficult. These also usually come with Wine configuration, login support for launchers, the option to add shortcuts to Steam, and a whole slew of other features allowing you to do less tinkering and kind of just get going.
+
 
 ### Decky Plugins
 
+
+
 ## Apps you NEED TO have installed
+
+
 
 > [!NOTE]
 > Items in *Italics* are available on the Discover Store.
@@ -57,12 +78,16 @@ Launchers are apps built for Linux that allow you to play games from other Launc
 | *[AnyDesk](https://anydesk.com/en)/[RustDesk](https://rustdesk.com)* | These are Remote Desktop applications. Use this to access your desktop mode from another PC or Device that can install these apps. This is great in the absence of a keyboard and mouse, you can also send files to yourself (albeit small ones). This is really useful also if you don't wanna keep switching between monitor inputs while docked, etc. If you want real ease of use be sure to set up unattended access with a password for the remote app so you don't have to use the Deck to accept every session. |
 | *[PeaZip](https://peazip.github.io)* | Application for handling compressed files. This includes .rar, .7z, .zip, etc. This is especially useful for multipart zip files (repacks/large games) as Dolphin seems to have issues with them. Open PeaZip, click Open, find where your multipart compressed files are, and select one. It should open all of the data inside the window, then click extract and make sure you extract to a place you can find easily! |
 
+
 > [!CAUTION]
 > Do not use BitTorrent or uTorrent as they have been known to be shady in the past.
 
+
 ---
 
+
 ## Guides for installing games
+
 ```mermaid
 graph TD
     A[Source Game]
@@ -89,14 +114,20 @@ graph TD
 ```
 
 
+
+
 #### Installing games through Steam
+
 
 > [!NOTE]
 > There are a few different ways to get cracked games on your system. They all for the most part end in the same results. Some games require one method over another. Part of piracy is experimenting and finding what works best. If you find a better method for a specific game let us know in the subreddit!
 
+
 If your game is already in a preinstalled state, skip to **Part 3**.
 
+
 #### Part 1: Running the setup.exe
+
 
 
 
@@ -111,6 +142,7 @@ If your game is already in a preinstalled state, skip to **Part 3**.
 </td>
 </tr>
 </table>
+
 
 <table>
 <tr>
@@ -130,6 +162,7 @@ If your game is already in a preinstalled state, skip to **Part 3**.
 </tr>
 </table>
 
+
 <table>
 <tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
@@ -142,9 +175,13 @@ If your game is already in a preinstalled state, skip to **Part 3**.
 </tr>
 </table>
 
+
+
 **Note:** FG repacks default to the D drive, and DoDi repacks default to the C drive.
 
+
 #### Part 2: Installation
+
 
 > [!WARNING]
 > Be patient. Sometimes, it can take a while for the installer to appear.
@@ -170,10 +207,14 @@ If your game is already in a preinstalled state, skip to **Part 3**.
 </tr>
 </table>
 
+
+
 > [!NOTE]
 > Don’t worry if the installation is slow, especially for repacks. This is normal and can take hours depending on game size and compression.
 
+
 #### Part 3: Running the Game
+
 <table>
 <tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
@@ -191,6 +232,7 @@ If your game is already in a preinstalled state, skip to **Part 3**.
 </td>
 </tr>
 </table>
+
 <table>
 <tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
@@ -208,8 +250,11 @@ If your game is already in a preinstalled state, skip to **Part 3**.
 </tr>
 </table>
 
+
+
 > [!NOTE]
 > If it shows an error or doesn’t run: Either the Proton version is incorrect (try different ones) or there’s a missing dependency. If it's the latter, refer to a dependencies guide ([Dependencies Guide](#installing-dependencies)).
+
 
 <table>
 <tr>
@@ -230,6 +275,7 @@ If your game is already in a preinstalled state, skip to **Part 3**.
 </td>
 </tr>
 </table>
+
 
 ### Installing games through Lutris
 
@@ -357,7 +403,9 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
 
 ---
 
+
 #### SSH Connection Guide: Windows
+
 <table>
 <tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
@@ -374,7 +422,9 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
 </tr>
 </table>
 
+
 ---
+
 
 #### Adding Your Deck Storage as a Drive on Your PC or Mac
 
@@ -423,6 +473,7 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
 </td>
 </tr>
 </table>
+
 
 #### Windows (10/11)
 
@@ -607,7 +658,9 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
 #### Physx
 - [NVIDIA Site](https://www.nvidia.com/en-us/drivers/physx/physx-9-19-0218-driver/)
 
+
 #### Installing with ProtonTricks
+
 <table>
 <tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
@@ -623,6 +676,7 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
 </td>
 </tr>
 </table>
+
 <table>
 <tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
@@ -650,6 +704,7 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
 </td>
 </tr>
 </table>
+
 
 > [!CAUTION]
 > This will likely show errors, that's okay, it's batch installing different types (including incompatible ones), the right ones will still be installed. Click through any installers that may show up.
@@ -753,7 +808,9 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
 ### Emudeck
 EmuDeck is a collection of scripts that allows you to autoconfigure your Steam Deck, it creates your roms directory structure and downloads all of the needed Emulators for you along with the best configurations for each of them. EmuDeck works great with [Steam Rom Manager](https://github.com/SteamGridDB/steam-rom-manager) or with [EmulationStation DE](https://es-de.org).
 
+
 #### Installing EmuDeck
+
 <table>
 <tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
@@ -783,6 +840,7 @@ EmuDeck is a collection of scripts that allows you to autoconfigure your Steam D
 </td>
 </tr>
 </table>
+
 
 *from [Emudeck wiki](https://emudeck.github.io/)*
 
@@ -940,6 +998,7 @@ Some of the games you want to emulate may have PC ports. Always check to see wha
 > [!NOTE]
 > Most of the apps you are using will be installed in a package format named **Flatpak**. **Lutris** and **ProtonTricks** especially. These apps can be controlled by an app called **FlatSeal**. Here we will show you how to enable permissions for an app to see your other devices.
 
+
 <table>
 <tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
@@ -966,6 +1025,7 @@ Some of the games you want to emulate may have PC ports. Always check to see wha
 </td>
 </tr>
 </table>
+
 
 > [!NOTE]
 > This should work for any folder you want your app to see, and any app that is a flatpak.
@@ -1043,17 +1103,23 @@ A couple of people have reported being able to pinpoint the search by changing t
     <li>Close the settings</li>
     <li>Click on the Controller Icon next to the Gear Icon, click on the Layout Selector (above <strong>View Layout</strong> and <strong>Edit Layout</strong>)</li>
 </ul>
-</td>
+ </td>
 </tr>
 </table>
 
+
 ### Game opens steam
+
 Either your crack isnt applied properly or you need to change the number in `steamapp_id.txt` to `1` in the game folder.
 
+
 ### No licenses
+
 If this shows it means your crack isn't working. Make sure you copied the files over properly, and that you have pointed to all of the relevent DLLs and dependencies.
 
+
 ### Games suddenly won't open or close
+
 <table>
 <tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
@@ -1067,31 +1133,42 @@ If this shows it means your crack isn't working. Make sure you copied the files 
 </tr>
 </table>
 
+
 ### Game tries to load and immediately stops
 
+
 #### Is Proton Enabled?
+
 > [!NOTE]
 > In some instances Steam may silently disable your forced Proton version for a non‑Steam shortcut.
 > Before doing anything else: open the shortcut's Properties and re‑enable a Proton version (start with Proton Experimental).
 
+
 #### Are there quotes around the target path?
+
 > [!NOTE]
 > Paths containing spaces must be wrapped in quotes in Launch Options / Target field.
 > Example (GOOD): `"/home/deck/Games/Tomb Raider/game.exe"`
 > Example (BAD): `/home/deck/Games/Tomb Raider/game.exe`
 
+
 #### Are dependencies installed?
+
 > [!CAUTION]
 > Missing DirectX / VC++ / .NET components will cause silent exits. See the [Installing Dependencies](#installing-dependencies) section above and install what your game needs.
 
+
 ### Mods won't load
+
 > [!WARNING]
 > Possible causes:
+>
 > * Required DLL overrides not applied (see [Adding DLLs to Proton](#adding-dlls-to-proton)).
 > * Using a Windows-only mod manager when a native / alternative method exists.
 > * Mod loader files placed in wrong prefix path.
 > * Incompatible Proton version (test Proton-GE or older Proton).
 > * Incorrect case-sensitive filenames on Linux.
+
 
 ---
 ## Other subreddits/groups
