@@ -17,11 +17,10 @@
     <div class="nav-backdrop" id="navBackdrop"></div>
   <aside id="auto-nav" class="auto-nav" aria-label="On this page"></aside>
     <main class="content">
-    <!-- Hamburger menu fixed at top left, always visible -->
-    <button class="util-btn menu-fixed-top-left theme-dynamic" id="menuToggle" aria-label="Open navigation" aria-controls="auto-nav" aria-expanded="false" type="button" title="Navigation">☰</button>
     <header class="topbar hero-wide" role="banner">
-      <div class="hero-inner">
-        <div class="page-title">
+      <div class="hero-inner" style="display: flex; align-items: center; gap: 1.2rem;">
+        <button class="util-btn menu-fixed-top-left theme-dynamic" id="menuToggle" aria-label="Open navigation" aria-controls="auto-nav" aria-expanded="false" type="button" title="Navigation">☰</button>
+        <div class="page-title" style="flex:1;">
           <span class="hero-title"><span class="emoji" aria-hidden="true">🏴‍☠️</span> <span class="hero-text">{{ page.title }}</span> <span class="emoji" aria-hidden="true">🏴‍☠️</span></span>
         </div>
         <button class="util-btn theme-topbar theme-dynamic" id="themeToggle" type="button" aria-label="Toggle color theme" title="Toggle theme"><span class="icon" aria-hidden="true">🌙</span></button>
