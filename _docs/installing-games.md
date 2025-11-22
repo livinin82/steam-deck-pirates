@@ -7,7 +7,6 @@ nav_order: 3
 # Guides for installing games
 
 ```mermaid
-graph TD;
     A[Source Game] --> B[Install Game on PC];
     A --> C[Pre-installed Game];
     A --> D[Install on SteamDeck];
@@ -35,6 +34,7 @@ Quick links:
 > If the game is already fully installed (a pre‑installed repack) skip to Part 3.
 
 ### Part 1: Run the installer
+ 
 <div class="panel"><strong>Method 1: Wine (simple)</strong>
 <ul><li>Right‑click setup.exe → Open with Wine.</li><li>Limit to 2GB RAM (optional).</li><li>Select external path (avoid prefix).</li></ul></div>
 <div class="panel"><strong>Method 2: Steam + Proton</strong>
