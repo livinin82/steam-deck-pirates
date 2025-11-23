@@ -219,37 +219,49 @@ body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
 /* Larger hamburger/menu button for accessibility (desktop/tablet) */
 
 .menu-fixed-top-left {
-	position: fixed;
-	top: 14px;
-	left: 14px;
-	z-index: 9999;
-	box-shadow: 0 2px 8px 0 rgba(0,0,0,0.18);
-	width: 40px;
-	height: 40px;
-	font-size: 1rem;
-	border-radius: 6px !important;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0 12px;
+		position: relative;
+		z-index: 2001;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px !important;
+		height: 32px !important;
+		min-width: 32px !important;
+		min-height: 32px !important;
+		padding: 0 !important;
+		margin: 0 0.2rem 0 0 !important;
+		background: var(--color-bg) !important;
+		color: var(--color-text) !important;
+		border: 1.5px solid var(--color-border) !important;
+		border-radius: 6px !important;
+		transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
 /* Theme toggle anchored to topbar, right side */
 /* Larger theme toggle button for accessibility (desktop/tablet) */
 .theme-topbar {
-	position: absolute;
-	top: 14px;
-	right: 24px;
-	z-index: 2000;
-	width: 40px;
-	height: 40px;
-	font-size: 1rem;
-	border-radius: 6px !important;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0 12px;
+		position: relative;
+		z-index: 2001;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px !important;
+		height: 32px !important;
+		min-width: 32px !important;
+		min-height: 32px !important;
+		padding: 0 !important;
+		margin: 0 0 0 0.2rem !important;
+		background: var(--color-bg) !important;
+		color: var(--color-text) !important;
+		border: 1.5px solid var(--color-border) !important;
+		border-radius: 6px !important;
+		transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
+	background: var(--color-accent-bg) !important;
+	color: var(--color-accent) !important;
+	border-color: var(--color-accent) !important;
+	background: var(--color-bg-alt) !important;
+	color: var(--color-accent) !important;
 
 /* Back to top button at bottom right, always visible */
 /* Larger scroll-to-top button for accessibility (desktop/tablet) */
@@ -311,11 +323,6 @@ body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
 		border: 1.5px solid var(--color-border) !important;
 		transition: background 0.2s, color 0.2s, border-color 0.2s;
 	}
-		background: var(--color-accent-bg) !important;
-		color: var(--color-accent) !important;
-		border-color: var(--color-accent) !important;
-		background: var(--color-bg-alt) !important;
-		color: var(--color-accent) !important;
 	.page-title {
 		flex: 1 1 0%;
 		min-width: 0;
