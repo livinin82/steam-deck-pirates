@@ -12,30 +12,30 @@ a:hover, .modern-link:hover {
 	text-decoration: underline;
 }
 
-/* More prominent subheadings */
-h2, .markdown-body h2 {
-	font-size: 2.7rem;
-	font-weight: 900;
-	border-bottom: 2.5px solid #e3e3e3;
-	padding-bottom: 0.28em;
-	margin-top: 2.7em;
-	margin-bottom: 1.3em;
+/* More prominent subheadings (single, consistent rule set) */
+h2, .markdown-body h2, .doc h2 {
+	font-size: 1.6rem;
+	font-weight: 800;
+	border-bottom: 1px solid var(--color-border);
+	padding-bottom: 0.4rem;
+	margin-top: 2.4rem;
+	margin-bottom: 1.4rem;
 	letter-spacing: 0.01em;
 	color: var(--color-heading);
 }
-h3, .markdown-body h3 {
-	font-size: 2.1rem;
-	font-weight: 800;
-	margin-top: 2.2em;
-	margin-bottom: 1em;
+h3, .markdown-body h3, .doc h3 {
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin-top: 1.8rem;
+	margin-bottom: 0.8rem;
 	color: var(--color-accent);
 	letter-spacing: 0.01em;
 }
-h4, .markdown-body h4 {
-	font-size: 1.1rem;
-	font-weight: 700;
-	margin-top: 1.5em;
-	margin-bottom: 0.8em;
+h4, .markdown-body h4, .doc h4 {
+	font-size: 0.95rem;
+	font-weight: 600;
+	margin-top: 1.2rem;
+	margin-bottom: 0.6rem;
 	color: var(--color-text-muted);
 	letter-spacing: 0.04em;
 	text-transform: uppercase;
@@ -214,25 +214,31 @@ html{scroll-behavior:smooth}
 	text-align: center;
 	margin: 0 auto;
 	max-width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 .hero-title {
-	font-size: 1.05rem;
+	color: var(--color-heading);
+	font-size: 1.1rem;
 	font-weight: 700;
 	letter-spacing: .5px;
-	display: inline-flex;
+	display: flex;
 	align-items: center;
 	gap: .5rem;
 	line-height: 1.1;
+	justify-content: center;
 }
 .hero-title .emoji {
 	margin: 0 0.15em;
 	font-size: 1.1em;
 }
 .hero-sub {
-	font-size: .8rem;
-	margin: .2rem 0 0;
+	font-size: 0.92rem;
 	color: var(--color-text-muted);
-	max-width: 720px;
+	margin: 0.2rem 0 0 0;
+	text-align: center;
 }
 
 /* Hamburger and theme toggle: edge-aligned, same size, theme-dynamic */
@@ -425,61 +431,139 @@ hr { border: 0; border-top: 1px solid var(--color-border); margin: 2.5rem 0; }
   .layout{flex-direction:column}
 }
 
-/* Mobile menu toggle */
-/* Removed legacy .menu-toggle-btn styles (menu handled via dock button) */
-
-/* Scroll spy active anchor */
-.nav a.spy-active{background:var(--color-accent-bg);color:var(--color-accent);font-weight:600}
-.nav a.deep-anchor{padding:.25rem .6rem .25rem 1.1rem;position:relative}
-.nav a.deep-anchor:before{content:'';position:absolute;left:.55rem;top:50%;width:4px;height:4px;background:var(--color-border);border-radius:50%;transform:translateY(-50%)}
-.nav a.deep-anchor.spy-active:before{background:var(--color-accent)}
-
-/* Back to top legacy (removed). Inline version inside .utility-dock inherits .util-btn */
-.utility-dock #backToTop{position:static;bottom:auto;right:auto;opacity:1;pointer-events:auto;transition:.25s background,.25s color,.25s transform;}
-.utility-dock #backToTop:hover{background:var(--color-accent-bg);color:var(--color-accent);}
-
-/* Remove prior individual placements */
-
-/* -------------------------------------------------- */
-/* Mobile refinement overrides                        */
-/* Center & enlarge hero banner, ensure nav fills vh  */
-/* -------------------------------------------------- */
-@media (max-width:640px){
-	/* Remove .hero-wide.topbar mobile override to preserve sticky topbar */
-	.utility-dock{position:fixed;left:50%!important;transform:translateX(-50%) translateY(0)!important;bottom:calc(14px + env(safe-area-inset-bottom,0px));}
+/* --- Restore ToC (sidebar) toggle behavior --- */
+.auto-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 300px;
+  max-width: 85vw;
+  height: 100vh;
+  padding: calc(var(--topbar-height) + 10px) 1rem 2rem;
+  background: var(--color-bg-alt);
+  border-right: 1px solid var(--color-border);
+  box-shadow: 0 0 0 1px var(--color-border),0 14px 40px -10px rgba(0,0,0,.55);
+  overflow-y: auto;
+  transform: translateX(-110%);
+  transition: .35s transform cubic-bezier(.4,.1,.2,1);
+  z-index: 1200;
+}
+body.nav-active .auto-nav {
+  transform: translateX(0);
+}
+.nav-backdrop {
+  opacity: 0;
+  pointer-events: none;
+  transition: .35s opacity;
+}
+body.nav-active .nav-backdrop {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-/* Desktop / general mermaid centering insurance */
-.doc .mermaid{display:block;text-align:center;margin:1.2rem auto;}
-.doc .mermaid svg{display:block;margin:0 auto;height:auto!important;width:auto!important;max-width:100%;}
-
-/* -------------------------------------------------- */
-/* Responsive images                                  */
-/* Ensure markdown images never overflow their container */
-/* -------------------------------------------------- */
-.doc img, .markdown-body img{max-width:100%;height:auto;display:block;margin:1.15rem auto;border-radius:6px;}
-/* Provide a softer shadow for large illustrative screenshots */
-.doc img[alt*="Dependencies"],
-.doc img[alt*="Proton Folder"],
-.markdown-body img[alt*="Dependencies"],
-.markdown-body img[alt*="Proton Folder"]{box-shadow:0 4px 24px -6px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.04);}
-/* Allow tiny badge/logo style images with explicit width attributes to sit inline */
-.doc a img[width], .markdown-body a img[width]{display:inline-block;margin:.2rem .35rem .2rem 0;vertical-align:middle;border-radius:4px;}
-/* If an image is the very first/last child in a block element, reduce top/bottom margin slightly */
-.doc p > img:first-child:last-child{margin:0.85rem auto;}
-
-/* Full height mobile nav (account for mobile browser chrome & safe areas) */
-@media (max-width:820px){
-	.auto-nav{height:100dvh;min-height:100vh;bottom:0;padding-bottom:calc(2.75rem + env(safe-area-inset-bottom,0px));}
+/* --- Title bar color and layout fixes --- */
+.page-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  flex: 1;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero-title {
+  color: var(--color-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  line-height: 1.1;
+  justify-content: center;
+}
+.hero-sub {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  margin: 0.2rem 0 0 0;
+  text-align: center;
+}
+.updated-date {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  margin-top: 0.2rem;
+  text-align: center;
 }
 
-/* Slight bump for really narrow devices */
-@media (max-width:420px){
-	.hero-title{font-size:clamp(1.7rem,8vw,2.15rem)}
+/* --- ToC (sidebar) theme and scrollspy restoration --- */
+.auto-nav nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.auto-nav li {
+  margin: 0;
+}
+.auto-nav a {
+  display: block;
+  padding: 0.4rem 0.55rem;
+  margin: 0 0 0.15rem;
+  border-radius: 0.4rem;
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: 0.15s background, 0.15s color;
+}
+.auto-nav a:hover {
+  background: var(--color-bg);
+  color: var(--color-heading);
+}
+.auto-nav a.active, .auto-nav a.spy-active {
+  background: var(--color-accent-bg);
+  color: var(--color-accent);
+  font-weight: 600;
+}
+.auto-nav li.lvl-3 a {
+  padding-left: 1.35rem;
+  font-size: 0.85rem;
+  opacity: 0.92;
 }
 
-/* Provide bottom padding for medium small screens too (utility dock space) */
-@media (min-width:641px) and (max-width:900px){
-	.doc{padding-bottom:calc(5.5rem + env(safe-area-inset-bottom,0px))}
+/* ToC sidebar background and border for theme */
+.auto-nav {
+  background: var(--color-bg-alt);
+  border-right: 1px solid var(--color-border);
+  box-shadow: 0 0 0 1px var(--color-border), 0 14px 40px -10px rgba(0,0,0,.55);
+}
+
+/* --- Heading formatting for sidebar and content --- */
+.doc h2, .markdown-body h2 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 0.18em;
+  margin-top: 2.2em;
+  margin-bottom: 1.1em;
+  color: var(--color-heading);
+}
+.doc h3, .markdown-body h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 1.7em;
+  margin-bottom: 0.8em;
+  color: var(--color-accent);
+}
+.doc h4, .markdown-body h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
