@@ -1,8 +1,7 @@
-# Updated: 2025-11-22
-
 # <span class="hero-title">Steam Deck Pirates' Cove</span>
 
 <p class="hero-sub">A consolidated single-page reference for running Windows games, emulation, and tweaks on Steam Deck.</p>
+<p class="updated-inline">Updated: {{ site.time | date: "%Y-%m-%d" }}</p>
 
 
 
