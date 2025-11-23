@@ -128,7 +128,7 @@ graph TD
 
 
 
-#### Installing games through Steam
+### Installing games through Steam
 
 
 > [!NOTE]
