@@ -297,11 +297,34 @@ body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
 		min-height: 36px !important;
 	}
 	.util-btn {
-		width: 36px !important;
-		height: 36px !important;
-		min-width: 36px !important;
-		min-height: 36px !important;
-		padding: 0 6px !important;
+		width: 32px !important;
+		height: 32px !important;
+		min-width: 32px !important;
+		min-height: 32px !important;
+		padding: 0 4px !important;
+		background: var(--color-bg) !important;
+		color: var(--color-text) !important;
+		border: 1.5px solid var(--color-border) !important;
+		transition: background 0.2s, color 0.2s, border-color 0.2s;
+		background: var(--color-accent-bg) !important;
+		color: var(--color-accent) !important;
+		border-color: var(--color-accent) !important;
+		background: var(--color-bg-alt) !important;
+		color: var(--color-accent) !important;
+		background: var(--color-bg) !important;
+		color: var(--color-text) !important;
+		border: 1.5px solid var(--color-border) !important;
+		transition: background 0.2s, color 0.2s, border-color 0.2s;
+		width: 32px !important;
+		height: 32px !important;
+		min-width: 32px !important;
+		min-height: 32px !important;
+		padding: 0 4px !important;
+		background: var(--color-accent-bg) !important;
+		color: var(--color-accent) !important;
+		border-color: var(--color-accent) !important;
+		background: var(--color-bg-alt) !important;
+		color: var(--color-accent) !important;
 	}
 	.page-title {
 		flex: 1 1 0%;
