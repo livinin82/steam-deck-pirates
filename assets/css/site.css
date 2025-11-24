@@ -1,3 +1,35 @@
+/* Robust color-coding for admonitions: match any blockquote containing [!NOTE], [!WARNING], etc. */
+blockquote, .admonition {
+	border-radius: 6px;
+	margin: 1.5rem 0;
+	padding: .85rem 1rem .9rem 1rem;
+	font-size: 0.97em;
+}
+blockquote:has(> p:contains('[!NOTE]')), blockquote:has(> :contains('[!NOTE]')) {
+	background: #18291e !important;
+	border-left: 4px solid #22c55e !important;
+	color: #d1fae5 !important;
+}
+blockquote:has(> p:contains('[!WARNING]')), blockquote:has(> :contains('[!WARNING]')) {
+	background: #2a2117 !important;
+	border-left: 4px solid #f59e0b !important;
+	color: #fef3c7 !important;
+}
+blockquote:has(> p:contains('[!TIP]')), blockquote:has(> :contains('[!TIP]')) {
+	background: #18291e !important;
+	border-left: 4px solid #22d3ee !important;
+	color: #cffafe !important;
+}
+blockquote:has(> p:contains('[!CAUTION]')), blockquote:has(> :contains('[!CAUTION]')) {
+	background: #2a1a1a !important;
+	border-left: 4px solid #dc2626 !important;
+	color: #fee2e2 !important;
+}
+blockquote:has(> p:contains('[!IMPORTANT]')), blockquote:has(> :contains('[!IMPORTANT]')) {
+	background: #1e2636 !important;
+	border-left: 4px solid #2563eb !important;
+	color: #dbeafe !important;
+}
 /* Admonition blocks: color-coded for [!NOTE], [!WARNING], etc. */
 blockquote.admonition-note, blockquote:has(strong:contains('[!NOTE]')) {
 	background: #18291e;
