@@ -14,8 +14,26 @@
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
   <div class="layout">
-    <div class="nav-backdrop" id="navBackdrop"></div>
-  <aside id="auto-nav" class="auto-nav" aria-label="On this page"></aside>
+    <div class="toc-blur-overlay" id="tocBlurOverlay"></div>
+    <aside id="auto-nav" class="auto-nav" aria-label="On this page"></aside>
+      <script>
+        // ToC blur overlay and click-to-close
+        (function(){
+          const overlay = document.getElementById('tocBlurOverlay');
+          const body = document.body;
+          function closeNav() {
+            body.classList.remove('nav-active');
+            document.getElementById('menuToggle').setAttribute('aria-expanded','false');
+          }
+          if(overlay) {
+            overlay.addEventListener('click', closeNav);
+          }
+          // Also close ToC with Escape key
+          document.addEventListener('keydown', function(e){
+            if(body.classList.contains('nav-active') && (e.key==='Escape'||e.key==='Esc')) closeNav();
+          });
+        })();
+      </script>
     <main class="content">
     <header class="topbar hero-wide" role="banner">
       <div class="hero-inner" style="display: flex; align-items: center; gap: 1.2rem;">
