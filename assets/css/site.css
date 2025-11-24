@@ -1,3 +1,36 @@
+/* Minimal color-coded admonitions: keep marker visible and bold, color border/bg by type */
+.doc blockquote > p:first-child {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.doc blockquote > p:first-child strong {
+	font-weight: bold;
+}
+.doc blockquote > p:first-child:contains('[!NOTE]') {
+	border-left: 4px solid var(--adm-note-color);
+	background: var(--adm-note-bg);
+	color: var(--adm-note-color);
+}
+.doc blockquote > p:first-child:contains('[!WARNING]') {
+	border-left: 4px solid var(--adm-warning-color);
+	background: var(--adm-warning-bg);
+	color: var(--adm-warning-color);
+}
+.doc blockquote > p:first-child:contains('[!TIP]') {
+	border-left: 4px solid var(--adm-tip-color);
+	background: var(--adm-tip-bg);
+	color: var(--adm-tip-color);
+}
+.doc blockquote > p:first-child:contains('[!IMPORTANT]') {
+	border-left: 4px solid var(--adm-important-color);
+	background: var(--adm-important-bg);
+	color: var(--adm-important-color);
+}
+.doc blockquote > p:first-child:contains('[!CAUTION]') {
+	border-left: 4px solid var(--adm-caution-color);
+	background: var(--adm-caution-bg);
+	color: var(--adm-caution-color);
+}
 /* Robust color-coding for admonitions: match any blockquote containing [!NOTE], [!WARNING], etc. */
 blockquote, .admonition {
 	border-radius: 6px;
