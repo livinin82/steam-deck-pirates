@@ -1,3 +1,12 @@
+/* Center Mermaid diagrams horizontally and prevent overflow */
+.mermaid {
+	display: block;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	max-width: 100%;
+	overflow-x: auto;
+	text-align: center;
+}
 /* --- PROTECT MERMAID DIAGRAMS --- */
 .mermaid {
 	border: none !important;
