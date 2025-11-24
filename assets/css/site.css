@@ -1,3 +1,25 @@
+/* --- PROTECT MERMAID DIAGRAMS --- */
+.mermaid, .mermaid * {
+	all: unset;
+	display: block;
+	font-family: inherit;
+	font-size: 1em;
+	color: inherit;
+	background: none;
+	border: none;
+	margin: 0 auto 1.5rem auto;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* Prevent blockquote/admonition styles from affecting Mermaid diagrams */
+.mermaid {
+	border: none !important;
+	background: none !important;
+	color: inherit !important;
+	border-radius: 0 !important;
+	margin: 1.5rem 0 !important;
+	padding: 0 !important;
+}
 /* Admonition color-coding for JS-applied classes */
 .admonition-note {
 	border-left: 4px solid var(--adm-note-color) !important;
