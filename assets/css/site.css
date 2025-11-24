@@ -24,14 +24,11 @@ a:hover, .modern-link:hover {
 }
 
 /* More prominent headings with shared gradient scheme */
+
 h1, .markdown-body h1, .doc h1,
 h2, .markdown-body h2, .doc h2,
-h3, .markdown-body h3, .doc h3,
-.hero-title {
-	background: linear-gradient(90deg, var(--color-accent), #ffef9c);
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
+h3, .markdown-body h3, .doc h3 {
+	color: var(--color-accent) !important;
 	font-weight: 800;
 	letter-spacing: 0.01em;
 }
