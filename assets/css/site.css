@@ -5,6 +5,102 @@ blockquote, .admonition {
 	padding: .85rem 1rem .9rem 1rem;
 	font-size: 0.97em;
 }
+/* Admonition blockquotes: color-code by type ([!NOTE], [!WARNING], etc.) */
+.doc blockquote > p:first-child {
+	position: relative;
+	padding-left: 0;
+}
+.doc blockquote > p:first-child {
+	/* Remove default margin for better alignment */
+	margin-top: 0;
+}
+.doc blockquote > p:first-child::before {
+	content: '';
+}
+
+/* [!NOTE] */
+.doc blockquote > p:first-child:has(> .admonition-note),
+.doc blockquote > p:first-child:has(> span:contains('[!NOTE]')),
+.doc blockquote > p:first-child:contains('[!NOTE]') {
+	border-left: 4px solid var(--adm-note-color);
+	background: var(--adm-note-bg);
+	color: var(--adm-note-color);
+	padding-left: 1em;
+}
+
+/* [!TIP] */
+.doc blockquote > p:first-child:contains('[!TIP]') {
+	border-left: 4px solid var(--adm-tip-color);
+	background: var(--adm-tip-bg);
+	color: var(--adm-tip-color);
+	padding-left: 1em;
+}
+
+/* [!IMPORTANT] */
+.doc blockquote > p:first-child:contains('[!IMPORTANT]') {
+	border-left: 4px solid var(--adm-important-color);
+	background: var(--adm-important-bg);
+	color: var(--adm-important-color);
+	padding-left: 1em;
+}
+
+/* [!WARNING] */
+.doc blockquote > p:first-child:contains('[!WARNING]') {
+	border-left: 4px solid var(--adm-warning-color);
+	background: var(--adm-warning-bg);
+	color: var(--adm-warning-color);
+	padding-left: 1em;
+}
+
+/* [!CAUTION] */
+.doc blockquote > p:first-child:contains('[!CAUTION]') {
+	border-left: 4px solid var(--adm-caution-color);
+	background: var(--adm-caution-bg);
+	color: var(--adm-caution-color);
+	padding-left: 1em;
+}
+
+/* Remove the [!TYPE] marker visually, but keep for screen readers */
+.doc blockquote > p:first-child {
+	position: relative;
+}
+.doc blockquote > p:first-child:before {
+	display: none;
+}
+.doc blockquote > p:first-child {
+	/* Hide the [!TYPE] marker visually */
+	text-indent: -9999px;
+	line-height: 0;
+}
+.doc blockquote > p:first-child:after {
+	text-indent: 0;
+	line-height: 1.5;
+	display: block;
+	position: absolute;
+	left: 1em;
+	top: 0;
+	font-weight: bold;
+}
+.doc blockquote > p:first-child:contains('[!NOTE]'):after {
+	content: 'Note';
+	color: var(--adm-note-color);
+}
+.doc blockquote > p:first-child:contains('[!TIP]'):after {
+	content: 'Tip';
+	color: var(--adm-tip-color);
+}
+.doc blockquote > p:first-child:contains('[!IMPORTANT]'):after {
+	content: 'Important';
+	color: var(--adm-important-color);
+}
+.doc blockquote > p:first-child:contains('[!WARNING]'):after {
+	content: 'Warning';
+	color: var(--adm-warning-color);
+}
+.doc blockquote > p:first-child:contains('[!CAUTION]'):after {
+	content: 'Caution';
+	color: var(--adm-caution-color);
+}
 blockquote:has(> p:contains('[!NOTE]')), blockquote:has(> :contains('[!NOTE]')) {
 	background: #18291e !important;
 	border-left: 4px solid #22c55e !important;
