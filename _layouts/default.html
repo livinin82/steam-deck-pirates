@@ -6,7 +6,7 @@
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}"/>
   {% seo %}
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/site.css?v={{ site.time | date: '%s' }}"/>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/site.css?v={{ site.time | date: '%s' }}-bust2"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -107,7 +107,7 @@
         (function(){
           const navContainer=document.getElementById('auto-nav');
           const toggle=document.getElementById('menuToggle');
-          const backdrop=document.getElementById('navBackdrop');
+          const overlay=document.getElementById('tocBlurOverlay');
           const content=document.getElementById('main-content');
           if(!navContainer||!content) return;
           const headings=[...content.querySelectorAll('h2, h3')];
@@ -134,6 +134,7 @@
           }
           window.addEventListener('scroll',update,{passive:true}); window.addEventListener('resize',update); update();
           function close(){ document.body.classList.remove('nav-active'); toggle&&toggle.setAttribute('aria-expanded','false'); }
+          if(overlay){ overlay.addEventListener('click', close); }
           toggle&&toggle.addEventListener('click',()=>{
             const willOpen=!document.body.classList.contains('nav-active');
             document.body.classList.toggle('nav-active',willOpen);
