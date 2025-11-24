@@ -1,3 +1,29 @@
+/* Admonition blocks: color-coded for [!NOTE], [!WARNING], etc. */
+blockquote.admonition-note, blockquote:has(strong:contains('[!NOTE]')) {
+	background: #18291e;
+	border-left: 4px solid #22c55e;
+	color: #d1fae5;
+}
+blockquote.admonition-warning, blockquote:has(strong:contains('[!WARNING]')) {
+	background: #2a2117;
+	border-left: 4px solid #f59e0b;
+	color: #fef3c7;
+}
+blockquote.admonition-tip, blockquote:has(strong:contains('[!TIP]')) {
+	background: #18291e;
+	border-left: 4px solid #22d3ee;
+	color: #cffafe;
+}
+blockquote.admonition-caution, blockquote:has(strong:contains('[!CAUTION]')) {
+	background: #2a1a1a;
+	border-left: 4px solid #dc2626;
+	color: #fee2e2;
+}
+blockquote.admonition-important, blockquote:has(strong:contains('[!IMPORTANT]')) {
+	background: #1e2636;
+	border-left: 4px solid #2563eb;
+	color: #dbeafe;
+}
 /* Responsive images in content */
 .doc img, .markdown-body img, .content img {
 	max-width: 100%;
