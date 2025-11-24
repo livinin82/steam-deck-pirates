@@ -1,3 +1,10 @@
+/* Responsive images in content */
+.doc img, .markdown-body img, .content img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 1.2rem auto;
+}
 /* ToC blur overlay for nav-active */
 .toc-blur-overlay {
 	display: none;
