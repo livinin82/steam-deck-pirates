@@ -8,95 +8,22 @@ blockquote, .admonition {
 /* Admonition blockquotes: color-code by type ([!NOTE], [!WARNING], etc.) */
 
 
-/* Admonition blockquotes: rentry.org style */
-.doc blockquote > p:first-child {
-	position: relative;
-	margin-top: 0;
-	padding-left: 0.9em;
-	border-radius: 4px;
-	font-size: 1em;
-	color: var(--color-text);
-	background: var(--color-blockquote-bg);
+
+/* Restore original blockquote and .doc blockquote styles */
+blockquote, .admonition {
+	border-radius: 6px;
+	margin: 1.5rem 0;
+	padding: .85rem 1rem .9rem 1rem;
+	font-size: 0.97em;
+}
+.doc blockquote {
+	margin: 1.5rem 0;
+	padding: .9rem 1rem .9rem 1rem;
 	border-left: 4px solid var(--color-accent);
-	margin-bottom: 0;
-	display: flex;
-	align-items: flex-start;
-}
-
-/* [!NOTE] */
-.doc blockquote > p:first-child:contains('[!NOTE]') {
-	border-left: 4px solid var(--adm-note-color);
-	background: var(--adm-note-bg);
-}
-.doc blockquote > p:first-child:contains('[!NOTE]')::before {
-	content: 'Note';
-	color: var(--adm-note-color);
-	font-weight: bold;
-	margin-right: 0.5em;
-	flex-shrink: 0;
-}
-
-/* [!TIP] */
-.doc blockquote > p:first-child:contains('[!TIP]') {
-	border-left: 4px solid var(--adm-tip-color);
-	background: var(--adm-tip-bg);
-}
-.doc blockquote > p:first-child:contains('[!TIP]')::before {
-	content: 'Tip';
-	color: var(--adm-tip-color);
-	font-weight: bold;
-	margin-right: 0.5em;
-	flex-shrink: 0;
-}
-
-/* [!IMPORTANT] */
-.doc blockquote > p:first-child:contains('[!IMPORTANT]') {
-	border-left: 4px solid var(--adm-important-color);
-	background: var(--adm-important-bg);
-}
-.doc blockquote > p:first-child:contains('[!IMPORTANT]')::before {
-	content: 'Important';
-	color: var(--adm-important-color);
-	font-weight: bold;
-	margin-right: 0.5em;
-	flex-shrink: 0;
-}
-
-/* [!WARNING] */
-.doc blockquote > p:first-child:contains('[!WARNING]') {
-	border-left: 4px solid var(--adm-warning-color);
-	background: var(--adm-warning-bg);
-}
-.doc blockquote > p:first-child:contains('[!WARNING]')::before {
-	content: 'Warning';
-	color: var(--adm-warning-color);
-	font-weight: bold;
-	margin-right: 0.5em;
-	flex-shrink: 0;
-}
-
-/* [!CAUTION] */
-.doc blockquote > p:first-child:contains('[!CAUTION]') {
-	border-left: 4px solid var(--adm-caution-color);
-	background: var(--adm-caution-bg);
-}
-.doc blockquote > p:first-child:contains('[!CAUTION]')::before {
-	content: 'Caution';
-	color: var(--adm-caution-color);
-	font-weight: bold;
-	margin-right: 0.5em;
-	flex-shrink: 0;
-}
-
-/* Hide the [!TYPE] marker but keep the rest of the text inline */
-.doc blockquote > p:first-child {
-	/* Use JS for best results, but CSS fallback: */
-}
-.doc blockquote > p:first-child {
-	/* Hide marker visually if at start of text */
-}
-.doc blockquote > p:first-child {
-	/* Optionally, use a monospace font for the label for closer match */
+	background: var(--color-blockquote-bg);
+	border-radius: 4px;
+	font-size: 0.92rem;
+	color: var(--color-text-muted);
 }
 blockquote:has(> p:contains('[!NOTE]')), blockquote:has(> :contains('[!NOTE]')) {
 	background: #18291e !important;
