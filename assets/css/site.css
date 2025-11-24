@@ -1,5 +1,5 @@
 /* Force topbar hero-title gradient with high specificity */
-.topbar .hero-title, .hero-title {
+.topbar .hero-title .hero-text, .hero-title .hero-text {
 	background: linear-gradient(90deg, #ffef9c 0%, #ffb347 40%, #ffef9c 100%);
 	-webkit-background-clip: text !important;
 	background-clip: text !important;
