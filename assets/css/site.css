@@ -1,3 +1,29 @@
+/* Admonition color-coding for JS-applied classes */
+.admonition-note {
+	border-left: 4px solid var(--adm-note-color) !important;
+	background: var(--adm-note-bg) !important;
+	color: var(--adm-note-color) !important;
+}
+.admonition-warning {
+	border-left: 4px solid var(--adm-warning-color) !important;
+	background: var(--adm-warning-bg) !important;
+	color: var(--adm-warning-color) !important;
+}
+.admonition-tip {
+	border-left: 4px solid var(--adm-tip-color) !important;
+	background: var(--adm-tip-bg) !important;
+	color: var(--adm-tip-color) !important;
+}
+.admonition-important {
+	border-left: 4px solid var(--adm-important-color) !important;
+	background: var(--adm-important-bg) !important;
+	color: var(--adm-important-color) !important;
+}
+.admonition-caution {
+	border-left: 4px solid var(--adm-caution-color) !important;
+	background: var(--adm-caution-bg) !important;
+	color: var(--adm-caution-color) !important;
+}
 /* Minimal color-coded admonitions: keep marker visible and bold, color border/bg by type */
 .doc blockquote > p:first-child {
 	margin-top: 0;
