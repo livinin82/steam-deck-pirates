@@ -197,18 +197,7 @@
       window.renderMermaid=render;
       if(document.readyState!=='loading') load();
       else document.addEventListener('DOMContentLoaded',load);
-      // Add manual re-render button for debugging
-      document.addEventListener('DOMContentLoaded', function() {
-        if(document.getElementById('rerender-mermaid-btn')) return;
-        const btn=document.createElement('button');
-        btn.textContent='Re-render Mermaid';
-        btn.id='rerender-mermaid-btn';
-        btn.style='position:fixed;bottom:16px;right:16px;z-index:3000;padding:0.6em 1.2em;background:#222;color:#fff;border-radius:6px;border:none;box-shadow:0 2px 8px #0003;cursor:pointer;opacity:0.7;';
-        btn.onclick=function(){
-          if(window.renderMermaid) window.renderMermaid();
-        };
-        document.body.appendChild(btn);
-      });
+
     })();
   </script>
 </body>
