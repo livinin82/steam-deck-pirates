@@ -159,14 +159,40 @@
             // Optional future: hide near top if desired.
         })();
         // Font size changer removed; font size now set by CSS for accessibility.
-        // Mermaid
-        (function(){
-          function load(){ if(window.mermaid){ render(); return;} const s=document.createElement('script'); s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js'; s.onload=render; document.head.appendChild(s); }
-          function render(){ if(!window.mermaid) return; const dark=document.documentElement.getAttribute('data-theme')!=='light'; window.mermaid.initialize({startOnLoad:false, theme:dark?'dark':'default'}); document.querySelectorAll('code.language-mermaid, pre code.mermaid').forEach(block=>{ const parent=block.closest('pre')||block.parentElement; const code=block.textContent.trim(); const wrapper=document.createElement('div'); wrapper.className='mermaid'; wrapper.textContent=code; parent.replaceWith(wrapper); }); window.mermaid.init(undefined, document.querySelectorAll('.mermaid')); }
-          window.renderMermaid=render; if(document.readyState!=='loading') load(); else document.addEventListener('DOMContentLoaded',load);
-        })();
+
       </script>
     </main>
   </div>
+  <script>
+    // Mermaid (moved to end of body for reliability)
+    (function(){
+      function load(){
+        console.log('[Mermaid] Loader running');
+        if(window.mermaid){ render(); return; }
+        const s=document.createElement('script');
+        s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';
+        s.onload=render;
+        document.head.appendChild(s);
+      }
+      function render(){
+        if(!window.mermaid) return;
+        const dark=document.documentElement.getAttribute('data-theme')!=='light';
+        window.mermaid.initialize({startOnLoad:false, theme:dark?'dark':'default'});
+        document.querySelectorAll('code.language-mermaid, pre code.mermaid').forEach(block=>{
+          const parent=block.closest('pre')||block.parentElement;
+          const code=block.textContent.trim();
+          const wrapper=document.createElement('div');
+          wrapper.className='mermaid';
+          wrapper.textContent=code;
+          parent.replaceWith(wrapper);
+        });
+        window.mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+        console.log('[Mermaid] Rendered diagrams');
+      }
+      window.renderMermaid=render;
+      if(document.readyState!=='loading') load();
+      else document.addEventListener('DOMContentLoaded',load);
+    })();
+  </script>
 </body>
 </html>
