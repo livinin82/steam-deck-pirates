@@ -69,9 +69,13 @@ Quick links:
 ---
 ### Installing games through other launchers {#installing-games-through-other-launchers}
 Use other launchers only if they add value (cloud saves, store integration).
-<div align="center">
-<a href="https://docs.usebottles.com/"><img src="https://cdn2.steamgriddb.com/logo_thumb/b6971181414fe808396c6883eb262e8d.png" alt="Bottles" width="110"></a>
-<a href="https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/wiki/Steam-Deck"><img src="https://cdn2.steamgriddb.com/icon_thumb/9f73f765160d33280216b73b6378c068.png" alt="Heroic" width="130"></a>
+<div align="center" style="display: flex; gap: 1.2em; justify-content: center;">
+    <a href="https://docs.usebottles.com/" title="Bottles" aria-label="Bottles">
+        <img class="launcher-icon-btn" src="https://cdn2.steamgriddb.com/logo_thumb/b6971181414fe808396c6883eb262e8d.png" alt="Bottles" />
+    </a>
+    <a href="https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/wiki/Steam-Deck" title="Heroic" aria-label="Heroic">
+        <img class="launcher-icon-btn" src="https://cdn2.steamgriddb.com/icon_thumb/9f73f765160d33280216b73b6378c068.png" alt="Heroic" />
+    </a>
 </div>
 
 ---

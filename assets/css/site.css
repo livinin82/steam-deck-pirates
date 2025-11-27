@@ -1,3 +1,23 @@
+/* Icon-only button style for launcher icons */
+.launcher-icon-btn {
+	width: 2.2em;
+	height: 2.2em;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background: var(--color-bg-alt);
+	border: 1.5px solid var(--color-border);
+	box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+	transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+	padding: 0.25em;
+	object-fit: contain;
+}
+a:hover .launcher-icon-btn {
+	background: var(--color-accent-bg);
+	border-color: var(--color-accent);
+	box-shadow: 0 2px 8px 0 rgba(0,0,0,0.13);
+}
 /* Remove persistent highlight on buttons after tap on mobile */
 @media (hover: none) and (pointer: coarse) {
 	.util-btn:focus, .util-btn:active,
