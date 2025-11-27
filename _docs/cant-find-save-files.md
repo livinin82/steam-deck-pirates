@@ -1,3 +1,8 @@
+
+---
+title: Can't find save files
+parent_id: common-questions
+nav_order: 5
 ---
 
 ## Using EmuSync to Sync or Back Up Save Files
@@ -18,11 +23,6 @@
 
 > [!TIP]
 > EmuSync is especially useful if you play on multiple devices or want an easy way to back up all your emulator saves at once. See the [official EmuSync documentation](https://github.com/emu-sync/EmuSync) for advanced options and troubleshooting.
----
-title: Can't find save files
-parent_id: common-questions
-nav_order: 5
----
 
 
 ## Can't find save files (moving between installs)
