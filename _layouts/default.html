@@ -100,8 +100,8 @@
       </script>
   <!-- Hamburger and theme toggle are now in the topbar -->
   <!-- Utility dock fully removed for parity between desktop and mobile -->
-  <!-- Back to top button at bottom right, always visible -->
-  <button class="util-btn back-to-bottom-right theme-dynamic" id="backToTop" type="button" aria-label="Back to top" title="Back to top">↑</button>
+  <!-- Back to top button: appears after scrolling -->
+  <button class="util-btn back-to-bottom-right theme-dynamic" id="backToTop" type="button" aria-label="Back to top" title="Back to top" style="display:flex;" onclick="window.scrollTo({top:0,behavior:'smooth'});console.log('[BackToTop] Inline click!');">↑</button>
   </div>
       <script>
   // Auto-generate navigation & mobile behavior
@@ -149,14 +149,23 @@
           navContainer.addEventListener('click',e=>{ if(e.target.tagName==='A') close(); });
           document.addEventListener('keydown',e=>{ if(e.key==='Escape') close(); });
         })();
-        // Back to top: always visible inline dock (no expansion animation)
-        (function(){
-          const btn=document.getElementById('backToTop');
-            if(!btn) return;
-            btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-            // Ensure aria-hidden cleared for assistive tech
-            btn.setAttribute('aria-hidden','false');
-            // Optional future: hide near top if desired.
+        // Back to top: show after scrolling, hide at top
+        (function() {
+          const btn = document.getElementById('backToTop');
+          if(!btn) return;
+          const showAt = 200; // px scrolled before showing
+          function check() {
+            console.log('[BackToTop] scrollY:', window.scrollY);
+            if(window.scrollY > showAt) {
+              btn.style.display = 'flex';
+            } else {
+              btn.style.display = 'none';
+            }
+          }
+          window.addEventListener('scroll', check, {passive:true});
+          window.addEventListener('resize', check);
+          check();
+          btn.setAttribute('aria-hidden','false');
         })();
         // Font size changer removed; font size now set by CSS for accessibility.
 

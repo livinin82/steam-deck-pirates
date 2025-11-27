@@ -1,3 +1,320 @@
+/* Remove persistent highlight on buttons after tap on mobile */
+@media (hover: none) and (pointer: coarse) {
+	.util-btn:focus, .util-btn:active,
+	.menu-fixed-top-left:focus, .menu-fixed-top-left:active,
+	.theme-topbar:focus, .theme-topbar:active {
+		outline: none !important;
+		box-shadow: none !important;
+		background: var(--color-bg) !important;
+		color: var(--color-text) !important;
+		border-color: var(--color-border) !important;
+	}
+}
+/* Center Mermaid diagrams horizontally and prevent overflow */
+.mermaid {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	max-width: 100%;
+	overflow-x: auto;
+}
+/* --- PROTECT MERMAID DIAGRAMS --- */
+.mermaid {
+	border: none !important;
+	background: none !important;
+	color: inherit !important;
+	border-radius: 0 !important;
+	margin: 1.5rem 0 !important;
+	padding: 0 !important;
+	/* Let Mermaid's own styles apply for sizing and font */
+}
+/* Admonition color-coding for JS-applied classes */
+.admonition-note {
+	border-left: 4px solid var(--adm-note-color) !important;
+	background: var(--adm-note-bg) !important;
+	color: var(--adm-note-color) !important;
+}
+.admonition-warning {
+	border-left: 4px solid var(--adm-warning-color) !important;
+	background: var(--adm-warning-bg) !important;
+	color: var(--adm-warning-color) !important;
+}
+.admonition-tip {
+	border-left: 4px solid var(--adm-tip-color) !important;
+	background: var(--adm-tip-bg) !important;
+	color: var(--adm-tip-color) !important;
+}
+.admonition-important {
+	border-left: 4px solid var(--adm-important-color) !important;
+	background: var(--adm-important-bg) !important;
+	color: var(--adm-important-color) !important;
+}
+.admonition-caution {
+	border-left: 4px solid var(--adm-caution-color) !important;
+	background: var(--adm-caution-bg) !important;
+	color: var(--adm-caution-color) !important;
+}
+/* Minimal color-coded admonitions: keep marker visible and bold, color border/bg by type */
+.doc blockquote > p:first-child {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.doc blockquote > p:first-child strong {
+	font-weight: bold;
+}
+.doc blockquote > p:first-child:contains('[!NOTE]') {
+	border-left: 4px solid var(--adm-note-color);
+	background: var(--adm-note-bg);
+	color: var(--adm-note-color);
+}
+.doc blockquote > p:first-child:contains('[!WARNING]') {
+	border-left: 4px solid var(--adm-warning-color);
+	background: var(--adm-warning-bg);
+	color: var(--adm-warning-color);
+}
+.doc blockquote > p:first-child:contains('[!TIP]') {
+	border-left: 4px solid var(--adm-tip-color);
+	background: var(--adm-tip-bg);
+	color: var(--adm-tip-color);
+}
+.doc blockquote > p:first-child:contains('[!IMPORTANT]') {
+	border-left: 4px solid var(--adm-important-color);
+	background: var(--adm-important-bg);
+	color: var(--adm-important-color);
+}
+.doc blockquote > p:first-child:contains('[!CAUTION]') {
+	border-left: 4px solid var(--adm-caution-color);
+	background: var(--adm-caution-bg);
+	color: var(--adm-caution-color);
+}
+/* Robust color-coding for admonitions: match any blockquote containing [!NOTE], [!WARNING], etc. */
+blockquote, .admonition {
+	border-radius: 6px;
+	margin: 1.5rem 0;
+	padding: .85rem 1rem .9rem 1rem;
+	font-size: 0.97em;
+}
+/* Admonition blockquotes: color-code by type ([!NOTE], [!WARNING], etc.) */
+
+
+
+/* Restore original blockquote and .doc blockquote styles */
+blockquote, .admonition {
+	border-radius: 6px;
+	margin: 1.5rem 0;
+	padding: .85rem 1rem .9rem 1rem;
+	font-size: 0.97em;
+}
+.doc blockquote {
+	margin: 1.5rem 0;
+	padding: .9rem 1rem .9rem 1rem;
+	border-left: 4px solid var(--color-accent);
+	background: var(--color-blockquote-bg);
+	border-radius: 4px;
+	font-size: 0.92rem;
+	color: var(--color-text-muted);
+}
+blockquote:has(> p:contains('[!NOTE]')), blockquote:has(> :contains('[!NOTE]')) {
+	background: #18291e !important;
+	border-left: 4px solid #22c55e !important;
+	color: #d1fae5 !important;
+}
+blockquote:has(> p:contains('[!WARNING]')), blockquote:has(> :contains('[!WARNING]')) {
+	background: #2a2117 !important;
+	border-left: 4px solid #f59e0b !important;
+	color: #fef3c7 !important;
+}
+blockquote:has(> p:contains('[!TIP]')), blockquote:has(> :contains('[!TIP]')) {
+	background: #18291e !important;
+	border-left: 4px solid #22d3ee !important;
+	color: #cffafe !important;
+}
+blockquote:has(> p:contains('[!CAUTION]')), blockquote:has(> :contains('[!CAUTION]')) {
+	background: #2a1a1a !important;
+	border-left: 4px solid #dc2626 !important;
+	color: #fee2e2 !important;
+}
+blockquote:has(> p:contains('[!IMPORTANT]')), blockquote:has(> :contains('[!IMPORTANT]')) {
+	background: #1e2636 !important;
+	border-left: 4px solid #2563eb !important;
+	color: #dbeafe !important;
+}
+/* Admonition blocks: color-coded for [!NOTE], [!WARNING], etc. */
+blockquote.admonition-note, blockquote:has(strong:contains('[!NOTE]')) {
+	background: #18291e;
+	border-left: 4px solid #22c55e;
+	color: #d1fae5;
+}
+blockquote.admonition-warning, blockquote:has(strong:contains('[!WARNING]')) {
+	background: #2a2117;
+	border-left: 4px solid #f59e0b;
+	color: #fef3c7;
+}
+blockquote.admonition-tip, blockquote:has(strong:contains('[!TIP]')) {
+	background: #18291e;
+	border-left: 4px solid #22d3ee;
+	color: #cffafe;
+}
+blockquote.admonition-caution, blockquote:has(strong:contains('[!CAUTION]')) {
+	background: #2a1a1a;
+	border-left: 4px solid #dc2626;
+	color: #fee2e2;
+}
+blockquote.admonition-important, blockquote:has(strong:contains('[!IMPORTANT]')) {
+	background: #1e2636;
+	border-left: 4px solid #2563eb;
+	color: #dbeafe;
+}
+/* Responsive images in content */
+.doc img, .markdown-body img, .content img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 1.2rem auto;
+}
+/* ToC blur overlay for nav-active */
+.toc-blur-overlay {
+	display: none;
+	position: fixed;
+	top: 0; left: 0; width: 100vw; height: 100vh;
+	z-index: 1200;
+	backdrop-filter: blur(6px);
+	background: rgba(0,0,0,0.18);
+	transition: background 0.2s;
+}
+body.nav-active .toc-blur-overlay {
+	display: block;
+}
+/* Force topbar hero-title gradient with high specificity */
+.topbar .hero-title .hero-text, .hero-title .hero-text {
+	background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent) 100%);
+	-webkit-background-clip: text !important;
+	background-clip: text !important;
+	color: transparent !important;
+	font-weight: 900 !important;
+	font-size: 1.25rem !important;
+	letter-spacing: 0.02em;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.12);
+}
+/* Modern link color for accessibility */
+a, .modern-link {
+	color: #1e90ff;
+	text-decoration: underline;
+	transition: color 0.2s;
+}
+a:visited, .modern-link:visited {
+	color: #7c3aed;
+}
+a:hover, .modern-link:hover {
+	color: #0056b3;
+	text-decoration: underline;
+}
+
+/* More prominent headings with shared gradient scheme */
+
+h1, .markdown-body h1, .doc h1,
+h2, .markdown-body h2, .doc h2,
+h3, .markdown-body h3, .doc h3 {
+	color: var(--color-accent) !important;
+	font-weight: 800;
+	letter-spacing: 0.01em;
+}
+
+h1, .markdown-body h1, .doc h1 {
+	font-size: 2.1rem;
+	margin-top: 2.8rem;
+	margin-bottom: 1.6rem;
+	border-bottom: 2px solid var(--color-border);
+	padding-bottom: 0.5rem;
+}
+
+h2, .markdown-body h2, .doc h2 {
+	font-size: 1.6rem;
+	margin-top: 2.4rem;
+	margin-bottom: 1.4rem;
+	border-bottom: 1px solid var(--color-border);
+	padding-bottom: 0.4rem;
+}
+
+h3, .markdown-body h3, .doc h3 {
+	font-size: 1.25rem;
+	margin-top: 1.8rem;
+	margin-bottom: 0.8rem;
+}
+h4, .markdown-body h4, .doc h4 {
+	font-size: 0.95rem;
+	font-weight: 600;
+	margin-top: 1.2rem;
+	margin-bottom: 0.6rem;
+	color: var(--color-text-muted);
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+/* Table/warning box improvements */
+td[bgcolor="#FFF3CD"] {
+	background: var(--color-bg-alt) !important;
+	color: var(--color-text) !important;
+	border: 1px solid var(--color-border) !important;
+	font-size: 0.92em !important;
+}
+
+/* Make warning/note boxes less visually dominant */
+td[bgcolor="#E3F2FD"] {
+	background: var(--color-bg-alt) !important;
+	color: var(--color-text) !important;
+	border: 1px solid var(--color-border) !important;
+	font-size: 0.92em !important;
+}
+/* Admonition markdown blockquote fix: style blockquotes that start with [!CAUTION], [!NOTE], etc. */
+blockquote:has(strong:contains('CAUTION')), blockquote:has(strong:contains('NOTE')), blockquote:has(strong:contains('WARNING')) {
+	background: var(--color-bg-alt);
+	border-left: 4px solid var(--adm-warning-color);
+	color: var(--color-text);
+	font-size: 0.93em;
+	padding: .85rem 1rem .9rem 1rem;
+	margin: 1.5rem 0;
+	border-radius: 6px;
+}
+@media (max-width: 700px) {
+	.topbar {
+		position: fixed !important;
+		top: 0 !important;
+		left: 0;
+		right: 0;
+		z-index: 2001 !important;
+		padding-left: 0.3rem !important;
+		padding-right: 0.3rem !important;
+		min-height: 48px !important;
+	}
+	.hero-inner {
+		gap: 0.4rem !important;
+		padding: 0.2rem 0 !important;
+	}
+	.hero-title {
+		font-size: 1.05rem !important;
+		line-height: 1.1 !important;
+		padding: 0 0.2rem !important;
+		max-width: 100vw;
+		white-space: normal;
+	}
+	.menu-fixed-top-left,
+	.theme-topbar {
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+	}
+	.page-title {
+		flex: 1 1 0%;
+		min-width: 0;
+		text-align: center;
+	}
+	.hero-title .emoji {
+		margin: 0 0.15em !important;
+		font-size: 1.1em !important;
+	}
+}
 *{box-sizing:border-box}
 
 :root{
@@ -55,70 +372,170 @@ html{scroll-behavior:smooth}
 .layout{display:flex;min-height:100vh}
 /* Removed legacy sidebar styles */
 .content{flex:1;min-width:0;display:flex;flex-direction:column}
-.topbar{position:sticky;top:0;background:color-mix(in srgb,var(--color-bg) 90%,transparent);backdrop-filter:saturate(160%) blur(8px);padding:.9rem 1.5rem;border-bottom:1px solid var(--color-border);z-index:20;display:flex;align-items:center;gap:1rem}
+.topbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100vw;
+	background: color-mix(in srgb,var(--color-bg) 90%,transparent);
+	backdrop-filter: saturate(160%) blur(8px);
+	padding: 0 0.7rem;
+	border-bottom: 1px solid var(--color-border);
+	z-index: 2001;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 48px;
+	min-height: 48px;
+	flex-shrink: 0;
+	flex-wrap: nowrap;
+	box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+}
 /* Full-bleed hero banner */
-.hero-wide{display:block;width:100%;max-width:none;margin:0;padding:0;--hero-bg:color-mix(in srgb,var(--color-bg-alt) 96%, transparent);background:var(--hero-bg)}
+.hero-wide {
+	display: block;
+	width: 100vw;
+	max-width: none;
+	margin: 0;
+	padding: 0;
+	--hero-bg: color-mix(in srgb,var(--color-bg-alt) 96%, transparent);
+	background: var(--hero-bg);
+}
 
 /* Narrow hero adjustments already handled below in max-width:640px block */
-.hero-wide .hero-inner{width:100%;max-width:1180px;margin:0 auto;padding:.95rem clamp(.9rem,4vw,2.2rem);display:flex;flex-direction:column;align-items:center;justify-content:center}
-.hero-wide .page-title{max-width:100%;margin:0 auto;text-align:center}
-.page-title{font-size:1rem;font-weight:600;color:var(--color-heading);flex:1;text-align:center}
-.hero-title{font-size:1.55rem;font-weight:700;letter-spacing:.5px;display:inline-flex;align-items:center;gap:.5rem;line-height:1.1}
-.hero-text{background:linear-gradient(90deg,var(--color-accent),#ffef9c);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
-.emoji{font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji','Android Emoji','EmojiOne Color','Twemoji Mozilla',system-ui,sans-serif;font-size:1.05em;line-height:1}
-.hero-sub{font-size:.8rem;margin:.2rem 0 0;color:var(--color-text-muted);max-width:720px}
-/* Mobile navigation */
-.nav-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(2px);opacity:0;pointer-events:none;transition:.3s opacity;z-index:1090}
-.auto-nav nav ul{list-style:none;margin:0;padding:0}
-.auto-nav li{margin:0}
-.auto-nav a{display:block;padding:.4rem .55rem;margin:0 0 .15rem;border-radius:.4rem;font-size:.8rem;color:var(--color-text-muted);text-decoration:none;transition:.15s background,color}
-.auto-nav a:hover{background:var(--color-bg);color:var(--color-heading)}
-.auto-nav a.active{background:var(--color-accent-bg);color:var(--color-accent);font-weight:600}
-.auto-nav li.lvl-3 a{padding-left:1.35rem;font-size:.74rem;opacity:.9}
-/* Hide duplicate first H1 inside document (hero provides visual) */
-.doc > h1:first-of-type{display:none}
-/* Unified off-canvas nav for all breakpoints (uses body.nav-active only) */
-.auto-nav{position:fixed;left:0;top:0;width:300px;max-width:85vw;height:100vh;padding:calc(var(--topbar-height) + 10px) 1rem 2rem;background:var(--color-bg-alt);border-right:1px solid var(--color-border);box-shadow:0 0 0 1px var(--color-border),0 14px 40px -10px rgba(0,0,0,.55);overflow-y:auto;transform:translateX(-110%);transition:.35s transform cubic-bezier(.4,.1,.2,1);z-index:1200}
-body.nav-active .auto-nav{transform:translateX(0)}
-.nav-backdrop{opacity:0;pointer-events:none;transition:.35s opacity}
-body.nav-active .nav-backdrop{opacity:1;pointer-events:auto}
-@media (min-width:1180px){
-	/* Optionally dock nav on very wide screens */
-	body.nav-active.dock-wide .auto-nav{transform:none;position:sticky}
+.hero-wide .hero-inner {
+	width: 100%;
+	max-width: 1180px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
+	height: 48px;
+	min-height: 48px;
+	flex-direction: row;
+	justify-content: center;
+	padding: 0;
+	flex-wrap: nowrap;
 }
-/* Utility dock (floating controls) */
-/* Utility dock island */
-/* Collapsed island: expandable group wraps divider + back-to-top */
-.utility-dock{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:1500;display:flex;align-items:center;gap:.55rem;padding:.55rem .7rem;background:color-mix(in srgb,var(--color-bg-alt) 85%, transparent);backdrop-filter:saturate(150%) blur(10px);border:1px solid var(--color-border);border-radius:46px;box-shadow:0 4px 18px -4px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.02);}
-.utility-dock .util-btn{cursor:pointer;width:42px;height:42px;background:var(--color-bg);border:1px solid var(--color-border);color:var(--color-text);padding:0;font-size:.95rem;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.25s background,.25s color,.25s border-color,.25s transform,.25s box-shadow}
-.utility-dock .util-btn:hover{background:var(--color-accent-bg);color:var(--color-accent);border-color:var(--color-accent-bg);box-shadow:0 2px 6px -2px rgba(0,0,0,.6)}
-.utility-dock .util-btn:active{transform:scale(.9)}
-/* Inline dock variant: no expansion mechanics */
-.utility-dock .expander,.utility-dock .divider{display:none!important}
-#backToTop{opacity:1!important;pointer-events:auto!important}
-@keyframes btt-pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,204,51,.0)}50%{box-shadow:0 0 0 6px rgba(255,204,51,.12)}}
-#backToTop:focus-visible{animation:btt-pulse 1.4s ease-out 1}
-/* Hide nav toggle on wide screens (desktop persistent nav) */
-/* Keep menu button visible on all widths */
-/* Compact adjustments small screens */
-@media (max-width:520px){
-	.utility-dock{gap:.45rem;padding:.45rem .6rem;bottom:14px}
-	.utility-dock .util-btn{--btn-size:38px;font-size:.85rem}
-		/* removed expanded variant */
-	.utility-dock .divider{height:22px}
+.page-title {
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--color-heading);
+	flex: 1;
+	text-align: center;
+	margin: 0 auto;
+	max-width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
-@media (max-width:640px){
-	.hero-title{font-size:1.25rem}
+.hero-title {
+	font-size: 1.1rem;
+	font-weight: 700;
+	letter-spacing: .5px;
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+	line-height: 1.1;
+	justify-content: center;
+	background: linear-gradient(90deg, var(--color-accent), #ffef9c);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
 }
-.doc{padding:2rem 2.5rem;max-width:1000px;margin:0 auto}
+.hero-title .emoji {
+	margin: 0 0.15em;
+	font-size: 1.1em;
+}
+.hero-sub {
+	font-size: 0.92rem;
+	color: var(--color-text-muted);
+	margin: 0.2rem 0 0 0;
+	text-align: center;
+}
+
+.updated-inline {
+	font-size: 0.78rem;
+	color: var(--color-text-muted);
+	margin: 0.12rem 0 0 0;
+	text-align: center;
+}
+
+/* Hamburger and theme toggle: edge-aligned, same size, theme-dynamic */
+.menu-fixed-top-left, .theme-topbar, .util-btn {
+	position: relative;
+	z-index: 2001;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	min-width: 40px;
+	min-height: 40px;
+	padding: 0;
+	margin: 0;
+	background: var(--color-bg);
+	color: var(--color-text);
+	border: 1.5px solid var(--color-border);
+	border-radius: 6px;
+	transition: background 0.2s, color 0.2s, border-color 0.2s;
+	box-shadow: none;
+}
+.menu-fixed-top-left:hover, .theme-topbar:hover, .util-btn:hover {
+	background: var(--color-accent-bg);
+	color: var(--color-accent);
+	border-color: var(--color-accent);
+}
+
+/* Scroll-to-top button: always visible, bottom right, accessible */
+.back-to-bottom-right {
+	position: fixed;
+	bottom: 18px;
+	right: 18px;
+	z-index: 2000;
+	width: 40px;
+	height: 40px;
+	font-size: 1.1rem;
+	border-radius: 6px;
+	background: var(--color-bg);
+	color: var(--color-accent);
+	border: 1.5px solid var(--color-accent);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+	cursor: pointer;
+	transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+}
+.back-to-bottom-right:focus {
+	outline: 2px solid var(--color-accent);
+	outline-offset: 2px;
+}
+.back-to-bottom-right:hover {
+	background: var(--color-accent-bg);
+	color: var(--color-heading);
+	border-color: var(--color-heading);
+	transform: translateY(-4px) scale(1.08);
+}
+
+/* Main content: fully dynamic, responsive, with padding */
+.doc {
+	padding: 56px 2.5vw 2.5vw 2.5vw;
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 100%;
+	box-sizing: border-box;
+}
 /* Responsive tables: wrap wide tables on small screens */
-.markdown-body table{display:table;width:100%;table-layout:auto}
+.markdown-body table{display:table;width:100%;table-layout:auto;font-size:0.92em;}
 @media (max-width:680px){
 	.markdown-body table{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--color-border);}
 	.markdown-body p + table, .markdown-body h4 + table, .markdown-body h3 + table{margin-top:.8rem}
 	/* Fallback: if GitHub Pages or parser fails and pipes render inline, force display block when row starts with pipe and contains pipe cells (progressive enhancement not bulletproof) */
 	.markdown-body table{border-collapse:collapse}
-	.markdown-body table th, .markdown-body table td{padding:.5rem .55rem}
+	.markdown-body table th, .markdown-body table td{padding:.5rem .55rem;font-size:0.92em;}
 	.markdown-body table thead{display:table-header-group}
 	.markdown-body table tr{display:table-row}
 	/* Ensure no side clipping on mobile */
@@ -151,9 +568,9 @@ html{font-size:17px}
 .admonition-warning{--adm-color:var(--adm-warning-color)}
 .admonition-caution{--adm-color:var(--adm-caution-color)}
 .admonition{border-left-color:var(--adm-color);}
-.admonition-title{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin:0 0 .4rem;color:var(--adm-color)}
-.markdown-body .admonition-title{font-size:.72em}
-.markdown-body .admonition{font-size:1em}
+.admonition-title{font-size:.62rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin:0 0 .4rem;color:var(--adm-color)}
+.markdown-body .admonition-title{font-size:.68em}
+.markdown-body .admonition{font-size:.93em}
 .doc h1,.doc h2,.doc h3,.doc h4{scroll-margin-top:80px;font-weight:600;line-height:1.2}
 .doc h1{font-size:calc(2rem * var(--font-scale));margin-top:0;color:var(--color-heading)}
 .doc h2{font-size:calc(1.35rem * var(--font-scale));margin-top:2.2rem;border-top:1px solid var(--color-border);padding-top:1.2rem;color:var(--color-heading)}
@@ -161,16 +578,61 @@ html{font-size:17px}
 .doc h4{font-size:calc(.85rem * var(--font-scale));margin-top:1.2rem;letter-spacing:.5px;text-transform:uppercase;color:var(--color-text-muted)}
 .doc p{margin:1rem 0}
 .doc code{background:var(--color-bg-alt);padding:.15rem .4rem;border-radius:4px;font-size:.78em;font-family:ui-monospace,Menlo,Monaco,"Cascadia Mono","Segoe UI Mono",Roboto Mono,monospace}
-.doc pre{background:var(--color-bg-alt);padding:1rem 1.2rem;border-radius:8px;overflow:auto;font-size:.74em;line-height:1.4}
-.doc table{border-collapse:collapse;width:100%;margin:1.5rem 0;font-size:.78em}
-.doc th,.doc td{border:1px solid var(--color-border);padding:.55rem .6rem;text-align:left;vertical-align:top}
-.doc th{background:var(--color-table-header);font-weight:600;color:var(--color-heading)}
-.doc blockquote{margin:1.5rem 0;padding:.9rem 1rem .9rem 1rem;border-left:4px solid var(--color-accent);background:var(--color-blockquote-bg);border-radius:4px;font-size:calc(.8rem * var(--font-scale));color:var(--color-text-muted)}
-.doc a{color:var(--color-link);text-decoration:none}
-.doc a:hover{text-decoration:underline}
-html{font-size:17px}
-hr{border:0;border-top:1px solid var(--color-border);margin:2.5rem 0}
-.markdown-body{--md-code-bg:var(--color-bg-alt);--md-border:var(--color-border);font-size:1rem;}
+/* Unify font sizing for accessibility */
+.doc pre {
+	background: var(--color-bg-alt);
+	padding: 1rem 1.2rem;
+	border-radius: 8px;
+	overflow: auto;
+	font-size: 1em;
+	line-height: 1.4;
+}
+.doc table {
+	border-collapse: collapse;
+	width: 100%;
+	margin: 1.5rem 0;
+	font-size: 0.92em;
+	background: inherit;
+}
+.doc th, .doc td {
+	border: 1px solid var(--color-border);
+	padding: .48rem .55rem;
+	text-align: left;
+	vertical-align: top;
+	background: inherit;
+}
+.doc th {
+	background: var(--color-table-header);
+	font-weight: 600;
+	color: var(--color-heading);
+}
+.doc blockquote {
+  margin: 1.5rem 0;
+  padding: .9rem 1rem .9rem 1rem;
+  border-left: 4px solid var(--color-accent);
+  background: var(--color-blockquote-bg);
+  border-radius: 4px;
+	font-size: 0.92rem;
+  color: var(--color-text-muted);
+}
+.admonition, .admonition-title {
+	font-size: 0.92em !important;
+}
+.markdown-body {
+	--md-code-bg: var(--color-bg-alt);
+	--md-border: var(--color-border);
+	font-size: 1em;
+}
+html { font-size: 17px; }
+@media (max-width: 600px) {
+  html { font-size: 16px; }
+  body { font-size: 15px; }
+}
+@media (max-width: 400px) {
+  html { font-size: 15px; }
+  body { font-size: 14px; }
+}
+hr { border: 0; border-top: 1px solid var(--color-border); margin: 2.5rem 0; }
 /* Font size changes now applied by adjusting root html font-size via JS; data-font kept for state only */
 .panel{background:var(--color-bg-alt);border:1px solid var(--color-border);padding:15px;border-radius:8px;margin:1.1rem 0;word-spacing:0.1em;text-rendering:optimizeLegibility}
 .panel--soft{background:var(--color-panel-soft-bg);border-color:var(--color-panel-soft-border)}
@@ -191,83 +653,151 @@ hr{border:0;border-top:1px solid var(--color-border);margin:2.5rem 0}
 /* Neutralize any legacy inline bgcolor attributes for theme consistency */
 [bgcolor]{background:var(--color-bg-alt)!important;color:var(--color-text)!important}
 @media (max-width:1080px){:root{--sidebar-width:250px}.doc{padding:1.5rem 1.75rem}.sidebar{padding:.9rem .75rem}}
-	.utility-dock{bottom:calc(14px + env(safe-area-inset-bottom,0px));}
 @media (max-width:820px){
   .layout{flex-direction:column}
 }
 
-/* Mobile menu toggle */
-/* Removed legacy .menu-toggle-btn styles (menu handled via dock button) */
-
-/* Scroll spy active anchor */
-.nav a.spy-active{background:var(--color-accent-bg);color:var(--color-accent);font-weight:600}
-.nav a.deep-anchor{padding:.25rem .6rem .25rem 1.1rem;position:relative}
-.nav a.deep-anchor:before{content:'';position:absolute;left:.55rem;top:50%;width:4px;height:4px;background:var(--color-border);border-radius:50%;transform:translateY(-50%)}
-.nav a.deep-anchor.spy-active:before{background:var(--color-accent)}
-
-/* Back to top legacy (removed). Inline version inside .utility-dock inherits .util-btn */
-.utility-dock #backToTop{position:static;bottom:auto;right:auto;opacity:1;pointer-events:auto;transition:.25s background,.25s color,.25s transform;}
-.utility-dock #backToTop:hover{background:var(--color-accent-bg);color:var(--color-accent)}
-
-/* Remove prior individual placements */
-
-/* -------------------------------------------------- */
-/* Mobile refinement overrides                        */
-/* Center & enlarge hero banner, ensure nav fills vh  */
-/* -------------------------------------------------- */
-@media (max-width:640px){
-	/* Stack topbar content vertically and center */
-		.hero-wide.topbar{flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0;background:var(--hero-bg);box-shadow:0 6px 22px -10px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.02);}
-		.hero-wide .hero-inner{padding:calc(env(safe-area-inset-top,0px) + .9rem) clamp(.95rem,7vw,2.4rem) 1.15rem}
-		.hero-wide.topbar:after{content:"";display:block;width:100%;height:1px;margin:.35rem 0 0;background:linear-gradient(90deg,transparent,var(--color-border),transparent);}
-	.page-title{width:100%;text-align:center}
-	/* Allow intelligent wrapping but avoid emojis isolating themselves */
-	.hero-title{font-size:clamp(1.65rem,7.2vw,2.05rem);line-height:1.12;flex-wrap:wrap;justify-content:center;text-align:center}
-	.hero-title .emoji:last-of-type{display:none} /* hide trailing emoji to reduce awkward wrap */
-	.hero-title .emoji{font-size:1.15em}
-	.hero-sub{font-size:.85rem;text-align:center}
-	/* Extra bottom padding so floating utility dock doesn't overlap early content */
-	.doc{padding:1.3rem clamp(.85rem,5vw,1.15rem) calc(6.25rem + env(safe-area-inset-bottom,0px));max-width:100%;}
-	/* Constrain wide content elements */
-	.doc pre,
-	.doc table,
-	.doc .mermaid{margin-left:0;margin-right:0;}
-	.doc .mermaid{overflow-x:auto;-webkit-overflow-scrolling:touch;padding:.25rem 0;text-align:center;}
-	.doc .mermaid svg{width:100%!important;height:auto!important;display:block;margin:0 auto;}
-	.utility-dock{position:fixed;left:50%!important;transform:translateX(-50%) translateY(0)!important;bottom:calc(14px + env(safe-area-inset-bottom,0px));}
+/* --- Restore ToC (sidebar) toggle behavior --- */
+.auto-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 300px;
+  max-width: 85vw;
+  height: 100vh;
+  padding: calc(var(--topbar-height) + 10px) 1rem 2rem;
+  background: var(--color-bg-alt);
+  border-right: 1px solid var(--color-border);
+  box-shadow: 0 0 0 1px var(--color-border),0 14px 40px -10px rgba(0,0,0,.55);
+  overflow-y: auto;
+  transform: translateX(-110%);
+  transition: .35s transform cubic-bezier(.4,.1,.2,1);
+  z-index: 1200;
+}
+body.nav-active .auto-nav {
+  transform: translateX(0);
+}
+.nav-backdrop {
+  opacity: 0;
+  pointer-events: none;
+  transition: .35s opacity;
+}
+body.nav-active .nav-backdrop {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-/* Desktop / general mermaid centering insurance */
-.doc .mermaid{display:block;text-align:center;margin:1.2rem auto;}
-.doc .mermaid svg{display:block;margin:0 auto;height:auto!important;width:auto!important;max-width:100%;}
-
-/* -------------------------------------------------- */
-/* Responsive images                                  */
-/* Ensure markdown images never overflow their container */
-/* -------------------------------------------------- */
-.doc img, .markdown-body img{max-width:100%;height:auto;display:block;margin:1.15rem auto;border-radius:6px;}
-/* Provide a softer shadow for large illustrative screenshots */
-.doc img[alt*="Dependencies"],
-.doc img[alt*="Proton Folder"],
-.markdown-body img[alt*="Dependencies"],
-.markdown-body img[alt*="Proton Folder"]{box-shadow:0 4px 24px -6px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.04);}
-/* Allow tiny badge/logo style images with explicit width attributes to sit inline */
-.doc a img[width], .markdown-body a img[width]{display:inline-block;margin:.2rem .35rem .2rem 0;vertical-align:middle;border-radius:4px;}
-/* If an image is the very first/last child in a block element, reduce top/bottom margin slightly */
-.doc p > img:first-child:last-child{margin:0.85rem auto;}
-
-/* Full height mobile nav (account for mobile browser chrome & safe areas) */
-@media (max-width:820px){
-	.auto-nav{height:100dvh;min-height:100vh;bottom:0;padding-bottom:calc(2.75rem + env(safe-area-inset-bottom,0px));}
+/* --- Title bar color and layout fixes --- */
+.page-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  flex: 1;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero-title {
+  color: var(--color-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  line-height: 1.1;
+  justify-content: center;
+}
+.hero-sub {
+	font-size: 0.92rem;
+	color: var(--color-text-muted);
+	margin: 0.6rem 0 0 0;
+	text-align: center;
+	display: block;
+	scroll-margin-top: 80px;
+}
+@media (max-width: 680px) {
+	.hero-sub {
+		margin-top: 2.2rem !important;
+		scroll-margin-top: 100px !important;
+	}
+}
+.updated-date {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  margin-top: 0.2rem;
+  text-align: center;
 }
 
-/* Slight bump for really narrow devices */
-@media (max-width:420px){
-	.hero-title{font-size:clamp(1.7rem,8vw,2.15rem)}
+/* --- ToC (sidebar) theme and scrollspy restoration --- */
+.auto-nav nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.auto-nav li {
+  margin: 0;
+}
+.auto-nav a {
+  display: block;
+  padding: 0.4rem 0.55rem;
+  margin: 0 0 0.15rem;
+  border-radius: 0.4rem;
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: 0.15s background, 0.15s color;
+}
+.auto-nav a:hover {
+  background: var(--color-bg);
+  color: var(--color-heading);
+}
+.auto-nav a.active, .auto-nav a.spy-active {
+  background: var(--color-accent-bg);
+  color: var(--color-accent);
+  font-weight: 600;
+}
+.auto-nav li.lvl-3 a {
+  padding-left: 1.35rem;
+  font-size: 0.85rem;
+  opacity: 0.92;
 }
 
-/* Provide bottom padding for medium small screens too (utility dock space) */
-@media (min-width:641px) and (max-width:900px){
-	.doc{padding-bottom:calc(5.5rem + env(safe-area-inset-bottom,0px))}
+/* ToC sidebar background and border for theme */
+.auto-nav {
+  background: var(--color-bg-alt);
+  border-right: 1px solid var(--color-border);
+  box-shadow: 0 0 0 1px var(--color-border), 0 14px 40px -10px rgba(0,0,0,.55);
+}
+
+/* --- Heading formatting for sidebar and content --- */
+.doc h2, .markdown-body h2 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 0.18em;
+  margin-top: 2.2em;
+  margin-bottom: 1.1em;
+  color: var(--color-heading);
+}
+.doc h3, .markdown-body h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 1.7em;
+  margin-bottom: 0.8em;
+  color: var(--color-accent);
+}
+.doc h4, .markdown-body h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 

@@ -33,14 +33,16 @@ Quick links:
 > [!NOTE]
 > If the game is already fully installed (a pre‑installed repack) skip to Part 3.
 
+
 ### Part 1: Run the installer
- 
+
 <div class="panel"><strong>Method 1: Wine (simple)</strong>
 <ul><li>Right‑click setup.exe → Open with Wine.</li><li>Limit to 2GB RAM (optional).</li><li>Select external path (avoid prefix).</li></ul></div>
 <div class="panel"><strong>Method 2: Steam + Proton</strong>
 <ul><li>Add setup.exe to Steam (Desktop Mode).</li><li>Force Proton Experimental.</li><li>Create <code>~/Games</code> folder.</li><li>Play to launch installer.</li></ul></div>
 <div class="panel"><strong>After either method</strong><ul><li>Let installer finish; uncheck extra runtimes.</li></ul></div>
-> FG repacks default to D:, DoDi to C: — adjust path.
+
+> **Note:** FG repacks default to the D: drive, and DoDi repacks default to the C: drive. Be sure to manually set the install location to the <code>~/Games</code> folder you created earlier.
 
 ### Part 2: Installer flow
 <div class="panel"><ul>

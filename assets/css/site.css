@@ -1,3 +1,15 @@
+/* Remove persistent highlight on buttons after tap on mobile */
+@media (hover: none) and (pointer: coarse) {
+	.util-btn:focus, .util-btn:active,
+	.menu-fixed-top-left:focus, .menu-fixed-top-left:active,
+	.theme-topbar:focus, .theme-topbar:active {
+		outline: none !important;
+		box-shadow: none !important;
+		background: var(--color-bg) !important;
+		color: var(--color-text) !important;
+		border-color: var(--color-border) !important;
+	}
+}
 /* Center Mermaid diagrams horizontally and prevent overflow */
 .mermaid {
 	display: flex;
@@ -483,19 +495,23 @@ html{scroll-behavior:smooth}
 	bottom: 18px;
 	right: 18px;
 	z-index: 2000;
-	width: 48px;
-	height: 48px;
-	font-size: 1.2rem;
+	width: 40px;
+	height: 40px;
+	font-size: 1.1rem;
 	border-radius: 6px;
 	background: var(--color-bg);
 	color: var(--color-accent);
-	border: 2px solid var(--color-accent);
+	border: 1.5px solid var(--color-accent);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
 	cursor: pointer;
 	transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+}
+.back-to-bottom-right:focus {
+	outline: 2px solid var(--color-accent);
+	outline-offset: 2px;
 }
 .back-to-bottom-right:hover {
 	background: var(--color-accent-bg);
@@ -697,10 +713,18 @@ body.nav-active .nav-backdrop {
   justify-content: center;
 }
 .hero-sub {
-  font-size: 0.92rem;
-  color: var(--color-text-muted);
-  margin: 0.2rem 0 0 0;
-  text-align: center;
+	font-size: 0.92rem;
+	color: var(--color-text-muted);
+	margin: 0.6rem 0 0 0;
+	text-align: center;
+	display: block;
+	scroll-margin-top: 80px;
+}
+@media (max-width: 680px) {
+	.hero-sub {
+		margin-top: 2.2rem !important;
+		scroll-margin-top: 100px !important;
+	}
 }
 .updated-date {
   font-size: 0.78rem;

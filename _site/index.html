@@ -12,34 +12,55 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="A comprehensive guide to sailing the high seas on your Steam Deck." />
 <meta property="og:description" content="A comprehensive guide to sailing the high seas on your Steam Deck." />
-<link rel="canonical" href="https://livinin82.github.io/" />
-<meta property="og:url" content="https://livinin82.github.io/" />
+<link rel="canonical" href="http://localhost:4000/steam-deck-pirates/" />
+<meta property="og:url" content="http://localhost:4000/steam-deck-pirates/" />
 <meta property="og:site_name" content="Steam Deck Pirates’ Cove" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Steam Deck Pirates’ Cove" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"A comprehensive guide to sailing the high seas on your Steam Deck.","headline":"Steam Deck Pirates’ Cove","name":"Steam Deck Pirates’ Cove","url":"https://livinin82.github.io/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","description":"A comprehensive guide to sailing the high seas on your Steam Deck.","headline":"Steam Deck Pirates’ Cove","name":"Steam Deck Pirates’ Cove","url":"http://localhost:4000/steam-deck-pirates/"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link rel="stylesheet" href="/assets/css/site.css?v=1763809242"/>
+  <link rel="stylesheet" href="/steam-deck-pirates/assets/css/site.css?v=1764216265-bust2"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="/steam-deck-pirates/assets/js/admonition.js?v=1764216265"></script>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
   <div class="layout">
-    <div class="nav-backdrop" id="navBackdrop"></div>
-  <aside id="auto-nav" class="auto-nav" aria-label="On this page"></aside>
+    <div class="toc-blur-overlay" id="tocBlurOverlay"></div>
+    <aside id="auto-nav" class="auto-nav" aria-label="On this page"></aside>
+      <script>
+        // ToC blur overlay and click-to-close
+        (function(){
+          const overlay = document.getElementById('tocBlurOverlay');
+          const body = document.body;
+          function closeNav() {
+            body.classList.remove('nav-active');
+            document.getElementById('menuToggle').setAttribute('aria-expanded','false');
+          }
+          if(overlay) {
+            overlay.addEventListener('click', closeNav);
+          }
+          // Also close ToC with Escape key
+          document.addEventListener('keydown', function(e){
+            if(body.classList.contains('nav-active') && (e.key==='Escape'||e.key==='Esc')) closeNav();
+          });
+        })();
+      </script>
     <main class="content">
     <header class="topbar hero-wide" role="banner">
-      <div class="hero-inner">
-        <div class="page-title">
+      <div class="hero-inner" style="display: flex; align-items: center; gap: 1.2rem;">
+        <button class="util-btn menu-fixed-top-left theme-dynamic" id="menuToggle" aria-label="Open navigation" aria-controls="auto-nav" aria-expanded="false" type="button" title="Navigation">☰</button>
+        <div class="page-title" style="flex:1;">
           <span class="hero-title"><span class="emoji" aria-hidden="true">🏴‍☠️</span> <span class="hero-text">Steam Deck Pirates' Cove</span> <span class="emoji" aria-hidden="true">🏴‍☠️</span></span>
+          
         </div>
+        <button class="util-btn theme-topbar theme-dynamic" id="themeToggle" type="button" aria-label="Toggle color theme" title="Toggle theme"><span class="icon" aria-hidden="true">🌙</span></button>
       </div>
-        <!-- Theme toggle moved to utility dock -->
         <script>
           (function(){
             const STORAGE_KEY = 'sdp-theme';
@@ -66,19 +87,21 @@
         </script>
       </header>
       <article id="main-content" class="doc markdown-body">
-<h1 id="steam-deck-pirates-cove"><span class="hero-title">Steam Deck Pirates’ Cove</span></h1>
-
 <p class="hero-sub">A consolidated single-page reference for running Windows games, emulation, and tweaks on Steam Deck.</p>
+<p class="updated-inline">Updated: 2025-11-27</p>
 
 <h2 id="info-about-steam-deck">Info About Steam Deck</h2>
 
 <h3 id="game-mode">Game Mode</h3>
+
 <p>Game Mode is essentially an overlay running Big Picture Mode, allowing you to access the Quick Access Menu and the Steam Menu and control everything in one easy to use interface. This is the preferred method to play games as it allows you to set hardware limits, change settings on the fly, enable a fps counter, and many other things on the fly. This is what the Deck boots into by default.</p>
 
 <h3 id="desktop-mode">Desktop Mode</h3>
+
 <p>Desktop Mode is what Game Mode is installed over. It is the real computer behind everything. Built on Arch Linux with KDE Desktop Environment. It can be accessed through Game Mode by opening the Steam Menu and clicking <strong>Power &gt; Switch to Desktop</strong>.</p>
 
 <h3 id="wine">Wine</h3>
+
 <p>Wine (originally an acronym for “Wine Is Not an Emulator”) is a compatibility layer capable of running Windows applications on several POSIX-compliant operating systems, such as Linux, macOS, &amp; BSD. Instead of simulating internal Windows logic like a virtual machine or emulator, Wine translates Windows API calls into POSIX calls on-the-fly, eliminating the performance and memory penalties of other methods and allowing you to cleanly integrate Windows applications into your desktop.</p>
 
 <p><em>from <a href="https://www.winehq.org/">WineHQ</a></em></p>
@@ -88,6 +111,7 @@
 </blockquote>
 
 <h3 id="proton">Proton</h3>
+
 <p>Proton is a compatibility layer for Windows games to run on Linux-based operating systems. Proton is developed by Valve in cooperation with developers from CodeWeavers. It is a collection of software and libraries combined with a patched version of Wine to improve performance and compatibility with Windows games. Proton is designed for integration into the Steam client as “Steam Play”. It is officially distributed through the client, although third-party forks can be manually installed. Proton incorporates several libraries that improve 3D performance. These include Direct3D-to-Vulkan translation layers, namely DXVK for Direct3D 9, 10 and 11, and VKD3D-Proton for Direct3D 12.</p>
 
 <p><em>from <a href="https://www.wikipedia.org">Wikipedia</a></em></p>
@@ -95,20 +119,44 @@
 <p><strong><em>There are two different Proton iterations right now:</em></strong></p>
 
 <h4 id="steams-official-proton">Steam’s Official Proton</h4>
+
 <p>This is what comes baked into the system more or less. These are selectable by going into the game Properties and clicking the Compatibility tab. From there you’ll click the checkbox next to “Force the use of a specific Steam Play compatibility tool”. Here you will be able to select any Proton available through steam as well as any others you have installed. Sometimes different games work with different Proton versions. More often than not Proton Experimental is the most up to date and has the best compatibility rate. All games are different, some may not have working sound unless you go to an old version. Mess with this first if you have issues running games.</p>
 
 <h4 id="ge-proton">GE-Proton</h4>
+
 <p>GE Proton (or Glorious Eggroll Proton) is an open source variant of Steams Proton that is user developed and maintained. It usually has faster support for games and also includes additional features and fixes, some which Steam can’t include for licensing reasons. It’s usually installed through ProtonUpQt, and can be selected the same as any other Proton version once installed, in the compatibility section of any game’s properties.</p>
 
 <h3 id="prefixes">Prefixes</h3>
+
 <p>A (Wine/Proton) prefix is what makes Proton able to run a Windows app on Linux “natively”. Inside of any prefix you’ll usually find a series of folders and files, one being <code class="language-plaintext highlighter-rouge">drive_c</code>. The reason for all of this is the folder structure and other dependencies and files emulates a Windows environment. Essentially a prefix pretends to be a Windows hard drive, pretends Windows is installed on it, and translates Linux commands/operations into Windows specific versions. This combined with Wine/Proton are the most major components of playing a Windows game on a Linux device.</p>
 
 <h3 id="launchers">Launchers</h3>
+
 <p>Launchers are apps built for Linux that allow you to play games from other Launcher based game companies. Heroic, Bottles, and Lutris are the mainly discussed ones. These add a few more things some games may need to run efficiently or properly at all. While these are a preferred method for ease of use, keep in mind this is another layer between your game and SteamOS so at times troubleshooting it may be a little more difficult. These also usually come with Wine configuration, login support for launchers, the option to add shortcuts to Steam, and a whole slew of other features allowing you to do less tinkering and kind of just get going.</p>
 
-<h3 id="decky-plugins">Decky Plugins</h3>
+<h3 id="decky-loader">Decky Loader</h3>
 
-<h2 id="apps-you-need-to-have-installed">Apps you NEED TO have installed</h2>
+<blockquote>
+  <p>[!WARNING]
+<strong>Decky Loader</strong> is a third-party plugin loader for the Steam Deck. It allows you to add custom features and tweaks to your Deck, but it has been known to break after SteamOS or plugin updates. <strong>Support for Decky Loader is not offered here. Use at your own risk.</strong></p>
+</blockquote>
+
+<h4 id="installing-decky-loader">Installing Decky Loader</h4>
+<ol>
+  <li>Go to the <a href="https://github.com/SteamDeckHomebrew/decky-loader">Decky Loader GitHub</a> and follow the installation instructions for your Steam Deck.</li>
+  <li>After installation, Decky will appear as a plug icon in the Steam Deck’s quick access menu.</li>
+  <li>You can browse and install plugins directly from the Decky interface.</li>
+</ol>
+
+<h4 id="disabling-or-uninstalling-decky-loader">Disabling or Uninstalling Decky Loader</h4>
+<ol>
+  <li>Open the Decky menu (plug icon).</li>
+  <li>Use the settings or options menu to disable or uninstall Decky Loader or any installed plugins.</li>
+</ol>
+
+<p>If you experience issues with games or SteamOS after installing Decky Loader or plugins, try disabling or uninstalling Decky Loader first.</p>
+
+<h2 id="commonly-used-apps">Commonly Used Apps</h2>
 
 <blockquote>
   <p>[!NOTE]
@@ -145,7 +193,7 @@ Items in <em>Italics</em> are available on the Discover Store.</p>
     </tr>
     <tr>
       <td style="text-align: left"><em><a href="https://warpinator.com/warpinator-download/">Warpinator</a></em></td>
-      <td style="text-align: center">Warpinator is a recommended file transfer service for your local network. This application works with all OS options. It will need to be running on both your Steam Deck and the device you are transferring files from/to. For Windows there are two options, <a href="https://winpinator.swisz.cz/">Winpinator</a> and <a href="https://warpinator.com/warpinator-download/">Warpinator</a>. I have personally had more luck with the actual Warpinator. Sometimes if there are connection issues it is best to manually set the network device in settings. This is the fastest and easiest to set up method for transferring files.</td>
+      <td style="text-align: center"><span class="modern-link">Warpinator</span> is a recommended file transfer service for your local network. This application works with all OS options. It will need to be running on both your Steam Deck and the device you are transferring files from/to. For Windows there are two options, <span class="modern-link">Winpinator</span> and <span class="modern-link">Warpinator</span>. I have personally had more luck with the actual Warpinator. Sometimes if there are connection issues it is best to manually set the network device in settings. This is the fastest and easiest to set up method for transferring files.</td>
     </tr>
     <tr>
       <td style="text-align: left"><em><a href="https://jdownloader.org">JDownloader</a></em></td>
@@ -174,6 +222,7 @@ Do not use BitTorrent or uTorrent as they have been known to be shady in the pas
 <hr />
 
 <h2 id="guides-for-installing-games">Guides for installing games</h2>
+
 <pre><code class="language-mermaid">graph TD
     A[Source Game]
     B["Install Game on PC"]
@@ -198,7 +247,7 @@ Do not use BitTorrent or uTorrent as they have been known to be shady in the pas
     H --&gt; Z
 </code></pre>
 
-<h4 id="installing-games-through-steam">Installing games through Steam</h4>
+<h3 id="installing-games-through-steam">Installing games through Steam</h3>
 
 <blockquote>
   <p>[!NOTE]
@@ -251,7 +300,12 @@ There are a few different ways to get cracked games on your system. They all for
 </tr>
 </table>
 
-<p><strong>Note:</strong> FG repacks default to the D drive, and DoDi repacks default to the C drive.</p>
+<blockquote>
+  <p>[!CAUTION]
+<strong>Installer Warning:</strong> On Linux/Steam Deck, never install games or repacks to the <strong>C:</strong> drive (or any default path inside <code>drive_c</code>). The <strong>C:</strong> drive is actually a hidden folder inside a “prefix”—a fake Windows environment created by Proton or Wine. If you install to <strong>C:</strong>, your game will be buried deep inside the prefix and hard to find or move later.</p>
+
+  <p>Instead, always choose a custom folder (like <strong>Games</strong> on your SD card, internal storage, or another drive). In most installers, your internal storage or microSD card will show up as a different drive letter—often <strong>Z:</strong>, <strong>D:</strong>, or something other than <strong>C:</strong>. Look for the folder you created (such as <strong>Games</strong>) in one of those drives and select it as your install location. After installation, double-check the folder you selected for your game files.</p>
+</blockquote>
 
 <h4 id="part-2-installation">Part 2: Installation</h4>
 
@@ -287,6 +341,7 @@ Don’t worry if the installation is slow, especially for repacks. This is norma
 </blockquote>
 
 <h4 id="part-3-running-the-game">Part 3: Running the Game</h4>
+
 <table>
 <tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
@@ -304,6 +359,7 @@ Don’t worry if the installation is slow, especially for repacks. This is norma
 </td>
 </tr>
 </table>
+
 <table>
 <tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
@@ -488,6 +544,7 @@ The password set in this tutorial will be your password across all Deck operatio
 <hr />
 
 <h4 id="ssh-connection-guide-windows">SSH Connection Guide: Windows</h4>
+
 <table>
 <tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
@@ -778,6 +835,7 @@ If it wasn’t explicitly clear in the previous note, do not download these from
 </ul>
 
 <h4 id="installing-with-protontricks">Installing with ProtonTricks</h4>
+
 <table>
 <tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
@@ -793,6 +851,7 @@ If it wasn’t explicitly clear in the previous note, do not download these from
 </td>
 </tr>
 </table>
+
 <table>
 <tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
@@ -944,6 +1003,7 @@ The sweet spot for performance is mostly in the Xbox/PS2 era, with the Switch be
 <p>EmuDeck is a collection of scripts that allows you to autoconfigure your Steam Deck, it creates your roms directory structure and downloads all of the needed Emulators for you along with the best configurations for each of them. EmuDeck works great with <a href="https://github.com/SteamGridDB/steam-rom-manager">Steam Rom Manager</a> or with <a href="https://es-de.org">EmulationStation DE</a>.</p>
 
 <h4 id="installing-emudeck">Installing EmuDeck</h4>
+
 <table>
 <tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
@@ -1249,8 +1309,6 @@ Some games will load perfectly but won’t have controller input. Prime examples
 <p>A couple of people have reported being able to pinpoint the search by changing the shortcut name to the Steam URL listing number:</p>
 
 <table>
-<tr>
-<tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
 <strong>In Desktop mode:</strong>
 <ul>
@@ -1264,72 +1322,106 @@ Some games will load perfectly but won’t have controller input. Prime examples
     <li>Change the title to the number you copied</li>
     <li>Close the settings</li>
     <li>Click on the Controller Icon next to the Gear Icon, click on the Layout Selector (above <strong>View Layout</strong> and <strong>Edit Layout</strong>)</li>
+
 </ul>
 </td>
-</tr>
-&lt;/table&gt;
+&lt;/tr&gt;
+</table>
 
-### Game opens steam
-Either your crack isnt applied properly or you need to change the number in `steamapp_id.txt` to `1` in the game folder.
+<h3 id="game-opens-steam">Game opens steam</h3>
 
-### No licenses
-If this shows it means your crack isn't working. Make sure you copied the files over properly, and that you have pointed to all of the relevent DLLs and dependencies.
+<p>Either your crack isn’t applied properly or you need to change the number in <code class="language-plaintext highlighter-rouge">steamapp_id.txt</code> to <code class="language-plaintext highlighter-rouge">1</code> in the game folder.</p>
 
-### Games suddenly won't open or close
+<h3 id="no-licenses">No licenses</h3>
+
+<p>If this shows it means your crack isn’t working. Make sure you copied the files over properly, and that you have pointed to all of the relevant DLLs and dependencies.</p>
+
+<h3 id="games-suddenly-wont-open-or-close">Games suddenly won’t open or close</h3>
+
 <table>
 <tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
-<p>More often than not, this is related to a plugin running in Decky. To verify this:</p>
+
+More often than not, this is related to a plugin running in Decky. To verify this:
+
 <ul>
     <li>Disable Decky and test your game</li>
     <li>Uninstall your plugins one by one, and see what changes it.</li>
     <li>Uninstall them all, and add them back one by one until you see the error happen again.</li>
 </ul>
+
 </td>
 </tr>
 </table>
 
-### Game tries to load and immediately stops
+<h3 id="game-tries-to-load-and-immediately-stops">Game tries to load and immediately stops</h3>
 
-#### Is Proton Enabled?
-&gt; [!NOTE]
-&gt; In some instances Steam may silently disable your forced Proton version for a non‑Steam shortcut.
-&gt; Before doing anything else: open the shortcut's Properties and re‑enable a Proton version (start with Proton Experimental).
+<h4 id="is-proton-enabled">Is Proton Enabled?</h4>
 
-#### Are there quotes around the target path?
-&gt; [!NOTE]
-&gt; Paths containing spaces must be wrapped in quotes in Launch Options / Target field.
-&gt; Example (GOOD): `"/home/deck/Games/Tomb Raider/game.exe"`
-&gt; Example (BAD): `/home/deck/Games/Tomb Raider/game.exe`
+<blockquote>
+  <p>[!NOTE]</p>
 
-#### Are dependencies installed?
-&gt; [!CAUTION]
-&gt; Missing DirectX / VC++ / .NET components will cause silent exits. See the [Installing Dependencies](#installing-dependencies) section above and install what your game needs.
+  <p>In some instances Steam may silently disable your forced Proton version for a non‑Steam shortcut.
+Before doing anything else: open the shortcut’s Properties and re‑enable a Proton version (start with Proton Experimental).</p>
+</blockquote>
 
-### Mods won't load
-&gt; [!WARNING]
-&gt; Possible causes:
-&gt; * Required DLL overrides not applied (see [Adding DLLs to Proton](#adding-dlls-to-proton)).
-&gt; * Using a Windows-only mod manager when a native / alternative method exists.
-&gt; * Mod loader files placed in wrong prefix path.
-&gt; * Incompatible Proton version (test Proton-GE or older Proton).
-&gt; * Incorrect case-sensitive filenames on Linux.
+<h4 id="are-there-quotes-around-the-target-path">Are there quotes around the target path?</h4>
 
----
-## Other subreddits/groups
-#### Piracy Related
-- [Linux Crack Tips](https://www.reddit.com/r/LinuxCrackSupport/)
-- [Piracy](https://www.reddit.com/r/Piracy)
-- [FreeMediaHeckYeah](https://www.reddit.com/r/FREEMEDIAHECKYEAH)
+<blockquote>
+  <p>[!NOTE]</p>
 
----
-## Useful Links
-- [ProtonDB](https://protondb.com/)
-- [SteamDB](https://steamdb.info/)
-- [SteamDeckHQ](https://steamdeckhq.com/)
-- [PCGamingWiki](https://www.pcgamingwiki.com/wiki/Home)
+  <p>Paths containing spaces must be wrapped in quotes in Launch Options / Target field.
+Example (GOOD): <code class="language-plaintext highlighter-rouge">"/home/deck/Games/Tomb Raider/game.exe"</code>
+Example (BAD): <code class="language-plaintext highlighter-rouge">/home/deck/Games/Tomb Raider/game.exe</code></p>
+</blockquote>
 
-</tr></table>
+<h4 id="are-dependencies-installed">Are dependencies installed?</h4>
+
+<blockquote>
+  <p>[!CAUTION]</p>
+
+  <p>Missing DirectX / VC++ / .NET components will cause silent exits. See the <a href="#installing-dependencies">Installing Dependencies</a> section above and install what your game needs.</p>
+</blockquote>
+
+<h3 id="mods-wont-load">Mods won’t load</h3>
+
+<blockquote>
+  <p>[!WARNING]</p>
+
+  <p>Possible causes:</p>
+
+  <ul>
+    <li>Required DLL overrides not applied (see <a href="#adding-dlls-to-proton">Adding DLLs to Proton</a>).</li>
+    <li>Using a Windows-only mod manager when a native / alternative method exists.</li>
+    <li>Mod loader files placed in wrong prefix path.</li>
+    <li>Incompatible Proton version (test Proton-GE or older Proton).</li>
+    <li>Incorrect case-sensitive filenames on Linux.</li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h2 id="other-subredditsgroups">Other subreddits/groups</h2>
+
+<h4 id="piracy-related">Piracy Related</h4>
+
+<ul>
+  <li><a href="https://www.reddit.com/r/LinuxCrackSupport/">Linux Crack Tips</a></li>
+  <li><a href="https://www.reddit.com/r/Piracy">Piracy</a></li>
+  <li><a href="https://www.reddit.com/r/FREEMEDIAHECKYEAH">FreeMediaHeckYeah</a></li>
+</ul>
+
+<hr />
+
+<h2 id="useful-links">Useful Links</h2>
+
+<ul>
+  <li><a href="https://protondb.com/">ProtonDB</a></li>
+  <li><a href="https://steamdb.info/">SteamDB</a></li>
+  <li><a href="https://steamdeckhq.com/">SteamDeckHQ</a></li>
+  <li><a href="https://www.pcgamingwiki.com/wiki/Home">PCGamingWiki</a></li>
+</ul>
+
 </article>
       <script>
         // Remove duplicate top H1 if it matches page title (defensive in case CSS hide fails or cache issues)
@@ -1355,18 +1447,17 @@ If this shows it means your crack isn't working. Make sure you copied the files 
           }
         })();
       </script>
-  <div class="utility-dock dock-inline" role="group" aria-label="Page utilities">
-    <button class="util-btn" id="menuToggle" aria-label="Open navigation" aria-controls="auto-nav" aria-expanded="false" type="button" title="Navigation">☰</button>
-    <button class="util-btn" id="themeToggle" type="button" aria-label="Toggle color theme" title="Toggle theme"><span class="icon" aria-hidden="true">🌙</span></button>
-    <button class="util-btn" id="fontToggle" type="button" aria-label="Cycle font size" title="Font size">A</button>
-    <button class="util-btn" id="backToTop" type="button" aria-label="Back to top" title="Back to top">↑</button>
+  <!-- Hamburger and theme toggle are now in the topbar -->
+  <!-- Utility dock fully removed for parity between desktop and mobile -->
+  <!-- Back to top button: appears after scrolling -->
+  <button class="util-btn back-to-bottom-right theme-dynamic" id="backToTop" type="button" aria-label="Back to top" title="Back to top" style="display:flex;" onclick="window.scrollTo({top:0,behavior:'smooth'});console.log('[BackToTop] Inline click!');">↑</button>
   </div>
       <script>
   // Auto-generate navigation & mobile behavior
         (function(){
           const navContainer=document.getElementById('auto-nav');
           const toggle=document.getElementById('menuToggle');
-          const backdrop=document.getElementById('navBackdrop');
+          const overlay=document.getElementById('tocBlurOverlay');
           const content=document.getElementById('main-content');
           if(!navContainer||!content) return;
           const headings=[...content.querySelectorAll('h2, h3')];
@@ -1393,6 +1484,7 @@ If this shows it means your crack isn't working. Make sure you copied the files 
           }
           window.addEventListener('scroll',update,{passive:true}); window.addEventListener('resize',update); update();
           function close(){ document.body.classList.remove('nav-active'); toggle&&toggle.setAttribute('aria-expanded','false'); }
+          if(overlay){ overlay.addEventListener('click', close); }
           toggle&&toggle.addEventListener('click',()=>{
             const willOpen=!document.body.classList.contains('nav-active');
             document.body.classList.toggle('nav-active',willOpen);
@@ -1406,63 +1498,65 @@ If this shows it means your crack isn't working. Make sure you copied the files 
           navContainer.addEventListener('click',e=>{ if(e.target.tagName==='A') close(); });
           document.addEventListener('keydown',e=>{ if(e.key==='Escape') close(); });
         })();
-        // Back to top: always visible inline dock (no expansion animation)
-        (function(){
-          const btn=document.getElementById('backToTop');
-            if(!btn) return;
-            btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-            // Ensure aria-hidden cleared for assistive tech
-            btn.setAttribute('aria-hidden','false');
-            // Optional future: hide near top if desired.
-        })();
-        // Font size toggle (normal -> large -> xlarge)
-        (function(){
-          const BTN_ID='fontToggle';
-          const STORE_KEY='sdp-font';
-          const ORDER=['normal','large','xlarge'];
-          const btn=document.getElementById(BTN_ID);
+        // Back to top: show after scrolling, hide at top
+        (function() {
+          const btn = document.getElementById('backToTop');
           if(!btn) return;
-          function apply(mode){
-            if(!ORDER.includes(mode)) mode='normal';
-            document.documentElement.setAttribute('data-font',mode);
-            // Base size 17px (set in CSS); adjust rem root for global scaling
-            const base=17; // px
-            const size = mode==='normal'?base : (mode==='large'?Math.round(base*1.12):Math.round(base*1.25));
-            // Apply min/max guard rails
-            const clamped = Math.min(24, Math.max(14, size));
-            document.documentElement.style.fontSize = clamped + 'px';
-            // Reflow nudge for iOS Safari caching
-            void document.documentElement.offsetWidth;
-            localStorage.setItem(STORE_KEY,mode);
-            btn.textContent = mode==='normal'?'A':(mode==='large'?'A+':'A++');
-            btn.setAttribute('data-size',mode);
+          const showAt = 200; // px scrolled before showing
+          function check() {
+            console.log('[BackToTop] scrollY:', window.scrollY);
+            if(window.scrollY > showAt) {
+              btn.style.display = 'flex';
+            } else {
+              btn.style.display = 'none';
+            }
           }
-            const saved=localStorage.getItem(STORE_KEY)||'normal';
-            apply(saved);
-          btn.addEventListener('click',()=>{
-            const current=btn.getAttribute('data-size')||'normal';
-            const next=ORDER[(ORDER.indexOf(current)+1)%ORDER.length];
-            apply(next);
-          });
+          window.addEventListener('scroll', check, {passive:true});
+          window.addEventListener('resize', check);
+          check();
+          btn.setAttribute('aria-hidden','false');
         })();
-        // Admonitions
-        (function(){
-          const map={ NOTE:'note', WARNING:'warning', CAUTION:'caution', TIP:'tip', IMPORTANT:'important' };
-          document.querySelectorAll('.markdown-body blockquote').forEach(bq=>{
-            const first=bq.firstElementChild||bq.firstChild; if(!first) return;
-            const text=(first.textContent||'').trim();
-            const m=text.match(/^\[(?:!)([A-Z]+)]/);
-            if(m){ const key=m[1]; const kind=map[key]; if(kind){ bq.classList.add('admonition','admonition-'+kind); first.textContent=first.textContent.replace(/^\[!([A-Z]+)]\s*/,''); const label=document.createElement('div'); label.className='admonition-title'; label.textContent=key.charAt(0)+key.slice(1).toLowerCase(); bq.insertBefore(label,bq.firstChild); }}
-          });
-        })();
-        // Mermaid
-        (function(){
-          function load(){ if(window.mermaid){ render(); return;} const s=document.createElement('script'); s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js'; s.onload=render; document.head.appendChild(s); }
-          function render(){ if(!window.mermaid) return; const dark=document.documentElement.getAttribute('data-theme')!=='light'; window.mermaid.initialize({startOnLoad:false, theme:dark?'dark':'default'}); document.querySelectorAll('code.language-mermaid, pre code.mermaid').forEach(block=>{ const parent=block.closest('pre')||block.parentElement; const code=block.textContent.trim(); const wrapper=document.createElement('div'); wrapper.className='mermaid'; wrapper.textContent=code; parent.replaceWith(wrapper); }); window.mermaid.init(undefined, document.querySelectorAll('.mermaid')); }
-          window.renderMermaid=render; if(document.readyState!=='loading') load(); else document.addEventListener('DOMContentLoaded',load);
-        })();
+        // Font size changer removed; font size now set by CSS for accessibility.
+
       </script>
     </main>
   </div>
+  <script>
+    // Mermaid (robust loader with cache-busting, error logging, and manual re-render)
+    (function(){
+      function load(){
+        console.log('[Mermaid] Loader running');
+        if(window.mermaid){ render(); return; }
+        const s=document.createElement('script');
+        s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js?v='+(new Date().getTime()); // cache-busting
+        s.onload=render;
+        s.onerror=function(){console.error('[Mermaid] Failed to load Mermaid.js');}
+        document.head.appendChild(s);
+      }
+      function render(){
+        try {
+          if(!window.mermaid) throw new Error('Mermaid not loaded');
+          const dark=document.documentElement.getAttribute('data-theme')!=='light';
+          window.mermaid.initialize({startOnLoad:false, theme:dark?'dark':'default'});
+          document.querySelectorAll('code.language-mermaid, pre code.mermaid').forEach(block=>{
+            const parent=block.closest('pre')||block.parentElement;
+            const code=block.textContent.trim();
+            const wrapper=document.createElement('div');
+            wrapper.className='mermaid';
+            wrapper.textContent=code;
+            parent.replaceWith(wrapper);
+          });
+          window.mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+          console.log('[Mermaid] Rendered diagrams');
+        } catch(e) {
+          console.error('[Mermaid] Render error:', e);
+        }
+      }
+      window.renderMermaid=render;
+      if(document.readyState!=='loading') load();
+      else document.addEventListener('DOMContentLoaded',load);
+
+    })();
+  </script>
 </body>
 </html>
