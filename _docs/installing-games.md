@@ -69,7 +69,7 @@ Quick links:
 ---
 ### Installing games through other launchers {#installing-games-through-other-launchers}
 Use other launchers only if they add value (cloud saves, store integration).
-<div align="center" style="display: flex; gap: 1.2em; justify-content: center;">
+<div class="launcher-icon-row">
     <a href="https://docs.usebottles.com/" title="Bottles" aria-label="Bottles">
         <img class="launcher-icon-btn" src="https://cdn2.steamgriddb.com/logo_thumb/b6971181414fe808396c6883eb262e8d.png" alt="Bottles" />
     </a>

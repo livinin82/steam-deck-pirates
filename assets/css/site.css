@@ -1,3 +1,12 @@
+/* Row for launcher icon buttons */
+.launcher-icon-row {
+	display: flex;
+	flex-direction: row;
+	gap: 1.2em;
+	justify-content: center;
+	align-items: center;
+	margin: 1.2em 0;
+}
 /* Icon-only button style for launcher icons */
 .launcher-icon-btn {
 	width: 2.2em;
