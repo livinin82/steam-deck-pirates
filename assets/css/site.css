@@ -1,3 +1,31 @@
+/* Bulletproof horizontal row for launcher icons */
+.launcher-icon-row-flex {
+	display: flex !important;
+	flex-direction: row !important;
+	gap: 1.2em !important;
+	justify-content: center !important;
+	align-items: center !important;
+	margin: 1.2em 0 !important;
+}
+.launcher-icon-btn-fixed {
+	width: 2.2em !important;
+	height: 2.2em !important;
+	display: inline-block !important;
+	border-radius: 50% !important;
+	background: var(--color-bg-alt) !important;
+	border: 1.5px solid var(--color-border) !important;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.08) !important;
+	transition: background 0.2s, border-color 0.2s, box-shadow 0.2s !important;
+	padding: 0.25em !important;
+	object-fit: contain !important;
+	vertical-align: middle !important;
+	flex-shrink: 0 !important;
+}
+a:hover .launcher-icon-btn-fixed {
+	background: var(--color-accent-bg) !important;
+	border-color: var(--color-accent) !important;
+	box-shadow: 0 2px 8px 0 rgba(0,0,0,0.13) !important;
+}
 /* Row for launcher icon buttons */
 .launcher-icon-row {
 	display: flex;
