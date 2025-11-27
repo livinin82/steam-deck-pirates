@@ -87,10 +87,12 @@ RetroDECK is a [ES-DE Frontend](https://es-de.org/) powered Flatpak all-in-one g
 ---
 ## Switch Emulation {#switch-emulation}
 
-#### Recommended Emulators
+
+
+#### Switch Emulator Overview
 
 > [!NOTE]
-> As of 2024, the two main Switch emulators were taken down by the most ruthlessly litigious playing card game companies of all time. Taken down does not mean gone, though. Nothing is ever fully erased from the internet. **EVER**. With that being said, we are not going to risk having this guide taken down by linking but as of now the best and most reliable iterations are to find mirrors of **Yuzu** or **Ryujinx**. Those will have been last updated before the shutdowns. As of the time this guide was written that should not affect any of the current games that are out (at least the important ones). There is a fork of **Ryujinx** that is being maintained by *GreemDev*. The **Yuzu** forks are **Sudachi** or **Suyu**.
+> As of 2024, the two main Switch emulators were taken down by the most ruthlessly litigious playing card game companies of all time. Taken down does not mean gone, though. Nothing is ever fully erased from the internet. **EVER**. With that being said, we are not going to risk having this guide taken down by linking or naming specific emulators. As of now, the best and most reliable iterations are usually found by checking current community recommendations, forums, or compatibility lists. The landscape changes fast—do your research and you’ll find what you need.
 
 > [!CAUTION]
 > All Switch emulators require prod.keys and firmware.

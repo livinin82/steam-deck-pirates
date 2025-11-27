@@ -21,12 +21,15 @@ nav_order: 3
 ```
 
 
+
 Quick links:
 
 - [Installing games through Steam](#installing-games-through-steam)
 - [Installing games through Lutris](#installing-games-through-lutris)
 - [Installing games through other launchers](#installing-games-through-other-launchers)
 - [Transferring Installed Games from PC](#transferring-installed-games-from-pc)
+
+> **Note:** The “Add Non-Steam Game” option is found in the Steam menu in Desktop Mode, not in the Deck UI or Gaming Mode. Switch to Desktop Mode to access this feature.
 
 ---
 ### Installing games through Steam {#installing-games-through-steam}
@@ -36,35 +39,42 @@ Quick links:
 
 ### Part 1: Run the installer
 
-<div class="panel"><strong>Method 1: Wine (simple)</strong>
-<ul><li>Right‑click setup.exe → Open with Wine.</li><li>Limit to 2GB RAM (optional).</li><li>Select external path (avoid prefix).</li></ul></div>
-<div class="panel"><strong>Method 2: Steam + Proton</strong>
-<ul><li>Add setup.exe to Steam (Desktop Mode).</li><li>Force Proton Experimental.</li><li>Create <code>~/Games</code> folder.</li><li>Play to launch installer.</li></ul></div>
-<div class="panel"><strong>After either method</strong><ul><li>Let installer finish; uncheck extra runtimes.</li></ul></div>
+<div class="panel"><strong>Method 1: Wine (simple) — For advanced users</strong>
+<ol><li>Right‑click <code>setup.exe</code> → Open with Wine.</li><li><strong>Limit to 2GB RAM (required on Deck)</strong>.</li><li>Select external path (avoid prefix).</li></ol></div>
+
+<div class="panel"><strong>Method 2: Steam + Proton — Recommended for most users</strong>
+<ol><li>Add setup.exe to Steam (Desktop Mode).</li><li><strong>Force the latest GE-Proton version</strong> (recommended). <br><em>Right-click the entry in your Steam Library, choose “Properties” → “Compatibility,” and check “Force the use of a specific Steam Play compatibility tool.”</em> If that fails, try Proton Experimental. Only try other Proton versions if those do not work.</li><li>Create <code>~/Games</code> folder.</li><li>Play to launch installer.</li></ol></div>
 
 > **Note:** FG repacks default to the D: drive, and DoDi repacks default to the C: drive. Be sure to manually set the install location to the <code>~/Games</code> folder you created earlier.
 
+
 ### Part 2: Installer flow
-<div class="panel"><ul>
+<div class="panel"><ol>
 <li>Choose language.</li>
 <li>Install to accessible folder (not inside prefix for big games).</li>
-<li>Disable bundled DirectX/VC++ unless necessary.</li>
+<li>Disable bundled DirectX/VC++ unless necessary (only install these if the game specifically requires them; otherwise, skip to avoid conflicts with system versions).</li>
 <li>Expect slow repack decompression.</li>
-</ul></div>
+</ol></div>
+
 
 ### Part 3: Running the game
-<div class="panel"><strong>Wine path</strong><ul><li>Add game.exe to Steam.</li><li>Set Proton Experimental.</li><li>Test in Desktop Mode first.</li></ul></div>
-<div class="panel"><strong>Proton path</strong><ul><li>Remove setup.exe entry.</li><li>Add game.exe instead.</li><li>Rename entry after success.</li></ul></div>
-> Launch errors = wrong Proton or missing dependencies.
+<div class="panel"><strong>Wine path</strong><ol><li>Add game.exe to Steam.</li><li><strong>Set the latest GE-Proton version</strong> (recommended). <br><em>Right-click the entry in your Steam Library, choose “Properties” → “Compatibility,” and check “Force the use of a specific Steam Play compatibility tool.”</em> If that fails, try the latest official Proton version. Only try other Proton versions if those do not work.</li><li>Test in Desktop Mode first (launch the game from Steam while in Desktop Mode, not Gaming Mode).</li></ol></div>
 
-<div class="panel"><strong>Tips</strong><ul><li>Extract multi‑part archives first.</li><li>Try Proton-GE if stock versions fail.</li><li>Avoid prefix drive_c for storage.</li></ul></div>
+> Launch errors = wrong Proton or missing dependencies. See the [dependencies guide](./installing-dependencies.md) for help installing required components.
+
+> **Tip:** If your game is missing a DLL or needs extra components, you can use [ProtonTricks](./installing-dependencies.md#using-protontricks) to install them into the correct prefix.
+
+<div class="panel"><strong>Tips</strong><ul><li>Extract multi‑part archives first (make sure to fully extract all <code>.zip</code>, <code>.rar</code>, or <code>.7z</code> parts before running the installer).</li><li>Start with the latest GE-Proton version. If that fails, try the latest official Proton version. Only try other Proton versions if those do not work.</li><li>Avoid prefix drive_c for storage (do NOT install large games inside the Wine prefix’s <code>drive_c</code> folder; use a separate folder like <code>~/Games</code> instead).</li></ul></div>
 
 ---
+
 ### Installing games through Lutris {#installing-games-through-lutris}
 > [!CAUTION] Ensure Lutris has filesystem permission (Flatseal).
 > [!NOTE] Some repacks need alternate runners; Lutris simplifies that.
-<div class="panel"><ol><li>Open Lutris.</li><li>+ → Add Game.</li><li>Name; Runner: Wine.</li><li>Game Options → installer .exe.</li><li>Save → entry appears.</li><li>Launch to install.</li><li>Configure → point executable to installed game.</li></ol></div>
+<div class="panel"><ol><li>Open Lutris.</li><li>+ → Add Game.</li><li>Name; Runner: Wine.</li><li>Game Options → installer .exe.</li><li><strong>Prefix folder:</strong> In the Game Options tab, set the "Wine prefix" to a custom folder (e.g., <code>~/Games/game-name-prefix</code>). This keeps each game isolated and avoids cluttering the default prefix.</li><li>Save → entry appears.</li><li>Launch to install.</li><li>Configure → point executable to installed game.</li></ol></div>
 > Use Advanced Options for custom Wine / Proton-GE versions.
+> 
+> **Tip:** Keeping each game in its own prefix folder makes troubleshooting and cleanup much easier. Avoid installing large games inside the default prefix (usually <code>~/.wine</code> or <code>~/.local/share/lutris/runners/wine</code>).
 
 ---
 ### Installing games through other launchers {#installing-games-through-other-launchers}
@@ -84,7 +94,7 @@ Use other launchers only if they add value (cloud saves, store integration).
 > Remember the password.
 
 ### Mount as network location
-<div class="panel"><ul><li>Windows: <code>sftp://deck@IP:/home/deck</code></li><li>macOS: Connect to Server… same URL</li><li>Linux: File manager connect dialog</li><li>SD card: <code>/run/media/mmcblk0p1</code></li></ul></div>
+<div class="panel"><ol><li>Windows: <code>sftp://deck@IP:/home/deck</code></li><li>macOS: Connect to Server… same URL</li><li>Linux: File manager connect dialog</li><li>SD card: <code>/run/media/mmcblk0p1</code></li></ol></div>
 
 ### Warpinator
 <div class="panel"><strong>Deck:</strong><ol><li>Install Warpinator.</li><li>Set PIN.</li><li>Select download folder.</li></ol><strong>PC:</strong><ol><li>Install Warpinator/Winpinator.</li><li>Match PIN.</li><li>Send files.</li></ol></div>
@@ -96,7 +106,7 @@ Below are step-by-step platform examples—enable SSH first (see steps above or 
 
 #### FTP (Slower Network Sharing, Needs an App) {#ftp-slower-network-sharing-needs-an-app}
 > [!NOTE] SFTP already provides secure file transfer via SSH; plain FTP is not recommended. If an app demands FTP, prefer SFTP mode.
-<div class="panel"><ul><li>Use an SFTP-capable client (FileZilla, WinSCP).</li><li>Host: Deck IP, Protocol: SFTP, User: <code>deck</code>.</li><li>Drag & drop game folder.</li></ul></div>
+<div class="panel"><ol><li>Use an SFTP-capable client (FileZilla, WinSCP).</li><li>Host: Deck IP, Protocol: SFTP, User: <code>deck</code>.</li><li>Drag & drop game folder.</li></ol></div>
 
 #### MTP (USB Sharing) {#mtp-usb-sharing}
 > [!NOTE] Useful if network is slow/unreliable.
