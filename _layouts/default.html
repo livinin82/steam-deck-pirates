@@ -47,6 +47,18 @@
           {% endif %}
         </div>
         <button class="util-btn theme-topbar theme-dynamic" id="themeToggle" type="button" aria-label="Toggle color theme" title="Toggle theme"><span class="icon" aria-hidden="true">🌙</span></button>
+        <script>
+          // Remove persistent focus highlight from menu and theme toggle buttons after click/tap
+          document.addEventListener('DOMContentLoaded', function() {
+            ['menuToggle', 'themeToggle'].forEach(function(id) {
+              var btn = document.getElementById(id);
+              if (btn) {
+                btn.addEventListener('mouseup', function() { btn.blur(); });
+                btn.addEventListener('touchend', function() { btn.blur(); });
+              }
+            });
+          });
+        </script>
       </div>
         <script>
           (function(){
