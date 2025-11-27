@@ -53,8 +53,10 @@
             ['menuToggle', 'themeToggle'].forEach(function(id) {
               var btn = document.getElementById(id);
               if (btn) {
-                btn.addEventListener('mouseup', function() { btn.blur(); });
-                btn.addEventListener('touchend', function() { btn.blur(); });
+                var blurHandler = function() { setTimeout(function() { btn.blur(); }, 100); };
+                btn.addEventListener('mouseup', blurHandler);
+                btn.addEventListener('touchend', blurHandler);
+                btn.addEventListener('click', blurHandler);
               }
             });
           });
