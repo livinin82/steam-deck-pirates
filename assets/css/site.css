@@ -232,7 +232,7 @@ blockquote.admonition-important, blockquote:has(strong:contains('[!IMPORTANT]'))
 	margin: 1.2rem auto;
 }
 
-/* Install flow image: 45% width, max 340px, responsive */
+/* Install flow image: 45% width desktop, 75% width mobile, max 340px, responsive */
 .install-flow-img {
 	width: 45%;
 	max-width: 340px;
@@ -240,6 +240,12 @@ blockquote.admonition-important, blockquote:has(strong:contains('[!IMPORTANT]'))
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
+}
+@media (max-width: 700px) {
+	.install-flow-img {
+		width: 75%;
+		max-width: 340px;
+	}
 }
 .install-flow-img.install-flow-light {
 	display: none;
