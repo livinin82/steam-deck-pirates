@@ -232,10 +232,9 @@ blockquote.admonition-important, blockquote:has(strong:contains('[!IMPORTANT]'))
 	display: block;
 	margin: 1.2rem auto;
 }
-/* Install flow image: show dark by default, swap on theme, and scale down */
 .install-flow-img {
-	width: 50%;
-	max-width: 400px;
+	width: 33%;
+	max-width: 260px;
 	height: auto;
 	margin-left: auto;
 	margin-right: auto;
