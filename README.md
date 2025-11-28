@@ -119,100 +119,100 @@ graph TD
     D --> F
     F --> G
     G -- SteamOS --> H
-    G -- Lutris --> Z
-    H --> Z
-```
+    ## Guides for installing games
+
+    ```mermaid
+    graph TD
+        A[Source Game]
+        B["Install Game on PC"]
+        C["Pre-installed Game"]
+        D["Install Game on SteamDeck"]
+        E["Transfer to Steam Deck"]
+        F["Add Non-Steam Game"]
+        G{"Set up Windows Environment"}
+        H["Configure with ProtonTricks"]
+        Z((Play Game))
+
+        A --> B
+        A --> C
+        A --> D
+        B --> E
+        C --> E
+        E --> F
+        D --> F
+        F --> G
+        G -- SteamOS --> H
+        G -- Lutris --> Z
+        H --> Z
+    ```
 
 
 
-
-### Installing games through Steam
-
-
-> [!NOTE]
-> There are a few different ways to get cracked games on your system. They all for the most part end in the same results. Some games require one method over another. Part of piracy is experimenting and finding what works best. If you find a better method for a specific game let us know in the subreddit!
+    ### Installing games through Steam
 
 
-If your game is already in a preinstalled state, skip to **Part 3**.
+    > [!NOTE]
+    > There are a few different ways to get cracked games on your system. They all for the most part end in the same results. Some games require one method over another. Part of piracy is experimenting and finding what works best. If you find a better method for a specific game let us know in the subreddit!
 
 
-#### Part 1: Running the setup.exe
+    If your game is already in a preinstalled state, skip to **Part 3**.
 
+
+    #### Part 1: Running the setup.exe
 
 
 
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
-<ul>
-    <li>Right-click setup.exe and select Wine.</li>
-    <li>Limit the installer to 2GB of RAM.</li>
-    <li>Install to your preferred location for games.</li>
-</ul>
-</td>
-</tr>
-</table>
+    <table>
+    <tr>
+    <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+    <ul>
+        <li>Right-click setup.exe and select Wine.</li>
+        <li>Limit the installer to 2GB of RAM.</li>
+        <li>Install to your preferred location for games.</li>
+        <li>Avoid installing to the default <strong>C:</strong> drive inside <code>drive_c</code>. Always pick a custom folder (like <code>/home/deck/Games</code> or a folder on your SD card) so the game is easy to find and move later.</li>
+    </ul>
+    </td>
+    </tr>
+    </table>
 
 
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
-<strong>Method 2: Using Steam Compatibility Tool</strong>
-<ul>
-    <li>Switch your Steam Deck to desktop mode (in the Power settings menu).</li>
-    <li>Locate the downloaded game and the setup.exe file.</li>
-    <li>Right-click on setup.exe and click “Add to Steam”.</li>
-    <li>Open Steam, go to your Library, and click on setup.exe.</li>
-    <li>Go to the Compatibility section and check the box for “Force the use of a specific compatibility tool.”</li>
-    <li>Select Proton Experimental.</li>
-    <li>Create a new folder called Games in <code>/home/deck/</code>.</li>
-    <li>Go back to Steam, click on setup.exe, and press Play.</li>
-</ul>
-</td>
-</tr>
-</table>
+    <table>
+    <tr>
+    <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+    <strong>Method 2: Using Steam Compatibility Tool</strong>
+    <ul>
+        <li>Switch your Steam Deck to desktop mode (in the Power settings menu).</li>
+        <li>Locate the downloaded game and the setup.exe file.</li>
+        <li>Right-click on setup.exe and click “Add to Steam”.</li>
+        <li>Open Steam, go to your Library, and click on setup.exe.</li>
+        <li>Go to the Compatibility section and check the box for “Force the use of a specific compatibility tool.”</li>
+        <li><strong>Prefer the latest GE-Proton version.</strong> If that fails, try Proton Experimental. Only try older Proton versions if those don’t work.</li>
+        <li>Create a new folder called Games in <code>/home/deck/</code> (or on your SD card).</li>
+        <li>Go back to Steam, click on setup.exe, and press Play.</li>
+    </ul>
+    </td>
+    </tr>
+    </table>
 
 
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
-<strong>Continued from either method:</strong>
-<ul>
-    <li>Wait for the installation to complete.</li>
-    <li>Once done, check off all the radio boxes in the installer and close it.</li>
-</ul>
-</td>
-</tr>
-</table>
+    <table>
+    <tr>
+    <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+    <strong>Continued from either method:</strong>
+    <ul>
+        <li>Wait for the installation to complete.</li>
+        <li>Once done, check off all the radio boxes in the installer and close it.</li>
+    </ul>
+    </td>
+    </tr>
+    </table>
 
 
 
-
-> [!CAUTION]
-> **Installer Warning:** On Linux/Steam Deck, never install games or repacks to the <strong>C:</strong> drive (or any default path inside <code>drive_c</code>). The <strong>C:</strong> drive is actually a hidden folder inside a "prefix"—a fake Windows environment created by Proton or Wine. If you install to <strong>C:</strong>, your game will be buried deep inside the prefix and hard to find or move later.
->
-> Instead, always choose a custom folder (like <strong>Games</strong> on your SD card, internal storage, or another drive). In most installers, your internal storage or microSD card will show up as a different drive letter—often <strong>Z:</strong>, <strong>D:</strong>, or something other than <strong>C:</strong>. Look for the folder you created (such as <strong>Games</strong>) in one of those drives and select it as your install location. After installation, double-check the folder you selected for your game files.
-
-
-#### Part 2: Installation
-
-
-> [!WARNING]
-> Be patient. Sometimes, it can take a while for the installer to appear.
-
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
-<ul>
-    <li>Once it does, select your preferred language (e.g., English) and click Next.</li>
-    <li>Follow the installer steps. Make sure to:
-        <ul>
-            <li>Set the installation path to the <code>Games</code> folder in the Z drive (or your microSD card if installing there).</li>
-            <li>Untick any options for additional installations (like DirectX and Visual C++).</li>
-        </ul>
-    </li>
-    <li>Start the installation.
-        <ul>
+    > [!CAUTION]
+    > **Installer Warning:** On Linux/Steam Deck, never install games or repacks to the <strong>C:</strong> drive (or any default path inside <code>drive_c</code>). The <strong>C:</strong> drive is actually a hidden folder inside a "prefix"—a fake Windows environment created by Proton or Wine. If you install to <strong>C:</strong>, your game will be buried deep inside the prefix and hard to find or move later.
+    >
+    > Instead, always choose a custom folder (like <strong>Games</strong> on your SD card, internal storage, or another drive). In most installers, your internal storage or microSD card will show up as a different drive letter—often <strong>Z:</strong>, <strong>D:</strong>, or something other than <strong>C:</strong>. Look for the folder you created (such as <strong>Games</strong>) in one of those drives and select it as your install location. After installation, double-check the folder you selected for your game files.
             <li>Optional step: Limit the installer to 2GB of RAM for installation stability.</li>
         </ul>
     </li>
@@ -1044,7 +1044,7 @@ Some of the games you want to emulate may have PC ports. Always check to see wha
 > [!NOTE]
 > This should work for any folder you want your app to see, and any app that is a flatpak.
 
-### Can't find save files.
+### Can't find save files (moving between installs)
 
 > [!NOTE]
 > There is also a cool app that is recommended called **[Shortix](https://github.com/Jannomag/shortix)**.
@@ -1054,9 +1054,11 @@ Some of the games you want to emulate may have PC ports. Always check to see wha
 <tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
 <ul>
-    <li>Use the website <a href="https://www.pcgamingwiki.com/wiki/Home">PCGamingWiki</a> to find the save path location.</li>
-    <li>Refer to our <a href="#finding-non-steam-game-proton-folder">Finding Non-Steam Game Proton Folder</a> section.</li>
-    <li>Use the path on the website to navigate within <code>drive_c</code> and find your save file.</li>
+    <li>Use the website <a href="https://www.pcgamingwiki.com/wiki/Home">PCGamingWiki</a> to find the save path location. <br><strong>Tip:</strong> On PCGamingWiki, you are looking for the <em>Windows</em> save path, because Proton creates a Windows-like environment inside its prefix.</li>
+    <li>Use <strong>ProtonTricks</strong> to help identify the correct <code>compatdata</code> folder for your game. This will show you which prefix is being used.</li>
+    <li>Refer to our <a href="#finding-non-steam-game-proton-folder">Finding Non-Steam Game Proton Folder</a> section for more details.</li>
+    <li>Use the path from PCGamingWiki to navigate within <code>drive_c</code> in your game's prefix and find your save file.</li>
+    <li>To back up your saves, see the <a href="#backing-up-save-files">Backing Up Save Files</a> section below.</li>
 </ul>
 </td>
 </tr>
@@ -1065,11 +1067,28 @@ Some of the games you want to emulate may have PC ports. Always check to see wha
 > [!NOTE]
 > If there is no save file, check the **Install Locations** section above.
 
-### How do I move/backup my save files?
+### Backing Up Save Files {#backing-up-save-files}
 
-> [!NOTE]
-> Enter [ludasavi](https://github.com/mtkennerly/ludusavi).
-> This app works to backup your saves and apply them to other installations/devices. All info can be found on the linked github. If this doesn't work for you, use the guide in the section right above this to figure out where they are then move them manually.
+There are two main ways to back up your save files:
+
+#### 1. Manual Copy & Paste
+
+1. Find your save file using the steps above.
+2. Copy the save file or folder to a safe location (external drive, cloud storage, etc.).
+3. To restore, copy it back to the same location in the correct prefix.
+
+#### 2. Using Ludusavi
+
+**[Ludusavi](https://github.com/mtkennerly/ludusavi)** is an open-source tool that automatically backs up and restores save data for hundreds of games, including Steam, GOG, and emulators.
+
+**How to use Ludusavi:**
+1. Download and install Ludusavi from the [official GitHub page](https://github.com/mtkennerly/ludusavi).
+2. Run Ludusavi and select the games/platforms you want to back up.
+3. Choose your backup location (local folder, cloud, etc.).
+4. Click “Backup” to save your files. Use “Restore” to put them back later.
+
+> [!TIP]
+> Ludusavi is great for regular backups and for moving saves between different systems or installs.
 
 ### Controller not working
 
