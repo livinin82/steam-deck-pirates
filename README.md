@@ -785,7 +785,7 @@ RetroDECK is a [ES-DE Frontend](https://es-de.org/) powered Flatpak all-in-one g
 <table>
 <tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
-<ul>
+<ol>
     <li>Put the Steam Deck into <strong>Desktop Mode</strong></li>
     <li>Install <strong>RetroDECK</strong> from <strong>Discover</strong></li>
     <li>Start RetroDECK first time in <strong>Desktop Mode</strong></li>
@@ -797,7 +797,7 @@ RetroDECK is a [ES-DE Frontend](https://es-de.org/) powered Flatpak all-in-one g
     <li>Switch over to <strong>Game Mode</strong> and go to <strong>RetroDECK</strong> on the Steam Grid under <strong>Library > Non-Steam</strong></li>
     <li>Add any of the the Official Layouts under <strong>Controller Settings > Controller Layouts > Templates</strong> in the Steam Deck called <code>RetroDECK: Steam Deck - Neptune SIMPLE or FULL</code> with a version number. Apply the layout.</li>
     <li>Launch <strong>RetroDECK</strong> and enjoy.</li>
-</ul>
+</ol>
 </td>
 </tr>
 </table>
@@ -861,7 +861,20 @@ Some of the games you want to emulate may have PC ports. Always check to see wha
 
 ---
 
+
 ## Common questions/Things you will encounter
+
+### Uninstalling a Non-Steam Game
+
+To uninstall a game that was added as a non-Steam shortcut:
+
+1. Open Steam in Desktop Mode.
+2. Go to your Library and find the non-Steam game you want to remove.
+3. Right-click the game and select <strong>Manage</strong> &gt; <strong>Remove non-Steam game from Library</strong>.
+4. <strong>Important:</strong> This only removes the shortcut from Steam. If you want to delete the actual game files, you must manually delete the game folder from your storage.
+
+> [!WARNING]
+> <strong>Uninstalling a non-Steam game or deleting its folder can also delete the entire prefix, including your game saves and configuration files.</strong> Before removing anything, make sure to <a href="#backing-up-save-files">back up your save files</a> and any important data. If you delete the prefix, all data inside (including saves) will be lost and cannot be recovered.
 
 ### Compressed files (.rar, .zip, .7z, etc.)
 
