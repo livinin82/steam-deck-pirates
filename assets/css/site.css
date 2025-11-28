@@ -225,16 +225,17 @@ blockquote.admonition-important, blockquote:has(strong:contains('[!IMPORTANT]'))
 	border-left: 4px solid #2563eb;
 	color: #dbeafe;
 }
-/* Responsive images in content */
 .doc img, .markdown-body img, .content img {
 	max-width: 100%;
 	height: auto;
 	display: block;
 	margin: 1.2rem auto;
 }
+
+/* Install flow image: 45% width, max 340px, responsive */
 .install-flow-img {
-	width: 33%;
-	max-width: 260px;
+	width: 45%;
+	max-width: 340px;
 	height: auto;
 	margin-left: auto;
 	margin-right: auto;
