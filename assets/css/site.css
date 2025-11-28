@@ -234,8 +234,8 @@ blockquote.admonition-important, blockquote:has(strong:contains('[!IMPORTANT]'))
 }
 /* Install flow image: show dark by default, swap on theme, and scale down */
 .install-flow-img {
-	width: 75%;
-	max-width: 600px;
+	width: 50%;
+	max-width: 400px;
 	height: auto;
 	margin-left: auto;
 	margin-right: auto;
