@@ -99,8 +99,8 @@ If you experience issues with games or SteamOS after installing Decky Loader or 
 ## Guides for installing games
 
 <p align="center">
-    <img class="install-flow-img install-flow-light" src="/assets/img/Light.png" alt="Install flow overview (light)" />
-    <img class="install-flow-img install-flow-dark" src="/assets/img/Dark.png" alt="Install flow overview (dark)" />
+    <img class="install-flow-img install-flow-light" src="{{ site.baseurl }}/assets/img/Light.png" alt="Install flow overview (light)" />
+    <img class="install-flow-img install-flow-dark" src="{{ site.baseurl }}/assets/img/Dark.png" alt="Install flow overview (dark)" />
 </p>
 
 
