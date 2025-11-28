@@ -973,26 +973,6 @@ Some of the games you want to emulate may have PC ports. Always check to see wha
 > [!NOTE]
 > This should work for any folder you want your app to see, and any app that is a flatpak.
 
-### Using EmuSync to Sync or Back Up Save Files
-
-**[EmuSync](https://github.com/emu-sync/EmuSync)** is a tool that helps you automatically back up and sync your emulator save files, save states, and configuration files across devices or to cloud storage. It supports a wide range of emulators and platforms, making it easy to keep your progress safe and portable.
-
-#### How to Use EmuSync
-
-1. **Visit the [EmuSync GitHub page](https://github.com/emu-sync/EmuSync) and download the latest release** for your platform (Linux, Windows, etc.).
-2. **Extract the archive** and follow the installation instructions in the README.
-3. **Configure EmuSync:**
-    - Run the EmuSync executable or script.
-    - Add your emulator save folders and choose your sync/backup destination (local folder, cloud, etc.).
-    - You can set up profiles for different emulators or systems.
-4. **Sync or back up:**
-    - Use the EmuSync interface or command to start syncing or backing up your files.
-    - You can automate this process or run it manually as needed.
-
-> [!TIP]
-> EmuSync is especially useful if you play on multiple devices or want an easy way to back up all your emulator saves at once. See the [official EmuSync documentation](https://github.com/emu-sync/EmuSync) for advanced options and troubleshooting.
-
-
 ### Can't find save files (moving between installs)
 
 > [!NOTE]
@@ -1038,6 +1018,24 @@ There are two main ways to back up your save files:
 
 > [!TIP]
 > Ludusavi is great for regular backups and for moving saves between different systems or installs.
+
+#### 3. Using EmuSync (emulator saves)
+
+**[EmuSync](https://github.com/emu-sync/EmuSync)** is a tool that helps you automatically back up and sync your emulator save files, save states, and configuration files across devices or to cloud storage. It supports a wide range of emulators and platforms, making it easy to keep your progress safe and portable.
+
+**How to use EmuSync:**
+1. Visit the [EmuSync GitHub page](https://github.com/emu-sync/EmuSync) and download the latest release for your platform (Linux, Windows, etc.).
+2. Extract the archive and follow the installation instructions in the README.
+3. Configure EmuSync:
+    - Run the EmuSync executable or script.
+    - Add your emulator save folders and choose your sync/backup destination (local folder, cloud, etc.).
+    - You can set up profiles for different emulators or systems.
+4. Sync or back up:
+    - Use the EmuSync interface or command to start syncing or backing up your files.
+    - You can automate this process or run it manually as needed.
+
+> [!TIP]
+> EmuSync is especially useful if you play on multiple devices or want an easy way to back up all your emulator saves at once. See the [official EmuSync documentation](https://github.com/emu-sync/EmuSync) for advanced options and troubleshooting.
 
 > [!NOTE]
 > There is also a cool app called **[Shortix](https://github.com/Jannomag/shortix)**. Shortix creates user-readable symlinks for Proton game prefixes, making it much easier to find your mods, game saves, etc. Once installed, you'll have a folder with shortcuts to your Proton folders. All info is in the link. This is optional, but can make the process easier.
