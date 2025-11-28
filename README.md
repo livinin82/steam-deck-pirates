@@ -99,135 +99,64 @@ If you experience issues with games or SteamOS after installing Decky Loader or 
 ## Guides for installing games
 
 ```mermaid
-graph TD
-    A[Source Game]
-    B["Install Game on PC"]
-    C["Pre-installed Game"]
-    D["Install Game on SteamDeck"]
-    E["Transfer to Steam Deck"]
-    F["Add Non-Steam Game"]
-    G{"Set up Windows Environment"}
-    H["Configure with ProtonTricks"]
-    Z((Play Game))
-
-    A --> B
-    A --> C
-    A --> D
-    B --> E
-    C --> E
-    E --> F
-    D --> F
-    F --> G
-    G -- SteamOS --> H
-    ## Guides for installing games
-
-    ```mermaid
-    graph TD
-        A[Source Game]
-        B["Install Game on PC"]
-        C["Pre-installed Game"]
-        D["Install Game on SteamDeck"]
-        E["Transfer to Steam Deck"]
-        F["Add Non-Steam Game"]
-        G{"Set up Windows Environment"}
-        H["Configure with ProtonTricks"]
-        Z((Play Game))
-
-        A --> B
-        A --> C
-        A --> D
-        B --> E
-        C --> E
-        E --> F
-        D --> F
-        F --> G
-        G -- SteamOS --> H
-        G -- Lutris --> Z
-        H --> Z
-    ```
+    A[Source Game] --> B[Install Game on PC];
+    A --> C[Pre-installed Game];
+    A --> D[Install on SteamDeck];
+    B --> E[Transfer to Deck];
+    C --> E;
+    E --> F[Add Non-Steam Game];
+    D --> F;
+    F --> G{Set up Windows Env};
+    G -->|SteamOS| H[Configure (ProtonTricks)];
+    G -->|Lutris| Z((Play));
+    H --> Z;
+```
 
 
 
-    ### Installing games through Steam
+Quick links:
 
+- [Installing games through Steam](#installing-games-through-steam)
+- [Installing games through Lutris](#installing-games-through-lutris)
+- [Installing games through other launchers](#installing-games-through-other-launchers)
+- [Transferring Installed Games from PC](#transferring-installed-games-from-pc)
 
-    > [!NOTE]
-    > There are a few different ways to get cracked games on your system. They all for the most part end in the same results. Some games require one method over another. Part of piracy is experimenting and finding what works best. If you find a better method for a specific game let us know in the subreddit!
+> **Note:** The “Add Non-Steam Game” option is found in the Steam menu in Desktop Mode, not in the Deck UI or Gaming Mode. Switch to Desktop Mode to access this feature.
 
-
-    If your game is already in a preinstalled state, skip to **Part 3**.
-
-
-    #### Part 1: Running the setup.exe
-
-
-
-    <table>
-    <tr>
-    <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
-    <ul>
-        <li>Right-click setup.exe and select Wine.</li>
-        <li>Limit the installer to 2GB of RAM.</li>
-        <li>Install to your preferred location for games.</li>
-        <li>Avoid installing to the default <strong>C:</strong> drive inside <code>drive_c</code>. Always pick a custom folder (like <code>/home/deck/Games</code> or a folder on your SD card) so the game is easy to find and move later.</li>
-    </ul>
-    </td>
-    </tr>
-    </table>
-
-
-    <table>
-    <tr>
-    <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
-    <strong>Method 2: Using Steam Compatibility Tool</strong>
-    <ul>
-        <li>Switch your Steam Deck to desktop mode (in the Power settings menu).</li>
-        <li>Locate the downloaded game and the setup.exe file.</li>
-        <li>Right-click on setup.exe and click “Add to Steam”.</li>
-        <li>Open Steam, go to your Library, and click on setup.exe.</li>
-        <li>Go to the Compatibility section and check the box for “Force the use of a specific compatibility tool.”</li>
-        <li><strong>Prefer the latest GE-Proton version.</strong> If that fails, try Proton Experimental. Only try older Proton versions if those don’t work.</li>
-        <li>Create a new folder called Games in <code>/home/deck/</code> (or on your SD card).</li>
-        <li>Go back to Steam, click on setup.exe, and press Play.</li>
-    </ul>
-    </td>
-    </tr>
-    </table>
-
-
-    <table>
-    <tr>
-    <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
-    <strong>Continued from either method:</strong>
-    <ul>
-        <li>Wait for the installation to complete.</li>
-        <li>Once done, check off all the radio boxes in the installer and close it.</li>
-    </ul>
-    </td>
-    </tr>
-    </table>
-
-
-
-    > [!CAUTION]
-    > **Installer Warning:** On Linux/Steam Deck, never install games or repacks to the <strong>C:</strong> drive (or any default path inside <code>drive_c</code>). The <strong>C:</strong> drive is actually a hidden folder inside a "prefix"—a fake Windows environment created by Proton or Wine. If you install to <strong>C:</strong>, your game will be buried deep inside the prefix and hard to find or move later.
-    >
-    > Instead, always choose a custom folder (like <strong>Games</strong> on your SD card, internal storage, or another drive). In most installers, your internal storage or microSD card will show up as a different drive letter—often <strong>Z:</strong>, <strong>D:</strong>, or something other than <strong>C:</strong>. Look for the folder you created (such as <strong>Games</strong>) in one of those drives and select it as your install location. After installation, double-check the folder you selected for your game files.
-            <li>Optional step: Limit the installer to 2GB of RAM for installation stability.</li>
-        </ul>
-    </li>
-</ul>
-</td>
-</tr>
-</table>
-
-
-
+---
+### Installing games through Steam {#installing-games-through-steam}
 > [!NOTE]
-> Don’t worry if the installation is slow, especially for repacks. This is normal and can take hours depending on game size and compression.
+> If the game is already fully installed (a pre‑installed repack) skip to Part 3.
 
 
-#### Part 3: Running the Game
+### Part 1: Run the installer
+
+<div class="panel"><strong>Method 1: Wine (simple) — For advanced users</strong>
+<ol><li>Right‑click <code>setup.exe</code> → Open with Wine.</li><li><strong>Limit to 2GB RAM (required on Deck)</strong>.</li><li>Select external path (avoid prefix).</li></ol></div>
+
+<div class="panel"><strong>Method 2: Steam + Proton — Recommended for most users</strong>
+<ol><li>Add setup.exe to Steam (Desktop Mode).</li><li><strong>Force the latest GE-Proton version</strong> (recommended). <br><em>Right-click the entry in your Steam Library, choose “Properties” → “Compatibility,” and check “Force the use of a specific Steam Play compatibility tool.”</em> If that fails, try Proton Experimental. Only try other Proton versions if those do not work.</li><li>Create <code>~/Games</code> folder.</li><li>Play to launch installer.</li></ol></div>
+
+> **Note:** FG repacks default to the D: drive, and DoDi repacks default to the C: drive. Be sure to manually set the install location to the <code>~/Games</code> folder you created earlier.
+
+
+### Part 2: Installer flow
+<div class="panel"><ol>
+<li>Choose language.</li>
+<li>Install to accessible folder (not inside prefix for big games).</li>
+<li>Disable bundled DirectX/VC++ unless necessary (only install these if the game specifically requires them; otherwise, skip to avoid conflicts with system versions).</li>
+<li>Expect slow repack decompression.</li>
+</ol></div>
+
+
+### Part 3: Running the game
+<div class="panel"><strong>Wine path</strong><ol><li>Add game.exe to Steam.</li><li><strong>Set the latest GE-Proton version</strong> (recommended). <br><em>Right-click the entry in your Steam Library, choose “Properties” → “Compatibility,” and check “Force the use of a specific Steam Play compatibility tool.”</em> If that fails, try the latest official Proton version. Only try other Proton versions if those do not work.</li><li>Test in Desktop Mode first (launch the game from Steam while in Desktop Mode, not Gaming Mode).</li></ol></div>
+
+> Launch errors = wrong Proton or missing dependencies. See the [dependencies guide](./installing-dependencies.md) for help installing required components.
+
+> **Tip:** If your game is missing a DLL or needs extra components, you can use [ProtonTricks](./installing-dependencies.md#using-protontricks) to install them into the correct prefix.
+
+<div class="panel"><strong>Tips</strong><ul><li>Extract multi‑part archives first (make sure to fully extract all <code>.zip</code>, <code>.rar</code>, or <code>.7z</code> parts before running the installer).</li><li>Start with the latest GE-Proton version. If that fails, try the latest official Proton version. Only try other Proton versions if those do not work.</li><li>Avoid prefix drive_c for storage (do NOT install large games inside the Wine prefix’s <code>drive_c</code> folder; use a separate folder like <code>~/Games</code> instead).</li></ul></div>
 
 <table>
 <tr>
@@ -1044,6 +973,26 @@ Some of the games you want to emulate may have PC ports. Always check to see wha
 > [!NOTE]
 > This should work for any folder you want your app to see, and any app that is a flatpak.
 
+### Using EmuSync to Sync or Back Up Save Files
+
+**[EmuSync](https://github.com/emu-sync/EmuSync)** is a tool that helps you automatically back up and sync your emulator save files, save states, and configuration files across devices or to cloud storage. It supports a wide range of emulators and platforms, making it easy to keep your progress safe and portable.
+
+#### How to Use EmuSync
+
+1. **Visit the [EmuSync GitHub page](https://github.com/emu-sync/EmuSync) and download the latest release** for your platform (Linux, Windows, etc.).
+2. **Extract the archive** and follow the installation instructions in the README.
+3. **Configure EmuSync:**
+    - Run the EmuSync executable or script.
+    - Add your emulator save folders and choose your sync/backup destination (local folder, cloud, etc.).
+    - You can set up profiles for different emulators or systems.
+4. **Sync or back up:**
+    - Use the EmuSync interface or command to start syncing or backing up your files.
+    - You can automate this process or run it manually as needed.
+
+> [!TIP]
+> EmuSync is especially useful if you play on multiple devices or want an easy way to back up all your emulator saves at once. See the [official EmuSync documentation](https://github.com/emu-sync/EmuSync) for advanced options and troubleshooting.
+
+
 ### Can't find save files (moving between installs)
 
 > [!NOTE]
@@ -1089,6 +1038,12 @@ There are two main ways to back up your save files:
 
 > [!TIP]
 > Ludusavi is great for regular backups and for moving saves between different systems or installs.
+
+> [!NOTE]
+> There is also a cool app called **[Shortix](https://github.com/Jannomag/shortix)**. Shortix creates user-readable symlinks for Proton game prefixes, making it much easier to find your mods, game saves, etc. Once installed, you'll have a folder with shortcuts to your Proton folders. All info is in the link. This is optional, but can make the process easier.
+
+> [!NOTE]
+> If there is no save file, check the **Install Locations** section above.
 
 ### Controller not working
 
