@@ -98,19 +98,9 @@ If you experience issues with games or SteamOS after installing Decky Loader or 
 
 ## Guides for installing games
 
-```mermaid
-    A[Source Game] --> B[Install Game on PC];
-    A --> C[Pre-installed Game];
-    A --> D[Install on SteamDeck];
-    B --> E[Transfer to Deck];
-    C --> E;
-    E --> F[Add Non-Steam Game];
-    D --> F;
-    F --> G{Set up Windows Env};
-    G -->|SteamOS| H[Configure (ProtonTricks)];
-    G -->|Lutris| Z((Play));
-    H --> Z;
-```
+<p align="center">
+    <img src="/assets/img/install-flow.png" alt="Install flow overview" />
+</p>
 
 
 
