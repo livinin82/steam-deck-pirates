@@ -873,8 +873,12 @@ To uninstall a game that was added as a non-Steam shortcut:
 3. Right-click the game and select <strong>Manage</strong> &gt; <strong>Remove non-Steam game from Library</strong>.
 4. <strong>Important:</strong> This only removes the shortcut from Steam. If you want to delete the actual game files, you must manually delete the game folder from your storage.
 
-> [!WARNING]
-> <strong>Uninstalling a non-Steam game or deleting its folder can also delete the entire prefix, including your game saves and configuration files.</strong> Before removing anything, make sure to <a href="#backing-up-save-files">back up your save files</a> and any important data. If you delete the prefix, all data inside (including saves) will be lost and cannot be recovered.
+
+<blockquote class="admonition-warning">
+    <strong>Warning:</strong> Uninstalling a non-Steam game or deleting its folder can also delete the entire prefix, including your game saves and configuration files.<br>
+    <b>Before removing anything, <a href="#backing-up-save-files">back up your save files</a> and any important data.</b><br>
+    If you delete the prefix, all data inside (including saves) will be lost and cannot be recovered.
+</blockquote>
 
 ### Compressed files (.rar, .zip, .7z, etc.)
 
