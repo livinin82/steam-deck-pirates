@@ -170,6 +170,31 @@ Quick links:
 
 ### Part 3: Running the Game
 
+1. In Steam, right-click the non-Steam shortcut you added (or add a new one if needed), and change the **Target** path to point to the correct `game.exe` where it was installed. Sometimes the main exe is in a subfolder—check for launchers and game-specific exes alike.  
+2. Change the **Start In** folder to match the folder where the `game.exe` is located. This helps the game find its files and run correctly.
+3. Go to the Compatibility section and **Force Compatibility**. 
+	- Start with the latest GE-Proton version. If that fails, try the latest official Proton version. Only try other Proton versions if those do not work.
+4. Click **Play** to launch the game.
+5. If it shows an error or doesn’t run: Refer to the [Dependencies section](https://livinin82.github.io/steam-deck-pirates/#installing-dependencies) for help.
+6. Run the game in Desktop mode to verify it works correctly.
+7. Once verified, you can rename it in Steam to whatever you prefer, and then switch back to Gaming mode to play.
+
+**Tips**
+ - Linux does not play well with spaces in file paths. Always wrap the path in quotes, e.g. `"/home/deck/Games/My Game/game.exe"`.
+- Extract multi‑part archives first (make sure to fully extract all `.zip`, `.rar`, or `.7z` parts before running the installer). (Link to Peazip Guide)
+- To install on a microSD card, create a folder named `Games` on the SD card root. Then, add it's path in Part 3
+- Some games may have a different `.exe` file for launching. Use Dolphin File Explorer to search for other `.exe` files in the game folder.
+- Some games require specific Proton versions. Search Reddit or protondb (Link) for recommendations, and use ProtonUp-QT to download other Proton versions if needed.
+
+<div class="panel"><strong>Tips</strong><ul><li>Extract multi‑part archives first (make sure to fully extract all <code>.zip</code>, <code>.rar</code>, or <code>.7z</code> parts before running the installer).</li><li>Start with the latest GE-Proton version. If that fails, try the latest official Proton version. Only try other Proton versions if those do not work.</li><li>Avoid prefix drive_c for storage (do NOT install large games inside the Wine prefix’s <code>drive_c</code> folder; use a separate folder like <code>~/Games</code> instead).</li></ul></div>
+
+
+
+
+
+> [!NOTE]
+> If it shows an error or doesn’t run: Either the Proton version is incorrect (try different ones) or there’s a missing dependency. If it's the latter, refer to a dependencies guide ([Dependencies Guide](#installing-dependencies)).
+
 
 <table>
 <tr>
