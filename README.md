@@ -552,14 +552,11 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
         <li>If you see only a small partition or no files, ensure DRD and MTP are enabled on the Deck.</li>
         <li>On Linux, you may need to install or restart <code>mtp</code> services: <code>sudo apt install mtp-tools jmtpfs</code>.</li>
     </ul>
+
+
+
 </blockquote>
 
-----
-
-
----
-
-## Guides for Proton/Wine
 
 
 <blockquote class="admonition-note">
