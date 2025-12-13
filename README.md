@@ -152,6 +152,14 @@ Quick links:
     <li>Choose language.</li>
     <li>Install to your <code>~/Games</code> folder (created previously or in Part 1), not inside the prefix, especially for big games.</li>
     <li>Disable bundled DirectX/VC++ unless necessary (only install these if the game specifically requires them; otherwise, skip to avoid conflicts with system versions).</li>
+    <li>Close the installer after it has successfully finished. Once decompression is complete and the installer finishes, close the installer completely before proceeding.</li>
+</ol></div>
+<blockquote class="admonition-caution">
+    <strong>Caution:</strong> Some repacks can take a long time to decompress, and the installer may appear unresponsive during this process. This is normal.
+</blockquote>
+    <li>Choose language.</li>
+    <li>Install to your <code>~/Games</code> folder (created previously or in Part 1), not inside the prefix, especially for big games.</li>
+    <li>Disable bundled DirectX/VC++ unless necessary (only install these if the game specifically requires them; otherwise, skip to avoid conflicts with system versions).</li>
     <li>Expect slow repack decompression.</li>
     <li>Close the installer after it has successfully finished. Once decompression is complete and the installer finishes, close the installer completely before proceeding.</li>
 </ol></div>
