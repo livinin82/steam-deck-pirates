@@ -168,7 +168,7 @@ Quick links:
 </blockquote>
 
 <blockquote class="admonition-caution">
-    <strong>Caution:</strong> <b>Do NOT install to the C: drive or inside the Wine prefix’s <code>drive_c</code> folder.</b> Always install large games to a separate folder like <code>~/Games</code> to prevent issues with storage, access, and future troubleshooting.
+    <strong>Caution:</strong> <b>Do NOT install to the C: drive or inside the Wine prefix’s <code>drive_c</code> folder.</b> Always install your games to a separate folder like <code>~/Games</code> to prevent issues with storage, access, and future troubleshooting.
 </blockquote>
 
 
