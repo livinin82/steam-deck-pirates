@@ -150,7 +150,7 @@ Quick links:
 ### Part 2: Installer flow
 <div class="panel"><ol>
     <li>Choose language.</li>
-    <li>Install to an accessible folder (not inside prefix for big games).</li>
+    <li>Install to your <code>~/Games</code> folder (created previously or in Part 1), not inside the prefix, especially for big games.</li>
     <li>Disable bundled DirectX/VC++ unless necessary (only install these if the game specifically requires them; otherwise, skip to avoid conflicts with system versions).</li>
     <li>Expect slow repack decompression.</li>
 </ol></div>
