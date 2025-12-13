@@ -126,18 +126,20 @@ Quick links:
 ---
 ### Installing games through Steam {#installing-games-through-steam}
 
+
 <blockquote class="admonition-note">
     <strong>Note:</strong> If the game is already fully installed (a pre‑installed repack) skip to Part 3.
 </blockquote>
 
-
 ### Part 1: Run the installer
 
-<div class="panel"><strong>Method 1: Wine (simple) — For advanced users</strong>
-<ol><li>Right‑click <code>setup.exe</code> → Open with Wine.</li><li><strong>Limit to 2GB RAM (required on Deck)</strong>.</li><li>Select external path (avoid prefix).</li></ol></div>
-
-<div class="panel"><strong>Method 2: Steam + Proton — Recommended for most users</strong>
-<ol><li>Add setup.exe to Steam (Desktop Mode).</li><li><strong>Force the latest GE-Proton version</strong> (recommended). <br><em>Right-click the entry in your Steam Library, choose “Properties” → “Compatibility,” and check “Force the use of a specific Steam Play compatibility tool.”</em> If that fails, try Proton Experimental. Only try other Proton versions if those do not work.</li><li>Create <code>~/Games</code> folder.</li><li>Play to launch installer.</li></ol></div>
+<div class="panel"><strong>Steam + Proton — Recommended for most users</strong>
+<ol>
+    <li>Add <code>setup.exe</code> to Steam (Desktop Mode).</li>
+    <li><strong>Force the latest GE-Proton version</strong> (recommended). <br><em>Right-click the entry in your Steam Library, choose “Properties” → “Compatibility,” and check “Force the use of a specific Steam Play compatibility tool.”</em> If that fails, try Proton Experimental. Only try other Proton versions if those do not work.</li>
+    <li>Create a <code>~/Games</code> folder.</li>
+    <li>Play to launch the installer.</li>
+</ol></div>
 
 
 <blockquote class="admonition-note">
@@ -147,15 +149,25 @@ Quick links:
 
 ### Part 2: Installer flow
 <div class="panel"><ol>
-<li>Choose language.</li>
-<li>Install to accessible folder (not inside prefix for big games).</li>
-<li>Disable bundled DirectX/VC++ unless necessary (only install these if the game specifically requires them; otherwise, skip to avoid conflicts with system versions).</li>
-<li>Expect slow repack decompression.</li>
+    <li>Choose language.</li>
+    <li>Install to an accessible folder (not inside prefix for big games).</li>
+    <li>Disable bundled DirectX/VC++ unless necessary (only install these if the game specifically requires them; otherwise, skip to avoid conflicts with system versions).</li>
+    <li>Expect slow repack decompression.</li>
 </ol></div>
 
 
 ### Part 3: Running the game
-<div class="panel"><strong>Wine path</strong><ol><li>Add game.exe to Steam.</li><li><strong>Set the latest GE-Proton version</strong> (recommended). <br><em>Right-click the entry in your Steam Library, choose “Properties” → “Compatibility,” and check “Force the use of a specific Steam Play compatibility tool.”</em> If that fails, try the latest official Proton version. Only try other Proton versions if those do not work.</li><li>Test in Desktop Mode first (launch the game from Steam while in Desktop Mode, not Gaming Mode).</li></ol></div>
+
+<div class="panel"><strong>Running the game</strong><ol>
+    <li>Once installation is complete, go to the installation folder and locate the game’s <code>game.exe</code> file.</li>
+    <li>Right-click on <code>game.exe</code> and select “Add to Steam” to add it as a non-Steam game.</li>
+    <li>Open Steam, find <code>game.exe</code>, and go to the Compatibility section.</li>
+    <li>Set the compatibility to Proton Experimental (or the latest GE-Proton version).</li>
+    <li>Launch the game by pressing Play.</li>
+    <li>If it shows an error or doesn’t run: Refer to the dependencies guide for help ([Dependencies Guide](#installing-dependencies)).</li>
+    <li>Run the game in Desktop mode to verify it works correctly.</li>
+    <li>Once verified, you can rename it in Steam to whatever you prefer, and then switch back to Gaming mode to play.</li>
+</ol></div>
 
 > Launch errors = wrong Proton or missing dependencies. See the [dependencies guide](./installing-dependencies.md) for help installing required components.
 
@@ -163,40 +175,7 @@ Quick links:
 
 <div class="panel"><strong>Tips</strong><ul><li>Extract multi‑part archives first (make sure to fully extract all <code>.zip</code>, <code>.rar</code>, or <code>.7z</code> parts before running the installer).</li><li>Start with the latest GE-Proton version. If that fails, try the latest official Proton version. Only try other Proton versions if those do not work.</li><li>Avoid prefix drive_c for storage (do NOT install large games inside the Wine prefix’s <code>drive_c</code> folder; use a separate folder like <code>~/Games</code> instead).</li></ul></div>
 
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
-<strong>Method 1: Using Wine</strong>
-<ul>
-    <li>Once the installation is complete, go to the installation folder and locate the game’s .exe file (e.g., <code>game.exe</code>).</li>
-    <li>Right-click on the <code>game.exe</code>, select “Add to Steam” to add it as a non-Steam game.</li>
-    <li>Open Steam, find <code>game.exe</code>, and go to the Compatibility section.</li>
-    <li>Set the compatibility to Proton Experimental.</li>
-    <li>Launch the game by pressing Play.</li>
-    <li>If it shows an error or doesn’t run: Refer to the dependencies guide for help ([Dependencies Guide](#installing-dependencies)).</li>
-    <li>Run the game in Desktop mode to verify it works correctly.</li>
-    <li>Once verified, you can rename it in Steam to whatever you prefer, and then switch back to Gaming mode to play.</li>
-</ul>
-</td>
-</tr>
-</table>
 
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
-<strong>Method 2: Using Steam Compatibility Tool</strong>
-<ul>
-    <li>Once the installation is complete, go back to Steam and remove <code>setup.exe</code> (right-click > Manage > Remove non-Steam game).</li>
-    <li>Go to the installation folder, find the <code>game.exe</code> file, right-click on it, and add it to Steam.</li>
-    <li>Open Steam, find <code>game.exe</code>, and go to the Compatibility section. Repeat steps 5-7 from Part 1 (set the compatibility to Proton Experimental).</li>
-    <li>Launch the game by pressing Play.</li>
-    <li>Run the game in Desktop mode to make sure it works correctly.</li>
-    <li>Exit the game. You can rename it in Steam to whatever you prefer (otherwise, it’ll show as <code>game.exe</code> in gaming mode).</li>
-    <li>Switch back to Gaming mode and enjoy your game!</li>
-</ul>
-</td>
-</tr>
-</table>
 
 
 
