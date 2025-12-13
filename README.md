@@ -138,7 +138,7 @@ Quick links:
     <li>Add <code>setup.exe</code> to Steam (Desktop Mode).</li>
     <li><strong>Force the latest GE-Proton version</strong> (recommended). <br><em>Right-click the entry in your Steam Library, choose “Properties” → “Compatibility,” and check “Force the use of a specific Steam Play compatibility tool.”</em> If that fails, try Proton Experimental. Only try other Proton versions if those do not work.</li>
     <li>Create a <code>~/Games</code> folder if you don't already have one, or use your existing <code>~/Games</code> folder if you've set one up previously.</li>
-    <li>Play to launch the installer.</li>
+    <li>Click <strong>Play</strong> to launch the installer.</li>
 </ol></div>
 
 
