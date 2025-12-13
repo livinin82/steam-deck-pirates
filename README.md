@@ -554,10 +554,11 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
     </ul>
 
 
-
 </blockquote>
 
+---
 
+## Guides for Proton/Wine
 
 <blockquote class="admonition-note">
     <strong>Note:</strong> This guide will be using ProtonTricks
