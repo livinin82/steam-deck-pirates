@@ -153,9 +153,10 @@ Quick links:
     <li>Install to your <code>~/Games</code> folder (created previously or in Part 1), not inside the prefix, especially for big games.</li>
     <li>Disable bundled DirectX/VC++ unless necessary (only install these if the game specifically requires them; otherwise, skip to avoid conflicts with system versions).</li>
     <li>Expect slow repack decompression.</li>
+    <li>Close the installer after it has successfully finished.</li>
 </ol></div>
 <blockquote class="admonition-caution">
-    <strong>Caution:</strong> Close the installer after it has successfully finished. Do not leave it running in the background.
+    <strong>Caution:</strong> Do not leave the installer running in the background after it finishes. Always close it completely before proceeding.
 </blockquote>
 
 
