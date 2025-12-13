@@ -624,14 +624,14 @@ html{scroll-behavior:smooth}
 /* Code blocks inside admonition/table cells should wrap instead of overflow */
 .markdown-body pre code{white-space:pre-wrap;word-break:break-word}
 .markdown-body code{word-break:break-word}
-/* Modern light red hue for all code blocks and inline code for visibility */
+/* Terminal style for all code blocks and inline code */
 .markdown-body pre, .doc pre, pre, code, .markdown-body code, .doc code {
-	background: #ffeaea !important;
-	border: 1px solid #ffb3b3 !important;
-	color: #b30000 !important;
+	background: #181a1b !important;
+	border: 1px solid #333 !important;
+	color: #a8ff60 !important;
 }
 /* Base markdown font size now driven by root html font-size (JS adjusts) */
-.markdown-body{--md-code-bg:#ffeaea;--md-border:#ffb3b3;font-size:1rem;}
+.markdown-body{--md-code-bg:#181a1b;--md-border:#333;font-size:1rem;}
 /* Root scale fallback (normal). JS modifies html font-size directly. */
 html{font-size:17px}
 .markdown-body p, .markdown-body ul, .markdown-body ol{line-height:1.6}
