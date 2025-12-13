@@ -556,13 +556,6 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
 
 ----
 
-**Troubleshooting:**
-- If your PC does not recognize the Steam Deck, try another USB cable or port.
-- Make sure the Steam Deck is unlocked and awake.
-- On Linux, you may need to install or restart `mtp` services: `sudo apt install mtp-tools jmtpfs`.
-- If you see only a small partition or no files, ensure MTP mode is enabled on the Deck.
-
-**Tip:** For large transfers, using MTP is often faster and more reliable than network-based methods.
 
 ---
 
