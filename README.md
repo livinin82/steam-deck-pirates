@@ -1142,16 +1142,19 @@ To uninstall a game that was added as a non-Steam shortcut:
 </tr>
 </table>
 
+
+#### The Manual Way
 <table>
 <tr>
 <td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
-<ul>
-    <li>Use the website <a href="https://www.pcgamingwiki.com/wiki/Home">PCGamingWiki</a> to find the save path location. <br><strong>Tip:</strong> On PCGamingWiki, you are looking for the <em>Windows</em> save path, because Proton creates a Windows-like environment inside its prefix.</li>
+<ol>
+    <li>Use the website <a href="https://www.pcgamingwiki.com/wiki/Home">PCGamingWiki</a> to find the save path location.</li>
+    <li><strong>Tip:</strong> On PCGamingWiki, you are looking for the <em>Windows</em> save path, because Proton creates a Windows-like environment inside its prefix.</li>
     <li>Use <strong>ProtonTricks</strong> to help identify the correct <code>compatdata</code> folder for your game. This will show you which prefix is being used.</li>
     <li>Refer to our <a href="#finding-non-steam-game-proton-folder">Finding Non-Steam Game Proton Folder</a> section for more details.</li>
     <li>Use the path from PCGamingWiki to navigate within <code>drive_c</code> in your game's prefix and find your save file.</li>
     <li>To back up your saves, see the <a href="#backing-up-save-files">Backing Up Save Files</a> section below.</li>
-</ul>
+</ol>
 </td>
 </tr>
 </table>
@@ -1226,8 +1229,9 @@ There are several ways to back up your save files. Here are the most common meth
     <strong>Tip:</strong> EmuSync is especially useful if you play on multiple devices or want an easy way to back up all your emulator saves at once. See the <a href="https://github.com/emu-sync/EmuSync">official EmuSync documentation</a> for advanced options and troubleshooting.
 </blockquote>
 
+
 > [!NOTE]
-> There is also a cool app called **[Shortix](https://github.com/Jannomag/shortix)**. Shortix creates user-readable symlinks for Proton game prefixes, making it much easier to find your mods, game saves, etc. Once installed, you'll have a folder with shortcuts to your Proton folders. All info is in the link. This is optional, but can make the process easier.
+> There is also a cool app called **[Shortix](#using-shortix-to-find-proton-folders)**. Shortix creates user-readable symlinks for Proton game prefixes, making it much easier to find your mods, game saves, etc. Once installed, you'll have a folder with shortcuts to your Proton folders. All info is in the guide. This is optional, but can make the process easier.
 
 > [!NOTE]
 > If there is no save file, check the **Install Locations** section above.
