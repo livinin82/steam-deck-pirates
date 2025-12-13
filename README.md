@@ -1125,10 +1125,22 @@ To uninstall a game that was added as a non-Steam shortcut:
 ### Can't find save files (moving between installs)
 
 
-<blockquote class="admonition-note">
-    <strong>Note:</strong> There is also a cool app that is recommended called <a href="https://github.com/Jannomag/shortix"><b>Shortix</b></a>.<br>
-    Shortix creates user readable symlinks for Proton game prefixes. Once it is installed, you will have a folder created that provides shortcuts to your proton folders. All of the info is in that link and should kind of make things a little easier in the process of finding your mods, game saves, etc. If you'd like a manual method to find the folders, I have written a guide below.
-</blockquote>
+
+#### Using Shortix to Find Proton Folders
+<table>
+<tr>
+<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<b><a href="https://github.com/Jannomag/shortix">Shortix</a></b> is a tool that creates user-readable symlinks for Proton game prefixes, making it much easier to find your mods, game saves, and more. Once installed, you'll have a folder with shortcuts to your Proton folders.
+<ol>
+    <li>Go to the <a href="https://github.com/Jannomag/shortix">Shortix GitHub page</a> and follow the installation instructions for your platform.</li>
+    <li>Run Shortix. It will create a folder (usually in your home directory) containing shortcuts to all your Proton prefixes.</li>
+    <li>Open this folder to quickly access the correct prefix for any game, without searching for long numbers.</li>
+    <li>Use these shortcuts to find your mods, game saves, or configuration files easily.</li>
+</ol>
+<b>Note:</b> If you'd like a manual method to find the folders, see the guide below.
+</td>
+</tr>
+</table>
 
 <table>
 <tr>
