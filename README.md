@@ -1149,48 +1149,70 @@ To uninstall a game that was added as a non-Steam shortcut:
     <strong>Note:</strong> If there is no save file, check the <b>Install Locations</b> section above.
 </blockquote>
 
+
 ### Backing Up Save Files {#backing-up-save-files}
 
-There are two main ways to back up your save files:
+There are several ways to back up your save files. Here are the most common methods:
 
 #### 1. Manual Copy & Paste
-
-1. Find your save file using the steps above.
-2. Copy the save file or folder to a safe location (external drive, cloud storage, etc.).
-3. To restore, copy it back to the same location in the correct prefix.
+<table>
+<tr>
+<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<ol>
+    <li>Find your save file using the steps above.</li>
+    <li>Copy the save file or folder to a safe location (external drive, cloud storage, etc.).</li>
+    <li>To restore, copy it back to the same location in the correct prefix.</li>
+</ol>
+</td>
+</tr>
+</table>
 
 #### 2. Using Ludusavi
-
-**[Ludusavi](https://github.com/mtkennerly/ludusavi)** is an open-source tool that automatically backs up and restores save data for hundreds of games, including Steam, GOG, and emulators.
-
-**How to use Ludusavi:**
-1. Download and install Ludusavi from the [official GitHub page](https://github.com/mtkennerly/ludusavi).
-2. Run Ludusavi and select the games/platforms you want to back up.
-3. Choose your backup location (local folder, cloud, etc.).
-4. Click “Backup” to save your files. Use “Restore” to put them back later.
-
-
+<table>
+<tr>
+<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<b><a href="https://github.com/mtkennerly/ludusavi">Ludusavi</a></b> is an open-source tool that automatically backs up and restores save data for hundreds of games, including Steam, GOG, and emulators.
+<ol>
+    <li>Download and install Ludusavi from the <a href="https://github.com/mtkennerly/ludusavi">official GitHub page</a>.</li>
+    <li>Run Ludusavi and select the games/platforms you want to back up.</li>
+    <li>Choose your backup location (local folder, cloud, etc.).</li>
+    <li>Click “Backup” to save your files. Use “Restore” to put them back later.</li>
+</ol>
+</td>
+</tr>
+</table>
 <blockquote class="admonition-tip">
     <strong>Tip:</strong> Ludusavi is great for regular backups and for moving saves between different systems or installs.
 </blockquote>
 
 #### 3. Using EmuSync (emulator saves)
-
-**[EmuSync](https://github.com/emu-sync/EmuSync)** is a tool that helps you automatically back up and sync your emulator save files, save states, and configuration files across devices or to cloud storage. It supports a wide range of emulators and platforms, making it easy to keep your progress safe and portable.
-
-**How to use EmuSync:**
-1. Visit the [EmuSync GitHub page](https://github.com/emu-sync/EmuSync) and download the latest release for your platform (Linux, Windows, etc.).
-2. Extract the archive and follow the installation instructions in the README.
-3. Configure EmuSync:
-    - Run the EmuSync executable or script.
-    - Add your emulator save folders and choose your sync/backup destination (local folder, cloud, etc.).
-    - You can set up profiles for different emulators or systems.
-4. Sync or back up:
-    - Use the EmuSync interface or command to start syncing or backing up your files.
-    - You can automate this process or run it manually as needed.
-
-> [!TIP]
-> EmuSync is especially useful if you play on multiple devices or want an easy way to back up all your emulator saves at once. See the [official EmuSync documentation](https://github.com/emu-sync/EmuSync) for advanced options and troubleshooting.
+<table>
+<tr>
+<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<b><a href="https://github.com/emu-sync/EmuSync">EmuSync</a></b> helps you automatically back up and sync your emulator save files, save states, and configuration files across devices or to cloud storage. It supports a wide range of emulators and platforms.
+<ol>
+    <li>Visit the <a href="https://github.com/emu-sync/EmuSync">EmuSync GitHub page</a> and download the latest release for your platform (Linux, Windows, etc.).</li>
+    <li>Extract the archive and follow the installation instructions in the README.</li>
+    <li>Configure EmuSync:
+        <ul>
+            <li>Run the EmuSync executable or script.</li>
+            <li>Add your emulator save folders and choose your sync/backup destination (local folder, cloud, etc.).</li>
+            <li>You can set up profiles for different emulators or systems.</li>
+        </ul>
+    </li>
+    <li>Sync or back up:
+        <ul>
+            <li>Use the EmuSync interface or command to start syncing or backing up your files.</li>
+            <li>You can automate this process or run it manually as needed.</li>
+        </ul>
+    </li>
+</ol>
+</td>
+</tr>
+</table>
+<blockquote class="admonition-tip">
+    <strong>Tip:</strong> EmuSync is especially useful if you play on multiple devices or want an easy way to back up all your emulator saves at once. See the <a href="https://github.com/emu-sync/EmuSync">official EmuSync documentation</a> for advanced options and troubleshooting.
+</blockquote>
 
 > [!NOTE]
 > There is also a cool app called **[Shortix](https://github.com/Jannomag/shortix)**. Shortix creates user-readable symlinks for Proton game prefixes, making it much easier to find your mods, game saves, etc. Once installed, you'll have a folder with shortcuts to your Proton folders. All info is in the link. This is optional, but can make the process easier.
