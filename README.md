@@ -952,7 +952,13 @@ Some of the games you want to emulate may have PC ports. Always check to see wha
 
 ---
 
-## Cracks/DLC/Updates
+
+
+
+
+## Common questions/Things you will encounter
+
+### Cracks/DLC/Updates
 
 <blockquote class="admonition-note">
     <strong>Note:</strong> Since a lot of cracks and updates are made for PC, it is often recommended to do whatever patching of files is required on your PC, then to transfer the fully patched game over to your Deck. This certainly applies in situations with CreamAPI, Goldberg Steam Emulator, and any cracked game updates. If you don't have the means to do that, or you like to do things in hard mode, then here is how you'd do that.<br>
@@ -977,21 +983,16 @@ Some of the games you want to emulate may have PC ports. Always check to see wha
 </tr>
 </table>
 
-
 <blockquote class="admonition-note">
     <strong>Note:</strong> Most modloaders really just modify and apply new files within the game folder. This can be done manually in most cases.<br>
     Don't forget to add DLLs through one of the methods listed in the DLLs part of this guide.
 </blockquote>
 
-
 <blockquote class="admonition-caution">
     <strong>Caution:</strong> If you still have trouble and you don't own a PC, this may be the only time we recommend installing Windows on an SD card and doing the file operations there. There are not many situations where it can't be done all through the Deck.
 </blockquote>
 
----
-
-
-## Common questions/Things you will encounter
+----
 
 ### Uninstalling a Non-Steam Game
 
