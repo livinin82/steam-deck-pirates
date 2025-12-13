@@ -147,7 +147,7 @@ Quick links:
 </blockquote>
 
 
-### Installing the Game
+### Part 2: Installing the Game
 <div class="panel"><ol>
     <li>Choose language.</li>
     <li>Install to your <code>~/Games</code> folder (created previously or in Part 1), not inside the prefix, especially for big games.</li>
@@ -167,46 +167,21 @@ Quick links:
     <b>Missing DLLs or extra components</b> may be required for mods or other enhancements. See the <a href="#adding-dlls-to-proton">Adding DLLs to Proton</a> section for details on how to add them using ProtonTricks or Steam launch options.
 </blockquote>
 
-<div class="panel"><strong>Running the game</strong><ol>
-    <li>After installation, locate the <code>game.exe</code> (or main executable) in the folder where you installed the game. Sometimes the main exe is in a subfolder—check for launchers and game-specific exes alike.</li>
-    <li>In Steam, right-click the non-Steam shortcut you added (or add a new one if needed), and change the <strong>Target</strong> path to point to the correct <code>game.exe</code> where it was installed.<br><b>Tip:</b> Linux does not play well with spaces in file paths. Always wrap the path in quotes, e.g. <code>"/home/deck/Games/My Game/game.exe"</code>.</li>
-    <li>Change the <strong>Start In</strong> folder to match the folder where the <code>game.exe</code> is located. This helps the game find its files and run correctly.</li>
-    <li>Go to the Compatibility section and set the compatibility to Proton Experimental (or the latest GE-Proton version).</li>
-    <li>Click <strong>Play</strong> to launch the game.</li>
-    <li>If it shows an error or doesn’t run: Refer to the <a href="#installing-dependencies">Dependencies section</a> for help.</li>
-    <li>Run the game in Desktop mode to verify it works correctly.</li>
-    <li>Once verified, you can rename it in Steam to whatever you prefer, and then switch back to Gaming mode to play.</li>
-</ol></div>
+1. In Steam, right-click the non-Steam shortcut you added (or add a new one if needed), and change the **Target** path to point to the correct `game.exe` where it was installed. Sometimes the main exe is in a subfolder—check for launchers and game-specific exes alike.  
+2. Change the **Start In** folder to match the folder where the `game.exe` is located. This helps the game find its files and run correctly.
+3. Go to the Compatibility section and **Force Compatibility**. 
+	- Start with the latest GE-Proton version. If that fails, try the latest official Proton version. Only try other Proton versions if those do not work.
+4. Click **Play** to launch the game.
+5. If it shows an error or doesn’t run: Refer to the [Dependencies section](https://livinin82.github.io/steam-deck-pirates/#installing-dependencies) for help.
+6. Run the game in Desktop mode to verify it works correctly.
+7. Once verified, you can rename it in Steam to whatever you prefer, and then switch back to Gaming mode to play.
 
-<div class="panel"><strong>Tips</strong><ul><li>Extract multi‑part archives first (make sure to fully extract all <code>.zip</code>, <code>.rar</code>, or <code>.7z</code> parts before running the installer).</li><li>Start with the latest GE-Proton version. If that fails, try the latest official Proton version. Only try other Proton versions if those do not work.</li><li>Avoid prefix drive_c for storage (do NOT install large games inside the Wine prefix’s <code>drive_c</code> folder; use a separate folder like <code>~/Games</code> instead).</li></ul></div>
-
-
-
-
-
-> [!NOTE]
-> If it shows an error or doesn’t run: Either the Proton version is incorrect (try different ones) or there’s a missing dependency. If it's the latter, refer to a dependencies guide ([Dependencies Guide](#installing-dependencies)).
-
-
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
-<strong>Additional Notes</strong>
-<ul>
-    <li>Some downloads may come in <code>.rar</code> files. Extract these using an app like PeaZip before proceeding to Step 2.</li>
-    <li>Proton Experimental should usually work, but if it doesn’t, try the latest Proton version or Proton-GE.</li>
-    <li>You may need to enable hidden files for this step.</li>
-    <li>To install on a microSD card, create a folder named <code>Games</code> on the SD card root. Then, add the following to <code>setup.exe</code>’s launch options:
-        <pre><code>STEAM_COMPAT_MOUNTS="/run/media/mmcblk0p1/Games/" %command%</code></pre>
-    </li>
-    <li>Avoid installing to the C drive to prevent issues later on.</li>
-    <li>Some games may have a different <code>.exe</code> file for launching. Use Dolphin File Explorer to search for other <code>.exe</code> files in the game folder.</li>
-    <li>Some games require specific Proton versions. Search Reddit for recommendations, and use ProtonUp-QT to download other Proton versions if needed.</li>
-    <li>This guide should help you install and configure non-Steam games on your Steam Deck. Enjoy gaming!</li>
-</ul>
-</td>
-</tr>
-</table>
+**Tips**
+ - Linux does not play well with spaces in file paths. Always wrap the path in quotes, e.g. `"/home/deck/Games/My Game/game.exe"`.
+- Extract multi‑part archives first (make sure to fully extract all `.zip`, `.rar`, or `.7z` parts before running the installer). (Link to Peazip Guide)
+- To install on a microSD card, create a folder named `Games` on the SD card root. Then, add it's path in Part 3
+- Some games may have a different `.exe` file for launching. Use Dolphin File Explorer to search for other `.exe` files in the game folder.
+- Some games require specific Proton versions. Search Reddit or protondb (Link) for recommendations, and use ProtonUp-QT to download other Proton versions if needed.
 
 
 ### Installing games through Lutris
