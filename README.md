@@ -1,23 +1,3 @@
-### Part 3: Running the game
-
-**Running the game**
-
-1. In Steam, right-click the non-Steam shortcut you added (or add a new one if needed), and change the **Target** path to point to the correct `game.exe` where it was installed. Sometimes the main exe is in a subfolder—check for launchers and game-specific exes alike.  
-2. Change the **Start In** folder to match the folder where the `game.exe` is located. This helps the game find its files and run correctly.
-3. Go to the Compatibility section and **Force Compatibility**. 
-    - Start with the latest GE-Proton version. If that fails, try the latest official Proton version. Only try other Proton versions if those do not work.
-4. Click **Play** to launch the game.
-5. If it shows an error or doesn’t run: Refer to the [Dependencies section](https://livinin82.github.io/steam-deck-pirates/#installing-dependencies) for help.
-6. Run the game in Desktop mode to verify it works correctly.
-7. Once verified, you can rename it in Steam to whatever you prefer, and then switch back to Gaming mode to play.
-
-**Tips**
-
- - Linux does not play well with spaces in file paths. Always wrap the path in quotes, e.g. `"/home/deck/Games/My Game/game.exe"`.
-- Extract multi‑part archives first (make sure to fully extract all `.zip`, `.rar`, or `.7z` parts before running the installer). (Link to Peazip Guide)
-- To install on a microSD card, create a folder named `Games` on the SD card root. Then, add it's path in Part 3
-- Some games may have a different `.exe` file for launching. Use Dolphin File Explorer to search for other `.exe` files in the game folder.
-- Some games require specific Proton versions. Search Reddit or protondb (Link) for recommendations, and use ProtonUp-QT to download other Proton versions if needed.
 
 <p class="hero-sub">A consolidated single-page reference for running Windows games, emulation, and tweaks on Steam Deck.</p>
 <p class="updated-inline">Updated: {{ site.time | date: "%Y-%m-%d" }}</p>
@@ -318,15 +298,23 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
 
 ---
 
-#### SSH Connection Guide: Linux
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
-<strong>Connect to Steam Deck from Linux:</strong>
-<ol>
-    <li>Open a terminal window.</li>
-    <li>Find your Steam Deck's IP address (Settings > Internet).</li>
-    <li>Connect using SSH:
+**Running the game**
+
+1. In Steam, right-click the non-Steam shortcut you added (or add a new one if needed), and change the **Target** path to point to the correct `game.exe` where it was installed. Sometimes the main exe is in a subfolder—check for launchers and game-specific exes alike.  
+2. Change the **Start In** folder to match the folder where the `game.exe` is located. This helps the game find its files and run correctly.
+3. Go to the Compatibility section and **Force Compatibility**. 
+    - Start with the latest GE-Proton version. If that fails, try the latest official Proton version. Only try other Proton versions if those do not work.
+4. Click **Play** to launch the game.
+5. If it shows an error or doesn’t run: Refer to the [Dependencies section](https://livinin82.github.io/steam-deck-pirates/#installing-dependencies) for help.
+6. Run the game in Desktop mode to verify it works correctly.
+7. Once verified, you can rename it in Steam to whatever you prefer, and then switch back to Gaming mode to play.
+
+**Tips**
+ - Linux does not play well with spaces in file paths. Always wrap the path in quotes, e.g. `"/home/deck/Games/My Game/game.exe"`.
+- Extract multi‑part archives first (make sure to fully extract all `.zip`, `.rar`, or `.7z` parts before running the installer). (Link to Peazip Guide)
+- To install on a microSD card, create a folder named `Games` on the SD card root. Then, add it's path in Part 3
+- Some games may have a different `.exe` file for launching. Use Dolphin File Explorer to search for other `.exe` files in the game folder.
+- Some games require specific Proton versions. Search Reddit or protondb (Link) for recommendations, and use ProtonUp-QT to download other Proton versions if needed.
         <pre><code>ssh deck@&lt;SteamDeck_IP&gt;</code></pre>
     </li>
     <li>Enter your password when prompted.</li>
