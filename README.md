@@ -515,6 +515,7 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
 1. <strong>Switch to Desktop Mode</strong> on your Steam Deck.
 2. <strong>Install Decky Loader:</strong>
     - Go to <a href="https://decky.xyz/">decky.xyz</a> and download the installer.
+    - <strong>Move the <code>decky_installer.desktop</code> file to your Desktop</strong> before running it, or the installation will not work.
     - Run the <code>decky_installer.desktop</code> file and follow the instructions.
     - You may need to set a sudo password (<code>passwd</code> in Konsole).
 3. <strong>Switch back to Game Mode.</strong>
@@ -535,10 +536,23 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
     - Your Deck should now appear as a storage device in Windows Explorer or your Linux file manager.
     - You can now drag and drop files between your PC and Steam Deck.
 
-**Tips:**
-- Use a USB 3.2 Gen1 or better cable and port for fastest speeds.
-- If you need to boot from USB or use Windows on your Deck, you may need to revert the BIOS setting back to XHCI.
-- Wireless methods (Warpinator, LocalSend, KDE Connect, SSHFS) are available but are much slower than wired MTP.
+<blockquote class="admonition-tip">
+    <strong>Tips:</strong>
+    <ul>
+        <li>Use a USB 3.2 Gen1 or better cable and port for fastest speeds.</li>
+        <li>If you need to boot from USB or use Windows on your Deck, you may need to revert the BIOS setting back to XHCI.</li>
+    </ul>
+</blockquote>
+
+<blockquote class="admonition-warning">
+    <strong>Troubleshooting:</strong>
+    <ul>
+        <li>If your PC does not recognize the Steam Deck, try another USB cable or port.</li>
+        <li>Make sure the Steam Deck is unlocked and awake.</li>
+        <li>If you see only a small partition or no files, ensure DRD and MTP are enabled on the Deck.</li>
+        <li>On Linux, you may need to install or restart <code>mtp</code> services: <code>sudo apt install mtp-tools jmtpfs</code>.</li>
+    </ul>
+</blockquote>
 
 ----
 
