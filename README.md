@@ -502,7 +502,53 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
     <strong>Warning:</strong> You can add the connection to the app by clicking <b>File&gt;Copy Current Connection to Site Manager</b>.
 </blockquote>
 
+
+
 #### MTP (USB Sharing)
+
+<blockquote class="admonition-warning">
+     <strong>Warning:</strong> Enabling MTP file transfer on the Steam Deck requires installing Decky Loader and the DeckMTP plugin, as well as changing BIOS settings. Decky Loader is a third-party tool and may affect your system. Proceed with caution and only install from the official Decky Loader website.
+</blockquote>
+
+**How to Enable MTP File Transfer (Wired USB) on Steam Deck:**
+
+1. <strong>Switch to Desktop Mode</strong> on your Steam Deck.
+2. <strong>Install Decky Loader:</strong>
+    - Go to <a href="https://decky.xyz/">decky.xyz</a> and download the installer.
+    - Run the <code>decky_installer.desktop</code> file and follow the instructions.
+    - You may need to set a sudo password (<code>passwd</code> in Konsole).
+3. <strong>Switch back to Game Mode.</strong>
+4. <strong>Install the DeckMTP Plugin:</strong>
+    - Press the “…” button under the right trackpad to open the Quick Access menu.
+    - Go to the Decky Loader tab and open the Marketplace.
+    - Search for “DeckMTP” and install it.
+5. <strong>Enable DRD in BIOS:</strong>
+    - Shut down your Deck completely.
+    - Hold “Volume Up” + Power until you hear a beep to enter BIOS.
+    - Go to the “Advanced” tab → “USB Configuration.”
+    - Change “USB Dual Role Device” from “XHCI” to “DRD.”
+    - Save and exit BIOS.
+6. <strong>Enable MTP in DeckMTP:</strong>
+    - Boot into Game Mode.
+    - Open the DeckMTP plugin and enable MTP.
+7. <strong>Connect your Steam Deck to your PC with a USB cable.</strong>
+    - Your Deck should now appear as a storage device in Windows Explorer or your Linux file manager.
+    - You can now drag and drop files between your PC and Steam Deck.
+
+**Tips:**
+- Use a USB 3.2 Gen1 or better cable and port for fastest speeds.
+- If you need to boot from USB or use Windows on your Deck, you may need to revert the BIOS setting back to XHCI.
+- Wireless methods (Warpinator, LocalSend, KDE Connect, SSHFS) are available but are much slower than wired MTP.
+
+----
+
+**Troubleshooting:**
+- If your PC does not recognize the Steam Deck, try another USB cable or port.
+- Make sure the Steam Deck is unlocked and awake.
+- On Linux, you may need to install or restart `mtp` services: `sudo apt install mtp-tools jmtpfs`.
+- If you see only a small partition or no files, ensure MTP mode is enabled on the Deck.
+
+**Tip:** For large transfers, using MTP is often faster and more reliable than network-based methods.
 
 ---
 
