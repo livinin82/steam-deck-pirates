@@ -586,19 +586,27 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
 ### Finding Non-Steam Game Proton Folder
 
 
+
 <blockquote class="admonition-note">
-    <strong>Note:</strong> This only works for games added to steam already as a non steam game.<br>
-    This means you need to enable proton on the game and try to run it once so it can set up a prefix for it.<br>
-    <ul>
-        <li>Open <b>ProtonTricks</b>.</li>
-        <li>In the list of games find the title you gave your game in Steam itself.</li>
-        <li>Next to the game name, there is a long number.</li>
-        <li>Open <b>Dolphin</b>.</li>
-        <li>Go to <code>/home/deck/.local/share/Steam/steamapps/compatdata</code> and find the number from earlier.</li>
-        <li>Enter the folder, then enter the <code>pfx</code> folder.</li>
-        <li><code>drive_c</code> is the folder a lot of the "wine" aspect of things will happen.</li>
-    </ul>
+    <strong>Note:</strong> This only works for games added to Steam already as a non-Steam game.<br>
+    You need to enable Proton on the game and try to run it once so it can set up a prefix for it.
 </blockquote>
+
+<table>
+<tr>
+<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<ol>
+    <li>Open <b>ProtonTricks</b>.</li>
+    <li>In the list of games, find the title you gave your game in Steam itself.</li>
+    <li>Next to the game name, there is a long number.</li>
+    <li>Open <b>Dolphin</b>.</li>
+    <li>Go to <code>/home/deck/.local/share/Steam/steamapps/compatdata</code> and find the number from earlier.</li>
+    <li>Enter the folder, then enter the <code>pfx</code> folder.</li>
+    <li><code>drive_c</code> is the folder where a lot of the "wine" aspect of things will happen.</li>
+</ol>
+</td>
+</tr>
+</table>
 
 
 <blockquote class="admonition-note">
