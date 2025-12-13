@@ -156,7 +156,7 @@ Quick links:
     <li>Close the installer after it has successfully finished.</li>
 </ol></div>
 <blockquote class="admonition-caution">
-    <strong>Caution:</strong> Do not leave the installer running in the background after it finishes. Always close it completely before proceeding.
+        <strong>Caution:</strong> After installation, close the installer completely. Do not leave it running in the background before proceeding.
 </blockquote>
 
 
