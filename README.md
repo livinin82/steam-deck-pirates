@@ -158,20 +158,22 @@ Quick links:
 
 ### Part 3: Running the game
 
+<blockquote class="admonition-warning">
+    <strong>Before you run the game:</strong><br>
+    <b>Launch errors</b> are often caused by using the wrong Proton version or missing dependencies. See the <a href="#installing-dependencies">Dependencies section</a> for help installing required components.<br><br>
+    <b>Missing DLLs or extra components</b> may be required for mods or other enhancements. See the <a href="#adding-dlls-to-proton">Adding DLLs to Proton</a> section for details on how to add them using ProtonTricks or Steam launch options.
+</blockquote>
+
 <div class="panel"><strong>Running the game</strong><ol>
     <li>Once installation is complete, go to the installation folder and locate the game’s <code>game.exe</code> file.</li>
     <li>Right-click on <code>game.exe</code> and select “Add to Steam” to add it as a non-Steam game.</li>
     <li>Open Steam, find <code>game.exe</code>, and go to the Compatibility section.</li>
     <li>Set the compatibility to Proton Experimental (or the latest GE-Proton version).</li>
-    <li>Launch the game by pressing Play.</li>
-    <li>If it shows an error or doesn’t run: Refer to the dependencies guide for help ([Dependencies Guide](#installing-dependencies)).</li>
+    <li>Click <strong>Play</strong> to launch the game.</li>
+    <li>If it shows an error or doesn’t run: Refer to the <a href="#installing-dependencies">Dependencies section</a> for help.</li>
     <li>Run the game in Desktop mode to verify it works correctly.</li>
     <li>Once verified, you can rename it in Steam to whatever you prefer, and then switch back to Gaming mode to play.</li>
 </ol></div>
-
-> Launch errors = wrong Proton or missing dependencies. See the [dependencies guide](./installing-dependencies.md) for help installing required components.
-
-> **Tip:** If your game is missing a DLL or needs extra components, you can use [ProtonTricks](./installing-dependencies.md#using-protontricks) to install them into the correct prefix.
 
 <div class="panel"><strong>Tips</strong><ul><li>Extract multi‑part archives first (make sure to fully extract all <code>.zip</code>, <code>.rar</code>, or <code>.7z</code> parts before running the installer).</li><li>Start with the latest GE-Proton version. If that fails, try the latest official Proton version. Only try other Proton versions if those do not work.</li><li>Avoid prefix drive_c for storage (do NOT install large games inside the Wine prefix’s <code>drive_c</code> folder; use a separate folder like <code>~/Games</code> instead).</li></ul></div>
 
