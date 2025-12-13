@@ -168,7 +168,8 @@ Quick links:
 </blockquote>
 
 <div class="panel"><strong>Running the game</strong><ol>
-    <li>In Steam, right-click the non-Steam shortcut you added (or add a new one if needed), and change the <strong>Target</strong> path to point to the correct <code>game.exe</code> where it was installed. Sometimes the main exe is in a subfolder—check for launchers and game-specific exes alike.<br><b>Tip:</b> Linux does not play well with spaces in file paths. Always wrap the path in quotes, e.g. <code>"/home/deck/Games/My Game/game.exe"</code>.</li>
+    <li>After installation, locate the <code>game.exe</code> (or main executable) in the folder where you installed the game. Sometimes the main exe is in a subfolder—check for launchers and game-specific exes alike.</li>
+    <li>In Steam, right-click the non-Steam shortcut you added (or add a new one if needed), and change the <strong>Target</strong> path to point to the correct <code>game.exe</code> where it was installed.<br><b>Tip:</b> Linux does not play well with spaces in file paths. Always wrap the path in quotes, e.g. <code>"/home/deck/Games/My Game/game.exe"</code>.</li>
     <li>Change the <strong>Start In</strong> folder to match the folder where the <code>game.exe</code> is located. This helps the game find its files and run correctly.</li>
     <li>Go to the Compatibility section and set the compatibility to Proton Experimental (or the latest GE-Proton version).</li>
     <li>Click <strong>Play</strong> to launch the game.</li>
@@ -298,28 +299,15 @@ Below are step-by-step guides for connecting to your Steam Deck via SSH from Lin
 
 ---
 
-
-### Part 3: Running the game
-
-1. In Steam, right-click the non-Steam shortcut you added (or add a new one if needed), and change the **Target** path to point to the correct `game.exe` where it was installed. Sometimes the main exe is in a subfolder—check for launchers and game-specific exes alike.  
-2. Change the **Start In** folder to match the folder where the `game.exe` is located. This helps the game find its files and run correctly.
-3. Go to the Compatibility section and **Force Compatibility**. 
-        - Start with the latest GE-Proton version. If that fails, try the latest official Proton version. Only try other Proton versions if those do not work.
-4. Click **Play** to launch the game.
-5. If it shows an error or doesn’t run: Refer to the [Dependencies section](https://livinin82.github.io/steam-deck-pirates/#installing-dependencies) for help.
-6. Run the game in Desktop mode to verify it works correctly.
-7. Once verified, you can rename it in Steam to whatever you prefer, and then switch back to Gaming mode to play.
-
-<blockquote class="admonition tip">
-<strong>Tips</strong>
-<ul>
-    <li>Linux does not play well with spaces in file paths. Always wrap the path in quotes, e.g. <code>"/home/deck/Games/My Game/game.exe"</code>.</li>
-    <li>Extract multi‑part archives first (make sure to fully extract all <code>.zip</code>, <code>.rar</code>, or <code>.7z</code> parts before running the installer). (Link to Peazip Guide)</li>
-    <li>To install on a microSD card, create a folder named <code>Games</code> on the SD card root. Then, add its path in Part 3.</li>
-    <li>Some games may have a different <code>.exe</code> file for launching. Use Dolphin File Explorer to search for other <code>.exe</code> files in the game folder.</li>
-    <li>Some games require specific Proton versions. Search Reddit or protondb (Link) for recommendations, and use ProtonUp-QT to download other Proton versions if needed.</li>
-</ul>
-</blockquote>
+#### SSH Connection Guide: Linux
+<table>
+<tr>
+<td bgcolor="#E3F2FD" width="100%" style="padding:15px; border-radius:5px;">
+<strong>Connect to Steam Deck from Linux:</strong>
+<ol>
+    <li>Open a terminal window.</li>
+    <li>Find your Steam Deck's IP address (Settings > Internet).</li>
+    <li>Connect using SSH:
         <pre><code>ssh deck@&lt;SteamDeck_IP&gt;</code></pre>
     </li>
     <li>Enter your password when prompted.</li>
