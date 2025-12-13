@@ -168,10 +168,10 @@ Quick links:
 </blockquote>
 
 <div class="panel"><strong>Running the game</strong><ol>
-    <li>Once installation is complete, go to the installation folder and locate the game’s <code>game.exe</code> file.</li>
-    <li>Right-click on <code>game.exe</code> and select “Add to Steam” to add it as a non-Steam game.</li>
-    <li>Open Steam, find <code>game.exe</code>, and go to the Compatibility section.</li>
-    <li>Set the compatibility to Proton Experimental (or the latest GE-Proton version).</li>
+    <li>After installation, locate the <code>game.exe</code> (or main executable) in the folder where you installed the game. Sometimes the main exe is in a subfolder—check for launchers and game-specific exes alike.</li>
+    <li>In Steam, right-click the non-Steam shortcut you added (or add a new one if needed), and change the <strong>Target</strong> path to point to the correct <code>game.exe</code> where it was installed.<br><b>Tip:</b> Linux does not play well with spaces in file paths. Always wrap the path in quotes, e.g. <code>"/home/deck/Games/My Game/game.exe"</code>.</li>
+    <li>Change the <strong>Start In</strong> folder to match the folder where the <code>game.exe</code> is located. This helps the game find its files and run correctly.</li>
+    <li>Go to the Compatibility section and set the compatibility to Proton Experimental (or the latest GE-Proton version).</li>
     <li>Click <strong>Play</strong> to launch the game.</li>
     <li>If it shows an error or doesn’t run: Refer to the <a href="#installing-dependencies">Dependencies section</a> for help.</li>
     <li>Run the game in Desktop mode to verify it works correctly.</li>
