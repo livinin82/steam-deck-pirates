@@ -38,24 +38,31 @@ nav_order: 5
     <li>To back up your saves, see the <a href="#backing-up-save-files">Backing Up Save Files</a> section below.</li>
 </ul>
 </div>
-## Running the game
+## Backing Up Save Files {#backing-up-save-files}
 
-1. In Steam, right-click the non-Steam shortcut you added (or add a new one if needed), and change the **Target** path to point to the correct `game.exe` where it was installed. Sometimes the main exe is in a subfolder—check for launchers and game-specific exes alike.  
-2. Change the **Start In** folder to match the folder where the `game.exe` is located. This helps the game find its files and run correctly.
-3. Go to the Compatibility section and **Force Compatibility**. 
-        - Start with the latest GE-Proton version. If that fails, try the latest official Proton version. Only try other Proton versions if those do not work.
-4. Click **Play** to launch the game.
-5. If it shows an error or doesn’t run: Refer to the [Dependencies section](https://livinin82.github.io/steam-deck-pirates/#installing-dependencies) for help.
-6. Run the game in Desktop mode to verify it works correctly.
-7. Once verified, you can rename it in Steam to whatever you prefer, and then switch back to Gaming mode to play.
+There are two main ways to back up your save files:
 
-<blockquote class="admonition tip">
-<strong>Tips</strong>
-<ul>
-    <li>Linux does not play well with spaces in file paths. Always wrap the path in quotes, e.g. <code>"/home/deck/Games/My Game/game.exe"</code>.</li>
-    <li>Extract multi‑part archives first (make sure to fully extract all <code>.zip</code>, <code>.rar</code>, or <code>.7z</code> parts before running the installer). (Link to Peazip Guide)</li>
-    <li>To install on a microSD card, create a folder named <code>Games</code> on the SD card root. Then, add its path in Part 3.</li>
-    <li>Some games may have a different <code>.exe</code> file for launching. Use Dolphin File Explorer to search for other <code>.exe</code> files in the game folder.</li>
-    <li>Some games require specific Proton versions. Search Reddit or protondb (Link) for recommendations, and use ProtonUp-QT to download other Proton versions if needed.</li>
-</ul>
-</blockquote>
+### 1. Manual Copy & Paste
+
+1. Find your save file using the steps above.
+2. Copy the save file or folder to a safe location (external drive, cloud storage, etc.).
+3. To restore, copy it back to the same location in the correct prefix.
+
+### 2. Using Ludusavi
+
+**[Ludusavi](https://github.com/mtkennerly/ludusavi)** is an open-source tool that automatically backs up and restores save data for hundreds of games, including Steam, GOG, and emulators.
+
+**How to use Ludusavi:**
+1. Download and install Ludusavi from the [official GitHub page](https://github.com/mtkennerly/ludusavi).
+2. Run Ludusavi and select the games/platforms you want to back up.
+3. Choose your backup location (local folder, cloud, etc.).
+4. Click “Backup” to save your files. Use “Restore” to put them back later.
+
+> [!TIP]
+> Ludusavi is great for regular backups and for moving saves between different systems or installs.
+
+> [!NOTE]
+> There is also a cool app called **[Shortix](https://github.com/Jannomag/shortix)**. Shortix creates user-readable symlinks for Proton game prefixes, making it much easier to find your mods, game saves, etc. Once installed, you'll have a folder with shortcuts to your Proton folders. All info is in the link. This is optional, but can make the process easier.
+
+> [!NOTE]
+> If there is no save file, check the **Install Locations** section above.
