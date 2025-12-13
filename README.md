@@ -194,7 +194,7 @@ Quick links:
     <strong>Tips:</strong>
     <ul>
         <li>Linux does not play well with spaces in file paths. Always wrap the path in quotes, e.g. <code>"/home/deck/Games/My Game/game.exe"</code>.</li>
-        <li>Extract multi‑part archives first (make sure to fully extract all <code>.zip</code>, <code>.rar</code>, or <code>.7z</code> parts before running the installer). (Link to Peazip Guide)</li>
+        <li>Extract multi‑part archives first (make sure to fully extract all <code>.zip</code>, <code>.rar</code>, or <code>.7z</code> parts before running the installer). <a href="#compressed-files">See the compressed files guide below.</a></li>
         <li>To install on a microSD card, create a folder named <code>Games</code> on the SD card root. Then, add its path in Part 3.</li>
         <li>Some games may have a different <code>.exe</code> file for launching. Use Dolphin File Explorer to search for other <code>.exe</code> files in the game folder.</li>
         <li>Some games require specific Proton versions. Search Reddit or protondb (Link) for recommendations, and use ProtonUp-QT to download other Proton versions if needed.</li>
