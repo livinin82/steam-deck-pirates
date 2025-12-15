@@ -111,6 +111,7 @@ If you experience issues with games or SteamOS after installing Decky Loader or 
 
 
 
+
 Quick links:
 
 - [Installing games through Steam](#installing-games-through-steam)
@@ -923,6 +924,51 @@ RetroDECK is a [ES-DE Frontend](https://es-de.org/) powered Flatpak all-in-one g
 
 *from [RetroDeck wiki](https://retrodeck.readthedocs.io/en/latest/wiki_devices/steamdeck/steamdeck-start/)*
 
+### Switching Default Emulator (EmuDeck/RetroDeck)
+
+You can change which emulator is used for a given system in both EmuDeck and RetroDeck. This is useful if you want to use a different core or emulator for compatibility or performance reasons. Both tools also allow you to set the emulator on a per-game basis for even more control.
+
+<blockquote class="admonition-tip">
+    <strong>Tip:</strong> If a game isn't working as expected, try switching to a different emulator/core for that system or just for that game.
+</blockquote>
+
+#### EmuDeck
+**To change the default emulator for a system:**
+1. Open the EmuDeck application (Desktop Mode).
+2. Go to the "Emulator Settings" or "Manage Emulators" section.
+3. Find the system you want to change (e.g., SNES, PS2, etc.).
+4. Select your preferred emulator/core from the dropdown or list.
+5. Save your changes. The new emulator will be used the next time you launch a game for that system.
+
+**To set the emulator on a per-game basis:**
+1. Open Steam ROM Manager or EmulationStation DE (whichever frontend you use with EmuDeck).
+2. Locate the game you want to change.
+3. Edit the game’s launch configuration or metadata (look for an "Edit Game" or "Advanced" option).
+4. Select the desired emulator/core for that specific game.
+5. Save and launch. This override will apply only to that game.
+
+> [!NOTE]
+> Some systems have multiple emulator options (e.g., RetroArch cores, standalone emulators). Not all emulators are available for every system. Per-game overrides may require using EmulationStation DE or editing config files directly.
+
+#### RetroDeck
+**To change the default emulator for a system:**
+1. Launch RetroDeck and open the main menu.
+2. Navigate to "Settings" > "Emulators".
+3. Select the system you want to change.
+4. Choose your preferred emulator/core from the available options.
+5. Save and exit. The new emulator will be used for that system going forward.
+
+**To set the emulator on a per-game basis:**
+1. In RetroDeck, find the game in your ROM list.
+2. Highlight the game and open its context menu (usually by pressing the menu/select button or right-clicking).
+3. Choose "Edit Game" or "Advanced Settings".
+4. Select the emulator/core override for that game.
+5. Save and launch. This override will only affect the selected game.
+
+> [!TIP]
+> Per-game overrides are useful for titles with special compatibility needs or performance issues. You can always revert to the system default if needed.
+
+---
 ### Individual emulators
 Individual emulators can be installed as well. A lot of them are already on the **Discover Store**. While this is a perfectly viable method of setting up your emulation zone, we will not really be covering it here. The reason for this is that we want you to have the most straightforward and easy setup you can get. Also, quite frankly, if a lot of people follow the guides posted above and use the already-developed frontends we suggest, we get less questions and have an easier time supporting people. Should you choose to do things this way, you will manually have to set every emulator up, tweak them all to look right, organize the folder structure, and download so much extra stuff. By the time you're halfway done, you'll wonder why you didn't do RetroDeck/EmuDeck in the beginning.
 
